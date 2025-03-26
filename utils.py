@@ -2,6 +2,7 @@ from typing import Union
 
 class Operation():
     def __init__(self, txn:int, resource:str):
+        self.is_read = None
         self.txn = txn
         self.type = "X"
         self.resource = resource
