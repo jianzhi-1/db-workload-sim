@@ -49,4 +49,41 @@ class Transaction():
 
     def __repr__(self):
         return f"Transaction({self.txn}, {self.operations})"
+
+def conflict(T1:Transaction, T2:Transaction, t:int):
+    if t < 0: return conflict(T2, T1, -t)
+    T1beforeT2, T2beforeT1 = False, False
+    resource_lock = dict()
+
+    def type_to_num(op):
+        return 1 if op.is_read else 2
+
+    for i in range(t + max(len(T1.operations), len(T2.operations))):
+        if i < len(T1.operations):
+            op = T1.operations[i]
+            if op.resource in resource_lock:
+                a, b = resource_lock[op.resource]
+                if max(type_to_num(op), b) == 2: # add edge if one of them is a read
+                    T2beforeT1 = True
+                resource_lock[op.resource] = (max(type_to_num(op), a), b)
+            else:
+                resource_lock[op.resource] = (type_to_num(op), 0)
+            if op.is_last_on_resource:
+                a, b = resource_lock[op.resource]
+                resource_lock[op.resource] = (0, b)
+        if i - t >= 0 and i - t < len(T2.operations):
+            op = T2.operations[i - t]
+            if op.resource in resource_lock:
+                a, b = resource_lock[op.resource]
+                if max(a, type_to_num(op)) == 2: # add edge if one of them is a write
+                    T1beforeT2 = True
+                resource_lock[op.resource] = (a, max(type_to_num(op), b))
+            else:
+                resource_lock[op.resource] = (0, type_to_num(op))
+            if op.is_last_on_resource:
+                a, b = resource_lock[op.resource]
+                resource_lock[op.resource] = (a, 0)
+
+    return T1beforeT2 and T2beforeT1
+
     
