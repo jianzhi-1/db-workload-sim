@@ -112,6 +112,8 @@ class Simulator():
             "steps": 0
         }
 
+        self.result_statistics = dict()
+
     def add_transactions(self, more_txns:list[Transaction]):
         # add more transactions to transaction pool, for possibly online use cases
         self.txnPool += more_txns
@@ -130,6 +132,8 @@ class Simulator():
             if decisions[i] == 1: 
                 self.inflight[t.txn] = t.operations
                 self.scheduled_time[t.txn] = self.step
+            elif decisions[i] == 2:
+                pass # schedule says toss this transaction away
             else: new_pool.append(t)
         self.txnPool = new_pool
 
@@ -189,6 +193,7 @@ class Simulator():
             op = self.inflight[txn][0] # get the first operation
             can = self.resource_locks.lock(op.resource, op.txn, op.type)
             if not can: # conflict
+                self.result_statistics[txn] = 0
                 self.statistics["n_aborts"] += 1
                 self.resource_locks.remove_all(op.txn)
                 self.inflight[txn] = []
@@ -198,6 +203,7 @@ class Simulator():
                     self.resource_locks.remove(op.resource, op.txn)
 
                 if op.is_last:
+                    self.result_statistics[txn] = 1
                     self.resource_locks.remove_all(op.txn) # not necessary, but for peace of mind
                     self.statistics["n_successes"] += 1
 

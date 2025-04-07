@@ -66,3 +66,28 @@ class QueueBasedScheduler(Scheduler):
         
         res = self.shave()
         return [1 if t.txn in res else 0 for t in TxnPool]
+
+class LumpScheduler(Scheduler):
+    def __init__(self):
+        self.memory:dict = None
+        self.step = 0
+        self.dont_care = None
+    
+    def inject_memory(self, memory:dict, dont_care:int):
+        self.memory = memory
+        self.dont_care = dont_care
+    
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction]) -> list[int]:
+        total_txns = len(TxnPool)
+        assert total_txns > 0, "scheduler fail: total number of transactions is 0"
+        res = [0]*total_txns
+        for i, txn in enumerate(TxnPool):
+            if txn.txn not in self.memory: assert False, "transaction not scheduled"
+            ts = self.memory[txn.txn]
+            if self.step > ts: assert False, "transaction should have been scheduled earlier"
+            if self.dont_care is not None and self.dont_care == ts: 
+                res[i] = 2
+            elif self.step == ts: 
+                res[i] = 1 # schedule it
+        self.step += 1
+        return res
