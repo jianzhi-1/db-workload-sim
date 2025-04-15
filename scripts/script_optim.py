@@ -8,7 +8,7 @@ from utils import conflict
 from models import LinearModel
 from Simulator import Simulator
 from Scheduler import LumpScheduler
-from Kernel import IntegerOptimisationKernel
+from Kernel import IntegerOptimisationKernel, SMFKernel
 
 def generator(num_txns, T):
     workload = SmallBankWorkload()
@@ -36,5 +36,12 @@ data_gen = generator(N, T)
 C, random_transactions_list = data_gen(batch_size)
 
 kernel = IntegerOptimisationKernel(N, T)
-res = kernel.run(C, debug=True)
+throughput, res = kernel.run(C, debug=True)
+print(f"Number of transactions scheduled = {throughput}")
+print(res)
+
+# smf kernel for the same workload
+smf_kernel = SMFKernel(N, T)
+throughput, res = smf_kernel.run(C, debug=True)
+print(f"Number of transactions scheduled = {throughput}")
 print(res)

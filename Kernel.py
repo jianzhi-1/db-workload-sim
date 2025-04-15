@@ -53,18 +53,46 @@ class IntegerOptimisationKernel(Kernel):
 
         # 3. Solve
         res = [-1]*N # default not scheduled
-        _ = int(prob.solve(solver=cp.GLPK_MI)) # how many transactions were scheduled
+        throughput = int(prob.solve(solver=cp.GLPK_MI)) # how many transactions were scheduled
         
         for i in range(N):
             for t in range(T):
                 if x.value[i*(T + 1) + t] > 0.5:
                     res[i] = t
                     break
-        return res
+        return throughput, res
 
 class SMFKernel(Kernel):
     def __init__(self, N, T):
         super().__init__(N, T)
 
     def run(self, C, debug=False):
-        raise NotImplementedError()  
+        import random
+        random.seed(262)
+        N, T = self.N, self.T # convenience
+        C = C.squeeze() # squeeze out the batch dimension
+
+        order = [i for i in range(N)]
+        random.shuffle(order)
+
+        res = [-1]*N
+        scheduled = set()
+
+        for i in order:
+            # candidate is transaction i
+            success, pos = False, -1
+            for t in range(0, T+1, 1):
+                # try to schedule transaction i at time t
+                temp_success = True
+                for j, tj in scheduled:
+                    if C[i][j][T + (tj - t)] == 1:
+                        temp_success = False
+                        break
+                if temp_success: # greedily assign
+                    success, pos = True, t
+                    break
+            if success:
+                res[i] = pos
+                scheduled.add((i, pos))
+
+        return len(scheduled), res
