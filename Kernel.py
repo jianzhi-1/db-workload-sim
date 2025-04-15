@@ -96,3 +96,10 @@ class SMFKernel(Kernel):
                 scheduled.add((i, pos))
 
         return len(scheduled), res
+
+class NNKernel(Kernel):
+    def __init__(self, N, T):
+        super().__init__(N, T)
+
+    def run(self, C, debug=False):
+        raise NotImplementedError()        
