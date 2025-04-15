@@ -52,26 +52,30 @@ class Transaction():
 
 def conflict(T1:Transaction, T2:Transaction, t:int):
     if t < 0: return conflict(T2, T1, -t)
-    T1beforeT2, T2beforeT1 = False, False
-    resource_lock = dict()
+
+    # Considering the case when transaction T2 is scheduled t time steps after T1.
+    # Transaction that is scheduled earlier always executes its operation first in the same time step.
+
+    T1beforeT2, T2beforeT1 = False, False # check for cycle
+    resource_lock = dict() # maps resource to (T1's lock type, T2's lock type)
 
     def type_to_num(op):
         return 1 if op.is_read else 2
 
-    for i in range(t + max(len(T1.operations), len(T2.operations))):
-        if i < len(T1.operations):
+    for i in range(max(len(T1.operations), t + len(T2.operations))):
+        if i < len(T1.operations): # a T1 operation executes in this step
             op = T1.operations[i]
             if op.resource in resource_lock:
                 a, b = resource_lock[op.resource]
-                if max(type_to_num(op), b) == 2: # add edge if one of them is a read
+                if max(type_to_num(op), b) == 2: # add edge if one of them is a write
                     T2beforeT1 = True
-                resource_lock[op.resource] = (max(type_to_num(op), a), b)
+                resource_lock[op.resource] = (max(type_to_num(op), a), b) # upgrade T1's lock
             else:
                 resource_lock[op.resource] = (type_to_num(op), 0)
             if op.is_last_on_resource:
                 a, b = resource_lock[op.resource]
-                resource_lock[op.resource] = (0, b)
-        if i - t >= 0 and i - t < len(T2.operations):
+                resource_lock[op.resource] = (0, b) # free T1's lock
+        if i - t >= 0 and i - t < len(T2.operations): # a T2 operation executes in this step
             op = T2.operations[i - t]
             if op.resource in resource_lock:
                 a, b = resource_lock[op.resource]
