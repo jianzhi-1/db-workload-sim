@@ -62,7 +62,7 @@ class IntegerOptimisationKernel(Kernel):
                     break
         return throughput, res
 
-class SMFKernel(Kernel):
+class SMFKernel(Kernel): # Cheng, 2024: https://www.vldb.org/pvldb/vol17/p2694-cheng.pdf
     def __init__(self, N, T):
         super().__init__(N, T)
 
@@ -98,8 +98,26 @@ class SMFKernel(Kernel):
         return len(scheduled), res
 
 class NNKernel(Kernel):
-    def __init__(self, N, T):
+    def __init__(self, N, T, model_file):
+        import torch
+        from models import LinearModel
         super().__init__(N, T)
-
+        if torch.cuda.is_available():
+            self.device = "cuda:0"
+        else:
+            self.device = "cpu"
+        self.model = LinearModel(N, T).to(self.device)
+        self.model.load_state_dict(torch.load(model_file))
+        
     def run(self, C, debug=False):
-        raise NotImplementedError()        
+        import torch
+        N, T = self.N, self.T
+        C = torch.from_numpy(C).to(self.device)
+        C = C.to(torch.float32)
+        lamb = self.model(C)
+        assert lamb.shape == (1, N, T+2)
+        
+        res = torch.argmax(lamb, dim=2)
+        res[res == T+1] = -1 # not scheduled
+        throughput = (res >= 0).sum()
+        return throughput, res   
