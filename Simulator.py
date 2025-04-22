@@ -1,3 +1,4 @@
+import heapq
 from Scheduler import Scheduler
 from utils import Transaction, Operation, ReadOperation, WriteOperation
 
@@ -7,8 +8,10 @@ def clone_operation_list(ls:list[Operation]):
 class Locker():
 
     ### A simplified structure to detect conflicts
+    #   Optimisation: stores the timestep in which a transaction will release a resource
 
     def __init__(self, ref=None):
+        self.probe_table = dict() # maps resource to a dictionary {"R": t1, "W", t2} indicating the latest time it will be held; used by some schedulers
         if ref is None:
             self.master_table = dict()
             # master_table: resource -> dict(txn -> R/W)
@@ -21,7 +24,20 @@ class Locker():
                 for txn in ref[resource]:
                     self.master_table[resource][txn] = ref[resource][txn]
 
-    def lock(self, resource, txn, typ) -> bool:
+    def probe(self, resource, typ:str) -> int:
+        # returns the earliest timestep in which a resource can be obtained
+        if resource not in self.probe_table: return 0 # no one using it anyways
+        if typ == "R": return self.probe_table[resource].get("W", -1) + 1 # must be after the last write
+        elif typ == "W": return max(self.probe_table[resource].get("R", -1) + 1, self.probe_table[resource].get("W", -1) + 1) # must be after last operation
+        assert False, "unreachable code"
+
+    def update(self, resource, typ:str, tt:int) -> int:
+        if resource not in self.probe_table: self.probe_table[resource] = dict()
+        self.probe_table[resource][typ] = max(self.probe_table[resource].get(typ, tt), tt)
+
+    def lock(self, resource, txn:int, typ:str, delta:int) -> bool:
+        # delta is the absolute timestep in which this resource must be released by txn
+
         if resource not in self.master_table: # if first person, then OK
             self.master_table[resource] = dict()
             self.master_table[resource][txn] = typ
@@ -60,7 +76,7 @@ class Locker():
             
             return False # no other cases
         else:
-            assert(False) # not possible
+            assert False, "invalid transaction type" # not possible
 
     def remove(self, resource, txn):
         # used when a transaction finished successfully
@@ -81,6 +97,14 @@ class Locker():
     def clear(self):
         self.master_table = dict()
 
+class Pair():
+    def __init__(self, priority:int, txn:Transaction):
+        self.priority = priority
+        self.txn = txn
+    
+    def __lt__(self, other):
+        return self.priority < other.priority
+
 class Simulator():
 
     ### Assumptions
@@ -94,6 +118,7 @@ class Simulator():
         self.resource_locks = Locker()
         self.graveyard = set()
         self.inflight = dict()
+        self.scheduled_txn = []
         self.scheduled_time = dict()
         self.step = 0
         self.clear()
@@ -119,22 +144,29 @@ class Simulator():
         self.txnPool += more_txns
 
     def sim(self, freeze=False) -> dict:
+        while len(self.scheduled_txn) > 0 and self.scheduled_txn[0].priority <= self.step:
+            if self.scheduled_txn[0].priority < self.step: assert False, "transaction should be scheduled earlier"
+            p = heapq.heappop(self.scheduled_txn)
+            self.inflight[p.txn.txn] = p.txn.operations
 
         if len(self.txnPool) == 0: # no more transactions to be scheduled
             self.tick()
             return self.statistics
 
-        decisions = self.scheduler.schedule(self.inflight, self.resource_locks, self.txnPool)
+        decisions = self.scheduler.schedule(self.inflight, self.resource_locks, self.txnPool, self.step)
         assert len(decisions) == len(self.txnPool), "Decision length is not equal transaction pool length"
 
         new_pool = []
         for i, t in enumerate(self.txnPool):
-            if decisions[i] == 1: 
-                self.inflight[t.txn] = t.operations
-                self.scheduled_time[t.txn] = self.step
-            elif decisions[i] == 2:
-                pass # schedule says toss this transaction away
-            else: new_pool.append(t)
+            if decisions[i] >= 1: 
+                if decisions[i] == 1:
+                    self.inflight[t.txn] = t.operations
+                else:
+                    heapq.heappush(self.scheduled_txn, Pair(self.scheduled_time[t.txn], t))
+            elif decisions[i] == -1:
+                pass # scheduler says toss this transaction away
+            elif decisions[i] == 0: new_pool.append(t)
+            else: assert False, f"unknown decision {decisions[i]}"
         self.txnPool = new_pool
 
         statistics = dict()
@@ -163,7 +195,7 @@ class Simulator():
             for txn in inflight_keyset:
                 if len(inflight_clone[txn]) == 0: assert False, "empty transaction for some reason"
                 op = inflight_clone[txn][0] # get the first operation
-                can = locker_clone.lock(op.resource, op.txn, op.type)
+                can = locker_clone.lock(op.resource, op.txn, op.type, self.step + op.delta_last + 1)
                 if not can: # conflict
                     statistics["freeze_aborts"] += 1
                     locker_clone.remove_all(op.txn)
@@ -191,7 +223,7 @@ class Simulator():
         for txn in inflight_keyset:
             if len(self.inflight[txn]) == 0: assert False, "empty transaction for some reason"
             op = self.inflight[txn][0] # get the first operation
-            can = self.resource_locks.lock(op.resource, op.txn, op.type)
+            can = self.resource_locks.lock(op.resource, op.txn, op.type, self.step + op.delta_last + 1)
             if not can: # conflict
                 self.result_statistics[txn] = 0
                 self.statistics["n_aborts"] += 1
