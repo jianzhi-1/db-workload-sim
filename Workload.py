@@ -54,13 +54,17 @@ class SmallBankWorkload(Workload):
         if probabilities is None: probabilities = [1/len(self.SMALLBANK_TXN_OPS)] * len(self.SMALLBANK_TXN_OPS) # assume by default uniform
 
         txn_type_arr = random.choices(population=list(self.SMALLBANK_TXN_OPS.keys()), weights=probabilities, k=num_txns)
-
-        txn_arr = [Transaction(i, [
-            WriteOperation(i, (op[1], self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]]))) 
-                if op[0] else 
-            ReadOperation(i, (op[1], self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]]))) 
-            for op in self.SMALLBANK_TXN_OPS[v]
-        ], v) for i, v in enumerate(txn_type_arr)]
+        
+        txn_arr = []
+        for i, v in enumerate(txn_type_arr):
+            op_list = []
+            cache = dict()
+            for op in self.SMALLBANK_TXN_OPS[v]:
+                val = cache[op[2]] if op[2] in cache else self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]])
+                if op[2] not in cache: cache[op[2]] = val
+                if op[0]: op_list.append(WriteOperation(i, (op[1], val))) # write operation
+                else: op_list.append(ReadOperation(i, (op[1], val))) # read operation
+            txn_arr.append(Transaction(i, op_list))
 
         return txn_arr
 
