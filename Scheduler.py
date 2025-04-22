@@ -1,25 +1,59 @@
 from abc import ABC, abstractmethod
-from utils import Transaction
+from utils import Transaction, conflict
+from Locker import Locker
 import random
 
 class Scheduler(ABC):
 
     @abstractmethod
-    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction]) -> list[int]:
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
         ...
 
 class RapidFireScheduler(Scheduler):
-    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction]) -> list[int]:
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
         total_txns = len(TxnPool)
         assert total_txns > 0, "scheduler fail: total number of transactions is 0"
         return [1] + [0]*(total_txns - 1)
 
 class SequentialScheduler(Scheduler):
-    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction]) -> list[int]:
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
         total_txns = len(TxnPool)
         assert total_txns > 0, "scheduler fail: total number of transactions is 0"
         if len(inflight) > 0: return [0]*total_txns
         return [1] + [0]*(total_txns - 1)
+
+class KSMFScheduler(Scheduler): # https://www.vldb.org/pvldb/vol17/p2694-cheng.pdf
+    def __init__(self, k=5):
+        self.k = k # how many transactions to sample
+        self.locker = Locker()
+    
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
+        total_txns = len(TxnPool)
+        
+        assert total_txns > 0, "scheduler fail: total number of transactions is 0"
+        res = [0]*total_txns
+
+        txnPoolClone = list(enumerate(TxnPool))
+
+        while len(txnPoolClone) >= 1:
+
+            idx_list = random.sample(range(len(txnPoolClone)), min(self.k, len(txnPoolClone)))
+            tmin, tidx, idxx = None, None, None
+
+            for idx in idx_list:
+                txn = txnPoolClone[idx][1]
+                t = max([self.locker.probe(op.resource, op.type) + 1 + i for i, op in enumerate(txn.operations)])
+                assert t >= 0, f"t = {t} is invalid"
+                t = max(t - curstep, 0)
+                if tmin is None or tmin > t:
+                    tmin, tidx, idxx = t, txnPoolClone[idx][0], idx
+            res[tidx] = tmin + 1
+            t_arr = [self.locker.probe(op.resource, op.type) + 1 + i for i, op in enumerate(txnPoolClone[idxx][1].operations)]
+            for op, tt in zip(txnPoolClone[idxx][1].operations, t_arr):
+                self.locker.update(op.resource, op.type, tt)
+            txnPoolClone.pop(idxx)
+            
+        return res
 
 class QueueBasedScheduler(Scheduler):
 
@@ -38,7 +72,7 @@ class QueueBasedScheduler(Scheduler):
             self.queues[i] = self.queues[i][1:] # pop
         return res
 
-    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction]) -> list[int]:
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
 
         if not self.started:
             for i in range(len(TxnPool)):
@@ -77,7 +111,7 @@ class LumpScheduler(Scheduler):
         self.memory = memory
         self.dont_care = dont_care
     
-    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction]) -> list[int]:
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
         total_txns = len(TxnPool)
         assert total_txns > 0, "scheduler fail: total number of transactions is 0"
         res = [0]*total_txns
@@ -86,7 +120,7 @@ class LumpScheduler(Scheduler):
             ts = self.memory[txn.txn]
             if self.step > ts: assert False, "transaction should have been scheduled earlier"
             if self.dont_care is not None and self.dont_care == ts: 
-                res[i] = 2
+                res[i] = -1
             elif self.step == ts: 
                 res[i] = 1 # schedule it
         self.step += 1

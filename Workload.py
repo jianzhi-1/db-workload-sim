@@ -14,7 +14,7 @@ class Workload(ABC):
         pass
 
     @abstractmethod
-    def generate_random_transactions(self, probabilities:list[float], num_txns:int) -> list[Transaction]:
+    def generate_random_transactions(self, num_txns:int, probabilities:list[float], start=0) -> list[Transaction]:
         ...
 
 class SmallBankWorkload(Workload):
@@ -49,22 +49,24 @@ class SmallBankWorkload(Workload):
         elif typ in "double": return random.randint(0, 100)
         assert False, f"Error: type {typ} not supported in gen"
 
-    def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None) -> list[Transaction]:
+    def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None, start=0) -> list[Transaction]:
 
         if probabilities is None: probabilities = [1/len(self.SMALLBANK_TXN_OPS)] * len(self.SMALLBANK_TXN_OPS) # assume by default uniform
 
         txn_type_arr = random.choices(population=list(self.SMALLBANK_TXN_OPS.keys()), weights=probabilities, k=num_txns)
         
         txn_arr = []
+        
         for i, v in enumerate(txn_type_arr):
+            txn_id = start + i
             op_list = []
             cache = dict()
             for op in self.SMALLBANK_TXN_OPS[v]:
                 val = cache[op[2]] if op[2] in cache else self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]])
                 if op[2] not in cache: cache[op[2]] = val
-                if op[0]: op_list.append(WriteOperation(i, (op[1], val))) # write operation
-                else: op_list.append(ReadOperation(i, (op[1], val))) # read operation
-            txn_arr.append(Transaction(i, op_list))
+                if op[0]: op_list.append(WriteOperation(txn_id, (op[1], val))) # write operation
+                else: op_list.append(ReadOperation(txn_id, (op[1], val))) # read operation
+            txn_arr.append(Transaction(txn_id, op_list))
 
         return txn_arr
 

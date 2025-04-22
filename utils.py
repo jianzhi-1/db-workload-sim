@@ -8,6 +8,7 @@ class Operation():
         self.resource = resource
         self.is_last = False
         self.is_last_on_resource = False
+        self.delta_last = -1 # the number of operations from it to the last operation on this resource
 
     def get_resource(self):
         return self.resource
@@ -19,6 +20,7 @@ class ReadOperation(Operation):
         self.type = "R"
         self.is_last = is_last
         self.is_last_on_resource = is_last_on_resource
+        self.delta_last = -1
 
     def __repr__(self):
         return f"Read({self.resource})"
@@ -30,6 +32,7 @@ class WriteOperation(Operation):
         self.type = "W"
         self.is_last = is_last
         self.is_last_on_resource = is_last_on_resource
+        self.delta_last = -1
 
     def __repr__(self):
         return f"Write({self.resource})"
@@ -41,16 +44,23 @@ class Transaction():
         assert len(operations) > 0
         self.operations = operations  # List of Read/Write objects
         self.operations[-1].is_last = True
-        visited = set()
+        visited = dict()
         for i in range(len(self.operations) - 1, -1, -1):
             if self.operations[i].resource not in visited:
                 self.operations[i].is_last_on_resource = True
-                visited.add(self.operations[i].resource)
+                self.operations[i].delta_last = 0 # it is the last operation
+                visited[self.operations[i].resource] = i
+            else:
+                self.operations[i].delta_last = visited[self.operations[i].resource] - i
 
     def __repr__(self):
         return f"Transaction({self.txn}, {self.operations})"
 
-def conflict(T1:Transaction, T2:Transaction, t:int):
+def conflict(T1:Transaction, T2:Transaction, t:int) -> bool:
+    """
+    Given two transactions T1 and T2 with T2 being t time steps after T1,
+    return whether the two transactions will conflict.
+    """
     if t < 0: return conflict(T2, T1, -t)
     T1beforeT2, T2beforeT1 = False, False
     resource_lock = dict()
