@@ -38,20 +38,25 @@ class KSMFScheduler(Scheduler): # https://www.vldb.org/pvldb/vol17/p2694-cheng.p
         while len(txnPoolClone) >= 1:
 
             idx_list = random.sample(range(len(txnPoolClone)), min(self.k, len(txnPoolClone)))
-            tmin, tidx, idxx = None, None, None
+            shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = None, None, None, None
 
             for idx in idx_list:
                 txn = txnPoolClone[idx][1]
-                t = max([self.locker.probe(op.resource, op.type) + 1 + i for i, op in enumerate(txn.operations)])
-                assert t >= 0, f"t = {t} is invalid"
-                t = max(t - curstep, 0)
-                if tmin is None or tmin > t:
-                    tmin, tidx, idxx = t, txnPoolClone[idx][0], idx
-            res[tidx] = tmin + 1
-            t_arr = [self.locker.probe(op.resource, op.type) + 1 + i for i, op in enumerate(txnPoolClone[idxx][1].operations)]
-            for op, tt in zip(txnPoolClone[idxx][1].operations, t_arr):
-                self.locker.update(op.resource, op.type, tt)
-            txnPoolClone.pop(idxx)
+                l = len(txn.operations)
+                latest_complete, latest_dispatch = None, None
+                for i, op in enumerate(txn.operations):
+                    ex = self.locker.probe(op.resource, op.type) + 1 # time when operator executes
+                    dispatch = ex - i # when the initial operator should be
+                    complete = dispatch + l - 1 # when the entire operation is done
+                    if latest_complete is None or complete > latest_complete:
+                        latest_complete, latest_dispatch = complete, dispatch
+                latest_complete = max(latest_complete - curstep, 0)
+                if shortest_makespan is None or shortest_makespan > latest_complete:
+                    shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = latest_complete, txnPoolClone[idx][0], idx, latest_dispatch
+            res[global_id_smf] = smf_dispatch_time - curstep + 1
+            for i, op in enumerate(txnPoolClone[local_id_smf][1].operations):
+                self.locker.update(op.resource, op.type, smf_dispatch_time + i)
+            txnPoolClone.pop(local_id_smf)
             
         return res
 
