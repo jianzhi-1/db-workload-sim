@@ -11,8 +11,8 @@ sim = Simulator(scheduler, [])
 T = 100
 
 for t in range(T):
-    num_txns = 100
-    random_transactions = workload.generate_transactions(num_txns, probabilities, start=t*100)
+    num_txns = 1000
+    random_transactions = workload.generate_transactions(num_txns, probabilities, start=t*num_txns)
     sim.add_transactions(random_transactions)
     sim.sim()
 
@@ -22,4 +22,5 @@ while not sim.done():
 
 sim.print_statistics()
 
-# {'n_aborts': 203, 'n_successes': 9797, 'steps': 14330}
+# {'n_aborts': 0, 'n_successes': 10000, 'steps': 6369}
+# {'n_aborts': 0, 'n_successes': 10000, 'steps': 6280}
