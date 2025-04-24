@@ -20,13 +20,15 @@ class SmallBankWorkload(Workload):
 
         self.NUM_ACCOUNTS = 10
         
-        self.SMALLBANK_TXN_OPS = { # (Read/Write, Table ID, column_name)
-            'Amalgamate': [(False, 0, 'custId0'), (False, 0, 'custId1'), (False, 1, 'custId0'), (False, 2, 'custId1'), (True, 2, 'custId0'), (True, 2, 'custId1')],
-            'Balance': [(False, 0, 'custName'), (False, 1, 'custName'), (False, 2, 'custName')],
-            'DepositChecking': [(False, 0, 'custName'), (True, 0, 'custName')],
-            'SendPayment': [(False, 0, 'sendAcct'), (False, 0, 'destAcct'), (False, 2, 'sendAcct'), (True, 2, 'sendAcct'), (True, 2, 'destAcct')],
-            'TransactSavings': [(False, 0, 'custName'), (False, 1, 'custName'), (True, 1, 'custName')],
-            'WriteCheck': [(False, 0, 'custName'), (False, 1, 'custName'), (False, 2, 'custName'), (True, 2, 'custName')],
+        self.SMALLBANK_TXN_OPS = { # (Read/Write, Table ID, column_name, cache-id)
+            # Operations with the same cache-id operate on the same row
+            # False -> Read, True -> Write
+            'Amalgamate': [(False, 0, 'custId0', 0), (False, 0, 'custId1', 1), (False, 1, 'custId0', 2), (False, 2, 'custId1', 3), (True, 2, 'custId0', 4), (True, 2, 'custId1', 5)],
+            'Balance': [(False, 0, 'custName', 0), (False, 1, 'custName', 1), (False, 2, 'custName', 2)],
+            'DepositChecking': [(False, 0, 'custName', 0), (True, 0, 'custName', 0)],
+            'SendPayment': [(False, 0, 'sendAcct', 0), (False, 0, 'destAcct', 1), (False, 2, 'sendAcct', 2), (True, 2, 'sendAcct', 2), (True, 2, 'destAcct', 3)],
+            'TransactSavings': [(False, 0, 'custName', 0), (False, 1, 'custName', 1), (True, 1, 'custName', 1)],
+            'WriteCheck': [(False, 0, 'custName', 0), (False, 1, 'custName', 1), (False, 2, 'custName', 2), (True, 2, 'custName', 2)],
         }
 
         self.num_txn_types = len(self.SMALLBANK_TXN_OPS)
@@ -87,8 +89,8 @@ class SmallBankWorkload(Workload):
             op_list = []
             cache = dict()
             for op in self.SMALLBANK_TXN_OPS[v]:
-                val = cache[op[2]] if op[2] in cache else self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]])
-                if op[2] not in cache: cache[op[2]] = val
+                val = cache[op[3]] if op[3] in cache else self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]])
+                if op[3] not in cache: cache[op[3]] = val
                 if op[0]: op_list.append(WriteOperation(txn_id, (op[1], val))) # write operation
                 else: op_list.append(ReadOperation(txn_id, (op[1], val))) # read operation
             txn_arr.append(Transaction(txn_id, op_list))
@@ -110,14 +112,14 @@ class SmallBankWorkload(Workload):
             cache = dict()
             for op in self.SMALLBANK_TXN_OPS[v]:
                 val = None
-                if op[2] in cache:
-                    val = cache[op[2]] # no choice, must take the cache value
+                if op[3] in cache:
+                    val = cache[op[3]] # no choice, must take the cache value
                 elif self.sticky_value is not None and random.random() < p: # for correlatedness
                     val = self.sticky_value
                 else:
                     val = self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]])
                     if self.sticky_value is None: self.sticky_value = val
-                if op[2] not in cache: cache[op[2]] = val
+                if op[3] not in cache: cache[op[3]] = val
                 if op[0]: op_list.append(WriteOperation(txn_id, (op[1], val))) # write operation
                 else: op_list.append(ReadOperation(txn_id, (op[1], val))) # read operation
             txn_arr.append(Transaction(txn_id, op_list))
