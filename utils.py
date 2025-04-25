@@ -1,4 +1,5 @@
 from typing import Union
+from random import randint as randint
 
 class Operation():
     def __init__(self, txn:int, resource:str):
@@ -14,26 +15,27 @@ class Operation():
         return self.resource
 
 class ReadOperation(Operation):
-    def __init__(self, txn:int, resource:Union[str, tuple], is_last:bool=False, is_last_on_resource:bool=False):
+    def __init__(self, txn:int, resource:Union[str, tuple], is_last:bool=False, is_last_on_resource:bool=False, res_rows:dict=None):
         super().__init__(txn, resource)
         self.is_read = True
         self.type = "R"
         self.is_last = is_last
         self.is_last_on_resource = is_last_on_resource
         self.delta_last = -1
+        self.res_rows = res_rows
 
     def __repr__(self):
         return f"Read({self.resource})"
 
 class WriteOperation(Operation):
-    def __init__(self, txn:int, resource:Union[str, tuple], is_last:bool=False, is_last_on_resource:bool=False):
+    def __init__(self, txn:int, resource:Union[str, tuple], is_last:bool=False, is_last_on_resource:bool=False, res_rows:dict=None):
         super().__init__(txn, resource)
         self.is_read = False
         self.type = "W"
         self.is_last = is_last
         self.is_last_on_resource = is_last_on_resource
         self.delta_last = -1
-
+        self.res_rows = res_rows
     def __repr__(self):
         return f"Write({self.resource})"
 
@@ -55,6 +57,15 @@ class Transaction():
 
     def __repr__(self):
         return f"Transaction({self.txn}, {self.operations})"
+
+class InputTyping:
+    def __init__(self, input_type, range_min, range_max):
+        self.input_type = input_type
+        self.range_min = range_min
+        self.range_max = range_max
+    
+    def generate_value(self):
+        return randint(self.range_min, self.range_max)
 
 def conflict(T1:Transaction, T2:Transaction, t:int) -> bool:
     """

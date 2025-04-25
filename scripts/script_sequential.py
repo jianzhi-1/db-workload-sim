@@ -1,9 +1,22 @@
+import argparse
 from Simulator import Simulator
 from Scheduler import SequentialScheduler
-from Workload import SmallBankWorkload
+from Workload import SmallBankWorkload, TPCCWorkload
 
-workload = SmallBankWorkload()
-probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
+parser = argparse.ArgumentParser()
+parser.add_argument("--workload", choices=["smallbank", "tpcc"], default="smallbank", help="Workload type to use")
+args = parser.parse_args()
+
+# Initialize workload based on parameter
+if args.workload == "smallbank":
+    workload = SmallBankWorkload()
+    probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
+    #workload = TPCCWorkload()
+    #probabilities = None
+else:  # tpcc
+    #print("TPCC workload")
+    workload = TPCCWorkload()
+    probabilities = None  # TPCC uses uniform distribution by default
 
 scheduler = SequentialScheduler()
 sim = Simulator(scheduler, [])

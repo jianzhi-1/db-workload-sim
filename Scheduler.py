@@ -130,3 +130,72 @@ class LumpScheduler(Scheduler):
                 res[i] = 1 # schedule it
         self.step += 1
         return res
+
+
+class LumpQueueScheduler(Scheduler):
+    def __init__(self, n_queues:int, hotkeys):
+        self.memory:dict = None
+        self.step = 0
+        self.dont_care = None
+        self.n_queues = n_queues
+        # self.queues = [[]]*n_queues # a queue of transaction ids
+        self.queues = {hotkey: [] for hotkey in hotkeys}
+        self.started = False
+        self.mapper = dict() # maps resource to (queue number, time)
+        self.queue_length_mapper = dict()
+
+    def inject_memory(self, memory:dict, dont_care:int):
+        self.memory = memory
+        self.dont_care = dont_care
+
+    def shave(self) -> list[int]:
+        res = []
+        for hotkey in self.queues.keys():
+            if len(self.queues[hotkey]) == 0: continue
+            res.append(self.queues[hotkey][0])
+            self.queues[hotkey] = self.queues[hotkey][1:] # pop
+        return res
+
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction]) -> list[int]:
+        total_txns = len(TxnPool)
+        assert total_txns > 0, "scheduler fail: total number of transactions is 0"
+        res_lump = [0]*total_txns
+        if not self.started:
+            for i in range(len(TxnPool)):
+
+                # 1. Find the queue with the latest contention, random if no such queue
+                latest_queue, latest_time = None, None
+                for op in TxnPool[i].operations:
+                    if op.resource in self.mapper:
+                        q, t = self.mapper[op.resource]
+                        if latest_queue is None or t > latest_time:
+                            latest_queue, latest_time = q, t
+
+                if latest_queue is None and len(TxnPool[i].hotKeys) == 0: # Not a hot key, lump schedule
+                    txn = TxnPool[i]
+                    if txn.txn not in self.memory: assert False, "transaction not scheduled"
+                    ts = self.memory[txn.txn]
+                    if self.step > ts: assert False, "transaction should have been scheduled earlier"
+                    if self.dont_care is not None and self.dont_care == ts:
+                        res_lump[i] = 2
+                    elif self.step == ts:
+                        res_lump[i] = 1 # schedule it
+
+                else: # hot key, lump schedule
+                    if latest_queue is None:
+                        latest_queue = TxnPool[i].hotkeys[0]
+                    # 2. Assign transaction to that queue
+                    self.queues[latest_queue].append(TxnPool[i].txn)
+
+                    # 3. Update the queue and operations meta
+                    self.queue_length_mapper[latest_queue] = self.queue_length_mapper.get(latest_queue, 0) + len(TxnPool[i].operations)
+                    set_t = self.queue_length_mapper[latest_queue]
+
+                    for op in TxnPool[i].operations:
+                        if op.resource not in self.mapper or (op.resource in self.mapper and self.mapper[op.resource][1] < set_t):
+                            self.mapper[op.resource] = (latest_queue, set_t)
+
+        res_queue = self.shave()
+        self.step += 1
+        res_queue = [1 if t.txn in res_queue else 0 for t in TxnPool]
+        return res_lump + res_queue

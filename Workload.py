@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from utils import Transaction, ReadOperation, WriteOperation
+from utils import Transaction, ReadOperation, WriteOperation, InputTyping
 import random
 from numpy.random import zipf # reduce importing large numpy library
 
@@ -125,11 +125,214 @@ class SmallBankWorkload(Workload):
             txn_arr.append(Transaction(txn_id, op_list))
         return txn_arr
 
-if __name__ == "__main__":
-    workload = SmallBankWorkload()
 
-    probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
-    num_txns = 100
-    random_transactions = workload.generate_random_transactions(num_txns, probabilities)
+class TPCCWorkload(Workload):
+    def __init__(self, correlated:bool=False, corr_params:dict=None) -> None:
+        self.NUM_WAREHOUSES = 10
+        self.NUM_DISTRICTS = 10
+        self.NUM_CUSTOMERS = 3000
+        self.NUM_ORDERS = 3000
+        self.NUM_ITEMS = 100000
+
+        self.TPCC_OPS = {
+            'Delivery': [# loop start 10
+                (False, 'N', False, ('D_ID', 'O_ID', 'W_ID')),
+                (True, 'N', True, ('D_ID', 'O_ID', 'W_ID')),
+                (False, 'O', False, ('D_ID', 'O_ID', 'W_ID')),
+                (True, 'O', True, ('D_ID', 'O_ID', 'W_ID')),
+                (True, 'L', False, ('D_ID', 'O_ID', 'W_ID')),
+                (False, 'L', True, ('D_ID', 'O_ID', 'W_ID')),
+                (True, 'C', True, ('C_ID', 'D_ID', 'W_ID')), # loop end
+            ],
+            'NewOrder': [
+                (False, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
+                (False, 'W', True, ('W_ID',)),
+                (False, 'D', False, ('D_ID', 'W_ID')),
+                (True, 'D', True, ('D_ID', 'W_ID')),
+                (False, 'I', True, ('D_ID', 'I_ID', 'O_ID', 'W_ID')),  # loop start, stmtInsertOOrder
+                (True, 'S', True, ('I_ID', 'W_ID')),  # loop end
+                # Batch updates which insert new rows
+            ],
+            'OrderStatus_ID': [
+                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'), #getCustomerByID
+                (False, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
+                # (Read('O'), 'W_ID', 'D_ID', 'C_ID'),
+                (False, 'O', True, ('C_ID', 'D_ID', 'W_ID')),
+                # (Read('L'), 'O_ID', 'D_ID', 'W_ID'),
+                (False, 'L', True, ('D_ID', 'O_ID', 'W_ID')),
+            ],
+            'OrderStatus_NAME': [
+                # (Read('C'), 'W_ID', 'D_ID', 'LAST'), #getCustomerByName
+                (False, 'C', True, ('D_ID', 'LAST', 'W_ID')),
+                # (Read('O'), 'W_ID', 'D_ID', 'C_ID'),
+                (False, 'O', True, ('C_ID', 'D_ID', 'W_ID')),
+                # (Read('L'), 'O_ID', 'D_ID', 'W_ID'),
+                (False, 'L', True, ('D_ID', 'O_ID', 'W_ID')),
+            ],
+            'Payment1_ID': [
+                # (Write('W'), 'W_ID'),
+                (True, 'W', True, ('W_ID',)),
+                # (Read('W'), 'W_ID'),
+                (False, 'W', True, ('W_ID',)),
+                # (Write('D'), 'W_ID', 'D_ID'),
+                (True, 'D', False, ('D_ID', 'W_ID')),
+                # (Read('D'), 'W_ID', 'D_ID'),
+                (False, 'D', True, ('D_ID', 'W_ID')),
+
+                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'), #getCustomerByID
+                (False, 'C', False, ('C_ID', 'D_ID', 'W_ID')),
+                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'),
+                (False, 'C', False, ('C_ID', 'D_ID', 'W_ID')),
+                # (Write('C'), 'W_ID', 'D_ID', 'C_ID'),
+                (True, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
+            ],
+            'Payment1_NAME': [
+                # (Write('W'), 'W_ID'),
+                (True, 'W', True, ('W_ID',)),
+                # (Read('W'), 'W_ID'),
+                (False, 'W', True, ('W_ID',)),
+                # (Write('D'), 'W_ID', 'D_ID'),
+                (True, 'D', False, ('D_ID', 'W_ID')),
+                # (Read('D'), 'W_ID', 'D_ID'),
+                (False, 'D', True, ('D_ID', 'W_ID')),
+
+                # (Read('C'), 'W_ID', 'D_ID', 'LAST'), #getCustomerByName
+                (False, 'C', True, ('D_ID', 'LAST', 'W_ID')),
+
+                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'),
+                (False, 'C', False, ('C_ID', 'D_ID', 'W_ID')),
+                # (Write('C'), 'W_ID', 'D_ID', 'C_ID'),
+                (True, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
+            ],
+            'Payment2_ID': [
+                # (Write('W'), 'W_ID'),
+                (True, 'W', True, ('W_ID',)),
+                # (Read('W'), 'W_ID'),
+                (False, 'W', True, ('W_ID',)),
+                # (Write('D'), 'W_ID', 'D_ID'),
+                (True, 'D', False, ('D_ID', 'W_ID')),
+                # (Read('D'), 'W_ID', 'D_ID'),
+                (False, 'D', True, ('D_ID', 'W_ID')),
+
+                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'), #getCustomerByID
+                (False, 'C', False, ('C_ID', 'D_ID', 'W_ID')),
+                
+                # (Write('C'), 'W_ID', 'D_ID', 'C_ID'),
+                (True, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
+            ],
+            'Payment2_NAME': [
+                # (Write('W'), 'W_ID'),
+                (True, 'W', True, ('W_ID',)),
+                # (Read('W'), 'W_ID'),
+                (False, 'W', True, ('W_ID',)),
+                # (Write('D'), 'W_ID', 'D_ID'),
+                (True, 'D', False, ('D_ID', 'W_ID')),
+                # (Read('D'), 'W_ID', 'D_ID'),
+                (False, 'D', True, ('D_ID', 'W_ID')),
+
+                # (Read('C'), 'W_ID', 'D_ID', 'LAST'), #getCustomerByName
+                (False, 'C', True, ('D_ID', 'LAST', 'W_ID')),
+
+                # (Write('C'), 'W_ID', 'D_ID', 'C_ID'),
+                (True, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
+
+            ],
+            'StockLevel': [
+                # (Read('D'), 'W_ID', 'D_ID'),
+                (False, 'D', True, ('D_ID', 'W_ID')),
+                # (Read('L'), 'W_ID', 'D_ID', 'O_ID'),
+                (False, 'L', True, ('D_ID', 'O_ID', 'W_ID'))
+            ]
+        }
+
+        self.TPCC_InputTypings = {
+            "C_ID" : InputTyping('int', 1, self.NUM_CUSTOMERS),
+            "D_ID" : InputTyping('int', 1, self.NUM_DISTRICTS),
+            "I_ID" : InputTyping('int', 1, self.NUM_ITEMS),
+            "LAST" : InputTyping('int', 1, self.NUM_CUSTOMERS),
+            "O_ID" : InputTyping('int', 1, self.NUM_ORDERS),
+            "W_ID" : InputTyping('int', 1, self.NUM_WAREHOUSES),
+        }
+
+        self.TPCC_TableMaps = {
+            # C, D, I, L, O, S, W
+            'C': 0, #CUSTOMER
+            'D': 1, #District
+            'I': 2, #Item
+            'L': 3, #ORDERLINE
+            'O': 4, #OPENORDER
+            'S': 5, #Stock
+            'W': 6, #Warehouse
+            'N': 7, #NEWORDER
+        }
+
+        self.num_txn_types = len(self.TPCC_OPS)
+
+        #self.SMALLBANK_HOT_KEYS = [(0,i) for i in range(10)] + [(1, i) for i in range(10)] + [(2, i) for i in range(10)] # ???
+        self.TPCC_HOT_KEYS = [(6,i) for i in range(self.NUM_WAREHOUSES)] + [(1, i) for i in range(self.NUM_DISTRICTS)] 
+
+        self.correlated:bool = correlated
+        self.corr_params:dict = corr_params
+        self.ttl = None # time to next event
+        self.state = 0 # 0: random, 1: correlated
+        self.sticky_value = None # the value that is correlated to during that time interval
+
+    def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None, start=0) -> list[Transaction]:
+        return [self.TPCC_generate_random_transaction(probabilities, start+i) for i in range(num_txns)]
+
+    def TPCC_generate_random_transaction(self,probabilities=None, txn_pool_id=None):
+        txn_ops = self.TPCC_OPS
+        if probabilities is None:
+            probabilities = [1/len(txn_ops)] * len(txn_ops)
+        # txn_type = random.choices(population=list(txn_ops.keys()), weights=probabilities, k=1)[0]
+        num_txn_types = len(txn_ops.keys())
+
+        txn_type_id = random.choices(population=([i for i in range(0, num_txn_types)]), weights=probabilities, k=1)[0]
+        txn_type = list(txn_ops.keys())[txn_type_id]
+
+        ops_unformatted = txn_ops[txn_type]
+        ops = [None]*len(ops_unformatted)
+
+        txn_input_typings = self.TPCC_InputTypings
+        my_inputs = {}
+
+        for key in txn_input_typings.keys():
+            cur_input_typing = txn_input_typings[key]
+            my_inputs[key] = cur_input_typing.generate_value()
+        
+        #print(my_inputs)
+
+        for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
+            # ops[op_idx] = deepcopy(ops_unformatted[op_idx][0])
+            # ops[op_idx].row = my_inputs[ops_unformatted[op_idx][1]]
+            isWrite = ops_unformatted[op_idx][0]
+            table = ops_unformatted[op_idx][1]
+            is_last_on_resource = ops_unformatted[op_idx][2]
+            rows = ops_unformatted[op_idx][3] # where clauses, i.e. ('D_ID', 'O_ID', 'W_ID')
+            is_last = op_idx == len(ops_unformatted) - 1
+
+            res_rows = {}
+            for row in rows:
+                res_rows[row] = my_inputs[row]
+            res =  ','.join(f"{k}:{v}" for k, v in res_rows.items())
+            #print(res)
+            
+            
+            if not isWrite: #read
+                ops[op_idx] = ReadOperation(txn_pool_id, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
+            else: #write
+                ops[op_idx] = WriteOperation(txn_pool_id, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
+
+        txn = Transaction(txn_pool_id, ops)
+        return txn
+
+
+if __name__ == "__main__":
+   #workload = SmallBankWorkload()
+    workload = TPCCWorkload()
+
+    #probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
+    num_txns = 10
+    random_transactions = workload.generate_random_transactions(num_txns, None)
     print(random_transactions)
    

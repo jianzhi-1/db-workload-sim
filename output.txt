@@ -1,0 +1,7 @@
+[
+    {
+        "n_aborts": 0,
+        "n_successes": 10000,
+        "steps": 52399
+    }
+]
