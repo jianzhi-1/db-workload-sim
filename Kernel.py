@@ -11,6 +11,46 @@ class Kernel(ABC):
         # returns: list denoting what time step between 0 to T a transaction should be scheduled at
         ...
 
+class IntegerOptimisationKernelMkII(Kernel):
+    def __init__(self, N):
+        super().__init__(N, 0)
+
+    def run(self, C, debug=False):
+        assert len(C.shape) == 2, "C is just supposed to be a 2D conflict matrix, not considering multiple timesteps"
+        assert C.shape[0] == C.shape[1], "conflict matrix must be a square"
+        
+        import cvxpy as cp
+
+        N = C.shape[0] # convenience
+
+        # 0. Optimisation variables
+        x = cp.Variable(N, boolean=True) # x[i] = 1{transaction i scheduled}
+
+        # 1. Constraints set up
+        # 1a. Basic constraints
+        constraints = [0 <= x, x <= 1] # either schedule or don't schedule
+        if debug: print("basic constraints done")
+
+        # 1b. Conflict constraints
+        for i in range(N):
+            for j in range(i + 1, N):
+                if C[i][j] == 1: # if conflict when scheduled together
+                    constraints.append(x[i] + x[j] <= 1) # x[i] + x[j] <= 1
+        if debug: print("conflict constraints done")
+
+        # 2. Define optimisation problem
+        objective = cp.Maximize(cp.sum(x)) # maximise the number of transactions scheduled
+        prob = cp.Problem(objective, constraints)
+
+        # 3. Solve
+        res = [0]*N # default not scheduled
+        throughput = int(prob.solve(solver=cp.GLPK_MI)) # how many transactions were scheduled
+        
+        for i in range(N):
+            if x.value[i] > 0.5:
+                res[i] = 1 # scheduled
+        return throughput, res
+
 class IntegerOptimisationKernel(Kernel):
     def __init__(self, N, T):
         super().__init__(N, T)
