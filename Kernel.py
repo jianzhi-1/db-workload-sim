@@ -72,7 +72,7 @@ class IntegerOptimisationKernel(Kernel):
 
         # 1b. Conflict constraints
         for i in range(N):
-            for j in range(N):
+            for j in range(i + 1, N, 1):
                 for t in range(-T, T+1, 1):
                     if C[i][j][T + t] == 1:
                         for tt in range(0, T+1, 1):
