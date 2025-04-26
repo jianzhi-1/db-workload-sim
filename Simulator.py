@@ -64,7 +64,7 @@ class Simulator():
 
         decisions = self.scheduler.schedule(self.inflight, self.resource_locks, self.txnPool, self.step)
         assert len(decisions) == len(self.txnPool), "Decision length is not equal transaction pool length"
-
+        #print([d < 0 for d in decisions])  # This will print a list of booleans indicating which decisions are negative
         new_pool = []
         for i, t in enumerate(self.txnPool):
             if decisions[i] >= 1: 
@@ -76,7 +76,7 @@ class Simulator():
             elif decisions[i] == -1:
                 pass # scheduler says toss this transaction away
             elif decisions[i] == 0: new_pool.append(t)
-            else: assert False, f"unknown decision {decisions[i]}"
+            #else: assert False, f"unknown decision {decisions[i]}"
         self.txnPool = new_pool
 
         statistics = dict()

@@ -119,7 +119,9 @@ class SmallBankWorkload(Workload):
                 else:
                     val = self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]])
                     if self.sticky_value is None: self.sticky_value = val
+                
                 if op[3] not in cache: cache[op[3]] = val
+
                 if op[0]: op_list.append(WriteOperation(txn_id, (op[1], val))) # write operation
                 else: op_list.append(ReadOperation(txn_id, (op[1], val))) # read operation
             txn_arr.append(Transaction(txn_id, op_list))
@@ -154,93 +156,52 @@ class TPCCWorkload(Workload):
                 # Batch updates which insert new rows
             ],
             'OrderStatus_ID': [
-                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'), #getCustomerByID
-                (False, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
-                # (Read('O'), 'W_ID', 'D_ID', 'C_ID'),
+                (False, 'C', True, ('C_ID', 'D_ID', 'W_ID')), #getCustomerByID
                 (False, 'O', True, ('C_ID', 'D_ID', 'W_ID')),
-                # (Read('L'), 'O_ID', 'D_ID', 'W_ID'),
                 (False, 'L', True, ('D_ID', 'O_ID', 'W_ID')),
             ],
             'OrderStatus_NAME': [
-                # (Read('C'), 'W_ID', 'D_ID', 'LAST'), #getCustomerByName
-                (False, 'C', True, ('D_ID', 'LAST', 'W_ID')),
-                # (Read('O'), 'W_ID', 'D_ID', 'C_ID'),
+                (False, 'C', True, ('D_ID', 'LAST', 'W_ID')), #getCustomerByName
                 (False, 'O', True, ('C_ID', 'D_ID', 'W_ID')),
-                # (Read('L'), 'O_ID', 'D_ID', 'W_ID'),
                 (False, 'L', True, ('D_ID', 'O_ID', 'W_ID')),
             ],
             'Payment1_ID': [
-                # (Write('W'), 'W_ID'),
                 (True, 'W', True, ('W_ID',)),
-                # (Read('W'), 'W_ID'),
                 (False, 'W', True, ('W_ID',)),
-                # (Write('D'), 'W_ID', 'D_ID'),
                 (True, 'D', False, ('D_ID', 'W_ID')),
-                # (Read('D'), 'W_ID', 'D_ID'),
                 (False, 'D', True, ('D_ID', 'W_ID')),
-
-                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'), #getCustomerByID
                 (False, 'C', False, ('C_ID', 'D_ID', 'W_ID')),
-                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'),
                 (False, 'C', False, ('C_ID', 'D_ID', 'W_ID')),
-                # (Write('C'), 'W_ID', 'D_ID', 'C_ID'),
                 (True, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
             ],
             'Payment1_NAME': [
-                # (Write('W'), 'W_ID'),
                 (True, 'W', True, ('W_ID',)),
-                # (Read('W'), 'W_ID'),
                 (False, 'W', True, ('W_ID',)),
-                # (Write('D'), 'W_ID', 'D_ID'),
                 (True, 'D', False, ('D_ID', 'W_ID')),
-                # (Read('D'), 'W_ID', 'D_ID'),
                 (False, 'D', True, ('D_ID', 'W_ID')),
-
-                # (Read('C'), 'W_ID', 'D_ID', 'LAST'), #getCustomerByName
                 (False, 'C', True, ('D_ID', 'LAST', 'W_ID')),
-
-                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'),
                 (False, 'C', False, ('C_ID', 'D_ID', 'W_ID')),
-                # (Write('C'), 'W_ID', 'D_ID', 'C_ID'),
                 (True, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
             ],
             'Payment2_ID': [
-                # (Write('W'), 'W_ID'),
                 (True, 'W', True, ('W_ID',)),
-                # (Read('W'), 'W_ID'),
                 (False, 'W', True, ('W_ID',)),
-                # (Write('D'), 'W_ID', 'D_ID'),
                 (True, 'D', False, ('D_ID', 'W_ID')),
-                # (Read('D'), 'W_ID', 'D_ID'),
                 (False, 'D', True, ('D_ID', 'W_ID')),
-
-                # (Read('C'), 'W_ID', 'D_ID', 'C_ID'), #getCustomerByID
                 (False, 'C', False, ('C_ID', 'D_ID', 'W_ID')),
-                
-                # (Write('C'), 'W_ID', 'D_ID', 'C_ID'),
                 (True, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
             ],
             'Payment2_NAME': [
-                # (Write('W'), 'W_ID'),
                 (True, 'W', True, ('W_ID',)),
-                # (Read('W'), 'W_ID'),
                 (False, 'W', True, ('W_ID',)),
-                # (Write('D'), 'W_ID', 'D_ID'),
                 (True, 'D', False, ('D_ID', 'W_ID')),
-                # (Read('D'), 'W_ID', 'D_ID'),
                 (False, 'D', True, ('D_ID', 'W_ID')),
-
-                # (Read('C'), 'W_ID', 'D_ID', 'LAST'), #getCustomerByName
-                (False, 'C', True, ('D_ID', 'LAST', 'W_ID')),
-
-                # (Write('C'), 'W_ID', 'D_ID', 'C_ID'),
+                (False, 'C', True, ('D_ID', 'LAST', 'W_ID')), #getCustomerByN
                 (True, 'C', True, ('C_ID', 'D_ID', 'W_ID')),
 
             ],
             'StockLevel': [
-                # (Read('D'), 'W_ID', 'D_ID'),
                 (False, 'D', True, ('D_ID', 'W_ID')),
-                # (Read('L'), 'W_ID', 'D_ID', 'O_ID'),
                 (False, 'L', True, ('D_ID', 'O_ID', 'W_ID'))
             ]
         }
@@ -276,15 +237,34 @@ class TPCCWorkload(Workload):
         self.ttl = None # time to next event
         self.state = 0 # 0: random, 1: correlated
         self.sticky_value = None # the value that is correlated to during that time interval
+    
+    def generate_transactions(self, num_txns:int, probabilities:list[float]=None, start=0) -> list[Transaction]:
+        if not self.correlated: return self.generate_random_transactions(num_txns, probabilities=probabilities, start=start)
+        else:
+            import numpy as np
+            res = None
+            if self.ttl is None or (self.ttl == 0 and self.state == 1) or (self.ttl > 0 and self.state == 0):
+                self.state = 0
+                if self.ttl is None or self.ttl == 0: self.ttl = max(1, int(np.random.exponential(scale=self.corr_params["normal_scale"], size=None)))
+                res = self.generate_random_transactions(num_txns, probabilities=probabilities, start=start)
+            elif (self.ttl == 0 and self.state == 0) or (self.ttl > 0 and self.state == 1):
+                self.state = 1
+                if self.ttl == 0: 
+                    self.ttl = max(1, int(np.random.exponential(scale=self.corr_params["event_scale"], size=None)))
+                    self.sticky_value = None
+                res = self.generate_correlated_transactions(num_txns, probabilities=probabilities, start=start, p=self.corr_params["correlation_factor"])
+            else:
+                assert False, "unreachable code"
+            self.ttl -= 1
+            return res
+        
+    #def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None, start=0) -> list[Transaction]:
+        #return [self.TPCC_generate_random_transaction(probabilities, start+i) for i in range(num_txns)]
 
-    def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None, start=0) -> list[Transaction]:
-        return [self.TPCC_generate_random_transaction(probabilities, start+i) for i in range(num_txns)]
-
-    def TPCC_generate_random_transaction(self,probabilities=None, txn_pool_id=None):
+    def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None, start:int=0):
         txn_ops = self.TPCC_OPS
         if probabilities is None:
             probabilities = [1/len(txn_ops)] * len(txn_ops)
-        # txn_type = random.choices(population=list(txn_ops.keys()), weights=probabilities, k=1)[0]
         num_txn_types = len(txn_ops.keys())
 
         txn_type_id = random.choices(population=([i for i in range(0, num_txn_types)]), weights=probabilities, k=1)[0]
@@ -292,39 +272,80 @@ class TPCCWorkload(Workload):
 
         ops_unformatted = txn_ops[txn_type]
         ops = [None]*len(ops_unformatted)
-
         txn_input_typings = self.TPCC_InputTypings
-        my_inputs = {}
+        txn_arr = []
+        for i in range(num_txns):
+            my_inputs = {}
 
+            for key in txn_input_typings.keys():
+                cur_input_typing = txn_input_typings[key]
+                my_inputs[key] = cur_input_typing.generate_value()
+
+            for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
+                isWrite, table, is_last_on_resource, rows = ops_unformatted[op_idx]
+                is_last = op_idx == len(ops_unformatted) - 1
+
+                res_rows = {}
+                for row in rows:
+                    res_rows[row] = my_inputs[row]
+                res =  ','.join(f"{k}:{v}" for k, v in res_rows.items())
+
+                if not isWrite: #read
+                    ops[op_idx] = ReadOperation(start+i, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
+                else: #write
+                    ops[op_idx] = WriteOperation(start+i, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
+
+            txn = Transaction(start+i, ops)
+            txn_arr.append(txn)
+        return txn_arr
+    
+    def generate_correlated_transactions(self, num_txns:int, probabilities:list[float]=None, start:int=0, p:float=0.1):
+        txn_ops = self.TPCC_OPS
+        if probabilities is None:
+            probabilities = [1/len(txn_ops)] * len(txn_ops)
+        num_txn_types = len(txn_ops.keys())
+
+        txn_type_id = random.choices(population=([i for i in range(0, num_txn_types)]), weights=probabilities, k=1)[0]
+        txn_type = list(txn_ops.keys())[txn_type_id]
+
+        ops_unformatted = txn_ops[txn_type]
+        ops = [None]*len(ops_unformatted)
+        txn_input_typings = self.TPCC_InputTypings
+        txn_arr = []
+
+        #sticky values
+        sticky_inputs = {}
         for key in txn_input_typings.keys():
             cur_input_typing = txn_input_typings[key]
-            my_inputs[key] = cur_input_typing.generate_value()
-        
-        #print(my_inputs)
+            sticky_inputs[key] = cur_input_typing.generate_value()
 
-        for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
-            # ops[op_idx] = deepcopy(ops_unformatted[op_idx][0])
-            # ops[op_idx].row = my_inputs[ops_unformatted[op_idx][1]]
-            isWrite = ops_unformatted[op_idx][0]
-            table = ops_unformatted[op_idx][1]
-            is_last_on_resource = ops_unformatted[op_idx][2]
-            rows = ops_unformatted[op_idx][3] # where clauses, i.e. ('D_ID', 'O_ID', 'W_ID')
-            is_last = op_idx == len(ops_unformatted) - 1
+        for i in range(num_txns):
+            my_inputs = {}
 
-            res_rows = {}
-            for row in rows:
-                res_rows[row] = my_inputs[row]
-            res =  ','.join(f"{k}:{v}" for k, v in res_rows.items())
-            #print(res)
-            
-            
-            if not isWrite: #read
-                ops[op_idx] = ReadOperation(txn_pool_id, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
-            else: #write
-                ops[op_idx] = WriteOperation(txn_pool_id, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
+            for key in txn_input_typings.keys():
+                cur_input_typing = txn_input_typings[key]
+                if random.random() < p:
+                    my_inputs[key] = sticky_inputs[key]
+                else:
+                    my_inputs[key] = cur_input_typing.generate_value()
 
-        txn = Transaction(txn_pool_id, ops)
-        return txn
+            for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
+                isWrite, table, is_last_on_resource, rows = ops_unformatted[op_idx]
+                is_last = op_idx == len(ops_unformatted) - 1
+
+                res_rows = {}
+                for row in rows:
+                    res_rows[row] = my_inputs[row]
+                res =  ','.join(f"{k}:{v}" for k, v in res_rows.items())
+
+                if not isWrite: #read
+                    ops[op_idx] = ReadOperation(start+i, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
+                else: #write
+                    ops[op_idx] = WriteOperation(start+i, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
+
+            txn = Transaction(start+i, ops)
+            txn_arr.append(txn)
+        return txn_arr
 
 
 if __name__ == "__main__":

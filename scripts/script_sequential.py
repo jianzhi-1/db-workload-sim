@@ -11,12 +11,9 @@ args = parser.parse_args()
 if args.workload == "smallbank":
     workload = SmallBankWorkload()
     probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
-    #workload = TPCCWorkload()
-    #probabilities = None
 else:  # tpcc
-    #print("TPCC workload")
     workload = TPCCWorkload()
-    probabilities = None  # TPCC uses uniform distribution by default
+    probabilities = [43,41,3,1,3,1,3,1,4]  # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_tpcc_config.xml
 
 scheduler = SequentialScheduler()
 sim = Simulator(scheduler, [])

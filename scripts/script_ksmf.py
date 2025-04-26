@@ -13,7 +13,7 @@ if args.workload == "smallbank":
     probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
 else:  # tpcc
     workload = TPCCWorkload()
-    probabilities = None  # TPCC uses uniform distribution by default
+    probabilities = [43,41,3,1,3,1,3,1,4]  # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_tpcc_config.xml
 
 scheduler = KSMFScheduler(k=5)
 sim = Simulator(scheduler, [])

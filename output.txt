@@ -1,7 +1,7 @@
 [
     {
         "n_aborts": 0,
-        "n_successes": 10000,
-        "steps": 52399
+        "n_successes": 91416,
+        "steps": 11002
     }
 ]
