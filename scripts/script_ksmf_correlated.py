@@ -14,16 +14,21 @@ scheduler = KSMFScheduler(k=5)
 sim = Simulator(scheduler, [])
 
 T = 100
+filename = "ksmf_correlated.txt"
 
 for t in range(T):
     num_txns = 1000
     random_transactions = workload.generate_transactions(num_txns, probabilities, start=t*num_txns)
     sim.add_transactions(random_transactions)
     sim.sim()
+    with open(filename, "a") as f:
+        f.write(str(sim.print_statistics()) + "\n")
 
 # clean up the remaining
 while not sim.done():
     sim.sim()
+    with open(filename, "a") as f:
+        f.write(str(sim.print_statistics()) + "\n")
 
 sim.print_statistics()
 

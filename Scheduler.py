@@ -60,11 +60,15 @@ class KSMFScheduler(Scheduler): # https://www.vldb.org/pvldb/vol17/p2694-cheng.p
             
         return res
 
+class KSMFExpScheduler(Scheduler):
+    # KSMF, but keeps an ewma bit per resource. If too high, prioritise scheduling that resource instead of makespan
+    pass
+
 class QueueBasedScheduler(Scheduler):
 
     def __init__(self, n_queues:int):
         self.n_queues = n_queues
-        self.queues = [[]]*n_queues # a queue of transaction ids
+        self.queues = [[] for _ in range(n_queues)] # a queue of transaction ids
         self.started = False
         self.mapper = dict() # maps resource to (queue number, time)
         self.queue_length_mapper = dict()
@@ -105,6 +109,48 @@ class QueueBasedScheduler(Scheduler):
         
         res = self.shave()
         return [1 if t.txn in res else 0 for t in TxnPool]
+
+class QueueKernelScheduler(Scheduler):
+    def __init__(self, n_queues:int, kernel):
+        self.n_queues = n_queues
+        self.queues:list[list[Transaction]] = [[] for _ in range(n_queues)] # a queue of transaction ids
+        self.kernel = kernel
+        self.seen = set()
+        self.locker = Locker()
+
+    def assign_to_queue(self, txn:Transaction):
+        queue_num = txn.operations[0].resource[1] % self.n_queues # currently, just hash the row id of the first operation
+        self.queues[queue_num].append(txn)
+
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
+        total_txns = len(TxnPool)
+        res = [0]*total_txns
+        mapper = dict() # maps transaction ID to index in the queue, so that return array is matched up
+
+        # 1. Schedule new transactions
+        for i, txn in enumerate(TxnPool):
+            if txn.txn not in self.seen:
+                self.assign_to_queue(txn)
+                self.seen.add(txn.txn)
+            mapper[txn.txn] = i
+        #print(mapper)
+        #print([len(q) for q in self.queues])
+
+        # 2. Process kernels
+        for i in range(self.n_queues):
+            if len(self.queues[i]) == 0: continue
+            kernel_res, remnant = self.kernel(self.queues[i], self.locker, curstep) # must pass in locker to filter those that can't be scheduled at the current time step
+            # how many did the kernel look at, result for those looked at, remaining unprocessed
+            self.queues[i] = remnant # update queue
+            for x, t in kernel_res: 
+                res[mapper[x]] = t
+            
+        return res
+
+class IntegerOptScheduler(Scheduler):
+    # at each time step, schedule as much as possible, the rest are deferred to the next
+    # maintains a state of resources used in Locker. If cannot schedule, then don't
+    pass
 
 class LumpScheduler(Scheduler):
     def __init__(self):

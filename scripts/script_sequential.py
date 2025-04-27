@@ -11,7 +11,7 @@ sim = Simulator(scheduler, [])
 T = 100
 
 for t in range(T):
-    num_txns = 100
+    num_txns = 1000
     random_transactions = workload.generate_random_transactions(num_txns, probabilities)
     sim.add_transactions(random_transactions)
     sim.sim()

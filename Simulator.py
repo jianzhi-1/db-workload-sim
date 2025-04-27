@@ -3,6 +3,9 @@ from Scheduler import Scheduler
 from utils import Transaction, Operation, ReadOperation, WriteOperation
 from Locker import Locker
 
+DELTA = 10000000 # must be greater than total number of transactions
+# determines how much to increment transaction number on reschedule
+
 def clone_operation_list(ls:list[Operation]):
     return [ReadOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource) if x.is_read else WriteOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource) for x in ls]
 
@@ -30,6 +33,7 @@ class Simulator():
         self.scheduled_txn = []
         self.scheduled_time = dict()
         self.step = 0
+        self.memo = dict()
         self.clear()
 
     def clear(self):
@@ -52,14 +56,15 @@ class Simulator():
         # add more transactions to transaction pool, for possibly online use cases
         self.txnPool.extend(more_txns)
 
-    def sim(self, freeze=False) -> dict:
+    def sim(self, freeze:bool=False, retryOnAbort:bool=False) -> dict:
         while len(self.scheduled_txn) > 0 and self.scheduled_txn[0].priority <= self.step:
             if self.scheduled_txn[0].priority < self.step: assert False, "transaction should be scheduled earlier"
             p = heapq.heappop(self.scheduled_txn)
             self.inflight[p.txn.txn] = p.txn.operations
+            self.memo[p.txn.txn] = p.txn
 
         if len(self.txnPool) == 0: # no more transactions to be scheduled
-            self.tick()
+            self.tick(retryOnAbort=retryOnAbort)
             return self.statistics
 
         decisions = self.scheduler.schedule(self.inflight, self.resource_locks, self.txnPool, self.step)
@@ -71,6 +76,7 @@ class Simulator():
                 self.scheduled_time[t.txn] = self.step + decisions[i] - 1
                 if decisions[i] == 1:
                     self.inflight[t.txn] = t.operations
+                    self.memo[t.txn] = t
                 else:
                     heapq.heappush(self.scheduled_txn, Pair(self.scheduled_time[t.txn], t))
             elif decisions[i] == -1:
@@ -82,7 +88,7 @@ class Simulator():
         statistics = dict()
 
         if freeze: statistics |= self.sim_frozen()
-        self.tick() # tick one step
+        self.tick(retryOnAbort=retryOnAbort) # tick one step
 
         return (self.statistics | statistics) if freeze else self.statistics
 
@@ -126,7 +132,7 @@ class Simulator():
 
         return statistics
 
-    def tick(self) -> dict:
+    def tick(self, retryOnAbort:bool=False) -> dict:
 
         inflight_keyset = list(self.inflight.keys())
         
@@ -139,6 +145,11 @@ class Simulator():
                 self.statistics["n_aborts"] += 1
                 self.resource_locks.remove_all(op.txn)
                 self.inflight[txn] = []
+                if retryOnAbort: 
+                    new_txn = self.memo[txn]
+                    # print(f"Rescheduled: {new_txn.txn} -> {new_txn.txn+DELTA}: {new_txn}")
+                    new_txn.txn += DELTA
+                    self.txnPool.append(new_txn)
             else: # success
                 self.inflight[txn] = self.inflight[txn][1:] # pop the first operations
                 if op.is_last_on_resource:
@@ -148,6 +159,7 @@ class Simulator():
                     self.result_statistics[txn] = 1
                     self.resource_locks.remove_all(op.txn) # not necessary, but for peace of mind
                     self.statistics["n_successes"] += 1
+                    del self.memo[txn] # no need to remember the original transaction anymore
 
             if len(self.inflight[txn]) == 0:
                 del self.inflight[txn]
@@ -158,6 +170,10 @@ class Simulator():
     def done(self) -> bool:
         return len(self.inflight) == 0 and len(self.txnPool) == 0 and len(self.scheduled_txn) == 0
     
-    def print_statistics(self) -> None:
+    def print_statistics(self) -> dict:
         print(self.statistics)
+        return self.statistics
+
+    def online_stats(self):
+        return self.step, len(self.inflight) + len(self.txnPool) + len(self.scheduled_txn)
 
