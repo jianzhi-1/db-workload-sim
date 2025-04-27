@@ -2,12 +2,10 @@ import heapq
 from Scheduler import Scheduler
 from utils import Transaction, Operation, ReadOperation, WriteOperation
 from Locker import Locker
+from utils import clone_transaction, clone_operation_list
 
 DELTA = 10000000 # must be greater than total number of transactions
 # determines how much to increment transaction number on reschedule
-
-def clone_operation_list(ls:list[Operation]):
-    return [ReadOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource) if x.is_read else WriteOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource) for x in ls]
 
 class Pair():
     def __init__(self, priority:int, txn:Transaction):
@@ -54,14 +52,14 @@ class Simulator():
 
     def add_transactions(self, more_txns:list[Transaction]):
         # add more transactions to transaction pool, for possibly online use cases
-        self.txnPool.extend(more_txns)
+        self.txnPool.extend([clone_transaction(txn) for txn in more_txns]) # clone just to be safe
 
     def sim(self, freeze:bool=False, retryOnAbort:bool=False) -> dict:
         while len(self.scheduled_txn) > 0 and self.scheduled_txn[0].priority <= self.step:
             if self.scheduled_txn[0].priority < self.step: assert False, "transaction should be scheduled earlier"
             p = heapq.heappop(self.scheduled_txn)
             self.inflight[p.txn.txn] = p.txn.operations
-            self.memo[p.txn.txn] = p.txn
+            self.memo[p.txn.txn] = clone_transaction(p.txn) # clone just in case need to reschedule
 
         if len(self.txnPool) == 0: # no more transactions to be scheduled
             self.tick(retryOnAbort=retryOnAbort)
@@ -76,7 +74,7 @@ class Simulator():
                 self.scheduled_time[t.txn] = self.step + decisions[i] - 1
                 if decisions[i] == 1:
                     self.inflight[t.txn] = t.operations
-                    self.memo[t.txn] = t
+                    self.memo[t.txn] = clone_transaction(t)
                 else:
                     heapq.heappush(self.scheduled_txn, Pair(self.scheduled_time[t.txn], t))
             elif decisions[i] == -1:
@@ -149,7 +147,7 @@ class Simulator():
                     new_txn = self.memo[txn]
                     # print(f"Rescheduled: {new_txn.txn} -> {new_txn.txn+DELTA}: {new_txn}")
                     new_txn.txn += DELTA
-                    self.txnPool.append(new_txn)
+                    self.txnPool.append(clone_transaction(new_txn))
             else: # success
                 self.inflight[txn] = self.inflight[txn][1:] # pop the first operations
                 if op.is_last_on_resource:

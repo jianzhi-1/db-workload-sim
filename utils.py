@@ -56,6 +56,12 @@ class Transaction():
     def __repr__(self):
         return f"Transaction({self.txn}, {self.operations})"
 
+def clone_operation_list(ls:list[Operation]):
+    return [ReadOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource) if x.is_read else WriteOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource) for x in ls]
+
+def clone_transaction(T:Transaction) -> Transaction:
+    return Transaction(T.txn, clone_operation_list(T.operations), txn_type=T.txn_type)
+
 def conflict(T1:Transaction, T2:Transaction, t:int) -> bool:
     """
     Given two transactions T1 and T2 with T2 being t time steps after T1,
