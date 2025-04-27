@@ -49,7 +49,7 @@ class KSMFScheduler(Scheduler): # https://www.vldb.org/pvldb/vol17/p2694-cheng.p
                     dispatch = ex - i # when the initial operator should be
                     complete = dispatch + l - 1 # when the entire operation is done
                     if latest_complete is None or complete > latest_complete:
-                        latest_complete, latest_dispatch = complete, dispatch
+                        latest_complete, latest_dispatch = complete, max(curstep, dispatch) # cannot dispatch later than curstep
                 latest_complete = max(latest_complete - curstep, 0)
                 if shortest_makespan is None or shortest_makespan > latest_complete:
                     shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = latest_complete, txnPoolClone[idx][0], idx, latest_dispatch
