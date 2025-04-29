@@ -109,6 +109,7 @@ class KSMFOracle2PhaseDontCareScheduler(Scheduler):
     def __init__(self, k=5):
         self.k = k # how many transactions to sample
         self.locker = Locker()
+        self.corr_locker = Locker()
         self.corr_resource_list = None
         self.prev = False
 
@@ -134,11 +135,12 @@ class KSMFOracle2PhaseDontCareScheduler(Scheduler):
             if isCorr: firstPhase.append((idx, txn))
             else: secondPhase.append((idx, txn))
 
-        firstPhase_smf = None
         firstPhaseLenMemo = len(firstPhase)
 
         while len(firstPhase) >= 1:
-            if self.prev == False: self.locker = Locker() # restart, don't care if got collision
+            if self.prev == False: 
+                self.locker = Locker(ref=self.corr_locker) # restart, don't care about non-correlated entries if got collision
+
             self.prev = True
 
             idx_list = random.sample(range(len(firstPhase)), min(self.k, len(firstPhase)))
@@ -159,10 +161,10 @@ class KSMFOracle2PhaseDontCareScheduler(Scheduler):
                 latest_complete = max(latest_complete - curstep, 0)
                 if shortest_makespan is None or shortest_makespan > latest_complete:
                     shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = latest_complete, firstPhase[idx][0], idx, latest_dispatch
-            firstPhase_smf = shortest_makespan
             res[global_id_smf] = smf_dispatch_time - curstep + 1
             for i, op in enumerate(firstPhase[local_id_smf][1].operations):
                 self.locker.update(op.resource, op.type, smf_dispatch_time + i)
+                self.corr_locker.update(op.resource, op.type, smf_dispatch_time + i)
             firstPhase.pop(local_id_smf)
 
         if firstPhaseLenMemo == 0:

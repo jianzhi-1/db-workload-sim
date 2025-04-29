@@ -33,6 +33,7 @@ class Simulator():
         self.step = 0
         self.memo = dict()
         self.clear()
+        self.flushPool = [] # flush for Oracle
 
     def clear(self):
         self.resource_locks = Locker()
@@ -54,6 +55,15 @@ class Simulator():
         # add more transactions to transaction pool, for possibly online use cases
         self.txnPool.extend([clone_transaction(txn) for txn in more_txns]) # clone just to be safe
 
+    def flush(self):
+        # flush all scheduled transaction back into transaction pool
+        self.flushPool = []
+        while len(self.scheduled_txn) > 0:
+            p = heapq.heappop(self.scheduled_txn)
+            new_txn = clone_transaction(p.txn)
+            new_txn.txn += DELTA
+            self.flushPool.append(new_txn)
+
     def sim(self, freeze:bool=False, retryOnAbort:bool=False) -> dict:
         while len(self.scheduled_txn) > 0 and self.scheduled_txn[0].priority <= self.step:
             if self.scheduled_txn[0].priority < self.step: assert False, "transaction should be scheduled earlier"
@@ -65,7 +75,7 @@ class Simulator():
             self.tick(retryOnAbort=retryOnAbort)
             return self.statistics
 
-        decisions = self.scheduler.schedule(self.inflight, self.resource_locks, self.txnPool, self.step)
+        decisions = self.scheduler.schedule(self.inflight, self, self.txnPool, self.step) # pass self for flush()
         assert len(decisions) == len(self.txnPool), "Decision length is not equal transaction pool length"
 
         new_pool = []
@@ -81,7 +91,8 @@ class Simulator():
                 pass # scheduler says toss this transaction away
             elif decisions[i] == 0: new_pool.append(t)
             else: assert False, f"unknown decision {decisions[i]}"
-        self.txnPool = new_pool
+        self.txnPool = new_pool + self.flushPool
+        self.flushPool = []
 
         statistics = dict()
 

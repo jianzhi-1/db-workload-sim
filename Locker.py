@@ -12,10 +12,14 @@ class Locker():
         else:
             # deepclone
             self.master_table = dict()
-            for resource in ref:
+            for resource in ref.master_table:
                 self.master_table[resource] = dict()
-                for txn in ref[resource]:
+                for txn in ref.master_table[resource]:
                     self.master_table[resource][txn] = ref[resource][txn]
+            for resource in ref.probe_table:
+                self.probe_table[resource] = dict()
+                for type in ref.probe_table[resource]:
+                    self.probe_table[resource][type] = ref.probe_table[resource][type]
 
     def probe(self, resource, typ:str) -> int:
         # returns the latest timestep in which a resource is used
