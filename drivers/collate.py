@@ -1,24 +1,20 @@
 import os
 import argparse
-import json
+import sys
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("script", type=str)
     parser.add_argument("num_trials", type=int)
-    parser.add_argument("--output", default="output.txt")
+    parser.add_argument("filename", type=str)
     args = parser.parse_args()
-
-    res = []
 
     for i in range(args.num_trials):
         print(f"=== trial {i} ===")
-        stream = os.popen(f"python3 -m scripts.{args.script}")
-        output = stream.read()
-        res.append(eval(output))
-    
-    with open(args.output, "w") as f:
-        json.dump(res, f, indent=4)
+        try:
+            os.system(f"python3 -m scripts.{args.script} >> {args.filename}")
+        except KeyboardInterrupt:
+            sys.exit(1)
     print("Done!")
 
 if __name__ == "__main__":
