@@ -50,6 +50,11 @@ class SmallBankWorkload(Workload):
         self.state = 0 # 0: random, 1: correlated
         self.sticky_value = None # the value that is correlated to during that time interval
 
+    def get_sticky_list(self) -> list:
+        if self.state == 0: return None
+        if self.sticky_value is None: return None
+        return [(i, self.sticky_value) for i in range(3)]
+
     def gen(self, typ:str) -> int:
         if typ in ["long", "string"]: return draw_zipf_with_max(1.01, self.NUM_ACCOUNTS)
         elif typ in "double": return random.randint(0, 100)
