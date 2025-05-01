@@ -1,5 +1,5 @@
 from Simulator import Simulator
-from Scheduler import Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler
+from Scheduler import Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, SequentialScheduler, QueueBasedScheduler
 from Workload import SmallBankWorkload
 from KernelWrapper import KernelWrapper
 from Kernel import IntegerOptimisationKernelMkII
@@ -10,11 +10,11 @@ probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db
 
 workload_arr = []
 T = 100
-n_queues = 50
-max_n_kernel = 50
-filename = "arena.txt"
+n_queues = 10
+max_n_kernel = 10
+filename = "arena_final_again_fixed_conflict.txt"
 for t in range(T):
-    num_txns = 10
+    num_txns = 1000
     random_transactions = workload.generate_transactions(num_txns, probabilities, start=t*num_txns)
     workload_arr.append([clone_transaction(txn) for txn in random_transactions])
 
@@ -29,8 +29,9 @@ contestants:list[Contestant] = []
 contestants.extend(
     [
         Contestant("int-opt-k=10", QueueKernelScheduler(n_queues=n_queues, kernel=KernelWrapper(IntegerOptimisationKernelMkII(max_n_kernel)))),
-        Contestant("k-smf", scheduler = KSMFScheduler(k=10)),
-        Contestant("queue-k-smf", scheduler = QueueScheduler(n_queues, KSMFScheduler, k=10))
+        Contestant("k-smf", scheduler = KSMFScheduler(k=100)),
+        #Contestant("queue-k-smf", scheduler = QueueScheduler(n_queues, KSMFScheduler, k=10)),
+        #Contestant("queue-based", scheduler = QueueBasedScheduler(n_queues=n_queues))
     ]
 )
 
@@ -41,7 +42,7 @@ for t in range(T):
     for contestant in contestants:
         contestant.sim.add_transactions(workload_arr[t])
         contestant.sim.sim(retryOnAbort=True)
-        print(contestant.sim.online_stats())
+        #print(contestant.sim.online_stats())
         d = contestant.sim.print_statistics()
         d["name"] = contestant.name
         curdone = curdone and contestant.sim.done()
@@ -53,8 +54,9 @@ for t in range(T):
 while not done:
     curdone = True
     for contestant in contestants:
+        if contestant.sim.done(): continue
         contestant.sim.sim(retryOnAbort=True)
-        print(contestant.sim.online_stats())
+        #print(contestant.sim.online_stats())
         d = contestant.sim.print_statistics()
         d["name"] = contestant.name
         curdone = curdone and contestant.sim.done()
