@@ -1,4 +1,15 @@
 from typing import Union
+from random import randint as randint # TPCC
+
+# TPCC
+class InputTyping:
+     def __init__(self, input_type, range_min, range_max):
+         self.input_type = input_type
+         self.range_min = range_min
+         self.range_max = range_max
+     
+     def generate_value(self):
+         return randint(self.range_min, self.range_max)
 
 class Operation():
     def __init__(self, txn:int, resource:str):
@@ -14,25 +25,27 @@ class Operation():
         return self.resource
 
 class ReadOperation(Operation):
-    def __init__(self, txn:int, resource:Union[str, tuple], is_last:bool=False, is_last_on_resource:bool=False):
+    def __init__(self, txn:int, resource:Union[str, tuple], is_last:bool=False, is_last_on_resource:bool=False, res_rows:dict=None):
         super().__init__(txn, resource)
         self.is_read = True
         self.type = "R"
         self.is_last = is_last
         self.is_last_on_resource = is_last_on_resource
         self.delta_last = -1
+        self.res_rows = res_rows # TPCC
 
     def __repr__(self):
         return f"Read({self.resource})"
 
 class WriteOperation(Operation):
-    def __init__(self, txn:int, resource:Union[str, tuple], is_last:bool=False, is_last_on_resource:bool=False):
+    def __init__(self, txn:int, resource:Union[str, tuple], is_last:bool=False, is_last_on_resource:bool=False, res_rows:dict=None):
         super().__init__(txn, resource)
         self.is_read = False
         self.type = "W"
         self.is_last = is_last
         self.is_last_on_resource = is_last_on_resource
         self.delta_last = -1
+        self.res_rows = res_rows # TPCC
 
     def __repr__(self):
         return f"Write({self.resource})"
@@ -57,7 +70,7 @@ class Transaction():
         return f"Transaction({self.txn}, {self.operations})"
 
 def clone_operation_list(ls:list[Operation]):
-    return [ReadOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource) if x.is_read else WriteOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource) for x in ls]
+    return [ReadOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource, x.res_rows) if x.is_read else WriteOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource, x.res_rows) for x in ls]
 
 def clone_transaction(T:Transaction) -> Transaction:
     return Transaction(T.txn, clone_operation_list(T.operations), txn_type=T.txn_type)
