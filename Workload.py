@@ -139,7 +139,8 @@ class TPCCWorkload(Workload):
         self.NUM_ITEMS = 100000
 
         self.TPCC_OPS = {
-            'Delivery': [# loop start 10
+            'Delivery': [# loop start 10 
+                #(isWrite, table, is_last_on_resource, where clauses)
                 (False, 'N', False, ('D_ID', 'O_ID', 'W_ID')),
                 (True, 'N', True, ('D_ID', 'O_ID', 'W_ID')),
                 (False, 'O', False, ('D_ID', 'O_ID', 'W_ID')),
@@ -209,10 +210,10 @@ class TPCCWorkload(Workload):
         }
 
         self.TPCC_InputTypings = {
-            "C_ID" : InputTyping('int', 1, self.NUM_CUSTOMERS),
+            "C_ID" : InputTyping('C_ID', 1, self.NUM_CUSTOMERS, random.randint(0, 1023)),
             "D_ID" : InputTyping('int', 1, self.NUM_DISTRICTS),
-            "I_ID" : InputTyping('int', 1, self.NUM_ITEMS),
-            "LAST" : InputTyping('int', 1, self.NUM_CUSTOMERS),
+            "I_ID" : InputTyping('I_ID', 1, self.NUM_ITEMS, random.randint(0, 8191)),
+            "LAST" : InputTyping('LAST', 0, 999, random.randint(0, 255)),
             "O_ID" : InputTyping('int', 1, self.NUM_ORDERS),
             "W_ID" : InputTyping('int', 1, self.NUM_WAREHOUSES),
         }
@@ -268,6 +269,7 @@ class TPCCWorkload(Workload):
         if probabilities is None:
             probabilities = [1/len(txn_ops)] * len(txn_ops)
         num_txn_types = len(txn_ops.keys())
+        txn_input_typings = self.TPCC_InputTypings
 
         txn_arr = []
         for i in range(num_txns):
@@ -275,30 +277,32 @@ class TPCCWorkload(Workload):
             txn_type = list(txn_ops.keys())[txn_type_id]
 
             ops_unformatted = txn_ops[txn_type]
-            ops = [None]*len(ops_unformatted)
-            txn_input_typings = self.TPCC_InputTypings
+            num_reps = 1
+            if txn_type == "NewOrder":
+                num_reps = random.randint(5, 10)
+            result_ops = []
 
-            my_inputs = {}
+            for _ in range(num_reps):
+                my_inputs = {}
 
-            for key in txn_input_typings.keys():
-                cur_input_typing = txn_input_typings[key]
-                my_inputs[key] = cur_input_typing.generate_value()
+                for key in txn_input_typings.keys():
+                    cur_input_typing = txn_input_typings[key]
+                    my_inputs[key] = cur_input_typing.generate_value()
 
-            for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
-                isWrite, table, is_last_on_resource, rows = ops_unformatted[op_idx]
-                is_last = op_idx == len(ops_unformatted) - 1
+                for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
+                    isWrite, table, is_last_on_resource, rows = ops_unformatted[op_idx]
+                    res_rows = {}
+                    for row in rows:
+                        res_rows[row] = my_inputs[row]
+                    res =  ','.join(f"{k}:{v}" for k, v in res_rows.items())
 
-                res_rows = {}
-                for row in rows:
-                    res_rows[row] = my_inputs[row]
-                res =  ','.join(f"{k}:{v}" for k, v in res_rows.items())
-
-                if not isWrite: #read
-                    ops[op_idx] = ReadOperation(start+i, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
-                else: #write
-                    ops[op_idx] = WriteOperation(start+i, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
-
-            txn = Transaction(start+i, ops)
+                    if not isWrite: #read
+                        result_ops.append(ReadOperation(start+i, (self.TPCC_TableMaps[table],res), False, is_last_on_resource, res_rows))
+                    else: #write
+                        result_ops.append(WriteOperation(start+i, (self.TPCC_TableMaps[table],res), False, is_last_on_resource, res_rows))
+            
+            result_ops[-1].is_last = True
+            txn = Transaction(start+i, result_ops, txn_type)
             txn_arr.append(txn)
         return txn_arr
     
@@ -308,14 +312,8 @@ class TPCCWorkload(Workload):
             probabilities = [1/len(txn_ops)] * len(txn_ops)
         num_txn_types = len(txn_ops.keys())
 
-        txn_type_id = random.choices(population=([i for i in range(0, num_txn_types)]), weights=probabilities, k=1)[0]
-        txn_type = list(txn_ops.keys())[txn_type_id]
-
-        ops_unformatted = txn_ops[txn_type]
-        ops = [None]*len(ops_unformatted)
         txn_input_typings = self.TPCC_InputTypings
         txn_arr = []
-
         #sticky values
         sticky_inputs = {}
         for key in txn_input_typings.keys():
@@ -323,6 +321,179 @@ class TPCCWorkload(Workload):
             sticky_inputs[key] = cur_input_typing.generate_value()
 
         for i in range(num_txns):
+            txn_type_id = random.choices(population=([i for i in range(0, num_txn_types)]), weights=probabilities, k=1)[0]
+            txn_type = list(txn_ops.keys())[txn_type_id]
+
+            ops_unformatted = txn_ops[txn_type]
+            result_ops = []
+
+            num_reps = 1
+            if txn_type == "NewOrder":
+                num_reps = random.randint(5, 10)
+            result_ops = []
+
+            for _ in range(num_reps):
+                my_inputs = {}
+
+                for key in txn_input_typings.keys():
+                    cur_input_typing = txn_input_typings[key]
+                    if random.random() < p:
+                        my_inputs[key] = sticky_inputs[key]
+                    else:
+                        my_inputs[key] = cur_input_typing.generate_value()
+
+                for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
+                    isWrite, table, is_last_on_resource, rows = ops_unformatted[op_idx]
+
+                    res_rows = {}
+                    for row in rows:
+                        res_rows[row] = my_inputs[row]
+                    res =  ','.join(f"{k}:{v}" for k, v in res_rows.items())
+
+                    if not isWrite: #read
+                        result_ops.append(ReadOperation(start+i, (self.TPCC_TableMaps[table],res), False, is_last_on_resource, res_rows))
+                    else: #write
+                        result_ops.append(WriteOperation(start+i, (self.TPCC_TableMaps[table],res), False, is_last_on_resource, res_rows))
+            
+            result_ops[-1].is_last = True
+            txn = Transaction(start+i, result_ops, txn_type)
+            txn_arr.append(txn)
+        return txn_arr
+
+class YCSBWorkload(Workload):
+    def __init__(self, correlated:bool=False, corr_params:dict=None) -> None:
+
+        self.NUM_RECORDS = 1000
+        self.MAX_SCAN = 1000
+
+        self.YCSB_OPS = {  #(isWrite, table, is_last_on_resource, where clauses)
+            'DeleteRecord' : [
+                (True, 'U', True, ('YCSB_KEY',)),
+            ],
+            'InsertRecord' : [
+                (True, 'U', True, ('YCSB_KEY',)),
+            ],
+            'ReadModifyWriteRecord' : [
+                (False, 'U', False, ('YCSB_KEY',)),
+                (True, 'U', True, ('YCSB_KEY',)),
+            ],
+            'ReadRecord' : [
+                (False, 'U', True, ('YCSB_KEY',)),
+            ],
+            'ScanRecord' : [ # range of lower to upper bound
+                (False, 'U', False, ('YCSB_KEY',)),
+            ],
+            'UpdateRecord' : [
+                (True, 'U', True, ('YCSB_KEY',)),
+            ],            
+        }
+
+        self.YCSB_InputTypings = {
+            "YCSB_KEY" : InputTyping('zipf', 1, self.NUM_RECORDS, None),
+        }
+
+        self.YCSB_TableMaps = {
+            'U': 0, #USERTABLE
+        }
+
+        self.num_txn_types = len(self.YCSB_OPS)
+
+        self.YCSB_HOT_KEYS = [(0,i) for i in range(10)] # first 10 YCSB_KEYs are hot
+
+        self.correlated:bool = correlated
+        self.corr_params:dict = corr_params
+        self.ttl = None # time to next event
+        self.state = 0 # 0: random, 1: correlated
+        self.sticky_value = None # the value that is correlated to during that time interval
+    
+    def generate_transactions(self, num_txns:int, probabilities:list[float]=None, start=0) -> list[Transaction]:
+        if not self.correlated: return self.generate_random_transactions(num_txns, probabilities=probabilities, start=start)
+        else:
+            import numpy as np
+            res = None
+            if self.ttl is None or (self.ttl == 0 and self.state == 1) or (self.ttl > 0 and self.state == 0):
+                self.state = 0
+                if self.ttl is None or self.ttl == 0: self.ttl = max(1, int(np.random.exponential(scale=self.corr_params["normal_scale"], size=None)))
+                res = self.generate_random_transactions(num_txns, probabilities=probabilities, start=start)
+            elif (self.ttl == 0 and self.state == 0) or (self.ttl > 0 and self.state == 1):
+                self.state = 1
+                if self.ttl == 0: 
+                    self.ttl = max(1, int(np.random.exponential(scale=self.corr_params["event_scale"], size=None)))
+                    self.sticky_value = None
+                res = self.generate_correlated_transactions(num_txns, probabilities=probabilities, start=start, p=self.corr_params["correlation_factor"])
+            else:
+                assert False, "unreachable code"
+            self.ttl -= 1
+            return res
+        
+    #def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None, start=0) -> list[Transaction]:
+        #return [self.TPCC_generate_random_transaction(probabilities, start+i) for i in range(num_txns)]
+
+    def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None, start:int=0):
+        txn_ops = self.YCSB_OPS
+        if probabilities is None:
+            probabilities = [1/len(txn_ops)] * len(txn_ops)
+        num_txn_types = len(txn_ops.keys())
+        txn_input_typings = self.YCSB_InputTypings
+
+        txn_arr = []
+        for i in range(num_txns):
+            txn_type_id = random.choices(population=([i for i in range(0, num_txn_types)]), weights=probabilities, k=1)[0]
+            txn_type = list(txn_ops.keys())[txn_type_id]
+
+            ops_unformatted = txn_ops[txn_type]
+            result_ops = []
+
+            my_inputs = {}
+
+            for key in txn_input_typings.keys():
+                cur_input_typing = txn_input_typings[key]
+                my_inputs[key] = cur_input_typing.generate_value()
+
+            row = my_inputs['YCSB_KEY']
+
+            if txn_type == "ScanRecord":
+                scan_count = random.randint(1, self.MAX_SCAN)
+                if row + scan_count > self.NUM_RECORDS:
+                    scan_count = self.NUM_RECORDS - row
+
+                for scan_idx in range(scan_count):
+                    result_ops.append(ReadOperation(start+i, (self.YCSB_TableMaps[table],row+scan_idx), False, is_last_on_resource))
+            else:
+                for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
+                    isWrite, table, is_last_on_resource, rows = ops_unformatted[op_idx]
+
+                    if not isWrite: #read
+                        result_ops.append(ReadOperation(start+i, (self.YCSB_TableMaps[table],row), False, is_last_on_resource))
+                    else: #write
+                        result_ops.append(WriteOperation(start+i, (self.YCSB_TableMaps[table],row), False, is_last_on_resource))
+            
+            result_ops[-1].is_last = True
+            txn = Transaction(start+i, result_ops, txn_type)
+            txn_arr.append(txn)
+        return txn_arr
+    
+    def generate_correlated_transactions(self, num_txns:int, probabilities:list[float]=None, start:int=0, p:float=0.1):
+        txn_ops = self.YCSB_OPS
+        if probabilities is None:
+            probabilities = [1/len(txn_ops)] * len(txn_ops)
+        num_txn_types = len(txn_ops.keys())
+
+        txn_input_typings = self.YCSB_InputTypings
+        txn_arr = []
+        #sticky values
+        sticky_inputs = {}
+        for key in txn_input_typings.keys():
+            cur_input_typing = txn_input_typings[key]
+            sticky_inputs[key] = cur_input_typing.generate_value()
+
+        for i in range(num_txns):
+            txn_type_id = random.choices(population=([i for i in range(0, num_txn_types)]), weights=probabilities, k=1)[0]
+            txn_type = list(txn_ops.keys())[txn_type_id]
+
+            ops_unformatted = txn_ops[txn_type]
+            result_ops = []
+
             my_inputs = {}
 
             for key in txn_input_typings.keys():
@@ -331,30 +502,39 @@ class TPCCWorkload(Workload):
                     my_inputs[key] = sticky_inputs[key]
                 else:
                     my_inputs[key] = cur_input_typing.generate_value()
+            
+            row = my_inputs['YCSB_KEY']
 
-            for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
-                isWrite, table, is_last_on_resource, rows = ops_unformatted[op_idx]
-                is_last = op_idx == len(ops_unformatted) - 1
+            if txn_type == "ScanRecord":
+                scan_count = random.randint(1, self.MAX_SCAN)
+                if row + scan_count > self.NUM_RECORDS:
+                    scan_count = self.NUM_RECORDS - row
 
-                res_rows = {}
-                for row in rows:
-                    res_rows[row] = my_inputs[row]
-                res =  ','.join(f"{k}:{v}" for k, v in res_rows.items())
+                for scan_idx in range(scan_count):
+                    result_ops.append(ReadOperation(start+i, (self.YCSB_TableMaps[table],row+scan_idx), False, is_last_on_resource))
+            else:
+                for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
+                    isWrite, table, is_last_on_resource, rows = ops_unformatted[op_idx]
 
-                if not isWrite: #read
-                    ops[op_idx] = ReadOperation(start+i, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
-                else: #write
-                    ops[op_idx] = WriteOperation(start+i, (self.TPCC_TableMaps[table],res), is_last, is_last_on_resource, res_rows)
-
-            txn = Transaction(start+i, ops)
+                    if not isWrite: #read
+                        result_ops.append(ReadOperation(start+i, (self.YCSB_TableMaps[table],row), False, is_last_on_resource))
+                    else: #write
+                        result_ops.append(WriteOperation(start+i, (self.YCSB_TableMaps[table],row), False, is_last_on_resource))
+            
+            result_ops[-1].is_last = True
+            txn = Transaction(start+i, result_ops, txn_type)
             txn_arr.append(txn)
         return txn_arr
 
-if __name__ == "__main__":
-    workload = SmallBankWorkload()
 
-    probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
+
+if __name__ == "__main__":
+    workload = YCSBWorkload()
+
+    #probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
     num_txns = 100
-    random_transactions = workload.generate_random_transactions(num_txns, probabilities)
-    print(random_transactions)
+    random_transactions = workload.generate_random_transactions(num_txns)
+    #print(random_transactions)
+    for txn in random_transactions:
+        print(txn)
    

@@ -1,15 +1,40 @@
 from typing import Union
 from random import randint as randint # TPCC
+from numpy.random import zipf
+
+def NURand(A, x, y, C):
+    """
+    Non-Uniform Random function as defined in the TPC-C benchmark.
+    """
+    r1 = randint(0, A)
+    r2 = randint(x, y)
+    return (((r1 | r2) + C) % (y - x + 1)) + x
+
+def draw_zipf_with_max(a, max_value):
+    for _ in range(100):
+        sample = zipf(a)
+        if sample <= max_value: return sample
+    return 1
 
 # TPCC
 class InputTyping:
-     def __init__(self, input_type, range_min, range_max):
+     def __init__(self, input_type, range_min, range_max, C:int=None):
          self.input_type = input_type
          self.range_min = range_min
          self.range_max = range_max
+         self.C = C
      
      def generate_value(self):
-         return randint(self.range_min, self.range_max)
+         if self.input_type == "LAST":
+             return NURand(255, self.range_min, self.range_max, self.C)
+         elif self.input_type == "C_ID":
+             return NURand(1023, self.range_min, self.range_max, self.C)
+         elif self.input_type == "I_ID":
+             return NURand(8191, self.range_min, self.range_max, self.C)
+         elif self.input_type == "zipf":
+             return draw_zipf_with_max(1.001, self.range_max)
+         else:
+             return randint(self.range_min, self.range_max)
 
 class Operation():
     def __init__(self, txn:int, resource:str):
@@ -67,7 +92,7 @@ class Transaction():
                 self.operations[i].delta_last = visited[self.operations[i].resource] - i
 
     def __repr__(self):
-        return f"Transaction({self.txn}, {self.operations})"
+        return f"Transaction({self.txn}, {self.txn_type},{self.operations})"
 
 def clone_operation_list(ls:list[Operation]):
     return [ReadOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource, x.res_rows) if x.is_read else WriteOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource, x.res_rows) for x in ls]
