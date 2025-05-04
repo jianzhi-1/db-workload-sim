@@ -5,11 +5,12 @@ import logging
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import tqdm.notebook
+from tqdm import tqdm
 
 from Workload import SmallBankWorkload
 from utils import conflict
-from models import LinearModel
+from models.LinearModel import LinearModel
+from models.CNNModel import CNNModel
 from Simulator import Simulator
 from Scheduler import LumpScheduler
 
@@ -37,7 +38,8 @@ EPS = 1e-6
 
 data_gen = generator(N, T)
 
-model = LinearModel(N, T).to("cuda:0") # PUT MODEL ON CUDA
+#model = CNNModel(N, T)
+model = LinearModel(N, T)
 criterion = nn.CrossEntropyLoss(reduction="mean")
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 loss_curve = []
@@ -45,11 +47,11 @@ p_loss_curve = []
 lamb_loss_curve = []
 total_loss = 0.0
 
-for epoch in tqdm.notebook.trange(num_epochs, desc="training", unit="epoch"):
+for epoch in tqdm(range(num_epochs), desc="training", unit="epoch"):
 
     x, random_transactions_list = data_gen(batch_size)
     assert x.shape == (batch_size, N, N, 2*T + 1)
-    x = torch.from_numpy(x.astype(np.float32)).to("cuda:0") # PUT X ON CUDA
+    x = torch.from_numpy(x.astype(np.float32))
 
     optimizer.zero_grad()
     lamb, p = model(x)
@@ -116,13 +118,13 @@ for epoch in tqdm.notebook.trange(num_epochs, desc="training", unit="epoch"):
     if epoch % 1 == 0:
         print(f"Epoch {epoch}; Loss = {loss.item():.4f}; Accumulated Loss: {total_loss/(epoch + 1):.4f}")
 
-# plt.figure(figsize=(15,10))
-# plt.plot(np.arange(len(loss_curve)), np.array(loss_curve), label="loss")
-# plt.plot(np.arange(len(p_loss_curve)), np.array(p_loss_curve), label="p_loss")
-# plt.plot(np.arange(len(lamb_loss_curve)), np.array(lamb_loss_curve), label="lamb_loss")
-# plt.xlabel('Epoch') 
-# plt.ylabel('Loss')
-# plt.legend()
-# plt.title('Training Loss Curve')
-# plt.grid()
-# plt.show()
+plt.figure(figsize=(15,10))
+plt.plot(np.arange(len(loss_curve)), np.array(loss_curve), label="loss")
+plt.plot(np.arange(len(p_loss_curve)), np.array(p_loss_curve), label="p_loss")
+plt.plot(np.arange(len(lamb_loss_curve)), np.array(lamb_loss_curve), label="lamb_loss")
+plt.xlabel('Epoch') 
+plt.ylabel('Loss')
+plt.legend()
+plt.title('Training Loss Curve')
+plt.grid()
+plt.show()
