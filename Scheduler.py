@@ -262,6 +262,123 @@ class KSMFOracle2PhaseDontCareScheduler(Scheduler):
             
         return res
 
+class KSMFTwistedOracle2PhaseDontCareScheduler(Scheduler):
+    # Same as KSMF, but knows when correlation are happening and which resource
+    # Hypothesis is that this allows for better stacking
+
+    def __init__(self, k=5):
+        self.k = k # how many transactions to sample
+        self.locker = AdvancedLocker()
+        self.corr_locker = AdvancedLocker()
+        self.corr_resource_list = None
+        self.prev = False
+
+    def inject_oracle_list(self, resource_list):
+        self.corr_resource_list = resource_list
+
+    def is_corr_resource(self, resource):
+        return (self.corr_resource_list is not None) and (resource in self.corr_resource_list)
+    
+    def schedule(self, inflight:dict(), _, TxnPool:list[Transaction], curstep:int) -> list[int]:
+        total_txns = len(TxnPool)
+        print(f"total_txns = {total_txns}")
+        update_table = dict() # maps resource to how many times it was seen in this iteration
+        
+        assert total_txns > 0, "scheduler fail: total number of transactions is 0"
+        res = []
+
+        txnPoolClone = list(enumerate(TxnPool))
+
+        firstPhase = []
+        secondPhase = []
+        for idx, txn in txnPoolClone:
+            isCorr = any([self.is_corr_resource(op.resource) for op in txn.operations])
+            if isCorr: firstPhase.append((idx, txn))
+            else: secondPhase.append((idx, txn))
+
+        firstPhaseLenMemo = len(firstPhase)
+
+        while len(firstPhase) >= 1:
+            if self.prev == False: 
+                self.locker = AdvancedLocker(ref=self.corr_locker) # restart, don't care about non-correlated entries if got collision
+
+            self.prev = True
+
+            # start Twisted
+
+            idx_list = random.sample(range(len(firstPhase)), min(self.k, len(firstPhase)))
+            shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = None, None, None, None
+            for idx in idx_list:
+                txn = firstPhase[idx][1]
+                l = len(txn.operations)
+                latest_complete, latest_dispatch = None, None
+                t_try = curstep # probing this step
+                t_hat = None    # the resultant step
+                while t_hat is None or t_hat != t_try:
+                    t_hat = t_try
+                    for i, op in enumerate(txn.operations):
+                        ex = self.locker.probe(op.resource, op.type, t_try + i, op.delta_last) # time when operator executes
+                        assert ex >= t_try + i, f"invariance broken: ex={ex}, t_try+i={t_try+i}"
+                        t_try = ex - i # when the initial operator should be
+                assert t_hat == t_try, f"t_hat={t_hat}, t_try={t_try}"
+                assert t_hat >= curstep, f"t_hat={t_hat}"
+                dispatch = t_hat
+                complete = t_hat + l - 1 # when the entire operation is done
+                latest_dispatch = dispatch
+                latest_complete = max(complete - curstep, 0)
+                if shortest_makespan is None or shortest_makespan > latest_complete:
+                    shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = latest_complete, firstPhase[idx][0], idx, latest_dispatch
+            res.append((global_id_smf, smf_dispatch_time - curstep + 1))
+            visited = set()
+            for i, op in enumerate(firstPhase[local_id_smf][1].operations):
+                if (op.resource, op.type) in visited: continue
+                visited.add((op.resource, op.type))
+                self.locker.update(op.resource, op.type, smf_dispatch_time + i, op.delta_last)
+                self.corr_locker.update(op.resource, op.type, smf_dispatch_time + i, op.delta_last) # update the base skeleton locker
+            firstPhase.pop(local_id_smf)
+
+            # end Twisted
+
+        if firstPhaseLenMemo == 0:
+            self.prev = False
+
+        while len(secondPhase) >= 1:
+
+            # start Twisted
+
+            idx_list = random.sample(range(len(secondPhase)), min(self.k, len(secondPhase)))
+            shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = None, None, None, None
+            for idx in idx_list:
+                txn = secondPhase[idx][1]
+                l = len(txn.operations)
+                latest_complete, latest_dispatch = None, None
+                t_try = curstep # probing this step
+                t_hat = None    # the resultant step
+                while t_hat is None or t_hat != t_try:
+                    t_hat = t_try
+                    for i, op in enumerate(txn.operations):
+                        ex = self.locker.probe(op.resource, op.type, t_try + i, op.delta_last) # time when operator executes
+                        assert ex >= t_try + i, f"invariance broken: ex={ex}, t_try+i={t_try+i}"
+                        t_try = ex - i # when the initial operator should be
+                assert t_hat == t_try, f"t_hat={t_hat}, t_try={t_try}"
+                assert t_hat >= curstep, f"t_hat={t_hat}"
+                dispatch = t_hat
+                complete = t_hat + l - 1 # when the entire operation is done
+                latest_dispatch = dispatch
+                latest_complete = max(complete - curstep, 0)
+                if shortest_makespan is None or shortest_makespan > latest_complete:
+                    shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = latest_complete, secondPhase[idx][0], idx, latest_dispatch
+            res.append((global_id_smf, smf_dispatch_time - curstep + 1))
+            visited = set()
+            for i, op in enumerate(secondPhase[local_id_smf][1].operations):
+                if (op.resource, op.type) in visited: continue
+                visited.add((op.resource, op.type))
+                self.locker.update(op.resource, op.type, smf_dispatch_time + i, op.delta_last)
+            secondPhase.pop(local_id_smf)
+
+            # end Twisted
+            
+        return res
 
 class KSMFOracle2PhaseScheduler(Scheduler):
     # Same as KSMF, but knows when correlation are happening and which resource

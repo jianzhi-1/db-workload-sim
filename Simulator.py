@@ -1,5 +1,5 @@
 import heapq
-from Scheduler import Scheduler, KSMFTwistedScheduler
+from Scheduler import Scheduler, KSMFTwistedScheduler, KSMFTwistedOracle2PhaseDontCareScheduler
 from utils import Transaction, Operation, ReadOperation, WriteOperation
 from Locker import Locker
 from utils import clone_transaction, clone_operation_list
@@ -76,11 +76,11 @@ class Simulator():
             return self.statistics
 
         decisions = self.scheduler.schedule(self.inflight, self, self.txnPool, self.step) # pass self for flush()
-        assert len(decisions) == len(self.txnPool), "Decision length is not equal transaction pool length"
+        assert len(decisions) == len(self.txnPool), f"Decision length is not equal transaction pool length, {type(self.scheduler)}, {len(decisions)}, {len(self.txnPool)}"
 
         new_pool = []
 
-        if isinstance(self.scheduler, KSMFTwistedScheduler):
+        if isinstance(self.scheduler, KSMFTwistedScheduler) or isinstance(self.scheduler, KSMFTwistedOracle2PhaseDontCareScheduler):
             for (i, v) in decisions:
                 t = self.txnPool[i]
                 if v >= 1: 
@@ -96,8 +96,6 @@ class Simulator():
                 else: assert False, f"unknown decision {v}"
         else:
             for i, t in enumerate(self.txnPool):
-                if decisions[i] >= 1: 
-            if decisions[i] >= 1: 
                 if decisions[i] >= 1: 
                     self.scheduled_time[t.txn] = self.step + decisions[i] - 1
                     if decisions[i] == 1:

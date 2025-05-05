@@ -1,5 +1,5 @@
 from Simulator import Simulator
-from Scheduler import Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, KSMFOracleScheduler, KSMFOracle2PhaseScheduler, KSMFZeroScheduler, KSMFOracle2PhaseDontCareScheduler
+from Scheduler import Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, KSMFOracleScheduler, KSMFOracle2PhaseScheduler, KSMFZeroScheduler, KSMFOracle2PhaseDontCareScheduler, KSMFTwistedOracle2PhaseDontCareScheduler, KSMFTwistedScheduler
 from Workload import SmallBankWorkload
 from KernelWrapper import KernelWrapper
 from Kernel import IntegerOptimisationKernelMkII
@@ -16,7 +16,7 @@ probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db
 workload_arr = []
 oracle_arr = []
 T = 100
-filename = "arena_correlated.txt"
+filename = "arena_correlated_twisted.txt"
 for t in range(T):
     num_txns = 1000
     random_transactions = workload.generate_transactions(num_txns, probabilities, start=t*num_txns)
@@ -34,10 +34,13 @@ contestants:list[Contestant] = []
 contestants.extend(
     [
         Contestant("k-smf-k=5", scheduler = KSMFScheduler(k=5)),
+        Contestant("k-smf-twisted-k=5", scheduler = KSMFTwistedScheduler(k=5)),
+        Contestant("k-smf-twisted-k=10", scheduler = KSMFTwistedScheduler(k=10)),
         Contestant("k-smf-k=10", scheduler = KSMFScheduler(k=10)),
-        Contestant("k-smf-oracle", scheduler = KSMFOracleScheduler(k=5)),
+        Contestant("k-smf-oracle-k=5", scheduler = KSMFOracleScheduler(k=5)),
         #Contestant("k-smf-oracle-2-phase", scheduler = KSMFOracle2PhaseScheduler(k=5)),
-        Contestant("k-smf-oracle-2-phase", scheduler = KSMFOracle2PhaseDontCareScheduler(k=5))
+        Contestant("k-smf-oracle-2-phase-k=5", scheduler = KSMFOracle2PhaseDontCareScheduler(k=5)),
+        Contestant("k-smf-twisted-k=5", scheduler = KSMFTwistedOracle2PhaseDontCareScheduler(k=5))
         #Contestant("k-smf-zero", scheduler = KSMFZeroScheduler(k=5))
     ]
 )

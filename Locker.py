@@ -129,14 +129,23 @@ class AdvancedLocker():
 
     def search(self, os, t, period): # want a [t, t+period] inclusive
         if os is None or len(os) == 0: return t
-        idx = os.bisect_right((t, -1))
-        if idx - 1 >= 0:
-            _, val_e = os[idx - 1]
-            if val_e >= t: return self.search(os, val_e + 1, period)
-        if idx == len(os): return t # t to the right of everything
-        val_s, val_e = os[idx]
-        if t + period < val_s: return t # can fit into the previous period
-        return self.search(os, val_e + 1, period) # must look after this period
+        t_try = t
+        while True:
+            idx = os.bisect_right((t_try, -1))
+            if idx - 1 >= 0:
+                _, val_e = os[idx - 1]
+                if val_e >= t_try: 
+                    t_try = val_e + 1
+                    continue
+            
+            if idx == len(os): 
+                return t_try # t to the right of everything
+            val_s, val_e = os[idx]
+            if t_try + period < val_s: 
+                return t_try # can fit into the previous period
+            t_try = val_e + 1 
+            continue
+            #self.search(os, val_e + 1, period) # must look after this period
 
     def dual_search(self, os1, os2, t, period):
         t_hat = self.search(os1, t, period) # search one sorted dict first for an estimate
