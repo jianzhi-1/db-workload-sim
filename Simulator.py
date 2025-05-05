@@ -1,5 +1,5 @@
 import heapq
-from Scheduler import Scheduler
+from Scheduler import Scheduler, KSMFTwistedScheduler
 from utils import Transaction, Operation, ReadOperation, WriteOperation
 from Locker import Locker
 from utils import clone_transaction, clone_operation_list
@@ -79,18 +79,37 @@ class Simulator():
         assert len(decisions) == len(self.txnPool), "Decision length is not equal transaction pool length"
 
         new_pool = []
-        for i, t in enumerate(self.txnPool):
+
+        if isinstance(self.scheduler, KSMFTwistedScheduler):
+            for (i, v) in decisions:
+                t = self.txnPool[i]
+                if v >= 1: 
+                    self.scheduled_time[t.txn] = self.step + v - 1
+                    if v == 1:
+                        self.inflight[t.txn] = t.operations
+                        self.memo[t.txn] = clone_transaction(t)
+                    else:
+                        heapq.heappush(self.scheduled_txn, Pair(self.scheduled_time[t.txn], t))
+                elif v == -1:
+                    pass # scheduler says toss this transaction away
+                elif v == 0: new_pool.append(t)
+                else: assert False, f"unknown decision {v}"
+        else:
+            for i, t in enumerate(self.txnPool):
+                if decisions[i] >= 1: 
             if decisions[i] >= 1: 
-                self.scheduled_time[t.txn] = self.step + decisions[i] - 1
-                if decisions[i] == 1:
-                    self.inflight[t.txn] = t.operations
-                    self.memo[t.txn] = clone_transaction(t)
-                else:
-                    heapq.heappush(self.scheduled_txn, Pair(self.scheduled_time[t.txn], t))
-            elif decisions[i] == -1:
-                pass # scheduler says toss this transaction away
-            elif decisions[i] == 0: new_pool.append(t)
-            else: assert False, f"unknown decision {decisions[i]}"
+                if decisions[i] >= 1: 
+                    self.scheduled_time[t.txn] = self.step + decisions[i] - 1
+                    if decisions[i] == 1:
+                        self.inflight[t.txn] = t.operations
+                        self.memo[t.txn] = clone_transaction(t)
+                    else:
+                        heapq.heappush(self.scheduled_txn, Pair(self.scheduled_time[t.txn], t))
+                elif decisions[i] == -1:
+                    pass # scheduler says toss this transaction away
+                elif decisions[i] == 0: new_pool.append(t)
+                else: assert False, f"unknown decision {decisions[i]}"
+        
         self.txnPool = new_pool + self.flushPool
         self.flushPool = []
 

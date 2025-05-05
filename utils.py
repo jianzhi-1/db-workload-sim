@@ -92,7 +92,7 @@ def conflict(T1:Transaction, T2:Transaction, t:int) -> bool:
             op = T1.operations[i]
             if op.resource in resource_lock:
                 a, b = resource_lock[op.resource]
-                if max(type_to_num(op), b) == 2: # add edge if one of them is a write
+                if b > 0 and max(type_to_num(op), b) == 2: # add edge if one of them is a write
                     # actually, there should also be a condition b > 0, but degrades performance
                     T2beforeT1 = True
                 resource_lock[op.resource] = (max(type_to_num(op), a), b)
@@ -105,7 +105,7 @@ def conflict(T1:Transaction, T2:Transaction, t:int) -> bool:
             op = T2.operations[i - t]
             if op.resource in resource_lock:
                 a, b = resource_lock[op.resource]
-                if max(a, type_to_num(op)) == 2: # add edge if one of them is a write
+                if a > 0 and max(a, type_to_num(op)) == 2: # add edge if one of them is a write
                     # actually, there should also be a condition a > 0, but degrades performance
                     T1beforeT2 = True
                 resource_lock[op.resource] = (a, max(type_to_num(op), b))

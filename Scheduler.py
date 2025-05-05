@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from utils import Transaction, conflict
-from Locker import Locker
+from Locker import Locker, AdvancedLocker
 import random
 from utils import clone_transaction
 
@@ -15,6 +15,24 @@ class RapidFireScheduler(Scheduler):
         total_txns = len(TxnPool)
         assert total_txns > 0, "scheduler fail: total number of transactions is 0"
         return [1] + [0]*(total_txns - 1)
+
+class RapidFireRandomScheduler(Scheduler):
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
+        total_txns = len(TxnPool)
+        assert total_txns > 0, "scheduler fail: total number of transactions is 0"
+        res = [0]*total_txns
+        res[random.randrange(total_txns)] = 1
+        return res
+
+class RapidFireKRandomScheduler(Scheduler):
+    def __init__(self, k):
+        self.k = k
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
+        total_txns = len(TxnPool)
+        assert total_txns > 0, "scheduler fail: total number of transactions is 0"
+        res = [0]*total_txns
+        for _ in range(self.k): res[random.randrange(total_txns)] = 1
+        return res
 
 class SequentialScheduler(Scheduler):
     def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
@@ -59,6 +77,53 @@ class KSMFScheduler(Scheduler): # https://www.vldb.org/pvldb/vol17/p2694-cheng.p
                 self.locker.update(op.resource, op.type, smf_dispatch_time + i)
             txnPoolClone.pop(local_id_smf)
             
+        return res
+
+class KSMFTwistedScheduler(Scheduler): # https://www.vldb.org/pvldb/vol17/p2694-cheng.pdf
+    def __init__(self, k=5):
+        self.k = k # how many transactions to sample
+        self.locker = AdvancedLocker()
+    
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
+        total_txns = len(TxnPool)
+        
+        assert total_txns > 0, "scheduler fail: total number of transactions is 0"
+        res = []
+
+        txnPoolClone = list(enumerate(TxnPool))
+
+        while len(txnPoolClone) >= 1:
+
+            idx_list = random.sample(range(len(txnPoolClone)), min(self.k, len(txnPoolClone)))
+            shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = None, None, None, None
+            for idx in idx_list:
+                txn = txnPoolClone[idx][1]
+                l = len(txn.operations)
+                latest_complete, latest_dispatch = None, None
+                t_try = curstep # probing this step
+                t_hat = None    # the resultant step
+                while t_hat is None or t_hat != t_try:
+                    t_hat = t_try
+                    for i, op in enumerate(txn.operations):
+                        ex = self.locker.probe(op.resource, op.type, t_try + i, op.delta_last) # time when operator executes
+                        assert ex >= t_try + i, f"invariance broken: ex={ex}, t_try+i={t_try+i}"
+                        t_try = ex - i # when the initial operator should be
+                assert t_hat == t_try, f"t_hat={t_hat}, t_try={t_try}"
+                assert t_hat >= curstep, f"t_hat={t_hat}"
+                dispatch = t_hat
+                complete = t_hat + l - 1 # when the entire operation is done
+                latest_dispatch = dispatch
+                latest_complete = max(complete - curstep, 0)
+                if shortest_makespan is None or shortest_makespan > latest_complete:
+                    shortest_makespan, global_id_smf, local_id_smf, smf_dispatch_time = latest_complete, txnPoolClone[idx][0], idx, latest_dispatch
+            res.append((global_id_smf, smf_dispatch_time - curstep + 1))
+            visited = set()
+            for i, op in enumerate(txnPoolClone[local_id_smf][1].operations):
+                if (op.resource, op.type) in visited: continue
+                visited.add((op.resource, op.type))
+                self.locker.update(op.resource, op.type, smf_dispatch_time + i, op.delta_last)
+            txnPoolClone.pop(local_id_smf)
+        assert len(res) == total_txns, "invariance broken"
         return res
 
 class KSMFZeroScheduler(Scheduler): # https://www.vldb.org/pvldb/vol17/p2694-cheng.pdf
