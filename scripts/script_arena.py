@@ -58,7 +58,7 @@ contestants.extend(
         Contestant("k-smf", scheduler = KSMFScheduler(k=100)),
         #Contestant("queue-k-smf", scheduler = QueueScheduler(n_queues, KSMFScheduler, k=10)),
         #Contestant("queue-based", scheduler = QueueBasedScheduler(n_queues=n_queues)),
-        #Contestant("CNN Model", scheduler=LumpScheduler(), model=model_CNN),
+        Contestant("CNN Model", scheduler=LumpScheduler(), model=model_CNN),
         Contestant("Linear Model", scheduler=LumpScheduler(), model=model_linear),
     ]
 )
