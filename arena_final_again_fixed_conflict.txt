@@ -1,5 +1,5 @@
-{'n_aborts': 0, 'n_successes': 0, 'steps': 1}
-{'n_aborts': 0, 'n_successes': 0, 'steps': 1}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'k-smf'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'Linear Model'}
 {'n_aborts': 0, 'n_successes': 10, 'steps': 2, 'name': 'k-smf'}
 {'n_aborts': 0, 'n_successes': 0, 'steps': 2, 'name': 'Linear Model'}
 {'n_aborts': 0, 'n_successes': 11, 'steps': 3, 'name': 'k-smf'}

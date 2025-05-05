@@ -520,15 +520,19 @@ class LumpScheduler(Scheduler):
         self.memory = memory
         self.dont_care = dont_care
     
-    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]: 
         total_txns = len(TxnPool)
         assert total_txns > 0, "scheduler fail: total number of transactions is 0"
         res = [0]*total_txns
         for i, txn in enumerate(TxnPool):
-            if txn.txn not in self.memory: assert False, "transaction not scheduled"
+            if txn.txn not in self.memory: 
+                #print(txn.txn, flush=True)
+                assert False, "transaction not scheduled"
             ts = self.memory[txn.txn]
-            if self.step > ts: assert False, "transaction should have been scheduled earlier"
-            if self.dont_care is not None and self.dont_care == ts: 
+            if self.step > ts: 
+                assert False, "transaction should have been scheduled earlier"
+                #del self.memory.pop[txn.txn]
+            if (self.dont_care is not None and self.dont_care == ts): 
                 res[i] = -1
             elif self.step == ts: 
                 res[i] = 1 # schedule it

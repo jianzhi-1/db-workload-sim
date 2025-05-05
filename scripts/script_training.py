@@ -7,6 +7,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from tqdm import tqdm
 
+import pickle
+
 from Workload import SmallBankWorkload
 from utils import conflict
 from models.LinearModel import LinearModel
@@ -128,3 +130,9 @@ plt.legend()
 plt.title('Training Loss Curve')
 plt.grid()
 plt.show()
+
+# Save the trained model as a pickle file
+with open('trained_model_linear.pkl', 'wb') as f:
+    pickle.dump(model, f)
+# Alternatively, you can use torch.save for PyTorch models:
+# torch.save(model, 'trained_model.pt')

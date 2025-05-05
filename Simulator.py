@@ -2,10 +2,20 @@ import heapq
 from Scheduler import Scheduler
 from utils import Transaction, Operation, ReadOperation, WriteOperation
 from Locker import Locker
-from utils import clone_transaction, clone_operation_list
+from utils import clone_transaction, clone_operation_list, conflict
+import torch
+import numpy as np
 
 DELTA = 10000000 # must be greater than total number of transactions
 # determines how much to increment transaction number on reschedule
+
+def conflict_matrix(batch_size, num_txns, T, random_transactions):
+    arr = np.zeros((batch_size, num_txns, num_txns, 2*T + 1))
+    for t in range(-T, T + 1, 1):
+        for i, t1 in enumerate(random_transactions):
+            for j, t2 in enumerate(random_transactions):
+                arr[0][i][j][t + T] = conflict(t1, t2, t)
+    return arr
 
 class Pair():
     def __init__(self, priority:int, txn:Transaction):
@@ -34,6 +44,7 @@ class Simulator():
         self.memo = dict()
         self.clear()
         self.flushPool = [] # flush for Oracle
+        self.model = None
 
     def clear(self):
         self.resource_locks = Locker()
@@ -64,7 +75,7 @@ class Simulator():
             new_txn.txn += DELTA
             self.flushPool.append(new_txn)
 
-    def sim(self, freeze:bool=False, retryOnAbort:bool=False) -> dict:
+    def sim(self, freeze:bool=False, retryOnAbort:bool=False, n:int=None, T:int=None) -> dict:
         while len(self.scheduled_txn) > 0 and self.scheduled_txn[0].priority <= self.step:
             if self.scheduled_txn[0].priority < self.step: assert False, "transaction should be scheduled earlier"
             p = heapq.heappop(self.scheduled_txn)
@@ -74,8 +85,26 @@ class Simulator():
         if len(self.txnPool) == 0: # no more transactions to be scheduled
             self.tick(retryOnAbort=retryOnAbort)
             return self.statistics
+        
+        txns_to_schedule:list[Transaction] = self.txnPool
+        if n != None and T != None:
+            txns_to_schedule = self.txnPool[:n]
+            #if len(txns_to_schedule != n):
+            #    txns_to_schedule.extend([Transaction(-1, [], "") for _ in range(n - len(txns_to_schedule))])
 
-        decisions = self.scheduler.schedule(self.inflight, self, self.txnPool, self.step) # pass self for flush()
+            x = conflict_matrix(1, n, T, txns_to_schedule)
+            x = torch.from_numpy(x.astype(np.float32))
+            lamb, p = self.model(x)
+            memory = dict()
+            for j, txn in enumerate(txns_to_schedule):
+                prob_arr = lamb[0][j].cpu().detach().numpy()
+                memory[txn.txn] = np.random.choice(range(self.step, self.step+T+2), p=prob_arr, size=1)[0]
+            self.scheduler.memory = memory
+
+        decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
+        if (n != None and len(self.txnPool) > len(txns_to_schedule)):
+            decisions.extend([0]*(len(self.txnPool) - len(txns_to_schedule)))
+
         assert len(decisions) == len(self.txnPool), "Decision length is not equal transaction pool length"
 
         new_pool = []
