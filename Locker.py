@@ -151,8 +151,12 @@ class AdvancedLocker():
         t_hat = self.search(os1, t, period) # search one sorted dict first for an estimate
         t_hat_hat = self.search(os2, t_hat, period) # then search the other for another estimate
         assert t_hat >= t and t_hat_hat >= t_hat, f"invariant check: t={t}, t_hat={t_hat}, t_hat_hat={t_hat_hat}"
-        if t_hat_hat == t: return t # if both agrees, then the returned time step is possible
-        return self.dual_search(os1, os2, t_hat_hat, period) # try again with new upper bound
+        while t_hat_hat != t: # try again with new upper bound
+            t = t_hat_hat
+            t_hat = self.search(os1, t, period)
+            t_hat_hat = self.search(os2, t_hat, period)
+            assert t_hat >= t and t_hat_hat >= t_hat, f"invariant check: t={t}, t_hat={t_hat}, t_hat_hat={t_hat_hat}"
+        return t # if both agrees, then the returned time step is possible
 
     def probe(self, resource, typ:str, t:int, period:int) -> int:
         # probes for a time interval [t, t+period], returns the latest time after t that the resource can be used
