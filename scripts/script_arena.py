@@ -1,5 +1,6 @@
+import pickle
 from Simulator import Simulator
-from Scheduler import Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, SequentialScheduler, QueueBasedScheduler
+from Scheduler import LumpScheduler, Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, SequentialScheduler, QueueBasedScheduler
 from Workload import SmallBankWorkload
 from KernelWrapper import KernelWrapper
 from Kernel import IntegerOptimisationKernelMkII
@@ -19,19 +20,28 @@ for t in range(T):
     workload_arr.append([clone_transaction(txn) for txn in random_transactions])
 
 class Contestant():
-    def __init__(self, name:str, scheduler:Scheduler):
+    def __init__(self, name:str, scheduler:Scheduler, model=None):
         self.name = name
         self.scheduler = scheduler
         self.sim = Simulator(scheduler, [])
+        self.sim.model = model
 
 contestants:list[Contestant] = []
 
+# Load the trained models from pickle files
+#with open('trained_model_CNN.pkl', 'rb') as f:
+#    model_CNN = pickle.load(f)
+
+with open('model_linear.pkl', 'rb') as f:
+    model_linear = pickle.load(f)
+    
 contestants.extend(
     [
-        Contestant("int-opt-k=10", QueueKernelScheduler(n_queues=n_queues, kernel=KernelWrapper(IntegerOptimisationKernelMkII(max_n_kernel)))),
-        Contestant("k-smf", scheduler = KSMFScheduler(k=100)),
+        #Contestant("int-opt-k=10", QueueKernelScheduler(n_queues=n_queues, kernel=KernelWrapper(IntegerOptimisationKernelMkII(max_n_kernel)))),
+        #Contestant("k-smf", scheduler = KSMFScheduler(k=100)),
         #Contestant("queue-k-smf", scheduler = QueueScheduler(n_queues, KSMFScheduler, k=10)),
         #Contestant("queue-based", scheduler = QueueBasedScheduler(n_queues=n_queues))
+        Contestant("Linear Model", scheduler=LumpScheduler(), model=model_linear),
     ]
 )
 
@@ -41,7 +51,10 @@ for t in range(T):
     curdone = True
     for contestant in contestants:
         contestant.sim.add_transactions(workload_arr[t])
-        contestant.sim.sim(retryOnAbort=True)
+        if contestant.sim.model is not None:
+            contestant.sim.sim(retryOnAbort=True, n=50, T=6)
+        else:
+            contestant.sim.sim(retryOnAbort=True)
         #print(contestant.sim.online_stats())
         d = contestant.sim.print_statistics()
         d["name"] = contestant.name
@@ -55,7 +68,10 @@ while not done:
     curdone = True
     for contestant in contestants:
         if contestant.sim.done(): continue
-        contestant.sim.sim(retryOnAbort=True)
+        if contestant.sim.model is not None:
+            contestant.sim.sim(retryOnAbort=True, n=50, T=6)
+        else:
+            contestant.sim.sim(retryOnAbort=True)
         #print(contestant.sim.online_stats())
         d = contestant.sim.print_statistics()
         d["name"] = contestant.name

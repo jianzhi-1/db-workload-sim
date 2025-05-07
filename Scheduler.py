@@ -707,12 +707,15 @@ class LumpScheduler(Scheduler):
         assert total_txns > 0, "scheduler fail: total number of transactions is 0"
         res = [0]*total_txns
         for i, txn in enumerate(TxnPool):
-            if txn.txn not in self.memory: assert False, "transaction not scheduled"
-            ts = self.memory[txn.txn]
-            if self.step > ts: assert False, "transaction should have been scheduled earlier"
-            if self.dont_care is not None and self.dont_care == ts: 
-                res[i] = -1
-            elif self.step == ts: 
-                res[i] = 1 # schedule it
+            if txn.txn not in self.memory: 
+                #assert False, "transaction not scheduled"
+                res[i] = 0
+            else:
+                ts = self.memory[txn.txn]
+                if self.step > ts: assert False, "transaction should have been scheduled earlier"
+                if self.dont_care is not None and self.dont_care == ts: 
+                    res[i] = -1
+                elif self.step == ts: 
+                    res[i] = 1 # schedule it
         self.step += 1
         return res

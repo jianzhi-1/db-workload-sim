@@ -1,3 +1,4 @@
+import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -5,11 +6,11 @@ import logging
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import tqdm.notebook
+from tqdm import tqdm
 
 from Workload import SmallBankWorkload
 from utils import conflict
-from models import LinearModel
+from models.LinearModel import LinearModel
 from Simulator import Simulator
 from Scheduler import LumpScheduler
 
@@ -32,7 +33,7 @@ def generator(num_txns, T):
 batch_size = 10 # batch size
 N = 50 # number of transactions we are considering in parallel
 T = 6 # number of delays we care about [0, ..., T]
-num_epochs = 50
+num_epochs = 200
 EPS = 1e-6
 
 data_gen = generator(N, T)
@@ -45,7 +46,7 @@ p_loss_curve = []
 lamb_loss_curve = []
 total_loss = 0.0
 
-for epoch in tqdm.notebook.trange(num_epochs, desc="training", unit="epoch"):
+for epoch in tqdm(range(num_epochs), desc="training", unit="epoch"):
 
     x, random_transactions_list = data_gen(batch_size)
     assert x.shape == (batch_size, N, N, 2*T + 1)
@@ -68,6 +69,7 @@ for epoch in tqdm.notebook.trange(num_epochs, desc="training", unit="epoch"):
         for j, txn in enumerate(random_transactions_list[i]):
             prob_arr = lamb[i][j].cpu().detach().numpy()
             memory[txn.txn] = np.random.choice(range(0, T+2), p=prob_arr, size=1)[0]
+        #print(memory, flush=True)
         scheduler.inject_memory(memory, T+1)
         sim_list.append(Simulator(scheduler, random_transactions_list[i]))
 
@@ -97,6 +99,7 @@ for epoch in tqdm.notebook.trange(num_epochs, desc="training", unit="epoch"):
                     p_loss += -torch.log(1.0 - F.sigmoid(p[b, i, t]))
                     target = lamb[b, i].clone().detach()
                     target[t] = EPS # reset the probability for that value
+                    target[T+1] = 1.0 - EPS
                     target = target/torch.sum(target)
                     lamb_loss += F.kl_div(torch.log(lamb[b, i]), target)
             else:
@@ -116,13 +119,16 @@ for epoch in tqdm.notebook.trange(num_epochs, desc="training", unit="epoch"):
     if epoch % 1 == 0:
         print(f"Epoch {epoch}; Loss = {loss.item():.4f}; Accumulated Loss: {total_loss/(epoch + 1):.4f}")
 
-# plt.figure(figsize=(15,10))
-# plt.plot(np.arange(len(loss_curve)), np.array(loss_curve), label="loss")
-# plt.plot(np.arange(len(p_loss_curve)), np.array(p_loss_curve), label="p_loss")
-# plt.plot(np.arange(len(lamb_loss_curve)), np.array(lamb_loss_curve), label="lamb_loss")
-# plt.xlabel('Epoch') 
-# plt.ylabel('Loss')
-# plt.legend()
-# plt.title('Training Loss Curve')
-# plt.grid()
-# plt.show()
+plt.figure(figsize=(15,10))
+plt.plot(np.arange(len(loss_curve)), np.array(loss_curve), label="loss")
+plt.plot(np.arange(len(p_loss_curve)), np.array(p_loss_curve), label="p_loss")
+plt.plot(np.arange(len(lamb_loss_curve)), np.array(lamb_loss_curve), label="lamb_loss")
+plt.xlabel('Epoch') 
+plt.ylabel('Loss')
+plt.legend()
+plt.title('Training Loss Curve')
+plt.grid()
+plt.show()
+
+with open("model_linear.pkl", "wb") as f:
+    pickle.dump(model, f)

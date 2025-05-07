@@ -12,7 +12,7 @@ def main():
     for i in range(args.num_trials):
         print(f"=== trial {i} ===")
         try:
-            os.system(f"python3 -m scripts.{args.script} >> {args.filename}")
+            os.system(f"python -m scripts.{args.script} >> {args.filename}")
         except KeyboardInterrupt:
             sys.exit(1)
     print("Done!")

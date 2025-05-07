@@ -1,1 +1,5 @@
 **/__pycache__/
+.venv/
+hyperparam_results/
+model_linear.pkl
+trained_model_CNN.pkl

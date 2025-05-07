@@ -1,11 +1,21 @@
 import heapq
+
+import numpy as np
+import torch
 from Scheduler import Scheduler, KSMFTwistedScheduler, KSMFTwistedOracle2PhaseDontCareScheduler
-from utils import Transaction, Operation, ReadOperation, WriteOperation
+from utils import Transaction, Operation, ReadOperation, WriteOperation, conflict
 from Locker import Locker
 from utils import clone_transaction, clone_operation_list
 
 DELTA = 10000000 # must be greater than total number of transactions
 # determines how much to increment transaction number on reschedule
+def conflict_matrix(batch_size, num_txns, T, random_transactions):
+    arr = np.zeros((batch_size, num_txns, num_txns, 2*T + 1))
+    for t in range(-T, T + 1, 1):
+        for i, t1 in enumerate(random_transactions):
+            for j, t2 in enumerate(random_transactions):
+                arr[0][i][j][t + T] = conflict(t1, t2, t)
+    return arr
 
 class Pair():
     def __init__(self, priority:int, txn:Transaction):
@@ -34,6 +44,7 @@ class Simulator():
         self.memo = dict()
         self.clear()
         self.flushPool = [] # flush for Oracle
+        self.txns_ML = []
 
     def clear(self):
         self.resource_locks = Locker()
@@ -63,8 +74,21 @@ class Simulator():
             new_txn = clone_transaction(p.txn)
             new_txn.txn += DELTA
             self.flushPool.append(new_txn)
-
-    def sim(self, freeze:bool=False, retryOnAbort:bool=False) -> dict:
+    
+    def update_memory(self, n, T):
+        txns_to_schedule = self.txnPool[:n]
+        x = conflict_matrix(1, n, T, txns_to_schedule)
+        x = torch.from_numpy(x.astype(np.float32))
+        lamb, p = self.model(x)
+        memory = dict()
+        for j, txn in enumerate(txns_to_schedule):
+            prob_arr = lamb[0][j].cpu().detach().numpy()
+            action = np.random.choice(range(self.step, self.step+T+2), p=prob_arr, size=1)[0]
+            if action != self.step+T+1:
+                memory[txn.txn] = action
+        self.scheduler.memory = memory
+    
+    def sim(self, freeze:bool=False, retryOnAbort:bool=False, n:int=None, T:int=None) -> dict:
         while len(self.scheduled_txn) > 0 and self.scheduled_txn[0].priority <= self.step:
             if self.scheduled_txn[0].priority < self.step: assert False, "transaction should be scheduled earlier"
             p = heapq.heappop(self.scheduled_txn)
@@ -74,8 +98,16 @@ class Simulator():
         if len(self.txnPool) == 0: # no more transactions to be scheduled
             self.tick(retryOnAbort=retryOnAbort)
             return self.statistics
+        if n != None and T != None: #ML model scheduling, only schedule every T steps
+            self.update_memory(self.scheduler.memory, self.txnPool, self.step)
 
-        decisions = self.scheduler.schedule(self.inflight, self, self.txnPool, self.step) # pass self for flush()
+            decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
+
+            if (len(self.txnPool) > len(txns_to_schedule)):
+                decisions.extend([0]*(len(self.txnPool) - len(txns_to_schedule)))
+        else:
+            decisions = self.scheduler.schedule(self.inflight, self, self.txnPool, self.step) # pass self for flush()
+
         assert len(decisions) == len(self.txnPool), f"Decision length is not equal transaction pool length, {type(self.scheduler)}, {len(decisions)}, {len(self.txnPool)}"
 
         new_pool = []

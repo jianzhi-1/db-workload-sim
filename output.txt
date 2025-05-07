@@ -1,0 +1,1473 @@
+{'n_aborts': 16, 'n_successes': 32, 'steps': 12}
+Epoch 0; Loss = 349.0142; Accumulated Loss: 349.0142
+{'n_aborts': 7, 'n_successes': 35, 'steps': 12}
+Epoch 1; Loss = 323.7411; Accumulated Loss: 336.3776
+{'n_aborts': 5, 'n_successes': 35, 'steps': 12}
+Epoch 2; Loss = 316.5583; Accumulated Loss: 329.7712
+{'n_aborts': 14, 'n_successes': 28, 'steps': 11}
+Epoch 3; Loss = 301.7089; Accumulated Loss: 322.7556
+{'n_aborts': 7, 'n_successes': 33, 'steps': 12}
+Epoch 4; Loss = 279.0571; Accumulated Loss: 314.0159
+{'n_aborts': 10, 'n_successes': 27, 'steps': 12}
+Epoch 5; Loss = 259.0109; Accumulated Loss: 304.8484
+{'n_aborts': 13, 'n_successes': 30, 'steps': 10}
+Epoch 6; Loss = 288.8410; Accumulated Loss: 302.5616
+{'n_aborts': 12, 'n_successes': 33, 'steps': 11}
+Epoch 7; Loss = 306.3321; Accumulated Loss: 303.0329
+{'n_aborts': 18, 'n_successes': 31, 'steps': 11}
+Epoch 8; Loss = 344.4350; Accumulated Loss: 307.6332
+{'n_aborts': 16, 'n_successes': 29, 'steps': 10}
+Epoch 9; Loss = 326.2523; Accumulated Loss: 309.4951
+{'n_aborts': 16, 'n_successes': 26, 'steps': 12}
+Epoch 10; Loss = 310.1231; Accumulated Loss: 309.5522
+{'n_aborts': 15, 'n_successes': 28, 'steps': 10}
+Epoch 11; Loss = 316.4479; Accumulated Loss: 310.1268
+{'n_aborts': 14, 'n_successes': 31, 'steps': 10}
+Epoch 12; Loss = 331.1183; Accumulated Loss: 311.7415
+{'n_aborts': 14, 'n_successes': 26, 'steps': 9}
+Epoch 13; Loss = 297.1998; Accumulated Loss: 310.7029
+{'n_aborts': 15, 'n_successes': 18, 'steps': 8}
+Epoch 14; Loss = 257.0625; Accumulated Loss: 307.1268
+{'n_aborts': 9, 'n_successes': 13, 'steps': 6}
+Epoch 15; Loss = 222.0442; Accumulated Loss: 301.8092
+{'n_aborts': 13, 'n_successes': 21, 'steps': 9}
+Epoch 16; Loss = 220.7126; Accumulated Loss: 297.0388
+{'n_aborts': 11, 'n_successes': 20, 'steps': 11}
+Epoch 17; Loss = 219.0126; Accumulated Loss: 292.7040
+{'n_aborts': 8, 'n_successes': 25, 'steps': 10}
+Epoch 18; Loss = 203.3775; Accumulated Loss: 288.0026
+{'n_aborts': 16, 'n_successes': 20, 'steps': 6}
+Epoch 19; Loss = 228.8968; Accumulated Loss: 285.0473
+{'n_aborts': 13, 'n_successes': 17, 'steps': 10}
+Epoch 20; Loss = 260.9737; Accumulated Loss: 283.9009
+{'n_aborts': 13, 'n_successes': 18, 'steps': 10}
+Epoch 21; Loss = 230.6886; Accumulated Loss: 281.4822
+{'n_aborts': 12, 'n_successes': 22, 'steps': 8}
+Epoch 22; Loss = 212.9027; Accumulated Loss: 278.5005
+{'n_aborts': 13, 'n_successes': 16, 'steps': 7}
+Epoch 23; Loss = 226.7189; Accumulated Loss: 276.3429
+{'n_aborts': 13, 'n_successes': 22, 'steps': 6}
+Epoch 24; Loss = 237.9106; Accumulated Loss: 274.8056
+{'n_aborts': 9, 'n_successes': 26, 'steps': 8}
+Epoch 25; Loss = 252.9178; Accumulated Loss: 273.9638
+{'n_aborts': 12, 'n_successes': 16, 'steps': 6}
+Epoch 26; Loss = 222.4037; Accumulated Loss: 272.0541
+{'n_aborts': 11, 'n_successes': 23, 'steps': 7}
+Epoch 27; Loss = 240.9233; Accumulated Loss: 270.9423
+{'n_aborts': 9, 'n_successes': 23, 'steps': 10}
+Epoch 28; Loss = 227.6667; Accumulated Loss: 269.4501
+{'n_aborts': 15, 'n_successes': 20, 'steps': 6}
+Epoch 29; Loss = 217.3857; Accumulated Loss: 267.7146
+{'n_aborts': 14, 'n_successes': 22, 'steps': 10}
+Epoch 30; Loss = 237.9057; Accumulated Loss: 266.7530
+{'n_aborts': 4, 'n_successes': 25, 'steps': 6}
+Epoch 31; Loss = 246.6916; Accumulated Loss: 266.1261
+{'n_aborts': 20, 'n_successes': 15, 'steps': 6}
+Epoch 32; Loss = 239.9900; Accumulated Loss: 265.3341
+{'n_aborts': 6, 'n_successes': 21, 'steps': 6}
+Epoch 33; Loss = 199.0415; Accumulated Loss: 263.3843
+{'n_aborts': 12, 'n_successes': 15, 'steps': 6}
+Epoch 34; Loss = 193.2802; Accumulated Loss: 261.3813
+{'n_aborts': 10, 'n_successes': 24, 'steps': 6}
+Epoch 35; Loss = 190.2225; Accumulated Loss: 259.4047
+{'n_aborts': 12, 'n_successes': 16, 'steps': 7}
+Epoch 36; Loss = 169.1525; Accumulated Loss: 256.9655
+{'n_aborts': 14, 'n_successes': 15, 'steps': 6}
+Epoch 37; Loss = 228.9087; Accumulated Loss: 256.2271
+{'n_aborts': 8, 'n_successes': 24, 'steps': 6}
+Epoch 38; Loss = 231.0332; Accumulated Loss: 255.5811
+{'n_aborts': 20, 'n_successes': 15, 'steps': 6}
+Epoch 39; Loss = 267.7483; Accumulated Loss: 255.8853
+{'n_aborts': 7, 'n_successes': 21, 'steps': 6}
+Epoch 40; Loss = 256.7401; Accumulated Loss: 255.9061
+{'n_aborts': 10, 'n_successes': 22, 'steps': 6}
+Epoch 41; Loss = 225.3978; Accumulated Loss: 255.1798
+{'n_aborts': 10, 'n_successes': 19, 'steps': 6}
+Epoch 42; Loss = 224.8677; Accumulated Loss: 254.4748
+{'n_aborts': 9, 'n_successes': 15, 'steps': 6}
+Epoch 43; Loss = 186.1926; Accumulated Loss: 252.9230
+{'n_aborts': 11, 'n_successes': 18, 'steps': 6}
+Epoch 44; Loss = 198.5313; Accumulated Loss: 251.7143
+{'n_aborts': 12, 'n_successes': 19, 'steps': 5}
+Epoch 45; Loss = 223.9369; Accumulated Loss: 251.1104
+{'n_aborts': 3, 'n_successes': 25, 'steps': 6}
+Epoch 46; Loss = 232.1563; Accumulated Loss: 250.7071
+{'n_aborts': 6, 'n_successes': 28, 'steps': 8}
+Epoch 47; Loss = 222.4723; Accumulated Loss: 250.1189
+{'n_aborts': 15, 'n_successes': 16, 'steps': 10}
+Epoch 48; Loss = 241.1548; Accumulated Loss: 249.9360
+{'n_aborts': 14, 'n_successes': 16, 'steps': 6}
+Epoch 49; Loss = 229.2949; Accumulated Loss: 249.5231
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1}
+{'n_aborts': 5, 'n_successes': 2, 'steps': 2, 'name': 'Linear Model'}
+{'n_aborts': 10, 'n_successes': 12, 'steps': 3, 'name': 'Linear Model'}
+{'n_aborts': 18, 'n_successes': 24, 'steps': 4, 'name': 'Linear Model'}
+{'n_aborts': 28, 'n_successes': 36, 'steps': 5, 'name': 'Linear Model'}
+{'n_aborts': 47, 'n_successes': 47, 'steps': 6, 'name': 'Linear Model'}
+{'n_aborts': 55, 'n_successes': 59, 'steps': 7, 'name': 'Linear Model'}
+{'n_aborts': 72, 'n_successes': 74, 'steps': 8, 'name': 'Linear Model'}
+{'n_aborts': 89, 'n_successes': 92, 'steps': 9, 'name': 'Linear Model'}
+{'n_aborts': 123, 'n_successes': 104, 'steps': 10, 'name': 'Linear Model'}
+{'n_aborts': 132, 'n_successes': 120, 'steps': 11, 'name': 'Linear Model'}
+{'n_aborts': 146, 'n_successes': 135, 'steps': 12, 'name': 'Linear Model'}
+{'n_aborts': 168, 'n_successes': 144, 'steps': 13, 'name': 'Linear Model'}
+{'n_aborts': 194, 'n_successes': 155, 'steps': 14, 'name': 'Linear Model'}
+{'n_aborts': 201, 'n_successes': 169, 'steps': 15, 'name': 'Linear Model'}
+{'n_aborts': 220, 'n_successes': 187, 'steps': 16, 'name': 'Linear Model'}
+{'n_aborts': 234, 'n_successes': 201, 'steps': 17, 'name': 'Linear Model'}
+{'n_aborts': 248, 'n_successes': 217, 'steps': 18, 'name': 'Linear Model'}
+{'n_aborts': 263, 'n_successes': 234, 'steps': 19, 'name': 'Linear Model'}
+{'n_aborts': 278, 'n_successes': 247, 'steps': 20, 'name': 'Linear Model'}
+{'n_aborts': 292, 'n_successes': 262, 'steps': 21, 'name': 'Linear Model'}
+{'n_aborts': 307, 'n_successes': 272, 'steps': 22, 'name': 'Linear Model'}
+{'n_aborts': 326, 'n_successes': 288, 'steps': 23, 'name': 'Linear Model'}
+{'n_aborts': 340, 'n_successes': 302, 'steps': 24, 'name': 'Linear Model'}
+{'n_aborts': 352, 'n_successes': 313, 'steps': 25, 'name': 'Linear Model'}
+{'n_aborts': 370, 'n_successes': 325, 'steps': 26, 'name': 'Linear Model'}
+{'n_aborts': 381, 'n_successes': 340, 'steps': 27, 'name': 'Linear Model'}
+{'n_aborts': 400, 'n_successes': 358, 'steps': 28, 'name': 'Linear Model'}
+{'n_aborts': 410, 'n_successes': 375, 'steps': 29, 'name': 'Linear Model'}
+{'n_aborts': 421, 'n_successes': 386, 'steps': 30, 'name': 'Linear Model'}
+{'n_aborts': 430, 'n_successes': 405, 'steps': 31, 'name': 'Linear Model'}
+{'n_aborts': 445, 'n_successes': 416, 'steps': 32, 'name': 'Linear Model'}
+{'n_aborts': 456, 'n_successes': 429, 'steps': 33, 'name': 'Linear Model'}
+{'n_aborts': 476, 'n_successes': 451, 'steps': 34, 'name': 'Linear Model'}
+{'n_aborts': 489, 'n_successes': 461, 'steps': 35, 'name': 'Linear Model'}
+{'n_aborts': 508, 'n_successes': 472, 'steps': 36, 'name': 'Linear Model'}
+{'n_aborts': 526, 'n_successes': 485, 'steps': 37, 'name': 'Linear Model'}
+{'n_aborts': 544, 'n_successes': 491, 'steps': 38, 'name': 'Linear Model'}
+{'n_aborts': 562, 'n_successes': 506, 'steps': 39, 'name': 'Linear Model'}
+{'n_aborts': 574, 'n_successes': 519, 'steps': 40, 'name': 'Linear Model'}
+{'n_aborts': 582, 'n_successes': 532, 'steps': 41, 'name': 'Linear Model'}
+{'n_aborts': 598, 'n_successes': 547, 'steps': 42, 'name': 'Linear Model'}
+{'n_aborts': 616, 'n_successes': 563, 'steps': 43, 'name': 'Linear Model'}
+{'n_aborts': 637, 'n_successes': 568, 'steps': 44, 'name': 'Linear Model'}
+{'n_aborts': 639, 'n_successes': 581, 'steps': 45, 'name': 'Linear Model'}
+{'n_aborts': 657, 'n_successes': 595, 'steps': 46, 'name': 'Linear Model'}
+{'n_aborts': 679, 'n_successes': 609, 'steps': 47, 'name': 'Linear Model'}
+{'n_aborts': 697, 'n_successes': 625, 'steps': 48, 'name': 'Linear Model'}
+{'n_aborts': 706, 'n_successes': 638, 'steps': 49, 'name': 'Linear Model'}
+{'n_aborts': 732, 'n_successes': 652, 'steps': 50, 'name': 'Linear Model'}
+{'n_aborts': 751, 'n_successes': 664, 'steps': 51, 'name': 'Linear Model'}
+{'n_aborts': 765, 'n_successes': 677, 'steps': 52, 'name': 'Linear Model'}
+{'n_aborts': 780, 'n_successes': 692, 'steps': 53, 'name': 'Linear Model'}
+{'n_aborts': 790, 'n_successes': 700, 'steps': 54, 'name': 'Linear Model'}
+{'n_aborts': 806, 'n_successes': 713, 'steps': 55, 'name': 'Linear Model'}
+{'n_aborts': 813, 'n_successes': 731, 'steps': 56, 'name': 'Linear Model'}
+{'n_aborts': 825, 'n_successes': 746, 'steps': 57, 'name': 'Linear Model'}
+{'n_aborts': 844, 'n_successes': 754, 'steps': 58, 'name': 'Linear Model'}
+{'n_aborts': 862, 'n_successes': 770, 'steps': 59, 'name': 'Linear Model'}
+{'n_aborts': 870, 'n_successes': 778, 'steps': 60, 'name': 'Linear Model'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1}
+{'n_aborts': 1, 'n_successes': 4, 'steps': 2, 'name': 'Linear Model'}
+{'n_aborts': 4, 'n_successes': 14, 'steps': 3, 'name': 'Linear Model'}
+{'n_aborts': 18, 'n_successes': 20, 'steps': 4, 'name': 'Linear Model'}
+{'n_aborts': 47, 'n_successes': 30, 'steps': 5, 'name': 'Linear Model'}
+{'n_aborts': 54, 'n_successes': 42, 'steps': 6, 'name': 'Linear Model'}
+{'n_aborts': 65, 'n_successes': 55, 'steps': 7, 'name': 'Linear Model'}
+{'n_aborts': 74, 'n_successes': 64, 'steps': 8, 'name': 'Linear Model'}
+{'n_aborts': 95, 'n_successes': 73, 'steps': 9, 'name': 'Linear Model'}
+{'n_aborts': 114, 'n_successes': 84, 'steps': 10, 'name': 'Linear Model'}
+{'n_aborts': 133, 'n_successes': 96, 'steps': 11, 'name': 'Linear Model'}
+{'n_aborts': 149, 'n_successes': 115, 'steps': 12, 'name': 'Linear Model'}
+{'n_aborts': 160, 'n_successes': 129, 'steps': 13, 'name': 'Linear Model'}
+{'n_aborts': 184, 'n_successes': 138, 'steps': 14, 'name': 'Linear Model'}
+{'n_aborts': 195, 'n_successes': 145, 'steps': 15, 'name': 'Linear Model'}
+{'n_aborts': 212, 'n_successes': 165, 'steps': 16, 'name': 'Linear Model'}
+{'n_aborts': 221, 'n_successes': 185, 'steps': 17, 'name': 'Linear Model'}
+{'n_aborts': 233, 'n_successes': 198, 'steps': 18, 'name': 'Linear Model'}
+{'n_aborts': 247, 'n_successes': 207, 'steps': 19, 'name': 'Linear Model'}
+{'n_aborts': 256, 'n_successes': 220, 'steps': 20, 'name': 'Linear Model'}
+{'n_aborts': 265, 'n_successes': 235, 'steps': 21, 'name': 'Linear Model'}
+{'n_aborts': 275, 'n_successes': 246, 'steps': 22, 'name': 'Linear Model'}
+{'n_aborts': 298, 'n_successes': 260, 'steps': 23, 'name': 'Linear Model'}
+{'n_aborts': 317, 'n_successes': 276, 'steps': 24, 'name': 'Linear Model'}
+{'n_aborts': 334, 'n_successes': 284, 'steps': 25, 'name': 'Linear Model'}
+{'n_aborts': 356, 'n_successes': 298, 'steps': 26, 'name': 'Linear Model'}
+{'n_aborts': 370, 'n_successes': 314, 'steps': 27, 'name': 'Linear Model'}
+{'n_aborts': 380, 'n_successes': 326, 'steps': 28, 'name': 'Linear Model'}
+{'n_aborts': 394, 'n_successes': 340, 'steps': 29, 'name': 'Linear Model'}
+{'n_aborts': 412, 'n_successes': 355, 'steps': 30, 'name': 'Linear Model'}
+{'n_aborts': 424, 'n_successes': 372, 'steps': 31, 'name': 'Linear Model'}
+{'n_aborts': 453, 'n_successes': 380, 'steps': 32, 'name': 'Linear Model'}
+{'n_aborts': 468, 'n_successes': 395, 'steps': 33, 'name': 'Linear Model'}
+{'n_aborts': 479, 'n_successes': 406, 'steps': 34, 'name': 'Linear Model'}
+{'n_aborts': 498, 'n_successes': 419, 'steps': 35, 'name': 'Linear Model'}
+{'n_aborts': 517, 'n_successes': 429, 'steps': 36, 'name': 'Linear Model'}
+{'n_aborts': 528, 'n_successes': 449, 'steps': 37, 'name': 'Linear Model'}
+{'n_aborts': 546, 'n_successes': 461, 'steps': 38, 'name': 'Linear Model'}
+{'n_aborts': 562, 'n_successes': 471, 'steps': 39, 'name': 'Linear Model'}
+{'n_aborts': 579, 'n_successes': 483, 'steps': 40, 'name': 'Linear Model'}
+{'n_aborts': 598, 'n_successes': 494, 'steps': 41, 'name': 'Linear Model'}
+{'n_aborts': 614, 'n_successes': 507, 'steps': 42, 'name': 'Linear Model'}
+{'n_aborts': 628, 'n_successes': 517, 'steps': 43, 'name': 'Linear Model'}
+{'n_aborts': 642, 'n_successes': 534, 'steps': 44, 'name': 'Linear Model'}
+{'n_aborts': 661, 'n_successes': 544, 'steps': 45, 'name': 'Linear Model'}
+{'n_aborts': 680, 'n_successes': 552, 'steps': 46, 'name': 'Linear Model'}
+{'n_aborts': 694, 'n_successes': 566, 'steps': 47, 'name': 'Linear Model'}
+{'n_aborts': 709, 'n_successes': 578, 'steps': 48, 'name': 'Linear Model'}
+{'n_aborts': 724, 'n_successes': 588, 'steps': 49, 'name': 'Linear Model'}
+{'n_aborts': 740, 'n_successes': 602, 'steps': 50, 'name': 'Linear Model'}
+{'n_aborts': 750, 'n_successes': 611, 'steps': 51, 'name': 'Linear Model'}
+{'n_aborts': 764, 'n_successes': 625, 'steps': 52, 'name': 'Linear Model'}
+{'n_aborts': 778, 'n_successes': 637, 'steps': 53, 'name': 'Linear Model'}
+{'n_aborts': 791, 'n_successes': 653, 'steps': 54, 'name': 'Linear Model'}
+{'n_aborts': 809, 'n_successes': 666, 'steps': 55, 'name': 'Linear Model'}
+{'n_aborts': 822, 'n_successes': 680, 'steps': 56, 'name': 'Linear Model'}
+{'n_aborts': 840, 'n_successes': 692, 'steps': 57, 'name': 'Linear Model'}
+{'n_aborts': 859, 'n_successes': 713, 'steps': 58, 'name': 'Linear Model'}
+{'n_aborts': 876, 'n_successes': 722, 'steps': 59, 'name': 'Linear Model'}
+{'n_aborts': 893, 'n_successes': 738, 'steps': 60, 'name': 'Linear Model'}
+{'n_aborts': 910, 'n_successes': 753, 'steps': 61, 'name': 'Linear Model'}
+{'n_aborts': 920, 'n_successes': 771, 'steps': 62, 'name': 'Linear Model'}
+{'n_aborts': 932, 'n_successes': 785, 'steps': 63, 'name': 'Linear Model'}
+{'n_aborts': 949, 'n_successes': 800, 'steps': 64, 'name': 'Linear Model'}
+{'n_aborts': 964, 'n_successes': 814, 'steps': 65, 'name': 'Linear Model'}
+{'n_aborts': 980, 'n_successes': 827, 'steps': 66, 'name': 'Linear Model'}
+{'n_aborts': 998, 'n_successes': 842, 'steps': 67, 'name': 'Linear Model'}
+{'n_aborts': 1012, 'n_successes': 852, 'steps': 68, 'name': 'Linear Model'}
+{'n_aborts': 1024, 'n_successes': 867, 'steps': 69, 'name': 'Linear Model'}
+{'n_aborts': 1034, 'n_successes': 883, 'steps': 70, 'name': 'Linear Model'}
+{'n_aborts': 1057, 'n_successes': 893, 'steps': 71, 'name': 'Linear Model'}
+{'n_aborts': 1071, 'n_successes': 904, 'steps': 72, 'name': 'Linear Model'}
+{'n_aborts': 1083, 'n_successes': 919, 'steps': 73, 'name': 'Linear Model'}
+{'n_aborts': 1102, 'n_successes': 929, 'steps': 74, 'name': 'Linear Model'}
+{'n_aborts': 1123, 'n_successes': 937, 'steps': 75, 'name': 'Linear Model'}
+{'n_aborts': 1138, 'n_successes': 949, 'steps': 76, 'name': 'Linear Model'}
+{'n_aborts': 1157, 'n_successes': 967, 'steps': 77, 'name': 'Linear Model'}
+{'n_aborts': 1167, 'n_successes': 978, 'steps': 78, 'name': 'Linear Model'}
+{'n_aborts': 1190, 'n_successes': 988, 'steps': 79, 'name': 'Linear Model'}
+{'n_aborts': 1201, 'n_successes': 1005, 'steps': 80, 'name': 'Linear Model'}
+{'n_aborts': 1220, 'n_successes': 1018, 'steps': 81, 'name': 'Linear Model'}
+{'n_aborts': 1233, 'n_successes': 1029, 'steps': 82, 'name': 'Linear Model'}
+{'n_aborts': 1255, 'n_successes': 1046, 'steps': 83, 'name': 'Linear Model'}
+{'n_aborts': 1273, 'n_successes': 1062, 'steps': 84, 'name': 'Linear Model'}
+{'n_aborts': 1284, 'n_successes': 1077, 'steps': 85, 'name': 'Linear Model'}
+{'n_aborts': 1297, 'n_successes': 1093, 'steps': 86, 'name': 'Linear Model'}
+{'n_aborts': 1312, 'n_successes': 1103, 'steps': 87, 'name': 'Linear Model'}
+{'n_aborts': 1335, 'n_successes': 1111, 'steps': 88, 'name': 'Linear Model'}
+{'n_aborts': 1349, 'n_successes': 1124, 'steps': 89, 'name': 'Linear Model'}
+{'n_aborts': 1367, 'n_successes': 1133, 'steps': 90, 'name': 'Linear Model'}
+{'n_aborts': 1383, 'n_successes': 1145, 'steps': 91, 'name': 'Linear Model'}
+{'n_aborts': 1403, 'n_successes': 1158, 'steps': 92, 'name': 'Linear Model'}
+{'n_aborts': 1418, 'n_successes': 1166, 'steps': 93, 'name': 'Linear Model'}
+{'n_aborts': 1444, 'n_successes': 1185, 'steps': 94, 'name': 'Linear Model'}
+{'n_aborts': 1464, 'n_successes': 1202, 'steps': 95, 'name': 'Linear Model'}
+{'n_aborts': 1473, 'n_successes': 1217, 'steps': 96, 'name': 'Linear Model'}
+{'n_aborts': 1480, 'n_successes': 1229, 'steps': 97, 'name': 'Linear Model'}
+{'n_aborts': 1498, 'n_successes': 1246, 'steps': 98, 'name': 'Linear Model'}
+{'n_aborts': 1514, 'n_successes': 1259, 'steps': 99, 'name': 'Linear Model'}
+{'n_aborts': 1530, 'n_successes': 1274, 'steps': 100, 'name': 'Linear Model'}
+{'n_aborts': 1555, 'n_successes': 1286, 'steps': 101, 'name': 'Linear Model'}
+{'n_aborts': 1567, 'n_successes': 1300, 'steps': 102, 'name': 'Linear Model'}
+{'n_aborts': 1584, 'n_successes': 1309, 'steps': 103, 'name': 'Linear Model'}
+{'n_aborts': 1595, 'n_successes': 1324, 'steps': 104, 'name': 'Linear Model'}
+{'n_aborts': 1613, 'n_successes': 1337, 'steps': 105, 'name': 'Linear Model'}
+{'n_aborts': 1632, 'n_successes': 1353, 'steps': 106, 'name': 'Linear Model'}
+{'n_aborts': 1650, 'n_successes': 1367, 'steps': 107, 'name': 'Linear Model'}
+{'n_aborts': 1662, 'n_successes': 1377, 'steps': 108, 'name': 'Linear Model'}
+{'n_aborts': 1677, 'n_successes': 1390, 'steps': 109, 'name': 'Linear Model'}
+{'n_aborts': 1684, 'n_successes': 1400, 'steps': 110, 'name': 'Linear Model'}
+{'n_aborts': 1691, 'n_successes': 1408, 'steps': 111, 'name': 'Linear Model'}
+{'n_aborts': 1715, 'n_successes': 1414, 'steps': 112, 'name': 'Linear Model'}
+{'n_aborts': 1732, 'n_successes': 1426, 'steps': 113, 'name': 'Linear Model'}
+{'n_aborts': 1751, 'n_successes': 1447, 'steps': 114, 'name': 'Linear Model'}
+{'n_aborts': 1768, 'n_successes': 1458, 'steps': 115, 'name': 'Linear Model'}
+{'n_aborts': 1779, 'n_successes': 1471, 'steps': 116, 'name': 'Linear Model'}
+{'n_aborts': 1796, 'n_successes': 1482, 'steps': 117, 'name': 'Linear Model'}
+{'n_aborts': 1823, 'n_successes': 1492, 'steps': 118, 'name': 'Linear Model'}
+{'n_aborts': 1840, 'n_successes': 1506, 'steps': 119, 'name': 'Linear Model'}
+{'n_aborts': 1852, 'n_successes': 1527, 'steps': 120, 'name': 'Linear Model'}
+{'n_aborts': 1861, 'n_successes': 1540, 'steps': 121, 'name': 'Linear Model'}
+{'n_aborts': 1877, 'n_successes': 1548, 'steps': 122, 'name': 'Linear Model'}
+{'n_aborts': 1901, 'n_successes': 1558, 'steps': 123, 'name': 'Linear Model'}
+{'n_aborts': 1916, 'n_successes': 1575, 'steps': 124, 'name': 'Linear Model'}
+{'n_aborts': 1930, 'n_successes': 1587, 'steps': 125, 'name': 'Linear Model'}
+{'n_aborts': 1937, 'n_successes': 1602, 'steps': 126, 'name': 'Linear Model'}
+{'n_aborts': 1958, 'n_successes': 1611, 'steps': 127, 'name': 'Linear Model'}
+{'n_aborts': 1972, 'n_successes': 1622, 'steps': 128, 'name': 'Linear Model'}
+{'n_aborts': 1997, 'n_successes': 1640, 'steps': 129, 'name': 'Linear Model'}
+{'n_aborts': 2010, 'n_successes': 1647, 'steps': 130, 'name': 'Linear Model'}
+{'n_aborts': 2027, 'n_successes': 1664, 'steps': 131, 'name': 'Linear Model'}
+{'n_aborts': 2045, 'n_successes': 1676, 'steps': 132, 'name': 'Linear Model'}
+{'n_aborts': 2060, 'n_successes': 1688, 'steps': 133, 'name': 'Linear Model'}
+{'n_aborts': 2080, 'n_successes': 1706, 'steps': 134, 'name': 'Linear Model'}
+{'n_aborts': 2096, 'n_successes': 1722, 'steps': 135, 'name': 'Linear Model'}
+{'n_aborts': 2105, 'n_successes': 1732, 'steps': 136, 'name': 'Linear Model'}
+{'n_aborts': 2121, 'n_successes': 1743, 'steps': 137, 'name': 'Linear Model'}
+{'n_aborts': 2137, 'n_successes': 1761, 'steps': 138, 'name': 'Linear Model'}
+{'n_aborts': 2160, 'n_successes': 1773, 'steps': 139, 'name': 'Linear Model'}
+{'n_aborts': 2172, 'n_successes': 1784, 'steps': 140, 'name': 'Linear Model'}
+{'n_aborts': 2186, 'n_successes': 1802, 'steps': 141, 'name': 'Linear Model'}
+{'n_aborts': 2204, 'n_successes': 1813, 'steps': 142, 'name': 'Linear Model'}
+{'n_aborts': 2210, 'n_successes': 1828, 'steps': 143, 'name': 'Linear Model'}
+{'n_aborts': 2232, 'n_successes': 1843, 'steps': 144, 'name': 'Linear Model'}
+{'n_aborts': 2241, 'n_successes': 1855, 'steps': 145, 'name': 'Linear Model'}
+{'n_aborts': 2257, 'n_successes': 1868, 'steps': 146, 'name': 'Linear Model'}
+{'n_aborts': 2275, 'n_successes': 1879, 'steps': 147, 'name': 'Linear Model'}
+{'n_aborts': 2300, 'n_successes': 1888, 'steps': 148, 'name': 'Linear Model'}
+{'n_aborts': 2311, 'n_successes': 1903, 'steps': 149, 'name': 'Linear Model'}
+{'n_aborts': 2324, 'n_successes': 1912, 'steps': 150, 'name': 'Linear Model'}
+{'n_aborts': 2332, 'n_successes': 1925, 'steps': 151, 'name': 'Linear Model'}
+{'n_aborts': 2348, 'n_successes': 1936, 'steps': 152, 'name': 'Linear Model'}
+{'n_aborts': 2364, 'n_successes': 1951, 'steps': 153, 'name': 'Linear Model'}
+{'n_aborts': 2385, 'n_successes': 1962, 'steps': 154, 'name': 'Linear Model'}
+{'n_aborts': 2409, 'n_successes': 1972, 'steps': 155, 'name': 'Linear Model'}
+{'n_aborts': 2419, 'n_successes': 1983, 'steps': 156, 'name': 'Linear Model'}
+{'n_aborts': 2438, 'n_successes': 1991, 'steps': 157, 'name': 'Linear Model'}
+{'n_aborts': 2456, 'n_successes': 2001, 'steps': 158, 'name': 'Linear Model'}
+{'n_aborts': 2482, 'n_successes': 2010, 'steps': 159, 'name': 'Linear Model'}
+{'n_aborts': 2505, 'n_successes': 2020, 'steps': 160, 'name': 'Linear Model'}
+{'n_aborts': 2533, 'n_successes': 2029, 'steps': 161, 'name': 'Linear Model'}
+{'n_aborts': 2544, 'n_successes': 2044, 'steps': 162, 'name': 'Linear Model'}
+{'n_aborts': 2553, 'n_successes': 2064, 'steps': 163, 'name': 'Linear Model'}
+{'n_aborts': 2571, 'n_successes': 2073, 'steps': 164, 'name': 'Linear Model'}
+{'n_aborts': 2587, 'n_successes': 2087, 'steps': 165, 'name': 'Linear Model'}
+{'n_aborts': 2602, 'n_successes': 2102, 'steps': 166, 'name': 'Linear Model'}
+{'n_aborts': 2607, 'n_successes': 2116, 'steps': 167, 'name': 'Linear Model'}
+{'n_aborts': 2622, 'n_successes': 2126, 'steps': 168, 'name': 'Linear Model'}
+{'n_aborts': 2641, 'n_successes': 2140, 'steps': 169, 'name': 'Linear Model'}
+{'n_aborts': 2660, 'n_successes': 2153, 'steps': 170, 'name': 'Linear Model'}
+{'n_aborts': 2669, 'n_successes': 2163, 'steps': 171, 'name': 'Linear Model'}
+{'n_aborts': 2688, 'n_successes': 2171, 'steps': 172, 'name': 'Linear Model'}
+{'n_aborts': 2703, 'n_successes': 2180, 'steps': 173, 'name': 'Linear Model'}
+{'n_aborts': 2723, 'n_successes': 2194, 'steps': 174, 'name': 'Linear Model'}
+{'n_aborts': 2740, 'n_successes': 2205, 'steps': 175, 'name': 'Linear Model'}
+{'n_aborts': 2750, 'n_successes': 2218, 'steps': 176, 'name': 'Linear Model'}
+{'n_aborts': 2764, 'n_successes': 2228, 'steps': 177, 'name': 'Linear Model'}
+{'n_aborts': 2782, 'n_successes': 2237, 'steps': 178, 'name': 'Linear Model'}
+{'n_aborts': 2800, 'n_successes': 2254, 'steps': 179, 'name': 'Linear Model'}
+{'n_aborts': 2813, 'n_successes': 2265, 'steps': 180, 'name': 'Linear Model'}
+{'n_aborts': 2838, 'n_successes': 2278, 'steps': 181, 'name': 'Linear Model'}
+{'n_aborts': 2847, 'n_successes': 2293, 'steps': 182, 'name': 'Linear Model'}
+{'n_aborts': 2866, 'n_successes': 2306, 'steps': 183, 'name': 'Linear Model'}
+{'n_aborts': 2882, 'n_successes': 2319, 'steps': 184, 'name': 'Linear Model'}
+{'n_aborts': 2902, 'n_successes': 2332, 'steps': 185, 'name': 'Linear Model'}
+{'n_aborts': 2913, 'n_successes': 2344, 'steps': 186, 'name': 'Linear Model'}
+{'n_aborts': 2936, 'n_successes': 2354, 'steps': 187, 'name': 'Linear Model'}
+{'n_aborts': 2943, 'n_successes': 2374, 'steps': 188, 'name': 'Linear Model'}
+{'n_aborts': 2954, 'n_successes': 2387, 'steps': 189, 'name': 'Linear Model'}
+{'n_aborts': 2972, 'n_successes': 2399, 'steps': 190, 'name': 'Linear Model'}
+{'n_aborts': 2992, 'n_successes': 2410, 'steps': 191, 'name': 'Linear Model'}
+{'n_aborts': 3014, 'n_successes': 2425, 'steps': 192, 'name': 'Linear Model'}
+{'n_aborts': 3019, 'n_successes': 2436, 'steps': 193, 'name': 'Linear Model'}
+{'n_aborts': 3038, 'n_successes': 2450, 'steps': 194, 'name': 'Linear Model'}
+{'n_aborts': 3051, 'n_successes': 2464, 'steps': 195, 'name': 'Linear Model'}
+{'n_aborts': 3075, 'n_successes': 2473, 'steps': 196, 'name': 'Linear Model'}
+{'n_aborts': 3085, 'n_successes': 2494, 'steps': 197, 'name': 'Linear Model'}
+{'n_aborts': 3103, 'n_successes': 2504, 'steps': 198, 'name': 'Linear Model'}
+{'n_aborts': 3118, 'n_successes': 2520, 'steps': 199, 'name': 'Linear Model'}
+{'n_aborts': 3136, 'n_successes': 2531, 'steps': 200, 'name': 'Linear Model'}
+{'n_aborts': 3151, 'n_successes': 2544, 'steps': 201, 'name': 'Linear Model'}
+{'n_aborts': 3180, 'n_successes': 2557, 'steps': 202, 'name': 'Linear Model'}
+{'n_aborts': 3185, 'n_successes': 2571, 'steps': 203, 'name': 'Linear Model'}
+{'n_aborts': 3205, 'n_successes': 2583, 'steps': 204, 'name': 'Linear Model'}
+{'n_aborts': 3228, 'n_successes': 2595, 'steps': 205, 'name': 'Linear Model'}
+{'n_aborts': 3243, 'n_successes': 2611, 'steps': 206, 'name': 'Linear Model'}
+{'n_aborts': 3263, 'n_successes': 2628, 'steps': 207, 'name': 'Linear Model'}
+{'n_aborts': 3275, 'n_successes': 2638, 'steps': 208, 'name': 'Linear Model'}
+{'n_aborts': 3287, 'n_successes': 2646, 'steps': 209, 'name': 'Linear Model'}
+{'n_aborts': 3304, 'n_successes': 2655, 'steps': 210, 'name': 'Linear Model'}
+{'n_aborts': 3321, 'n_successes': 2667, 'steps': 211, 'name': 'Linear Model'}
+{'n_aborts': 3337, 'n_successes': 2681, 'steps': 212, 'name': 'Linear Model'}
+{'n_aborts': 3361, 'n_successes': 2698, 'steps': 213, 'name': 'Linear Model'}
+{'n_aborts': 3377, 'n_successes': 2711, 'steps': 214, 'name': 'Linear Model'}
+{'n_aborts': 3392, 'n_successes': 2721, 'steps': 215, 'name': 'Linear Model'}
+{'n_aborts': 3403, 'n_successes': 2743, 'steps': 216, 'name': 'Linear Model'}
+{'n_aborts': 3419, 'n_successes': 2757, 'steps': 217, 'name': 'Linear Model'}
+{'n_aborts': 3431, 'n_successes': 2768, 'steps': 218, 'name': 'Linear Model'}
+{'n_aborts': 3441, 'n_successes': 2782, 'steps': 219, 'name': 'Linear Model'}
+{'n_aborts': 3463, 'n_successes': 2793, 'steps': 220, 'name': 'Linear Model'}
+{'n_aborts': 3474, 'n_successes': 2810, 'steps': 221, 'name': 'Linear Model'}
+{'n_aborts': 3488, 'n_successes': 2818, 'steps': 222, 'name': 'Linear Model'}
+{'n_aborts': 3503, 'n_successes': 2828, 'steps': 223, 'name': 'Linear Model'}
+{'n_aborts': 3516, 'n_successes': 2838, 'steps': 224, 'name': 'Linear Model'}
+{'n_aborts': 3534, 'n_successes': 2849, 'steps': 225, 'name': 'Linear Model'}
+{'n_aborts': 3549, 'n_successes': 2865, 'steps': 226, 'name': 'Linear Model'}
+{'n_aborts': 3565, 'n_successes': 2881, 'steps': 227, 'name': 'Linear Model'}
+{'n_aborts': 3582, 'n_successes': 2891, 'steps': 228, 'name': 'Linear Model'}
+{'n_aborts': 3597, 'n_successes': 2909, 'steps': 229, 'name': 'Linear Model'}
+{'n_aborts': 3607, 'n_successes': 2921, 'steps': 230, 'name': 'Linear Model'}
+{'n_aborts': 3613, 'n_successes': 2936, 'steps': 231, 'name': 'Linear Model'}
+{'n_aborts': 3625, 'n_successes': 2953, 'steps': 232, 'name': 'Linear Model'}
+{'n_aborts': 3656, 'n_successes': 2962, 'steps': 233, 'name': 'Linear Model'}
+{'n_aborts': 3669, 'n_successes': 2977, 'steps': 234, 'name': 'Linear Model'}
+{'n_aborts': 3693, 'n_successes': 2985, 'steps': 235, 'name': 'Linear Model'}
+{'n_aborts': 3705, 'n_successes': 3001, 'steps': 236, 'name': 'Linear Model'}
+{'n_aborts': 3717, 'n_successes': 3011, 'steps': 237, 'name': 'Linear Model'}
+{'n_aborts': 3733, 'n_successes': 3026, 'steps': 238, 'name': 'Linear Model'}
+{'n_aborts': 3747, 'n_successes': 3042, 'steps': 239, 'name': 'Linear Model'}
+{'n_aborts': 3767, 'n_successes': 3057, 'steps': 240, 'name': 'Linear Model'}
+{'n_aborts': 3779, 'n_successes': 3070, 'steps': 241, 'name': 'Linear Model'}
+{'n_aborts': 3806, 'n_successes': 3081, 'steps': 242, 'name': 'Linear Model'}
+{'n_aborts': 3818, 'n_successes': 3092, 'steps': 243, 'name': 'Linear Model'}
+{'n_aborts': 3844, 'n_successes': 3105, 'steps': 244, 'name': 'Linear Model'}
+{'n_aborts': 3868, 'n_successes': 3115, 'steps': 245, 'name': 'Linear Model'}
+{'n_aborts': 3877, 'n_successes': 3124, 'steps': 246, 'name': 'Linear Model'}
+{'n_aborts': 3897, 'n_successes': 3136, 'steps': 247, 'name': 'Linear Model'}
+{'n_aborts': 3911, 'n_successes': 3149, 'steps': 248, 'name': 'Linear Model'}
+{'n_aborts': 3924, 'n_successes': 3158, 'steps': 249, 'name': 'Linear Model'}
+{'n_aborts': 3942, 'n_successes': 3174, 'steps': 250, 'name': 'Linear Model'}
+{'n_aborts': 3954, 'n_successes': 3187, 'steps': 251, 'name': 'Linear Model'}
+{'n_aborts': 3976, 'n_successes': 3196, 'steps': 252, 'name': 'Linear Model'}
+{'n_aborts': 3986, 'n_successes': 3212, 'steps': 253, 'name': 'Linear Model'}
+{'n_aborts': 4004, 'n_successes': 3225, 'steps': 254, 'name': 'Linear Model'}
+{'n_aborts': 4015, 'n_successes': 3235, 'steps': 255, 'name': 'Linear Model'}
+{'n_aborts': 4025, 'n_successes': 3250, 'steps': 256, 'name': 'Linear Model'}
+{'n_aborts': 4043, 'n_successes': 3265, 'steps': 257, 'name': 'Linear Model'}
+{'n_aborts': 4059, 'n_successes': 3285, 'steps': 258, 'name': 'Linear Model'}
+{'n_aborts': 4064, 'n_successes': 3294, 'steps': 259, 'name': 'Linear Model'}
+{'n_aborts': 4075, 'n_successes': 3311, 'steps': 260, 'name': 'Linear Model'}
+{'n_aborts': 4098, 'n_successes': 3320, 'steps': 261, 'name': 'Linear Model'}
+{'n_aborts': 4111, 'n_successes': 3331, 'steps': 262, 'name': 'Linear Model'}
+{'n_aborts': 4136, 'n_successes': 3342, 'steps': 263, 'name': 'Linear Model'}
+{'n_aborts': 4154, 'n_successes': 3355, 'steps': 264, 'name': 'Linear Model'}
+{'n_aborts': 4166, 'n_successes': 3368, 'steps': 265, 'name': 'Linear Model'}
+{'n_aborts': 4178, 'n_successes': 3386, 'steps': 266, 'name': 'Linear Model'}
+{'n_aborts': 4192, 'n_successes': 3398, 'steps': 267, 'name': 'Linear Model'}
+{'n_aborts': 4208, 'n_successes': 3412, 'steps': 268, 'name': 'Linear Model'}
+{'n_aborts': 4224, 'n_successes': 3425, 'steps': 269, 'name': 'Linear Model'}
+{'n_aborts': 4233, 'n_successes': 3440, 'steps': 270, 'name': 'Linear Model'}
+{'n_aborts': 4242, 'n_successes': 3450, 'steps': 271, 'name': 'Linear Model'}
+{'n_aborts': 4256, 'n_successes': 3467, 'steps': 272, 'name': 'Linear Model'}
+{'n_aborts': 4273, 'n_successes': 3483, 'steps': 273, 'name': 'Linear Model'}
+{'n_aborts': 4283, 'n_successes': 3496, 'steps': 274, 'name': 'Linear Model'}
+{'n_aborts': 4292, 'n_successes': 3514, 'steps': 275, 'name': 'Linear Model'}
+{'n_aborts': 4309, 'n_successes': 3528, 'steps': 276, 'name': 'Linear Model'}
+{'n_aborts': 4321, 'n_successes': 3545, 'steps': 277, 'name': 'Linear Model'}
+{'n_aborts': 4339, 'n_successes': 3564, 'steps': 278, 'name': 'Linear Model'}
+{'n_aborts': 4353, 'n_successes': 3576, 'steps': 279, 'name': 'Linear Model'}
+{'n_aborts': 4364, 'n_successes': 3591, 'steps': 280, 'name': 'Linear Model'}
+{'n_aborts': 4382, 'n_successes': 3608, 'steps': 281, 'name': 'Linear Model'}
+{'n_aborts': 4401, 'n_successes': 3617, 'steps': 282, 'name': 'Linear Model'}
+{'n_aborts': 4420, 'n_successes': 3622, 'steps': 283, 'name': 'Linear Model'}
+{'n_aborts': 4432, 'n_successes': 3637, 'steps': 284, 'name': 'Linear Model'}
+{'n_aborts': 4453, 'n_successes': 3650, 'steps': 285, 'name': 'Linear Model'}
+{'n_aborts': 4466, 'n_successes': 3666, 'steps': 286, 'name': 'Linear Model'}
+{'n_aborts': 4485, 'n_successes': 3674, 'steps': 287, 'name': 'Linear Model'}
+{'n_aborts': 4501, 'n_successes': 3690, 'steps': 288, 'name': 'Linear Model'}
+{'n_aborts': 4521, 'n_successes': 3701, 'steps': 289, 'name': 'Linear Model'}
+{'n_aborts': 4529, 'n_successes': 3710, 'steps': 290, 'name': 'Linear Model'}
+{'n_aborts': 4546, 'n_successes': 3723, 'steps': 291, 'name': 'Linear Model'}
+{'n_aborts': 4564, 'n_successes': 3738, 'steps': 292, 'name': 'Linear Model'}
+{'n_aborts': 4585, 'n_successes': 3751, 'steps': 293, 'name': 'Linear Model'}
+{'n_aborts': 4594, 'n_successes': 3767, 'steps': 294, 'name': 'Linear Model'}
+{'n_aborts': 4617, 'n_successes': 3778, 'steps': 295, 'name': 'Linear Model'}
+{'n_aborts': 4635, 'n_successes': 3793, 'steps': 296, 'name': 'Linear Model'}
+{'n_aborts': 4653, 'n_successes': 3808, 'steps': 297, 'name': 'Linear Model'}
+{'n_aborts': 4666, 'n_successes': 3824, 'steps': 298, 'name': 'Linear Model'}
+{'n_aborts': 4673, 'n_successes': 3837, 'steps': 299, 'name': 'Linear Model'}
+{'n_aborts': 4696, 'n_successes': 3850, 'steps': 300, 'name': 'Linear Model'}
+{'n_aborts': 4709, 'n_successes': 3867, 'steps': 301, 'name': 'Linear Model'}
+{'n_aborts': 4724, 'n_successes': 3877, 'steps': 302, 'name': 'Linear Model'}
+{'n_aborts': 4741, 'n_successes': 3890, 'steps': 303, 'name': 'Linear Model'}
+{'n_aborts': 4757, 'n_successes': 3904, 'steps': 304, 'name': 'Linear Model'}
+{'n_aborts': 4770, 'n_successes': 3915, 'steps': 305, 'name': 'Linear Model'}
+{'n_aborts': 4788, 'n_successes': 3925, 'steps': 306, 'name': 'Linear Model'}
+{'n_aborts': 4801, 'n_successes': 3941, 'steps': 307, 'name': 'Linear Model'}
+{'n_aborts': 4812, 'n_successes': 3953, 'steps': 308, 'name': 'Linear Model'}
+{'n_aborts': 4824, 'n_successes': 3970, 'steps': 309, 'name': 'Linear Model'}
+{'n_aborts': 4847, 'n_successes': 3984, 'steps': 310, 'name': 'Linear Model'}
+{'n_aborts': 4863, 'n_successes': 3996, 'steps': 311, 'name': 'Linear Model'}
+{'n_aborts': 4875, 'n_successes': 4012, 'steps': 312, 'name': 'Linear Model'}
+{'n_aborts': 4883, 'n_successes': 4022, 'steps': 313, 'name': 'Linear Model'}
+{'n_aborts': 4893, 'n_successes': 4036, 'steps': 314, 'name': 'Linear Model'}
+{'n_aborts': 4911, 'n_successes': 4048, 'steps': 315, 'name': 'Linear Model'}
+{'n_aborts': 4924, 'n_successes': 4061, 'steps': 316, 'name': 'Linear Model'}
+{'n_aborts': 4934, 'n_successes': 4077, 'steps': 317, 'name': 'Linear Model'}
+{'n_aborts': 4953, 'n_successes': 4085, 'steps': 318, 'name': 'Linear Model'}
+{'n_aborts': 4969, 'n_successes': 4099, 'steps': 319, 'name': 'Linear Model'}
+{'n_aborts': 4991, 'n_successes': 4108, 'steps': 320, 'name': 'Linear Model'}
+{'n_aborts': 4997, 'n_successes': 4121, 'steps': 321, 'name': 'Linear Model'}
+{'n_aborts': 5014, 'n_successes': 4128, 'steps': 322, 'name': 'Linear Model'}
+{'n_aborts': 5029, 'n_successes': 4143, 'steps': 323, 'name': 'Linear Model'}
+{'n_aborts': 5054, 'n_successes': 4158, 'steps': 324, 'name': 'Linear Model'}
+{'n_aborts': 5075, 'n_successes': 4166, 'steps': 325, 'name': 'Linear Model'}
+{'n_aborts': 5094, 'n_successes': 4179, 'steps': 326, 'name': 'Linear Model'}
+{'n_aborts': 5111, 'n_successes': 4192, 'steps': 327, 'name': 'Linear Model'}
+{'n_aborts': 5126, 'n_successes': 4210, 'steps': 328, 'name': 'Linear Model'}
+{'n_aborts': 5142, 'n_successes': 4220, 'steps': 329, 'name': 'Linear Model'}
+{'n_aborts': 5158, 'n_successes': 4234, 'steps': 330, 'name': 'Linear Model'}
+{'n_aborts': 5166, 'n_successes': 4247, 'steps': 331, 'name': 'Linear Model'}
+{'n_aborts': 5182, 'n_successes': 4257, 'steps': 332, 'name': 'Linear Model'}
+{'n_aborts': 5202, 'n_successes': 4266, 'steps': 333, 'name': 'Linear Model'}
+{'n_aborts': 5220, 'n_successes': 4280, 'steps': 334, 'name': 'Linear Model'}
+{'n_aborts': 5242, 'n_successes': 4291, 'steps': 335, 'name': 'Linear Model'}
+{'n_aborts': 5253, 'n_successes': 4308, 'steps': 336, 'name': 'Linear Model'}
+{'n_aborts': 5261, 'n_successes': 4320, 'steps': 337, 'name': 'Linear Model'}
+{'n_aborts': 5280, 'n_successes': 4339, 'steps': 338, 'name': 'Linear Model'}
+{'n_aborts': 5295, 'n_successes': 4349, 'steps': 339, 'name': 'Linear Model'}
+{'n_aborts': 5310, 'n_successes': 4361, 'steps': 340, 'name': 'Linear Model'}
+{'n_aborts': 5328, 'n_successes': 4378, 'steps': 341, 'name': 'Linear Model'}
+{'n_aborts': 5351, 'n_successes': 4388, 'steps': 342, 'name': 'Linear Model'}
+{'n_aborts': 5363, 'n_successes': 4408, 'steps': 343, 'name': 'Linear Model'}
+{'n_aborts': 5385, 'n_successes': 4420, 'steps': 344, 'name': 'Linear Model'}
+{'n_aborts': 5397, 'n_successes': 4433, 'steps': 345, 'name': 'Linear Model'}
+{'n_aborts': 5417, 'n_successes': 4451, 'steps': 346, 'name': 'Linear Model'}
+{'n_aborts': 5430, 'n_successes': 4466, 'steps': 347, 'name': 'Linear Model'}
+{'n_aborts': 5439, 'n_successes': 4481, 'steps': 348, 'name': 'Linear Model'}
+{'n_aborts': 5459, 'n_successes': 4492, 'steps': 349, 'name': 'Linear Model'}
+{'n_aborts': 5470, 'n_successes': 4509, 'steps': 350, 'name': 'Linear Model'}
+{'n_aborts': 5484, 'n_successes': 4521, 'steps': 351, 'name': 'Linear Model'}
+{'n_aborts': 5498, 'n_successes': 4538, 'steps': 352, 'name': 'Linear Model'}
+{'n_aborts': 5511, 'n_successes': 4551, 'steps': 353, 'name': 'Linear Model'}
+{'n_aborts': 5524, 'n_successes': 4563, 'steps': 354, 'name': 'Linear Model'}
+{'n_aborts': 5532, 'n_successes': 4574, 'steps': 355, 'name': 'Linear Model'}
+{'n_aborts': 5556, 'n_successes': 4583, 'steps': 356, 'name': 'Linear Model'}
+{'n_aborts': 5574, 'n_successes': 4597, 'steps': 357, 'name': 'Linear Model'}
+{'n_aborts': 5594, 'n_successes': 4611, 'steps': 358, 'name': 'Linear Model'}
+{'n_aborts': 5611, 'n_successes': 4634, 'steps': 359, 'name': 'Linear Model'}
+{'n_aborts': 5622, 'n_successes': 4647, 'steps': 360, 'name': 'Linear Model'}
+{'n_aborts': 5636, 'n_successes': 4662, 'steps': 361, 'name': 'Linear Model'}
+{'n_aborts': 5648, 'n_successes': 4673, 'steps': 362, 'name': 'Linear Model'}
+{'n_aborts': 5667, 'n_successes': 4684, 'steps': 363, 'name': 'Linear Model'}
+{'n_aborts': 5679, 'n_successes': 4694, 'steps': 364, 'name': 'Linear Model'}
+{'n_aborts': 5701, 'n_successes': 4708, 'steps': 365, 'name': 'Linear Model'}
+{'n_aborts': 5720, 'n_successes': 4723, 'steps': 366, 'name': 'Linear Model'}
+{'n_aborts': 5728, 'n_successes': 4734, 'steps': 367, 'name': 'Linear Model'}
+{'n_aborts': 5742, 'n_successes': 4746, 'steps': 368, 'name': 'Linear Model'}
+{'n_aborts': 5757, 'n_successes': 4766, 'steps': 369, 'name': 'Linear Model'}
+{'n_aborts': 5767, 'n_successes': 4782, 'steps': 370, 'name': 'Linear Model'}
+{'n_aborts': 5780, 'n_successes': 4792, 'steps': 371, 'name': 'Linear Model'}
+{'n_aborts': 5787, 'n_successes': 4806, 'steps': 372, 'name': 'Linear Model'}
+{'n_aborts': 5803, 'n_successes': 4817, 'steps': 373, 'name': 'Linear Model'}
+{'n_aborts': 5821, 'n_successes': 4833, 'steps': 374, 'name': 'Linear Model'}
+{'n_aborts': 5835, 'n_successes': 4845, 'steps': 375, 'name': 'Linear Model'}
+{'n_aborts': 5851, 'n_successes': 4865, 'steps': 376, 'name': 'Linear Model'}
+{'n_aborts': 5869, 'n_successes': 4876, 'steps': 377, 'name': 'Linear Model'}
+{'n_aborts': 5879, 'n_successes': 4890, 'steps': 378, 'name': 'Linear Model'}
+{'n_aborts': 5897, 'n_successes': 4898, 'steps': 379, 'name': 'Linear Model'}
+{'n_aborts': 5909, 'n_successes': 4908, 'steps': 380, 'name': 'Linear Model'}
+{'n_aborts': 5922, 'n_successes': 4923, 'steps': 381, 'name': 'Linear Model'}
+{'n_aborts': 5941, 'n_successes': 4938, 'steps': 382, 'name': 'Linear Model'}
+{'n_aborts': 5959, 'n_successes': 4952, 'steps': 383, 'name': 'Linear Model'}
+{'n_aborts': 5976, 'n_successes': 4967, 'steps': 384, 'name': 'Linear Model'}
+{'n_aborts': 5991, 'n_successes': 4977, 'steps': 385, 'name': 'Linear Model'}
+{'n_aborts': 6005, 'n_successes': 4995, 'steps': 386, 'name': 'Linear Model'}
+{'n_aborts': 6022, 'n_successes': 5011, 'steps': 387, 'name': 'Linear Model'}
+{'n_aborts': 6039, 'n_successes': 5024, 'steps': 388, 'name': 'Linear Model'}
+{'n_aborts': 6058, 'n_successes': 5034, 'steps': 389, 'name': 'Linear Model'}
+{'n_aborts': 6072, 'n_successes': 5043, 'steps': 390, 'name': 'Linear Model'}
+{'n_aborts': 6093, 'n_successes': 5056, 'steps': 391, 'name': 'Linear Model'}
+{'n_aborts': 6106, 'n_successes': 5071, 'steps': 392, 'name': 'Linear Model'}
+{'n_aborts': 6113, 'n_successes': 5083, 'steps': 393, 'name': 'Linear Model'}
+{'n_aborts': 6129, 'n_successes': 5099, 'steps': 394, 'name': 'Linear Model'}
+{'n_aborts': 6151, 'n_successes': 5105, 'steps': 395, 'name': 'Linear Model'}
+{'n_aborts': 6166, 'n_successes': 5118, 'steps': 396, 'name': 'Linear Model'}
+{'n_aborts': 6185, 'n_successes': 5133, 'steps': 397, 'name': 'Linear Model'}
+{'n_aborts': 6206, 'n_successes': 5148, 'steps': 398, 'name': 'Linear Model'}
+{'n_aborts': 6220, 'n_successes': 5160, 'steps': 399, 'name': 'Linear Model'}
+{'n_aborts': 6228, 'n_successes': 5175, 'steps': 400, 'name': 'Linear Model'}
+{'n_aborts': 6246, 'n_successes': 5188, 'steps': 401, 'name': 'Linear Model'}
+{'n_aborts': 6264, 'n_successes': 5196, 'steps': 402, 'name': 'Linear Model'}
+{'n_aborts': 6281, 'n_successes': 5205, 'steps': 403, 'name': 'Linear Model'}
+{'n_aborts': 6300, 'n_successes': 5221, 'steps': 404, 'name': 'Linear Model'}
+{'n_aborts': 6316, 'n_successes': 5235, 'steps': 405, 'name': 'Linear Model'}
+{'n_aborts': 6331, 'n_successes': 5249, 'steps': 406, 'name': 'Linear Model'}
+{'n_aborts': 6350, 'n_successes': 5263, 'steps': 407, 'name': 'Linear Model'}
+{'n_aborts': 6358, 'n_successes': 5274, 'steps': 408, 'name': 'Linear Model'}
+{'n_aborts': 6376, 'n_successes': 5285, 'steps': 409, 'name': 'Linear Model'}
+{'n_aborts': 6387, 'n_successes': 5302, 'steps': 410, 'name': 'Linear Model'}
+{'n_aborts': 6402, 'n_successes': 5314, 'steps': 411, 'name': 'Linear Model'}
+{'n_aborts': 6416, 'n_successes': 5327, 'steps': 412, 'name': 'Linear Model'}
+{'n_aborts': 6429, 'n_successes': 5341, 'steps': 413, 'name': 'Linear Model'}
+{'n_aborts': 6438, 'n_successes': 5362, 'steps': 414, 'name': 'Linear Model'}
+{'n_aborts': 6448, 'n_successes': 5374, 'steps': 415, 'name': 'Linear Model'}
+{'n_aborts': 6464, 'n_successes': 5389, 'steps': 416, 'name': 'Linear Model'}
+{'n_aborts': 6483, 'n_successes': 5400, 'steps': 417, 'name': 'Linear Model'}
+{'n_aborts': 6499, 'n_successes': 5409, 'steps': 418, 'name': 'Linear Model'}
+{'n_aborts': 6512, 'n_successes': 5417, 'steps': 419, 'name': 'Linear Model'}
+{'n_aborts': 6528, 'n_successes': 5428, 'steps': 420, 'name': 'Linear Model'}
+{'n_aborts': 6551, 'n_successes': 5440, 'steps': 421, 'name': 'Linear Model'}
+{'n_aborts': 6571, 'n_successes': 5456, 'steps': 422, 'name': 'Linear Model'}
+{'n_aborts': 6579, 'n_successes': 5476, 'steps': 423, 'name': 'Linear Model'}
+{'n_aborts': 6597, 'n_successes': 5488, 'steps': 424, 'name': 'Linear Model'}
+{'n_aborts': 6604, 'n_successes': 5500, 'steps': 425, 'name': 'Linear Model'}
+{'n_aborts': 6620, 'n_successes': 5511, 'steps': 426, 'name': 'Linear Model'}
+{'n_aborts': 6640, 'n_successes': 5517, 'steps': 427, 'name': 'Linear Model'}
+{'n_aborts': 6654, 'n_successes': 5529, 'steps': 428, 'name': 'Linear Model'}
+{'n_aborts': 6666, 'n_successes': 5545, 'steps': 429, 'name': 'Linear Model'}
+{'n_aborts': 6683, 'n_successes': 5553, 'steps': 430, 'name': 'Linear Model'}
+{'n_aborts': 6691, 'n_successes': 5568, 'steps': 431, 'name': 'Linear Model'}
+{'n_aborts': 6712, 'n_successes': 5580, 'steps': 432, 'name': 'Linear Model'}
+{'n_aborts': 6730, 'n_successes': 5601, 'steps': 433, 'name': 'Linear Model'}
+{'n_aborts': 6740, 'n_successes': 5615, 'steps': 434, 'name': 'Linear Model'}
+{'n_aborts': 6749, 'n_successes': 5625, 'steps': 435, 'name': 'Linear Model'}
+{'n_aborts': 6765, 'n_successes': 5630, 'steps': 436, 'name': 'Linear Model'}
+{'n_aborts': 6776, 'n_successes': 5640, 'steps': 437, 'name': 'Linear Model'}
+{'n_aborts': 6793, 'n_successes': 5652, 'steps': 438, 'name': 'Linear Model'}
+{'n_aborts': 6810, 'n_successes': 5667, 'steps': 439, 'name': 'Linear Model'}
+{'n_aborts': 6823, 'n_successes': 5681, 'steps': 440, 'name': 'Linear Model'}
+{'n_aborts': 6831, 'n_successes': 5691, 'steps': 441, 'name': 'Linear Model'}
+{'n_aborts': 6844, 'n_successes': 5698, 'steps': 442, 'name': 'Linear Model'}
+{'n_aborts': 6873, 'n_successes': 5707, 'steps': 443, 'name': 'Linear Model'}
+{'n_aborts': 6886, 'n_successes': 5720, 'steps': 444, 'name': 'Linear Model'}
+{'n_aborts': 6895, 'n_successes': 5727, 'steps': 445, 'name': 'Linear Model'}
+{'n_aborts': 6915, 'n_successes': 5745, 'steps': 446, 'name': 'Linear Model'}
+{'n_aborts': 6930, 'n_successes': 5760, 'steps': 447, 'name': 'Linear Model'}
+{'n_aborts': 6950, 'n_successes': 5769, 'steps': 448, 'name': 'Linear Model'}
+{'n_aborts': 6965, 'n_successes': 5779, 'steps': 449, 'name': 'Linear Model'}
+{'n_aborts': 6986, 'n_successes': 5791, 'steps': 450, 'name': 'Linear Model'}
+{'n_aborts': 7003, 'n_successes': 5807, 'steps': 451, 'name': 'Linear Model'}
+{'n_aborts': 7019, 'n_successes': 5813, 'steps': 452, 'name': 'Linear Model'}
+{'n_aborts': 7044, 'n_successes': 5819, 'steps': 453, 'name': 'Linear Model'}
+{'n_aborts': 7060, 'n_successes': 5828, 'steps': 454, 'name': 'Linear Model'}
+{'n_aborts': 7076, 'n_successes': 5835, 'steps': 455, 'name': 'Linear Model'}
+{'n_aborts': 7091, 'n_successes': 5843, 'steps': 456, 'name': 'Linear Model'}
+{'n_aborts': 7110, 'n_successes': 5855, 'steps': 457, 'name': 'Linear Model'}
+{'n_aborts': 7121, 'n_successes': 5865, 'steps': 458, 'name': 'Linear Model'}
+{'n_aborts': 7139, 'n_successes': 5878, 'steps': 459, 'name': 'Linear Model'}
+{'n_aborts': 7150, 'n_successes': 5895, 'steps': 460, 'name': 'Linear Model'}
+{'n_aborts': 7166, 'n_successes': 5907, 'steps': 461, 'name': 'Linear Model'}
+{'n_aborts': 7179, 'n_successes': 5922, 'steps': 462, 'name': 'Linear Model'}
+{'n_aborts': 7195, 'n_successes': 5935, 'steps': 463, 'name': 'Linear Model'}
+{'n_aborts': 7203, 'n_successes': 5948, 'steps': 464, 'name': 'Linear Model'}
+{'n_aborts': 7216, 'n_successes': 5957, 'steps': 465, 'name': 'Linear Model'}
+{'n_aborts': 7230, 'n_successes': 5975, 'steps': 466, 'name': 'Linear Model'}
+{'n_aborts': 7238, 'n_successes': 5990, 'steps': 467, 'name': 'Linear Model'}
+{'n_aborts': 7254, 'n_successes': 6010, 'steps': 468, 'name': 'Linear Model'}
+{'n_aborts': 7271, 'n_successes': 6016, 'steps': 469, 'name': 'Linear Model'}
+{'n_aborts': 7294, 'n_successes': 6030, 'steps': 470, 'name': 'Linear Model'}
+{'n_aborts': 7305, 'n_successes': 6047, 'steps': 471, 'name': 'Linear Model'}
+{'n_aborts': 7319, 'n_successes': 6062, 'steps': 472, 'name': 'Linear Model'}
+{'n_aborts': 7337, 'n_successes': 6075, 'steps': 473, 'name': 'Linear Model'}
+{'n_aborts': 7354, 'n_successes': 6090, 'steps': 474, 'name': 'Linear Model'}
+{'n_aborts': 7369, 'n_successes': 6101, 'steps': 475, 'name': 'Linear Model'}
+{'n_aborts': 7388, 'n_successes': 6111, 'steps': 476, 'name': 'Linear Model'}
+{'n_aborts': 7393, 'n_successes': 6120, 'steps': 477, 'name': 'Linear Model'}
+{'n_aborts': 7408, 'n_successes': 6135, 'steps': 478, 'name': 'Linear Model'}
+{'n_aborts': 7422, 'n_successes': 6146, 'steps': 479, 'name': 'Linear Model'}
+{'n_aborts': 7444, 'n_successes': 6154, 'steps': 480, 'name': 'Linear Model'}
+{'n_aborts': 7473, 'n_successes': 6164, 'steps': 481, 'name': 'Linear Model'}
+{'n_aborts': 7494, 'n_successes': 6172, 'steps': 482, 'name': 'Linear Model'}
+{'n_aborts': 7513, 'n_successes': 6186, 'steps': 483, 'name': 'Linear Model'}
+{'n_aborts': 7522, 'n_successes': 6194, 'steps': 484, 'name': 'Linear Model'}
+{'n_aborts': 7540, 'n_successes': 6202, 'steps': 485, 'name': 'Linear Model'}
+{'n_aborts': 7559, 'n_successes': 6212, 'steps': 486, 'name': 'Linear Model'}
+{'n_aborts': 7571, 'n_successes': 6231, 'steps': 487, 'name': 'Linear Model'}
+{'n_aborts': 7584, 'n_successes': 6244, 'steps': 488, 'name': 'Linear Model'}
+{'n_aborts': 7606, 'n_successes': 6258, 'steps': 489, 'name': 'Linear Model'}
+{'n_aborts': 7618, 'n_successes': 6266, 'steps': 490, 'name': 'Linear Model'}
+{'n_aborts': 7631, 'n_successes': 6276, 'steps': 491, 'name': 'Linear Model'}
+{'n_aborts': 7652, 'n_successes': 6287, 'steps': 492, 'name': 'Linear Model'}
+{'n_aborts': 7666, 'n_successes': 6299, 'steps': 493, 'name': 'Linear Model'}
+{'n_aborts': 7682, 'n_successes': 6309, 'steps': 494, 'name': 'Linear Model'}
+{'n_aborts': 7696, 'n_successes': 6319, 'steps': 495, 'name': 'Linear Model'}
+{'n_aborts': 7720, 'n_successes': 6333, 'steps': 496, 'name': 'Linear Model'}
+{'n_aborts': 7735, 'n_successes': 6347, 'steps': 497, 'name': 'Linear Model'}
+{'n_aborts': 7756, 'n_successes': 6356, 'steps': 498, 'name': 'Linear Model'}
+{'n_aborts': 7772, 'n_successes': 6368, 'steps': 499, 'name': 'Linear Model'}
+{'n_aborts': 7787, 'n_successes': 6378, 'steps': 500, 'name': 'Linear Model'}
+{'n_aborts': 7812, 'n_successes': 6390, 'steps': 501, 'name': 'Linear Model'}
+{'n_aborts': 7833, 'n_successes': 6405, 'steps': 502, 'name': 'Linear Model'}
+{'n_aborts': 7849, 'n_successes': 6419, 'steps': 503, 'name': 'Linear Model'}
+{'n_aborts': 7865, 'n_successes': 6432, 'steps': 504, 'name': 'Linear Model'}
+{'n_aborts': 7886, 'n_successes': 6445, 'steps': 505, 'name': 'Linear Model'}
+{'n_aborts': 7907, 'n_successes': 6457, 'steps': 506, 'name': 'Linear Model'}
+{'n_aborts': 7925, 'n_successes': 6463, 'steps': 507, 'name': 'Linear Model'}
+{'n_aborts': 7937, 'n_successes': 6480, 'steps': 508, 'name': 'Linear Model'}
+{'n_aborts': 7954, 'n_successes': 6491, 'steps': 509, 'name': 'Linear Model'}
+{'n_aborts': 7972, 'n_successes': 6508, 'steps': 510, 'name': 'Linear Model'}
+{'n_aborts': 7994, 'n_successes': 6521, 'steps': 511, 'name': 'Linear Model'}
+{'n_aborts': 8003, 'n_successes': 6537, 'steps': 512, 'name': 'Linear Model'}
+{'n_aborts': 8020, 'n_successes': 6550, 'steps': 513, 'name': 'Linear Model'}
+{'n_aborts': 8041, 'n_successes': 6564, 'steps': 514, 'name': 'Linear Model'}
+{'n_aborts': 8054, 'n_successes': 6581, 'steps': 515, 'name': 'Linear Model'}
+{'n_aborts': 8066, 'n_successes': 6596, 'steps': 516, 'name': 'Linear Model'}
+{'n_aborts': 8092, 'n_successes': 6608, 'steps': 517, 'name': 'Linear Model'}
+{'n_aborts': 8101, 'n_successes': 6620, 'steps': 518, 'name': 'Linear Model'}
+{'n_aborts': 8124, 'n_successes': 6632, 'steps': 519, 'name': 'Linear Model'}
+{'n_aborts': 8147, 'n_successes': 6642, 'steps': 520, 'name': 'Linear Model'}
+{'n_aborts': 8156, 'n_successes': 6654, 'steps': 521, 'name': 'Linear Model'}
+{'n_aborts': 8170, 'n_successes': 6665, 'steps': 522, 'name': 'Linear Model'}
+{'n_aborts': 8191, 'n_successes': 6678, 'steps': 523, 'name': 'Linear Model'}
+{'n_aborts': 8210, 'n_successes': 6687, 'steps': 524, 'name': 'Linear Model'}
+{'n_aborts': 8219, 'n_successes': 6704, 'steps': 525, 'name': 'Linear Model'}
+{'n_aborts': 8237, 'n_successes': 6720, 'steps': 526, 'name': 'Linear Model'}
+{'n_aborts': 8255, 'n_successes': 6734, 'steps': 527, 'name': 'Linear Model'}
+{'n_aborts': 8268, 'n_successes': 6753, 'steps': 528, 'name': 'Linear Model'}
+{'n_aborts': 8287, 'n_successes': 6767, 'steps': 529, 'name': 'Linear Model'}
+{'n_aborts': 8297, 'n_successes': 6780, 'steps': 530, 'name': 'Linear Model'}
+{'n_aborts': 8319, 'n_successes': 6794, 'steps': 531, 'name': 'Linear Model'}
+{'n_aborts': 8331, 'n_successes': 6805, 'steps': 532, 'name': 'Linear Model'}
+{'n_aborts': 8343, 'n_successes': 6815, 'steps': 533, 'name': 'Linear Model'}
+{'n_aborts': 8355, 'n_successes': 6827, 'steps': 534, 'name': 'Linear Model'}
+{'n_aborts': 8377, 'n_successes': 6838, 'steps': 535, 'name': 'Linear Model'}
+{'n_aborts': 8400, 'n_successes': 6852, 'steps': 536, 'name': 'Linear Model'}
+{'n_aborts': 8415, 'n_successes': 6872, 'steps': 537, 'name': 'Linear Model'}
+{'n_aborts': 8424, 'n_successes': 6892, 'steps': 538, 'name': 'Linear Model'}
+{'n_aborts': 8430, 'n_successes': 6903, 'steps': 539, 'name': 'Linear Model'}
+{'n_aborts': 8450, 'n_successes': 6915, 'steps': 540, 'name': 'Linear Model'}
+{'n_aborts': 8456, 'n_successes': 6926, 'steps': 541, 'name': 'Linear Model'}
+{'n_aborts': 8482, 'n_successes': 6939, 'steps': 542, 'name': 'Linear Model'}
+{'n_aborts': 8501, 'n_successes': 6953, 'steps': 543, 'name': 'Linear Model'}
+{'n_aborts': 8513, 'n_successes': 6969, 'steps': 544, 'name': 'Linear Model'}
+{'n_aborts': 8540, 'n_successes': 6981, 'steps': 545, 'name': 'Linear Model'}
+{'n_aborts': 8551, 'n_successes': 6997, 'steps': 546, 'name': 'Linear Model'}
+{'n_aborts': 8567, 'n_successes': 7009, 'steps': 547, 'name': 'Linear Model'}
+{'n_aborts': 8581, 'n_successes': 7024, 'steps': 548, 'name': 'Linear Model'}
+{'n_aborts': 8595, 'n_successes': 7035, 'steps': 549, 'name': 'Linear Model'}
+{'n_aborts': 8614, 'n_successes': 7051, 'steps': 550, 'name': 'Linear Model'}
+{'n_aborts': 8631, 'n_successes': 7063, 'steps': 551, 'name': 'Linear Model'}
+{'n_aborts': 8650, 'n_successes': 7071, 'steps': 552, 'name': 'Linear Model'}
+{'n_aborts': 8665, 'n_successes': 7080, 'steps': 553, 'name': 'Linear Model'}
+{'n_aborts': 8678, 'n_successes': 7095, 'steps': 554, 'name': 'Linear Model'}
+{'n_aborts': 8692, 'n_successes': 7104, 'steps': 555, 'name': 'Linear Model'}
+{'n_aborts': 8710, 'n_successes': 7118, 'steps': 556, 'name': 'Linear Model'}
+{'n_aborts': 8720, 'n_successes': 7139, 'steps': 557, 'name': 'Linear Model'}
+{'n_aborts': 8732, 'n_successes': 7153, 'steps': 558, 'name': 'Linear Model'}
+{'n_aborts': 8745, 'n_successes': 7166, 'steps': 559, 'name': 'Linear Model'}
+{'n_aborts': 8756, 'n_successes': 7175, 'steps': 560, 'name': 'Linear Model'}
+{'n_aborts': 8769, 'n_successes': 7191, 'steps': 561, 'name': 'Linear Model'}
+{'n_aborts': 8785, 'n_successes': 7200, 'steps': 562, 'name': 'Linear Model'}
+{'n_aborts': 8794, 'n_successes': 7215, 'steps': 563, 'name': 'Linear Model'}
+{'n_aborts': 8811, 'n_successes': 7222, 'steps': 564, 'name': 'Linear Model'}
+{'n_aborts': 8824, 'n_successes': 7237, 'steps': 565, 'name': 'Linear Model'}
+{'n_aborts': 8840, 'n_successes': 7250, 'steps': 566, 'name': 'Linear Model'}
+{'n_aborts': 8863, 'n_successes': 7261, 'steps': 567, 'name': 'Linear Model'}
+{'n_aborts': 8874, 'n_successes': 7269, 'steps': 568, 'name': 'Linear Model'}
+{'n_aborts': 8895, 'n_successes': 7285, 'steps': 569, 'name': 'Linear Model'}
+{'n_aborts': 8916, 'n_successes': 7299, 'steps': 570, 'name': 'Linear Model'}
+{'n_aborts': 8940, 'n_successes': 7309, 'steps': 571, 'name': 'Linear Model'}
+{'n_aborts': 8951, 'n_successes': 7323, 'steps': 572, 'name': 'Linear Model'}
+{'n_aborts': 8973, 'n_successes': 7334, 'steps': 573, 'name': 'Linear Model'}
+{'n_aborts': 8981, 'n_successes': 7350, 'steps': 574, 'name': 'Linear Model'}
+{'n_aborts': 9003, 'n_successes': 7362, 'steps': 575, 'name': 'Linear Model'}
+{'n_aborts': 9020, 'n_successes': 7382, 'steps': 576, 'name': 'Linear Model'}
+{'n_aborts': 9036, 'n_successes': 7391, 'steps': 577, 'name': 'Linear Model'}
+{'n_aborts': 9047, 'n_successes': 7407, 'steps': 578, 'name': 'Linear Model'}
+{'n_aborts': 9063, 'n_successes': 7418, 'steps': 579, 'name': 'Linear Model'}
+{'n_aborts': 9075, 'n_successes': 7435, 'steps': 580, 'name': 'Linear Model'}
+{'n_aborts': 9098, 'n_successes': 7444, 'steps': 581, 'name': 'Linear Model'}
+{'n_aborts': 9102, 'n_successes': 7453, 'steps': 582, 'name': 'Linear Model'}
+{'n_aborts': 9113, 'n_successes': 7461, 'steps': 583, 'name': 'Linear Model'}
+{'n_aborts': 9139, 'n_successes': 7474, 'steps': 584, 'name': 'Linear Model'}
+{'n_aborts': 9162, 'n_successes': 7482, 'steps': 585, 'name': 'Linear Model'}
+{'n_aborts': 9174, 'n_successes': 7497, 'steps': 586, 'name': 'Linear Model'}
+{'n_aborts': 9188, 'n_successes': 7512, 'steps': 587, 'name': 'Linear Model'}
+{'n_aborts': 9204, 'n_successes': 7525, 'steps': 588, 'name': 'Linear Model'}
+{'n_aborts': 9218, 'n_successes': 7535, 'steps': 589, 'name': 'Linear Model'}
+{'n_aborts': 9237, 'n_successes': 7548, 'steps': 590, 'name': 'Linear Model'}
+{'n_aborts': 9254, 'n_successes': 7560, 'steps': 591, 'name': 'Linear Model'}
+{'n_aborts': 9269, 'n_successes': 7569, 'steps': 592, 'name': 'Linear Model'}
+{'n_aborts': 9281, 'n_successes': 7580, 'steps': 593, 'name': 'Linear Model'}
+{'n_aborts': 9299, 'n_successes': 7588, 'steps': 594, 'name': 'Linear Model'}
+{'n_aborts': 9313, 'n_successes': 7603, 'steps': 595, 'name': 'Linear Model'}
+{'n_aborts': 9334, 'n_successes': 7610, 'steps': 596, 'name': 'Linear Model'}
+{'n_aborts': 9350, 'n_successes': 7629, 'steps': 597, 'name': 'Linear Model'}
+{'n_aborts': 9366, 'n_successes': 7644, 'steps': 598, 'name': 'Linear Model'}
+{'n_aborts': 9380, 'n_successes': 7657, 'steps': 599, 'name': 'Linear Model'}
+{'n_aborts': 9392, 'n_successes': 7675, 'steps': 600, 'name': 'Linear Model'}
+{'n_aborts': 9411, 'n_successes': 7686, 'steps': 601, 'name': 'Linear Model'}
+{'n_aborts': 9422, 'n_successes': 7699, 'steps': 602, 'name': 'Linear Model'}
+{'n_aborts': 9436, 'n_successes': 7714, 'steps': 603, 'name': 'Linear Model'}
+{'n_aborts': 9448, 'n_successes': 7724, 'steps': 604, 'name': 'Linear Model'}
+{'n_aborts': 9461, 'n_successes': 7742, 'steps': 605, 'name': 'Linear Model'}
+{'n_aborts': 9475, 'n_successes': 7757, 'steps': 606, 'name': 'Linear Model'}
+{'n_aborts': 9492, 'n_successes': 7766, 'steps': 607, 'name': 'Linear Model'}
+{'n_aborts': 9501, 'n_successes': 7779, 'steps': 608, 'name': 'Linear Model'}
+{'n_aborts': 9519, 'n_successes': 7795, 'steps': 609, 'name': 'Linear Model'}
+{'n_aborts': 9532, 'n_successes': 7809, 'steps': 610, 'name': 'Linear Model'}
+{'n_aborts': 9549, 'n_successes': 7823, 'steps': 611, 'name': 'Linear Model'}
+{'n_aborts': 9568, 'n_successes': 7835, 'steps': 612, 'name': 'Linear Model'}
+{'n_aborts': 9586, 'n_successes': 7848, 'steps': 613, 'name': 'Linear Model'}
+{'n_aborts': 9605, 'n_successes': 7863, 'steps': 614, 'name': 'Linear Model'}
+{'n_aborts': 9619, 'n_successes': 7879, 'steps': 615, 'name': 'Linear Model'}
+{'n_aborts': 9639, 'n_successes': 7895, 'steps': 616, 'name': 'Linear Model'}
+{'n_aborts': 9648, 'n_successes': 7909, 'steps': 617, 'name': 'Linear Model'}
+{'n_aborts': 9666, 'n_successes': 7923, 'steps': 618, 'name': 'Linear Model'}
+{'n_aborts': 9690, 'n_successes': 7939, 'steps': 619, 'name': 'Linear Model'}
+{'n_aborts': 9705, 'n_successes': 7948, 'steps': 620, 'name': 'Linear Model'}
+{'n_aborts': 9717, 'n_successes': 7965, 'steps': 621, 'name': 'Linear Model'}
+{'n_aborts': 9732, 'n_successes': 7979, 'steps': 622, 'name': 'Linear Model'}
+{'n_aborts': 9751, 'n_successes': 7991, 'steps': 623, 'name': 'Linear Model'}
+{'n_aborts': 9771, 'n_successes': 8003, 'steps': 624, 'name': 'Linear Model'}
+{'n_aborts': 9785, 'n_successes': 8012, 'steps': 625, 'name': 'Linear Model'}
+{'n_aborts': 9805, 'n_successes': 8028, 'steps': 626, 'name': 'Linear Model'}
+{'n_aborts': 9823, 'n_successes': 8041, 'steps': 627, 'name': 'Linear Model'}
+{'n_aborts': 9841, 'n_successes': 8052, 'steps': 628, 'name': 'Linear Model'}
+{'n_aborts': 9854, 'n_successes': 8061, 'steps': 629, 'name': 'Linear Model'}
+{'n_aborts': 9869, 'n_successes': 8079, 'steps': 630, 'name': 'Linear Model'}
+{'n_aborts': 9890, 'n_successes': 8094, 'steps': 631, 'name': 'Linear Model'}
+{'n_aborts': 9900, 'n_successes': 8108, 'steps': 632, 'name': 'Linear Model'}
+{'n_aborts': 9918, 'n_successes': 8125, 'steps': 633, 'name': 'Linear Model'}
+{'n_aborts': 9928, 'n_successes': 8133, 'steps': 634, 'name': 'Linear Model'}
+{'n_aborts': 9941, 'n_successes': 8140, 'steps': 635, 'name': 'Linear Model'}
+{'n_aborts': 9964, 'n_successes': 8158, 'steps': 636, 'name': 'Linear Model'}
+{'n_aborts': 9988, 'n_successes': 8168, 'steps': 637, 'name': 'Linear Model'}
+{'n_aborts': 9995, 'n_successes': 8181, 'steps': 638, 'name': 'Linear Model'}
+{'n_aborts': 10013, 'n_successes': 8192, 'steps': 639, 'name': 'Linear Model'}
+{'n_aborts': 10028, 'n_successes': 8201, 'steps': 640, 'name': 'Linear Model'}
+{'n_aborts': 10052, 'n_successes': 8209, 'steps': 641, 'name': 'Linear Model'}
+{'n_aborts': 10071, 'n_successes': 8221, 'steps': 642, 'name': 'Linear Model'}
+{'n_aborts': 10086, 'n_successes': 8230, 'steps': 643, 'name': 'Linear Model'}
+{'n_aborts': 10113, 'n_successes': 8248, 'steps': 644, 'name': 'Linear Model'}
+{'n_aborts': 10127, 'n_successes': 8264, 'steps': 645, 'name': 'Linear Model'}
+{'n_aborts': 10134, 'n_successes': 8278, 'steps': 646, 'name': 'Linear Model'}
+{'n_aborts': 10145, 'n_successes': 8297, 'steps': 647, 'name': 'Linear Model'}
+{'n_aborts': 10156, 'n_successes': 8314, 'steps': 648, 'name': 'Linear Model'}
+{'n_aborts': 10174, 'n_successes': 8322, 'steps': 649, 'name': 'Linear Model'}
+{'n_aborts': 10197, 'n_successes': 8336, 'steps': 650, 'name': 'Linear Model'}
+{'n_aborts': 10209, 'n_successes': 8352, 'steps': 651, 'name': 'Linear Model'}
+{'n_aborts': 10226, 'n_successes': 8366, 'steps': 652, 'name': 'Linear Model'}
+{'n_aborts': 10239, 'n_successes': 8380, 'steps': 653, 'name': 'Linear Model'}
+{'n_aborts': 10261, 'n_successes': 8391, 'steps': 654, 'name': 'Linear Model'}
+{'n_aborts': 10268, 'n_successes': 8410, 'steps': 655, 'name': 'Linear Model'}
+{'n_aborts': 10287, 'n_successes': 8419, 'steps': 656, 'name': 'Linear Model'}
+{'n_aborts': 10293, 'n_successes': 8435, 'steps': 657, 'name': 'Linear Model'}
+{'n_aborts': 10310, 'n_successes': 8446, 'steps': 658, 'name': 'Linear Model'}
+{'n_aborts': 10329, 'n_successes': 8457, 'steps': 659, 'name': 'Linear Model'}
+{'n_aborts': 10341, 'n_successes': 8473, 'steps': 660, 'name': 'Linear Model'}
+{'n_aborts': 10354, 'n_successes': 8486, 'steps': 661, 'name': 'Linear Model'}
+{'n_aborts': 10375, 'n_successes': 8504, 'steps': 662, 'name': 'Linear Model'}
+{'n_aborts': 10395, 'n_successes': 8518, 'steps': 663, 'name': 'Linear Model'}
+{'n_aborts': 10404, 'n_successes': 8531, 'steps': 664, 'name': 'Linear Model'}
+{'n_aborts': 10420, 'n_successes': 8546, 'steps': 665, 'name': 'Linear Model'}
+{'n_aborts': 10433, 'n_successes': 8559, 'steps': 666, 'name': 'Linear Model'}
+{'n_aborts': 10447, 'n_successes': 8568, 'steps': 667, 'name': 'Linear Model'}
+{'n_aborts': 10461, 'n_successes': 8581, 'steps': 668, 'name': 'Linear Model'}
+{'n_aborts': 10474, 'n_successes': 8591, 'steps': 669, 'name': 'Linear Model'}
+{'n_aborts': 10493, 'n_successes': 8603, 'steps': 670, 'name': 'Linear Model'}
+{'n_aborts': 10508, 'n_successes': 8610, 'steps': 671, 'name': 'Linear Model'}
+{'n_aborts': 10525, 'n_successes': 8622, 'steps': 672, 'name': 'Linear Model'}
+{'n_aborts': 10540, 'n_successes': 8635, 'steps': 673, 'name': 'Linear Model'}
+{'n_aborts': 10556, 'n_successes': 8645, 'steps': 674, 'name': 'Linear Model'}
+{'n_aborts': 10574, 'n_successes': 8657, 'steps': 675, 'name': 'Linear Model'}
+{'n_aborts': 10591, 'n_successes': 8670, 'steps': 676, 'name': 'Linear Model'}
+{'n_aborts': 10610, 'n_successes': 8681, 'steps': 677, 'name': 'Linear Model'}
+{'n_aborts': 10628, 'n_successes': 8697, 'steps': 678, 'name': 'Linear Model'}
+{'n_aborts': 10649, 'n_successes': 8707, 'steps': 679, 'name': 'Linear Model'}
+{'n_aborts': 10663, 'n_successes': 8722, 'steps': 680, 'name': 'Linear Model'}
+{'n_aborts': 10682, 'n_successes': 8732, 'steps': 681, 'name': 'Linear Model'}
+{'n_aborts': 10694, 'n_successes': 8744, 'steps': 682, 'name': 'Linear Model'}
+{'n_aborts': 10703, 'n_successes': 8757, 'steps': 683, 'name': 'Linear Model'}
+{'n_aborts': 10715, 'n_successes': 8770, 'steps': 684, 'name': 'Linear Model'}
+{'n_aborts': 10731, 'n_successes': 8780, 'steps': 685, 'name': 'Linear Model'}
+{'n_aborts': 10748, 'n_successes': 8791, 'steps': 686, 'name': 'Linear Model'}
+{'n_aborts': 10763, 'n_successes': 8799, 'steps': 687, 'name': 'Linear Model'}
+{'n_aborts': 10789, 'n_successes': 8816, 'steps': 688, 'name': 'Linear Model'}
+{'n_aborts': 10803, 'n_successes': 8828, 'steps': 689, 'name': 'Linear Model'}
+{'n_aborts': 10814, 'n_successes': 8837, 'steps': 690, 'name': 'Linear Model'}
+{'n_aborts': 10827, 'n_successes': 8847, 'steps': 691, 'name': 'Linear Model'}
+{'n_aborts': 10843, 'n_successes': 8854, 'steps': 692, 'name': 'Linear Model'}
+{'n_aborts': 10858, 'n_successes': 8867, 'steps': 693, 'name': 'Linear Model'}
+{'n_aborts': 10883, 'n_successes': 8878, 'steps': 694, 'name': 'Linear Model'}
+{'n_aborts': 10896, 'n_successes': 8891, 'steps': 695, 'name': 'Linear Model'}
+{'n_aborts': 10918, 'n_successes': 8906, 'steps': 696, 'name': 'Linear Model'}
+{'n_aborts': 10935, 'n_successes': 8919, 'steps': 697, 'name': 'Linear Model'}
+{'n_aborts': 10945, 'n_successes': 8927, 'steps': 698, 'name': 'Linear Model'}
+{'n_aborts': 10961, 'n_successes': 8945, 'steps': 699, 'name': 'Linear Model'}
+{'n_aborts': 10986, 'n_successes': 8954, 'steps': 700, 'name': 'Linear Model'}
+{'n_aborts': 11002, 'n_successes': 8967, 'steps': 701, 'name': 'Linear Model'}
+{'n_aborts': 11021, 'n_successes': 8980, 'steps': 702, 'name': 'Linear Model'}
+{'n_aborts': 11046, 'n_successes': 8988, 'steps': 703, 'name': 'Linear Model'}
+{'n_aborts': 11060, 'n_successes': 9006, 'steps': 704, 'name': 'Linear Model'}
+{'n_aborts': 11074, 'n_successes': 9021, 'steps': 705, 'name': 'Linear Model'}
+{'n_aborts': 11085, 'n_successes': 9034, 'steps': 706, 'name': 'Linear Model'}
+{'n_aborts': 11098, 'n_successes': 9042, 'steps': 707, 'name': 'Linear Model'}
+{'n_aborts': 11119, 'n_successes': 9053, 'steps': 708, 'name': 'Linear Model'}
+{'n_aborts': 11138, 'n_successes': 9063, 'steps': 709, 'name': 'Linear Model'}
+{'n_aborts': 11150, 'n_successes': 9079, 'steps': 710, 'name': 'Linear Model'}
+{'n_aborts': 11167, 'n_successes': 9090, 'steps': 711, 'name': 'Linear Model'}
+{'n_aborts': 11192, 'n_successes': 9104, 'steps': 712, 'name': 'Linear Model'}
+{'n_aborts': 11202, 'n_successes': 9117, 'steps': 713, 'name': 'Linear Model'}
+{'n_aborts': 11216, 'n_successes': 9137, 'steps': 714, 'name': 'Linear Model'}
+{'n_aborts': 11234, 'n_successes': 9151, 'steps': 715, 'name': 'Linear Model'}
+{'n_aborts': 11252, 'n_successes': 9165, 'steps': 716, 'name': 'Linear Model'}
+{'n_aborts': 11275, 'n_successes': 9175, 'steps': 717, 'name': 'Linear Model'}
+{'n_aborts': 11287, 'n_successes': 9185, 'steps': 718, 'name': 'Linear Model'}
+{'n_aborts': 11306, 'n_successes': 9197, 'steps': 719, 'name': 'Linear Model'}
+{'n_aborts': 11326, 'n_successes': 9203, 'steps': 720, 'name': 'Linear Model'}
+{'n_aborts': 11339, 'n_successes': 9215, 'steps': 721, 'name': 'Linear Model'}
+{'n_aborts': 11353, 'n_successes': 9227, 'steps': 722, 'name': 'Linear Model'}
+{'n_aborts': 11374, 'n_successes': 9236, 'steps': 723, 'name': 'Linear Model'}
+{'n_aborts': 11391, 'n_successes': 9249, 'steps': 724, 'name': 'Linear Model'}
+{'n_aborts': 11420, 'n_successes': 9256, 'steps': 725, 'name': 'Linear Model'}
+{'n_aborts': 11431, 'n_successes': 9269, 'steps': 726, 'name': 'Linear Model'}
+{'n_aborts': 11451, 'n_successes': 9283, 'steps': 727, 'name': 'Linear Model'}
+{'n_aborts': 11458, 'n_successes': 9300, 'steps': 728, 'name': 'Linear Model'}
+{'n_aborts': 11479, 'n_successes': 9313, 'steps': 729, 'name': 'Linear Model'}
+{'n_aborts': 11494, 'n_successes': 9328, 'steps': 730, 'name': 'Linear Model'}
+{'n_aborts': 11502, 'n_successes': 9341, 'steps': 731, 'name': 'Linear Model'}
+{'n_aborts': 11518, 'n_successes': 9356, 'steps': 732, 'name': 'Linear Model'}
+{'n_aborts': 11524, 'n_successes': 9371, 'steps': 733, 'name': 'Linear Model'}
+{'n_aborts': 11537, 'n_successes': 9380, 'steps': 734, 'name': 'Linear Model'}
+{'n_aborts': 11556, 'n_successes': 9393, 'steps': 735, 'name': 'Linear Model'}
+{'n_aborts': 11572, 'n_successes': 9405, 'steps': 736, 'name': 'Linear Model'}
+{'n_aborts': 11583, 'n_successes': 9420, 'steps': 737, 'name': 'Linear Model'}
+{'n_aborts': 11597, 'n_successes': 9436, 'steps': 738, 'name': 'Linear Model'}
+{'n_aborts': 11611, 'n_successes': 9449, 'steps': 739, 'name': 'Linear Model'}
+{'n_aborts': 11620, 'n_successes': 9467, 'steps': 740, 'name': 'Linear Model'}
+{'n_aborts': 11630, 'n_successes': 9481, 'steps': 741, 'name': 'Linear Model'}
+{'n_aborts': 11649, 'n_successes': 9488, 'steps': 742, 'name': 'Linear Model'}
+{'n_aborts': 11669, 'n_successes': 9496, 'steps': 743, 'name': 'Linear Model'}
+{'n_aborts': 11683, 'n_successes': 9507, 'steps': 744, 'name': 'Linear Model'}
+{'n_aborts': 11693, 'n_successes': 9522, 'steps': 745, 'name': 'Linear Model'}
+{'n_aborts': 11714, 'n_successes': 9534, 'steps': 746, 'name': 'Linear Model'}
+{'n_aborts': 11739, 'n_successes': 9543, 'steps': 747, 'name': 'Linear Model'}
+{'n_aborts': 11754, 'n_successes': 9555, 'steps': 748, 'name': 'Linear Model'}
+{'n_aborts': 11768, 'n_successes': 9568, 'steps': 749, 'name': 'Linear Model'}
+{'n_aborts': 11785, 'n_successes': 9579, 'steps': 750, 'name': 'Linear Model'}
+{'n_aborts': 11800, 'n_successes': 9586, 'steps': 751, 'name': 'Linear Model'}
+{'n_aborts': 11822, 'n_successes': 9600, 'steps': 752, 'name': 'Linear Model'}
+{'n_aborts': 11842, 'n_successes': 9614, 'steps': 753, 'name': 'Linear Model'}
+{'n_aborts': 11851, 'n_successes': 9628, 'steps': 754, 'name': 'Linear Model'}
+{'n_aborts': 11870, 'n_successes': 9640, 'steps': 755, 'name': 'Linear Model'}
+{'n_aborts': 11886, 'n_successes': 9653, 'steps': 756, 'name': 'Linear Model'}
+{'n_aborts': 11897, 'n_successes': 9670, 'steps': 757, 'name': 'Linear Model'}
+{'n_aborts': 11912, 'n_successes': 9684, 'steps': 758, 'name': 'Linear Model'}
+{'n_aborts': 11922, 'n_successes': 9692, 'steps': 759, 'name': 'Linear Model'}
+{'n_aborts': 11944, 'n_successes': 9705, 'steps': 760, 'name': 'Linear Model'}
+{'n_aborts': 11960, 'n_successes': 9714, 'steps': 761, 'name': 'Linear Model'}
+{'n_aborts': 11977, 'n_successes': 9725, 'steps': 762, 'name': 'Linear Model'}
+{'n_aborts': 11990, 'n_successes': 9739, 'steps': 763, 'name': 'Linear Model'}
+{'n_aborts': 12008, 'n_successes': 9752, 'steps': 764, 'name': 'Linear Model'}
+{'n_aborts': 12021, 'n_successes': 9767, 'steps': 765, 'name': 'Linear Model'}
+{'n_aborts': 12040, 'n_successes': 9777, 'steps': 766, 'name': 'Linear Model'}
+{'n_aborts': 12055, 'n_successes': 9794, 'steps': 767, 'name': 'Linear Model'}
+{'n_aborts': 12067, 'n_successes': 9805, 'steps': 768, 'name': 'Linear Model'}
+{'n_aborts': 12080, 'n_successes': 9820, 'steps': 769, 'name': 'Linear Model'}
+{'n_aborts': 12099, 'n_successes': 9838, 'steps': 770, 'name': 'Linear Model'}
+{'n_aborts': 12111, 'n_successes': 9848, 'steps': 771, 'name': 'Linear Model'}
+{'n_aborts': 12118, 'n_successes': 9858, 'steps': 772, 'name': 'Linear Model'}
+{'n_aborts': 12135, 'n_successes': 9871, 'steps': 773, 'name': 'Linear Model'}
+{'n_aborts': 12148, 'n_successes': 9882, 'steps': 774, 'name': 'Linear Model'}
+{'n_aborts': 12162, 'n_successes': 9893, 'steps': 775, 'name': 'Linear Model'}
+{'n_aborts': 12177, 'n_successes': 9903, 'steps': 776, 'name': 'Linear Model'}
+{'n_aborts': 12196, 'n_successes': 9918, 'steps': 777, 'name': 'Linear Model'}
+{'n_aborts': 12207, 'n_successes': 9929, 'steps': 778, 'name': 'Linear Model'}
+{'n_aborts': 12227, 'n_successes': 9944, 'steps': 779, 'name': 'Linear Model'}
+{'n_aborts': 12242, 'n_successes': 9955, 'steps': 780, 'name': 'Linear Model'}
+{'n_aborts': 12253, 'n_successes': 9970, 'steps': 781, 'name': 'Linear Model'}
+{'n_aborts': 12269, 'n_successes': 9981, 'steps': 782, 'name': 'Linear Model'}
+{'n_aborts': 12288, 'n_successes': 9990, 'steps': 783, 'name': 'Linear Model'}
+{'n_aborts': 12306, 'n_successes': 10001, 'steps': 784, 'name': 'Linear Model'}
+{'n_aborts': 12322, 'n_successes': 10014, 'steps': 785, 'name': 'Linear Model'}
+{'n_aborts': 12337, 'n_successes': 10028, 'steps': 786, 'name': 'Linear Model'}
+{'n_aborts': 12356, 'n_successes': 10037, 'steps': 787, 'name': 'Linear Model'}
+{'n_aborts': 12374, 'n_successes': 10049, 'steps': 788, 'name': 'Linear Model'}
+{'n_aborts': 12397, 'n_successes': 10060, 'steps': 789, 'name': 'Linear Model'}
+{'n_aborts': 12412, 'n_successes': 10075, 'steps': 790, 'name': 'Linear Model'}
+{'n_aborts': 12431, 'n_successes': 10083, 'steps': 791, 'name': 'Linear Model'}
+{'n_aborts': 12449, 'n_successes': 10101, 'steps': 792, 'name': 'Linear Model'}
+{'n_aborts': 12469, 'n_successes': 10113, 'steps': 793, 'name': 'Linear Model'}
+{'n_aborts': 12475, 'n_successes': 10133, 'steps': 794, 'name': 'Linear Model'}
+{'n_aborts': 12486, 'n_successes': 10146, 'steps': 795, 'name': 'Linear Model'}
+{'n_aborts': 12494, 'n_successes': 10160, 'steps': 796, 'name': 'Linear Model'}
+{'n_aborts': 12506, 'n_successes': 10173, 'steps': 797, 'name': 'Linear Model'}
+{'n_aborts': 12520, 'n_successes': 10188, 'steps': 798, 'name': 'Linear Model'}
+{'n_aborts': 12540, 'n_successes': 10202, 'steps': 799, 'name': 'Linear Model'}
+{'n_aborts': 12557, 'n_successes': 10216, 'steps': 800, 'name': 'Linear Model'}
+{'n_aborts': 12568, 'n_successes': 10228, 'steps': 801, 'name': 'Linear Model'}
+{'n_aborts': 12581, 'n_successes': 10246, 'steps': 802, 'name': 'Linear Model'}
+{'n_aborts': 12596, 'n_successes': 10258, 'steps': 803, 'name': 'Linear Model'}
+{'n_aborts': 12610, 'n_successes': 10271, 'steps': 804, 'name': 'Linear Model'}
+{'n_aborts': 12624, 'n_successes': 10281, 'steps': 805, 'name': 'Linear Model'}
+{'n_aborts': 12637, 'n_successes': 10294, 'steps': 806, 'name': 'Linear Model'}
+{'n_aborts': 12658, 'n_successes': 10306, 'steps': 807, 'name': 'Linear Model'}
+{'n_aborts': 12675, 'n_successes': 10323, 'steps': 808, 'name': 'Linear Model'}
+{'n_aborts': 12687, 'n_successes': 10338, 'steps': 809, 'name': 'Linear Model'}
+{'n_aborts': 12703, 'n_successes': 10355, 'steps': 810, 'name': 'Linear Model'}
+{'n_aborts': 12721, 'n_successes': 10361, 'steps': 811, 'name': 'Linear Model'}
+{'n_aborts': 12737, 'n_successes': 10376, 'steps': 812, 'name': 'Linear Model'}
+{'n_aborts': 12745, 'n_successes': 10388, 'steps': 813, 'name': 'Linear Model'}
+{'n_aborts': 12765, 'n_successes': 10403, 'steps': 814, 'name': 'Linear Model'}
+{'n_aborts': 12782, 'n_successes': 10415, 'steps': 815, 'name': 'Linear Model'}
+{'n_aborts': 12793, 'n_successes': 10429, 'steps': 816, 'name': 'Linear Model'}
+{'n_aborts': 12817, 'n_successes': 10438, 'steps': 817, 'name': 'Linear Model'}
+{'n_aborts': 12831, 'n_successes': 10451, 'steps': 818, 'name': 'Linear Model'}
+{'n_aborts': 12844, 'n_successes': 10464, 'steps': 819, 'name': 'Linear Model'}
+{'n_aborts': 12863, 'n_successes': 10475, 'steps': 820, 'name': 'Linear Model'}
+{'n_aborts': 12878, 'n_successes': 10494, 'steps': 821, 'name': 'Linear Model'}
+{'n_aborts': 12896, 'n_successes': 10506, 'steps': 822, 'name': 'Linear Model'}
+{'n_aborts': 12903, 'n_successes': 10524, 'steps': 823, 'name': 'Linear Model'}
+{'n_aborts': 12912, 'n_successes': 10535, 'steps': 824, 'name': 'Linear Model'}
+{'n_aborts': 12926, 'n_successes': 10549, 'steps': 825, 'name': 'Linear Model'}
+{'n_aborts': 12939, 'n_successes': 10567, 'steps': 826, 'name': 'Linear Model'}
+{'n_aborts': 12954, 'n_successes': 10587, 'steps': 827, 'name': 'Linear Model'}
+{'n_aborts': 12968, 'n_successes': 10596, 'steps': 828, 'name': 'Linear Model'}
+{'n_aborts': 12991, 'n_successes': 10611, 'steps': 829, 'name': 'Linear Model'}
+{'n_aborts': 13011, 'n_successes': 10620, 'steps': 830, 'name': 'Linear Model'}
+{'n_aborts': 13025, 'n_successes': 10634, 'steps': 831, 'name': 'Linear Model'}
+{'n_aborts': 13040, 'n_successes': 10645, 'steps': 832, 'name': 'Linear Model'}
+{'n_aborts': 13058, 'n_successes': 10661, 'steps': 833, 'name': 'Linear Model'}
+{'n_aborts': 13078, 'n_successes': 10671, 'steps': 834, 'name': 'Linear Model'}
+{'n_aborts': 13097, 'n_successes': 10687, 'steps': 835, 'name': 'Linear Model'}
+{'n_aborts': 13107, 'n_successes': 10701, 'steps': 836, 'name': 'Linear Model'}
+{'n_aborts': 13118, 'n_successes': 10716, 'steps': 837, 'name': 'Linear Model'}
+{'n_aborts': 13134, 'n_successes': 10729, 'steps': 838, 'name': 'Linear Model'}
+{'n_aborts': 13148, 'n_successes': 10739, 'steps': 839, 'name': 'Linear Model'}
+{'n_aborts': 13170, 'n_successes': 10751, 'steps': 840, 'name': 'Linear Model'}
+{'n_aborts': 13184, 'n_successes': 10764, 'steps': 841, 'name': 'Linear Model'}
+{'n_aborts': 13198, 'n_successes': 10773, 'steps': 842, 'name': 'Linear Model'}
+{'n_aborts': 13222, 'n_successes': 10789, 'steps': 843, 'name': 'Linear Model'}
+{'n_aborts': 13233, 'n_successes': 10801, 'steps': 844, 'name': 'Linear Model'}
+{'n_aborts': 13251, 'n_successes': 10817, 'steps': 845, 'name': 'Linear Model'}
+{'n_aborts': 13268, 'n_successes': 10828, 'steps': 846, 'name': 'Linear Model'}
+{'n_aborts': 13283, 'n_successes': 10843, 'steps': 847, 'name': 'Linear Model'}
+{'n_aborts': 13305, 'n_successes': 10860, 'steps': 848, 'name': 'Linear Model'}
+{'n_aborts': 13313, 'n_successes': 10871, 'steps': 849, 'name': 'Linear Model'}
+{'n_aborts': 13320, 'n_successes': 10890, 'steps': 850, 'name': 'Linear Model'}
+{'n_aborts': 13337, 'n_successes': 10906, 'steps': 851, 'name': 'Linear Model'}
+{'n_aborts': 13352, 'n_successes': 10913, 'steps': 852, 'name': 'Linear Model'}
+{'n_aborts': 13372, 'n_successes': 10922, 'steps': 853, 'name': 'Linear Model'}
+{'n_aborts': 13387, 'n_successes': 10939, 'steps': 854, 'name': 'Linear Model'}
+{'n_aborts': 13404, 'n_successes': 10956, 'steps': 855, 'name': 'Linear Model'}
+{'n_aborts': 13413, 'n_successes': 10969, 'steps': 856, 'name': 'Linear Model'}
+{'n_aborts': 13429, 'n_successes': 10981, 'steps': 857, 'name': 'Linear Model'}
+{'n_aborts': 13445, 'n_successes': 10993, 'steps': 858, 'name': 'Linear Model'}
+{'n_aborts': 13462, 'n_successes': 11004, 'steps': 859, 'name': 'Linear Model'}
+{'n_aborts': 13483, 'n_successes': 11014, 'steps': 860, 'name': 'Linear Model'}
+{'n_aborts': 13497, 'n_successes': 11032, 'steps': 861, 'name': 'Linear Model'}
+{'n_aborts': 13508, 'n_successes': 11040, 'steps': 862, 'name': 'Linear Model'}
+{'n_aborts': 13527, 'n_successes': 11049, 'steps': 863, 'name': 'Linear Model'}
+{'n_aborts': 13543, 'n_successes': 11061, 'steps': 864, 'name': 'Linear Model'}
+{'n_aborts': 13560, 'n_successes': 11073, 'steps': 865, 'name': 'Linear Model'}
+{'n_aborts': 13569, 'n_successes': 11085, 'steps': 866, 'name': 'Linear Model'}
+{'n_aborts': 13587, 'n_successes': 11102, 'steps': 867, 'name': 'Linear Model'}
+{'n_aborts': 13604, 'n_successes': 11108, 'steps': 868, 'name': 'Linear Model'}
+{'n_aborts': 13614, 'n_successes': 11124, 'steps': 869, 'name': 'Linear Model'}
+{'n_aborts': 13631, 'n_successes': 11130, 'steps': 870, 'name': 'Linear Model'}
+{'n_aborts': 13651, 'n_successes': 11141, 'steps': 871, 'name': 'Linear Model'}
+{'n_aborts': 13660, 'n_successes': 11154, 'steps': 872, 'name': 'Linear Model'}
+{'n_aborts': 13672, 'n_successes': 11167, 'steps': 873, 'name': 'Linear Model'}
+{'n_aborts': 13690, 'n_successes': 11184, 'steps': 874, 'name': 'Linear Model'}
+{'n_aborts': 13710, 'n_successes': 11194, 'steps': 875, 'name': 'Linear Model'}
+{'n_aborts': 13716, 'n_successes': 11208, 'steps': 876, 'name': 'Linear Model'}
+{'n_aborts': 13734, 'n_successes': 11220, 'steps': 877, 'name': 'Linear Model'}
+{'n_aborts': 13753, 'n_successes': 11233, 'steps': 878, 'name': 'Linear Model'}
+{'n_aborts': 13770, 'n_successes': 11248, 'steps': 879, 'name': 'Linear Model'}
+{'n_aborts': 13787, 'n_successes': 11261, 'steps': 880, 'name': 'Linear Model'}
+{'n_aborts': 13810, 'n_successes': 11272, 'steps': 881, 'name': 'Linear Model'}
+{'n_aborts': 13825, 'n_successes': 11287, 'steps': 882, 'name': 'Linear Model'}
+{'n_aborts': 13836, 'n_successes': 11302, 'steps': 883, 'name': 'Linear Model'}
+{'n_aborts': 13851, 'n_successes': 11314, 'steps': 884, 'name': 'Linear Model'}
+{'n_aborts': 13865, 'n_successes': 11325, 'steps': 885, 'name': 'Linear Model'}
+{'n_aborts': 13874, 'n_successes': 11337, 'steps': 886, 'name': 'Linear Model'}
+{'n_aborts': 13892, 'n_successes': 11346, 'steps': 887, 'name': 'Linear Model'}
+{'n_aborts': 13913, 'n_successes': 11361, 'steps': 888, 'name': 'Linear Model'}
+{'n_aborts': 13925, 'n_successes': 11376, 'steps': 889, 'name': 'Linear Model'}
+{'n_aborts': 13942, 'n_successes': 11388, 'steps': 890, 'name': 'Linear Model'}
+{'n_aborts': 13962, 'n_successes': 11400, 'steps': 891, 'name': 'Linear Model'}
+{'n_aborts': 13972, 'n_successes': 11415, 'steps': 892, 'name': 'Linear Model'}
+{'n_aborts': 13990, 'n_successes': 11429, 'steps': 893, 'name': 'Linear Model'}
+{'n_aborts': 14009, 'n_successes': 11443, 'steps': 894, 'name': 'Linear Model'}
+{'n_aborts': 14025, 'n_successes': 11452, 'steps': 895, 'name': 'Linear Model'}
+{'n_aborts': 14043, 'n_successes': 11465, 'steps': 896, 'name': 'Linear Model'}
+{'n_aborts': 14058, 'n_successes': 11477, 'steps': 897, 'name': 'Linear Model'}
+{'n_aborts': 14073, 'n_successes': 11491, 'steps': 898, 'name': 'Linear Model'}
+{'n_aborts': 14079, 'n_successes': 11502, 'steps': 899, 'name': 'Linear Model'}
+{'n_aborts': 14099, 'n_successes': 11512, 'steps': 900, 'name': 'Linear Model'}
+{'n_aborts': 14121, 'n_successes': 11524, 'steps': 901, 'name': 'Linear Model'}
+{'n_aborts': 14129, 'n_successes': 11542, 'steps': 902, 'name': 'Linear Model'}
+{'n_aborts': 14146, 'n_successes': 11555, 'steps': 903, 'name': 'Linear Model'}
+{'n_aborts': 14155, 'n_successes': 11570, 'steps': 904, 'name': 'Linear Model'}
+{'n_aborts': 14175, 'n_successes': 11578, 'steps': 905, 'name': 'Linear Model'}
+{'n_aborts': 14199, 'n_successes': 11588, 'steps': 906, 'name': 'Linear Model'}
+{'n_aborts': 14213, 'n_successes': 11602, 'steps': 907, 'name': 'Linear Model'}
+{'n_aborts': 14231, 'n_successes': 11617, 'steps': 908, 'name': 'Linear Model'}
+{'n_aborts': 14244, 'n_successes': 11632, 'steps': 909, 'name': 'Linear Model'}
+{'n_aborts': 14257, 'n_successes': 11642, 'steps': 910, 'name': 'Linear Model'}
+{'n_aborts': 14269, 'n_successes': 11658, 'steps': 911, 'name': 'Linear Model'}
+{'n_aborts': 14281, 'n_successes': 11674, 'steps': 912, 'name': 'Linear Model'}
+{'n_aborts': 14297, 'n_successes': 11683, 'steps': 913, 'name': 'Linear Model'}
+{'n_aborts': 11, 'n_successes': 32, 'steps': 12}
+Epoch 0; Loss = 336.9066; Accumulated Loss: 336.9066
+{'n_aborts': 12, 'n_successes': 34, 'steps': 11}
+Epoch 1; Loss = 341.2835; Accumulated Loss: 339.0951
+{'n_aborts': 16, 'n_successes': 34, 'steps': 12}
+Epoch 2; Loss = 327.9170; Accumulated Loss: 335.3690
+{'n_aborts': 12, 'n_successes': 31, 'steps': 12}
+Epoch 3; Loss = 308.9598; Accumulated Loss: 328.7667
+{'n_aborts': 7, 'n_successes': 29, 'steps': 12}
+Epoch 4; Loss = 274.9874; Accumulated Loss: 318.0109
+{'n_aborts': 9, 'n_successes': 35, 'steps': 11}
+Epoch 5; Loss = 266.4301; Accumulated Loss: 309.4141
+{'n_aborts': 4, 'n_successes': 37, 'steps': 12}
+Epoch 6; Loss = 259.7481; Accumulated Loss: 302.3189
+{'n_aborts': 12, 'n_successes': 32, 'steps': 11}
+Epoch 7; Loss = 316.2703; Accumulated Loss: 304.0629
+{'n_aborts': 9, 'n_successes': 32, 'steps': 12}
+Epoch 8; Loss = 296.9456; Accumulated Loss: 303.2720
+{'n_aborts': 15, 'n_successes': 29, 'steps': 6}
+Epoch 9; Loss = 323.4203; Accumulated Loss: 305.2869
+{'n_aborts': 12, 'n_successes': 28, 'steps': 11}
+Epoch 10; Loss = 307.5780; Accumulated Loss: 305.4952
+{'n_aborts': 16, 'n_successes': 28, 'steps': 11}
+Epoch 11; Loss = 294.7522; Accumulated Loss: 304.5999
+{'n_aborts': 25, 'n_successes': 20, 'steps': 10}
+Epoch 12; Loss = 315.4007; Accumulated Loss: 305.4307
+{'n_aborts': 17, 'n_successes': 26, 'steps': 11}
+Epoch 13; Loss = 322.3591; Accumulated Loss: 306.6399
+{'n_aborts': 7, 'n_successes': 28, 'steps': 11}
+Epoch 14; Loss = 307.5765; Accumulated Loss: 306.7023
+{'n_aborts': 11, 'n_successes': 28, 'steps': 10}
+Epoch 15; Loss = 265.8783; Accumulated Loss: 304.1508
+{'n_aborts': 9, 'n_successes': 27, 'steps': 10}
+Epoch 16; Loss = 235.9916; Accumulated Loss: 300.1415
+{'n_aborts': 7, 'n_successes': 18, 'steps': 7}
+Epoch 17; Loss = 200.1311; Accumulated Loss: 294.5853
+{'n_aborts': 6, 'n_successes': 28, 'steps': 8}
+Epoch 18; Loss = 207.4800; Accumulated Loss: 290.0008
+{'n_aborts': 10, 'n_successes': 23, 'steps': 5}
+Epoch 19; Loss = 176.0808; Accumulated Loss: 284.3048
+{'n_aborts': 11, 'n_successes': 14, 'steps': 12}
+Epoch 20; Loss = 191.2381; Accumulated Loss: 279.8731
+{'n_aborts': 16, 'n_successes': 17, 'steps': 6}
+Epoch 21; Loss = 227.3898; Accumulated Loss: 277.4875
+{'n_aborts': 13, 'n_successes': 26, 'steps': 6}
+Epoch 22; Loss = 233.0726; Accumulated Loss: 275.5564
+{'n_aborts': 5, 'n_successes': 25, 'steps': 6}
+Epoch 23; Loss = 215.8926; Accumulated Loss: 273.0704
+{'n_aborts': 16, 'n_successes': 19, 'steps': 6}
+Epoch 24; Loss = 248.5918; Accumulated Loss: 272.0913
+{'n_aborts': 13, 'n_successes': 18, 'steps': 6}
+Epoch 25; Loss = 262.2370; Accumulated Loss: 271.7123
+{'n_aborts': 13, 'n_successes': 13, 'steps': 6}
+Epoch 26; Loss = 243.0732; Accumulated Loss: 270.6516
+{'n_aborts': 14, 'n_successes': 15, 'steps': 6}
+Epoch 27; Loss = 212.4106; Accumulated Loss: 268.5715
+{'n_aborts': 11, 'n_successes': 16, 'steps': 6}
+Epoch 28; Loss = 216.6521; Accumulated Loss: 266.7812
+{'n_aborts': 11, 'n_successes': 17, 'steps': 7}
+Epoch 29; Loss = 210.0217; Accumulated Loss: 264.8892
+{'n_aborts': 10, 'n_successes': 17, 'steps': 6}
+Epoch 30; Loss = 210.6295; Accumulated Loss: 263.1389
+{'n_aborts': 11, 'n_successes': 19, 'steps': 11}
+Epoch 31; Loss = 222.2605; Accumulated Loss: 261.8614
+{'n_aborts': 14, 'n_successes': 26, 'steps': 6}
+Epoch 32; Loss = 236.8262; Accumulated Loss: 261.1028
+{'n_aborts': 16, 'n_successes': 19, 'steps': 6}
+Epoch 33; Loss = 227.4016; Accumulated Loss: 260.1116
+{'n_aborts': 13, 'n_successes': 21, 'steps': 9}
+Epoch 34; Loss = 243.0834; Accumulated Loss: 259.6251
+{'n_aborts': 14, 'n_successes': 19, 'steps': 8}
+Epoch 35; Loss = 229.1692; Accumulated Loss: 258.7791
+{'n_aborts': 12, 'n_successes': 19, 'steps': 6}
+Epoch 36; Loss = 208.9930; Accumulated Loss: 257.4335
+{'n_aborts': 15, 'n_successes': 20, 'steps': 7}
+Epoch 37; Loss = 224.1744; Accumulated Loss: 256.5583
+{'n_aborts': 9, 'n_successes': 21, 'steps': 6}
+Epoch 38; Loss = 174.0157; Accumulated Loss: 254.4418
+{'n_aborts': 8, 'n_successes': 17, 'steps': 8}
+Epoch 39; Loss = 217.5897; Accumulated Loss: 253.5205
+{'n_aborts': 10, 'n_successes': 18, 'steps': 7}
+Epoch 40; Loss = 189.5546; Accumulated Loss: 251.9603
+{'n_aborts': 7, 'n_successes': 15, 'steps': 10}
+Epoch 41; Loss = 212.4604; Accumulated Loss: 251.0199
+{'n_aborts': 14, 'n_successes': 20, 'steps': 6}
+Epoch 42; Loss = 217.1168; Accumulated Loss: 250.2314
+{'n_aborts': 6, 'n_successes': 21, 'steps': 9}
+Epoch 43; Loss = 212.1955; Accumulated Loss: 249.3670
+{'n_aborts': 17, 'n_successes': 18, 'steps': 6}
+Epoch 44; Loss = 240.4272; Accumulated Loss: 249.1683
+{'n_aborts': 18, 'n_successes': 15, 'steps': 6}
+Epoch 45; Loss = 231.3938; Accumulated Loss: 248.7819
+{'n_aborts': 16, 'n_successes': 19, 'steps': 6}
+Epoch 46; Loss = 240.2981; Accumulated Loss: 248.6014
+{'n_aborts': 16, 'n_successes': 23, 'steps': 8}
+Epoch 47; Loss = 250.5689; Accumulated Loss: 248.6424
+{'n_aborts': 11, 'n_successes': 22, 'steps': 12}
+Epoch 48; Loss = 225.8486; Accumulated Loss: 248.1772
+{'n_aborts': 8, 'n_successes': 21, 'steps': 6}
+Epoch 49; Loss = 212.3950; Accumulated Loss: 247.4616
+{'n_aborts': 7, 'n_successes': 19, 'steps': 6}
+Epoch 50; Loss = 209.0826; Accumulated Loss: 246.7090
+{'n_aborts': 17, 'n_successes': 15, 'steps': 6}
+Epoch 51; Loss = 218.5905; Accumulated Loss: 246.1683
+{'n_aborts': 14, 'n_successes': 16, 'steps': 6}
+Epoch 52; Loss = 214.5629; Accumulated Loss: 245.5720
+{'n_aborts': 13, 'n_successes': 17, 'steps': 9}
+Epoch 53; Loss = 215.8485; Accumulated Loss: 245.0215
+{'n_aborts': 13, 'n_successes': 18, 'steps': 6}
+Epoch 54; Loss = 216.0512; Accumulated Loss: 244.4948
+{'n_aborts': 16, 'n_successes': 12, 'steps': 7}
+Epoch 55; Loss = 229.0827; Accumulated Loss: 244.2196
+{'n_aborts': 6, 'n_successes': 21, 'steps': 6}
+Epoch 56; Loss = 230.1370; Accumulated Loss: 243.9725
+{'n_aborts': 14, 'n_successes': 20, 'steps': 6}
+Epoch 57; Loss = 213.5838; Accumulated Loss: 243.4486
+{'n_aborts': 8, 'n_successes': 17, 'steps': 6}
+Epoch 58; Loss = 197.3352; Accumulated Loss: 242.6670
+{'n_aborts': 8, 'n_successes': 17, 'steps': 6}
+Epoch 59; Loss = 206.5422; Accumulated Loss: 242.0649
+{'n_aborts': 11, 'n_successes': 26, 'steps': 6}
+Epoch 60; Loss = 215.3291; Accumulated Loss: 241.6266
+{'n_aborts': 12, 'n_successes': 25, 'steps': 6}
+Epoch 61; Loss = 235.3268; Accumulated Loss: 241.5250
+{'n_aborts': 9, 'n_successes': 23, 'steps': 6}
+Epoch 62; Loss = 218.1631; Accumulated Loss: 241.1542
+{'n_aborts': 11, 'n_successes': 16, 'steps': 6}
+Epoch 63; Loss = 209.6221; Accumulated Loss: 240.6615
+{'n_aborts': 13, 'n_successes': 17, 'steps': 6}
+Epoch 64; Loss = 227.2432; Accumulated Loss: 240.4551
+{'n_aborts': 9, 'n_successes': 27, 'steps': 6}
+Epoch 65; Loss = 226.7108; Accumulated Loss: 240.2468
+{'n_aborts': 7, 'n_successes': 24, 'steps': 6}
+Epoch 66; Loss = 219.0973; Accumulated Loss: 239.9312
+{'n_aborts': 8, 'n_successes': 20, 'steps': 6}
+Epoch 67; Loss = 195.4637; Accumulated Loss: 239.2772
+{'n_aborts': 12, 'n_successes': 17, 'steps': 11}
+Epoch 68; Loss = 207.2076; Accumulated Loss: 238.8124
+{'n_aborts': 13, 'n_successes': 22, 'steps': 6}
+Epoch 69; Loss = 214.2702; Accumulated Loss: 238.4618
+{'n_aborts': 4, 'n_successes': 25, 'steps': 6}
+Epoch 70; Loss = 215.6906; Accumulated Loss: 238.1411
+{'n_aborts': 7, 'n_successes': 25, 'steps': 6}
+Epoch 71; Loss = 218.1495; Accumulated Loss: 237.8635
+{'n_aborts': 9, 'n_successes': 25, 'steps': 6}
+Epoch 72; Loss = 243.1976; Accumulated Loss: 237.9365
+{'n_aborts': 14, 'n_successes': 18, 'steps': 6}
+Epoch 73; Loss = 245.3562; Accumulated Loss: 238.0368
+{'n_aborts': 12, 'n_successes': 21, 'steps': 6}
+Epoch 74; Loss = 195.6091; Accumulated Loss: 237.4711
+{'n_aborts': 11, 'n_successes': 20, 'steps': 6}
+Epoch 75; Loss = 206.7403; Accumulated Loss: 237.0667
+{'n_aborts': 10, 'n_successes': 22, 'steps': 6}
+Epoch 76; Loss = 223.6369; Accumulated Loss: 236.8923
+{'n_aborts': 14, 'n_successes': 17, 'steps': 6}
+Epoch 77; Loss = 216.6315; Accumulated Loss: 236.6326
+{'n_aborts': 14, 'n_successes': 13, 'steps': 6}
+Epoch 78; Loss = 198.6998; Accumulated Loss: 236.1524
+{'n_aborts': 9, 'n_successes': 22, 'steps': 6}
+Epoch 79; Loss = 215.7061; Accumulated Loss: 235.8968
+{'n_aborts': 11, 'n_successes': 18, 'steps': 6}
+Epoch 80; Loss = 203.8898; Accumulated Loss: 235.5017
+{'n_aborts': 14, 'n_successes': 19, 'steps': 6}
+Epoch 81; Loss = 223.4656; Accumulated Loss: 235.3549
+{'n_aborts': 12, 'n_successes': 18, 'steps': 6}
+Epoch 82; Loss = 215.3564; Accumulated Loss: 235.1140
+{'n_aborts': 8, 'n_successes': 23, 'steps': 6}
+Epoch 83; Loss = 219.2349; Accumulated Loss: 234.9249
+{'n_aborts': 12, 'n_successes': 18, 'steps': 6}
+Epoch 84; Loss = 220.8192; Accumulated Loss: 234.7590
+{'n_aborts': 9, 'n_successes': 23, 'steps': 6}
+Epoch 85; Loss = 200.5195; Accumulated Loss: 234.3608
+{'n_aborts': 17, 'n_successes': 20, 'steps': 6}
+Epoch 86; Loss = 227.7364; Accumulated Loss: 234.2847
+{'n_aborts': 16, 'n_successes': 17, 'steps': 6}
+Epoch 87; Loss = 249.8936; Accumulated Loss: 234.4621
+{'n_aborts': 9, 'n_successes': 22, 'steps': 11}
+Epoch 88; Loss = 214.3046; Accumulated Loss: 234.2356
+{'n_aborts': 17, 'n_successes': 12, 'steps': 6}
+Epoch 89; Loss = 214.4373; Accumulated Loss: 234.0156
+{'n_aborts': 6, 'n_successes': 18, 'steps': 6}
+Epoch 90; Loss = 220.2250; Accumulated Loss: 233.8641
+{'n_aborts': 10, 'n_successes': 16, 'steps': 12}
+Epoch 91; Loss = 199.8119; Accumulated Loss: 233.4939
+{'n_aborts': 10, 'n_successes': 23, 'steps': 6}
+Epoch 92; Loss = 212.4342; Accumulated Loss: 233.2675
+{'n_aborts': 12, 'n_successes': 17, 'steps': 6}
+Epoch 93; Loss = 212.8339; Accumulated Loss: 233.0501
+{'n_aborts': 10, 'n_successes': 12, 'steps': 6}
+Epoch 94; Loss = 209.2180; Accumulated Loss: 232.7992
+{'n_aborts': 18, 'n_successes': 18, 'steps': 6}
+Epoch 95; Loss = 232.4811; Accumulated Loss: 232.7959
+{'n_aborts': 4, 'n_successes': 22, 'steps': 6}
+Epoch 96; Loss = 190.0468; Accumulated Loss: 232.3552
+{'n_aborts': 13, 'n_successes': 21, 'steps': 6}
+Epoch 97; Loss = 210.5245; Accumulated Loss: 232.1324
+{'n_aborts': 10, 'n_successes': 20, 'steps': 6}
+Epoch 98; Loss = 220.9442; Accumulated Loss: 232.0194
+{'n_aborts': 17, 'n_successes': 21, 'steps': 6}
+Epoch 99; Loss = 253.1357; Accumulated Loss: 232.2306
+{'n_aborts': 12, 'n_successes': 22, 'steps': 6}
+Epoch 100; Loss = 219.6980; Accumulated Loss: 232.1065
+{'n_aborts': 16, 'n_successes': 18, 'steps': 6}
+Epoch 101; Loss = 241.6997; Accumulated Loss: 232.2006
+{'n_aborts': 14, 'n_successes': 14, 'steps': 6}
+Epoch 102; Loss = 222.2847; Accumulated Loss: 232.1043
+{'n_aborts': 11, 'n_successes': 15, 'steps': 6}
+Epoch 103; Loss = 214.1534; Accumulated Loss: 231.9317
+{'n_aborts': 7, 'n_successes': 24, 'steps': 6}
+Epoch 104; Loss = 212.2715; Accumulated Loss: 231.7444
+{'n_aborts': 5, 'n_successes': 18, 'steps': 6}
+Epoch 105; Loss = 185.9757; Accumulated Loss: 231.3127
+{'n_aborts': 13, 'n_successes': 18, 'steps': 6}
+Epoch 106; Loss = 204.4638; Accumulated Loss: 231.0617
+{'n_aborts': 10, 'n_successes': 23, 'steps': 6}
+Epoch 107; Loss = 204.0109; Accumulated Loss: 230.8113
+{'n_aborts': 5, 'n_successes': 19, 'steps': 6}
+Epoch 108; Loss = 193.6517; Accumulated Loss: 230.4704
+{'n_aborts': 12, 'n_successes': 22, 'steps': 6}
+Epoch 109; Loss = 225.8830; Accumulated Loss: 230.4286
+{'n_aborts': 20, 'n_successes': 13, 'steps': 6}
+Epoch 110; Loss = 229.4890; Accumulated Loss: 230.4202
+{'n_aborts': 14, 'n_successes': 23, 'steps': 6}
+Epoch 111; Loss = 213.3512; Accumulated Loss: 230.2678
+{'n_aborts': 17, 'n_successes': 13, 'steps': 6}
+Epoch 112; Loss = 227.6257; Accumulated Loss: 230.2444
+{'n_aborts': 6, 'n_successes': 21, 'steps': 6}
+Epoch 113; Loss = 201.7701; Accumulated Loss: 229.9946
+{'n_aborts': 11, 'n_successes': 21, 'steps': 6}
+Epoch 114; Loss = 201.8596; Accumulated Loss: 229.7500
+{'n_aborts': 14, 'n_successes': 14, 'steps': 6}
+Epoch 115; Loss = 225.1019; Accumulated Loss: 229.7099
+{'n_aborts': 11, 'n_successes': 20, 'steps': 6}
+Epoch 116; Loss = 236.6500; Accumulated Loss: 229.7692
+{'n_aborts': 14, 'n_successes': 19, 'steps': 6}
+Epoch 117; Loss = 234.2172; Accumulated Loss: 229.8069
+{'n_aborts': 12, 'n_successes': 19, 'steps': 6}
+Epoch 118; Loss = 222.8776; Accumulated Loss: 229.7487
+{'n_aborts': 5, 'n_successes': 22, 'steps': 6}
+Epoch 119; Loss = 175.8857; Accumulated Loss: 229.2998
+{'n_aborts': 6, 'n_successes': 25, 'steps': 6}
+Epoch 120; Loss = 191.8553; Accumulated Loss: 228.9904
+{'n_aborts': 17, 'n_successes': 19, 'steps': 6}
+Epoch 121; Loss = 236.4299; Accumulated Loss: 229.0514
+{'n_aborts': 11, 'n_successes': 22, 'steps': 10}
+Epoch 122; Loss = 230.0314; Accumulated Loss: 229.0593
+{'n_aborts': 7, 'n_successes': 19, 'steps': 6}
+Epoch 123; Loss = 214.6180; Accumulated Loss: 228.9429
+{'n_aborts': 8, 'n_successes': 25, 'steps': 6}
+Epoch 124; Loss = 224.2874; Accumulated Loss: 228.9056
+{'n_aborts': 12, 'n_successes': 13, 'steps': 11}
+Epoch 125; Loss = 212.6042; Accumulated Loss: 228.7762
+{'n_aborts': 7, 'n_successes': 22, 'steps': 6}
+Epoch 126; Loss = 182.3389; Accumulated Loss: 228.4106
+{'n_aborts': 13, 'n_successes': 16, 'steps': 6}
+Epoch 127; Loss = 206.1982; Accumulated Loss: 228.2371
+{'n_aborts': 9, 'n_successes': 29, 'steps': 8}
+Epoch 128; Loss = 204.0148; Accumulated Loss: 228.0493
+{'n_aborts': 19, 'n_successes': 14, 'steps': 6}
+Epoch 129; Loss = 200.1511; Accumulated Loss: 227.8347
+{'n_aborts': 11, 'n_successes': 20, 'steps': 6}
+Epoch 130; Loss = 205.8198; Accumulated Loss: 227.6666
+{'n_aborts': 7, 'n_successes': 24, 'steps': 8}
+Epoch 131; Loss = 250.1210; Accumulated Loss: 227.8367
+{'n_aborts': 10, 'n_successes': 22, 'steps': 6}
+Epoch 132; Loss = 228.8599; Accumulated Loss: 227.8444
+{'n_aborts': 10, 'n_successes': 23, 'steps': 6}
+Epoch 133; Loss = 216.8108; Accumulated Loss: 227.7621
+{'n_aborts': 13, 'n_successes': 17, 'steps': 6}
+Epoch 134; Loss = 223.0329; Accumulated Loss: 227.7271
+{'n_aborts': 14, 'n_successes': 22, 'steps': 6}
+Epoch 135; Loss = 217.7919; Accumulated Loss: 227.6540
+{'n_aborts': 9, 'n_successes': 18, 'steps': 6}
+Epoch 136; Loss = 186.0234; Accumulated Loss: 227.3501
+{'n_aborts': 17, 'n_successes': 16, 'steps': 6}
+Epoch 137; Loss = 194.0807; Accumulated Loss: 227.1091
+{'n_aborts': 6, 'n_successes': 25, 'steps': 6}
+Epoch 138; Loss = 204.7686; Accumulated Loss: 226.9483
+{'n_aborts': 14, 'n_successes': 17, 'steps': 6}
+Epoch 139; Loss = 243.3641; Accumulated Loss: 227.0656
+{'n_aborts': 10, 'n_successes': 20, 'steps': 6}
+Epoch 140; Loss = 226.7046; Accumulated Loss: 227.0630
+{'n_aborts': 14, 'n_successes': 21, 'steps': 6}
+Epoch 141; Loss = 237.0471; Accumulated Loss: 227.1333
+{'n_aborts': 17, 'n_successes': 17, 'steps': 6}
+Epoch 142; Loss = 217.2586; Accumulated Loss: 227.0643
+{'n_aborts': 7, 'n_successes': 23, 'steps': 9}
+Epoch 143; Loss = 220.8638; Accumulated Loss: 227.0212
+{'n_aborts': 9, 'n_successes': 20, 'steps': 6}
+Epoch 144; Loss = 188.1034; Accumulated Loss: 226.7528
+{'n_aborts': 12, 'n_successes': 24, 'steps': 10}
+Epoch 145; Loss = 212.5943; Accumulated Loss: 226.6558
+{'n_aborts': 13, 'n_successes': 18, 'steps': 7}
+Epoch 146; Loss = 191.9776; Accumulated Loss: 226.4199
+{'n_aborts': 11, 'n_successes': 19, 'steps': 6}
+Epoch 147; Loss = 225.6252; Accumulated Loss: 226.4146
+{'n_aborts': 13, 'n_successes': 20, 'steps': 6}
+Epoch 148; Loss = 213.2356; Accumulated Loss: 226.3261
+{'n_aborts': 10, 'n_successes': 21, 'steps': 6}
+Epoch 149; Loss = 235.4696; Accumulated Loss: 226.3871
+{'n_aborts': 10, 'n_successes': 20, 'steps': 8}
+Epoch 150; Loss = 210.4590; Accumulated Loss: 226.2816
+{'n_aborts': 4, 'n_successes': 26, 'steps': 7}
+Epoch 151; Loss = 240.1326; Accumulated Loss: 226.3727
+{'n_aborts': 9, 'n_successes': 20, 'steps': 6}
+Epoch 152; Loss = 221.5231; Accumulated Loss: 226.3410
+{'n_aborts': 11, 'n_successes': 15, 'steps': 6}
+Epoch 153; Loss = 234.3537; Accumulated Loss: 226.3931
+{'n_aborts': 18, 'n_successes': 25, 'steps': 6}
+Epoch 154; Loss = 216.5890; Accumulated Loss: 226.3298
+{'n_aborts': 4, 'n_successes': 25, 'steps': 6}
+Epoch 155; Loss = 186.0789; Accumulated Loss: 226.0718
+{'n_aborts': 10, 'n_successes': 18, 'steps': 7}
+Epoch 156; Loss = 195.4444; Accumulated Loss: 225.8767
+{'n_aborts': 11, 'n_successes': 18, 'steps': 6}
+Epoch 157; Loss = 193.4097; Accumulated Loss: 225.6712
+{'n_aborts': 8, 'n_successes': 20, 'steps': 6}
+Epoch 158; Loss = 213.6822; Accumulated Loss: 225.5958
+{'n_aborts': 12, 'n_successes': 18, 'steps': 6}
+Epoch 159; Loss = 224.4335; Accumulated Loss: 225.5885
+{'n_aborts': 14, 'n_successes': 22, 'steps': 6}
+Epoch 160; Loss = 229.5738; Accumulated Loss: 225.6133
+{'n_aborts': 8, 'n_successes': 27, 'steps': 6}
+Epoch 161; Loss = 224.1436; Accumulated Loss: 225.6042
+{'n_aborts': 8, 'n_successes': 24, 'steps': 6}
+Epoch 162; Loss = 216.9675; Accumulated Loss: 225.5512
+{'n_aborts': 17, 'n_successes': 24, 'steps': 6}
+Epoch 163; Loss = 232.8138; Accumulated Loss: 225.5955
+{'n_aborts': 13, 'n_successes': 14, 'steps': 6}
+Epoch 164; Loss = 217.8738; Accumulated Loss: 225.5487
+{'n_aborts': 4, 'n_successes': 15, 'steps': 6}
+Epoch 165; Loss = 208.6759; Accumulated Loss: 225.4471
+{'n_aborts': 3, 'n_successes': 25, 'steps': 7}
+Epoch 166; Loss = 200.5982; Accumulated Loss: 225.2983
+{'n_aborts': 9, 'n_successes': 21, 'steps': 6}
+Epoch 167; Loss = 210.5680; Accumulated Loss: 225.2106
+{'n_aborts': 9, 'n_successes': 14, 'steps': 6}
+Epoch 168; Loss = 215.2840; Accumulated Loss: 225.1519
+{'n_aborts': 15, 'n_successes': 22, 'steps': 9}
+Epoch 169; Loss = 217.6359; Accumulated Loss: 225.1077
+{'n_aborts': 9, 'n_successes': 26, 'steps': 7}
+Epoch 170; Loss = 228.6423; Accumulated Loss: 225.1283
+{'n_aborts': 16, 'n_successes': 21, 'steps': 6}
+Epoch 171; Loss = 238.8932; Accumulated Loss: 225.2084
+{'n_aborts': 13, 'n_successes': 20, 'steps': 6}
+Epoch 172; Loss = 216.4771; Accumulated Loss: 225.1579
+{'n_aborts': 14, 'n_successes': 16, 'steps': 6}
+Epoch 173; Loss = 219.0905; Accumulated Loss: 225.1230
+{'n_aborts': 13, 'n_successes': 16, 'steps': 6}
+Epoch 174; Loss = 188.8595; Accumulated Loss: 224.9158
+{'n_aborts': 3, 'n_successes': 18, 'steps': 6}
+Epoch 175; Loss = 183.5371; Accumulated Loss: 224.6807
+{'n_aborts': 8, 'n_successes': 24, 'steps': 6}
+Epoch 176; Loss = 208.9635; Accumulated Loss: 224.5919
+{'n_aborts': 7, 'n_successes': 18, 'steps': 6}
+Epoch 177; Loss = 193.3333; Accumulated Loss: 224.4163
+{'n_aborts': 14, 'n_successes': 16, 'steps': 7}
+Epoch 178; Loss = 238.0318; Accumulated Loss: 224.4923
+{'n_aborts': 8, 'n_successes': 20, 'steps': 6}
+Epoch 179; Loss = 230.3311; Accumulated Loss: 224.5248
+{'n_aborts': 10, 'n_successes': 16, 'steps': 6}
+Epoch 180; Loss = 221.8919; Accumulated Loss: 224.5102
+{'n_aborts': 17, 'n_successes': 22, 'steps': 6}
+Epoch 181; Loss = 232.1689; Accumulated Loss: 224.5523
+{'n_aborts': 15, 'n_successes': 19, 'steps': 6}
+Epoch 182; Loss = 248.0738; Accumulated Loss: 224.6809
+{'n_aborts': 10, 'n_successes': 17, 'steps': 10}
+Epoch 183; Loss = 220.4262; Accumulated Loss: 224.6577
+{'n_aborts': 11, 'n_successes': 22, 'steps': 6}
+Epoch 184; Loss = 190.8725; Accumulated Loss: 224.4751
+{'n_aborts': 12, 'n_successes': 15, 'steps': 6}
+Epoch 185; Loss = 207.9029; Accumulated Loss: 224.3860
+{'n_aborts': 12, 'n_successes': 15, 'steps': 11}
+Epoch 186; Loss = 196.9975; Accumulated Loss: 224.2395
+{'n_aborts': 14, 'n_successes': 18, 'steps': 6}
+Epoch 187; Loss = 195.3440; Accumulated Loss: 224.0858
+{'n_aborts': 14, 'n_successes': 23, 'steps': 6}
+Epoch 188; Loss = 225.9468; Accumulated Loss: 224.0957
+{'n_aborts': 13, 'n_successes': 19, 'steps': 6}
+Epoch 189; Loss = 236.6819; Accumulated Loss: 224.1619
+{'n_aborts': 12, 'n_successes': 22, 'steps': 12}
+Epoch 190; Loss = 247.6075; Accumulated Loss: 224.2847
+{'n_aborts': 11, 'n_successes': 20, 'steps': 6}
+Epoch 191; Loss = 213.5239; Accumulated Loss: 224.2286
+{'n_aborts': 6, 'n_successes': 18, 'steps': 6}
+Epoch 192; Loss = 200.8083; Accumulated Loss: 224.1073
+{'n_aborts': 14, 'n_successes': 22, 'steps': 6}
+Epoch 193; Loss = 205.6828; Accumulated Loss: 224.0123
+{'n_aborts': 12, 'n_successes': 17, 'steps': 6}
+Epoch 194; Loss = 182.5549; Accumulated Loss: 223.7997
+{'n_aborts': 4, 'n_successes': 19, 'steps': 7}
+Epoch 195; Loss = 192.6856; Accumulated Loss: 223.6410
+{'n_aborts': 9, 'n_successes': 28, 'steps': 8}
+Epoch 196; Loss = 208.9230; Accumulated Loss: 223.5663
+{'n_aborts': 15, 'n_successes': 11, 'steps': 6}
+Epoch 197; Loss = 219.8754; Accumulated Loss: 223.5476
+{'n_aborts': 10, 'n_successes': 22, 'steps': 6}
+Epoch 198; Loss = 238.7538; Accumulated Loss: 223.6240
+{'n_aborts': 7, 'n_successes': 22, 'steps': 9}
+Epoch 199; Loss = 233.8974; Accumulated Loss: 223.6754
