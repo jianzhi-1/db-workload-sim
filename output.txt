@@ -1471,3 +1471,11 @@ Epoch 197; Loss = 219.8754; Accumulated Loss: 223.5476
 Epoch 198; Loss = 238.7538; Accumulated Loss: 223.6240
 {'n_aborts': 7, 'n_successes': 22, 'steps': 9}
 Epoch 199; Loss = 233.8974; Accumulated Loss: 223.6754
+Episode 50: Avg Reward (last 50): 49.20
+Episode 100: Avg Reward (last 50): 49.05
+Episode 50: Avg Reward (last 50): 48.66
+Episode 100: Avg Reward (last 50): 49.40
+Episode 50: Avg Reward (last 50): 24.63
+Episode 100: Avg Reward (last 50): 24.73
+Episode 50: Avg Reward (last 50): 24.78
+Episode 100: Avg Reward (last 50): 24.53
