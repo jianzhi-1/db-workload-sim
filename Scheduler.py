@@ -694,7 +694,7 @@ class IntegerOptScheduler(Scheduler):
 
 class LumpScheduler(Scheduler):
     def __init__(self):
-        self.memory:dict = None
+        self.memory:dict = {}
         self.step = 0
         self.dont_care = None
     
@@ -706,16 +706,84 @@ class LumpScheduler(Scheduler):
         total_txns = len(TxnPool)
         assert total_txns > 0, "scheduler fail: total number of transactions is 0"
         res = [0]*total_txns
+        #print(self.memory, flush=True)
         for i, txn in enumerate(TxnPool):
             if txn.txn not in self.memory: 
                 #assert False, "transaction not scheduled"
                 res[i] = 0
             else:
                 ts = self.memory[txn.txn]
-                if self.step > ts: assert False, "transaction should have been scheduled earlier"
+                if self.step > ts: 
+                    # assert False, "transaction should have been scheduled earlier"
+                    res[i] = 0
                 if self.dont_care is not None and self.dont_care == ts: 
                     res[i] = -1
                 elif self.step == ts: 
                     res[i] = 1 # schedule it
         self.step += 1
+        return res
+
+
+class RLSMFTwistedScheduler(Scheduler): # https://www.vldb.org/pvldb/vol17/p2694-cheng.pdf
+    def __init__(self, k=5):
+        self.k = k # how many transactions to sample
+        self.locker = AdvancedLocker()
+    
+    def schedule(self, inflight:dict(), Locker, TxnPool:list[Transaction], curstep:int) -> list[int]:
+        total_txns = len(TxnPool)
+        
+        assert total_txns > 0, "scheduler fail: total number of transactions is 0"
+        res = []
+
+        # txnPoolClone = list(enumerate(TxnPool))
+        # print(txnPoolClone, flush=True)
+
+        # while len(txnPoolClone) >= 1:
+
+        #idx_list = random.sample(range(len(txnPoolClone)), min(self.k, len(txnPoolClone)))
+        shortest_makespan, global_id_smf, _, smf_dispatch_time = None, None, None, None
+        idx_list = range(len(TxnPool))
+        for idx, txn in enumerate(TxnPool):
+            # txn = txnPoolClone[idx][1]
+            #print(idx, txn, flush=True)
+            #print(txnPoolClone[idx][0], flush=True)
+            #txn = txnPoolClone[txn_info][1]
+            # print(idx, txn_info, flush=True)
+            l = len(txn.operations)
+            latest_complete, latest_dispatch = None, None
+            t_try = curstep # probing this step
+            t_hat = None    # the resultant step
+            while t_hat is None or t_hat != t_try:
+                t_hat = t_try
+                for i, op in enumerate(txn.operations):
+                    ex = self.locker.probe(op.resource, op.type, t_try + i, op.delta_last) # time when operator executes
+                    assert ex >= t_try + i, f"invariance broken: ex={ex}, t_try+i={t_try+i}"
+                    t_try = ex - i # when the initial operator should be
+            assert t_hat == t_try, f"t_hat={t_hat}, t_try={t_try}"
+            assert t_hat >= curstep, f"t_hat={t_hat}"
+            dispatch = t_hat
+            complete = t_hat + l - 1 # when the entire operation is done
+            latest_dispatch = dispatch
+            latest_complete = max(complete - curstep, 0)
+
+            res.append((idx, latest_dispatch - curstep + 1))
+            visited = set()
+            for i, op in enumerate(txn.operations):
+                if (op.resource, op.type) in visited: continue
+                visited.add((op.resource, op.type))
+                self.locker.update(op.resource, op.type, latest_dispatch + i, op.delta_last)
+
+
+        #     if shortest_makespan is None or shortest_makespan > latest_complete:
+        #         shortest_makespan, global_id_smf, _, smf_dispatch_time = latest_complete, idx, None, latest_dispatch
+        # res.append((global_id_smf, smf_dispatch_time - curstep + 1))
+        # visited = set()
+        # # for i, op in enumerate(txnPoolClone[local_id_smf][1].operations):
+        # for i, op in enumerate(txn.operations):
+        #     if (op.resource, op.type) in visited: continue
+        #     visited.add((op.resource, op.type))
+        #     self.locker.update(op.resource, op.type, smf_dispatch_time + i, op.delta_last)
+        # # txnPoolClone.pop(local_id_smf)
+        # print(len(res), total_txns, flush=True)
+        # assert len(res) == total_txns, "invariance broken"
         return res

@@ -9,14 +9,89 @@ class QNetwork(nn.Module):
         self.N = N
         self.T = T
         self.hidden_dim = hidden_dim
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = nn.Sequential(
             nn.Linear(N*N*(2*T+1) + N, hidden_dim),
             nn.ReLU(),
-            nn.Linear(hidden_dim, N)
+            nn.Linear(hidden_dim, N+1)
         )
 
-    def forward(self, x):
-        return self.model(x)
+    def obtain_schedule(self, conflict_matrix):
+        N, T = self.N, self.T # convenience
+        assert conflict_matrix.shape == (1, N, N, 2*T+1), f"conflict_matrix.shape = {conflict_matrix.shape}"
+        conflict_matrix = conflict_matrix.squeeze()
+        assert conflict_matrix.shape == (N, N, 2*T+1), f"conflict_matrix.shape = {conflict_matrix.shape}"
+        mask = torch.zeros(self.N)
+        assert mask.shape == (self.N,), f"mask.shape = {mask.shape}"
+
+        scheduled = []
+
+        for _ in range(self.N):
+            state_tensor = self.get_state_tensor(conflict_matrix, mask)
+            assert state_tensor.shape == (N*N*(2*T+1)+N,), f"state_tensor.shape = {state_tensor.shape}"
+            action = self.select_action(state_tensor, mask)
+            #assert 0 <= action and action < N, f"action = {action}"
+
+            if action >= N:
+                done = True
+            else:
+                pos = self.get_position(action, scheduled, conflict_matrix, mask)
+                scheduled.append((action, pos))
+                mask[action] = 1
+
+                done = (mask.sum() == self.N)
+                next_state_tensor = self.get_state_tensor(conflict_matrix, mask)
+                assert next_state_tensor.shape == (N*N*(2*T+1)+N,), f"next_state_tensor.shape = {state_tensor.shape}"
+            if done: break
+
+        return scheduled, mask
+    
+    def select_action(self, state_tensor, mask):
+        # action = arg max_a(Q(s, a))
+        # unless epsilon, then explore a bit
+        assert state_tensor.shape == (self.N*self.N*(2*self.T+1)+self.N,), f"state_tensor.shape = {state_tensor.shape}"
+        assert mask.shape == (self.N,), f"mask.shape = {mask.shape}"
+        with torch.no_grad():
+            q_values = self.model(state_tensor)
+            adjusted_mask = torch.cat([mask, torch.tensor([0])])
+            # Convert mask to boolean tensor for indexing
+            mask_bool = (adjusted_mask == 1)
+            q_values[mask_bool] = float('-inf')  # transactions that are already scheduled are masked out
+            #if random.random() < self.epsilon: # epsilon-greedy exploration
+            #    valid_actions = torch.where(mask == 0)[0]
+            #    return random.choice(valid_actions.tolist())
+            return torch.argmax(q_values).item()
+        assert False # should be unreachable
+
+    def get_position(self, new_action, scheduled, conflict_matrix, mask):
+        N, T = self.N, self.T # convenience
+        #assert 0 <= new_action and new_action < N, f"new_action = f{new_action}"
+        assert conflict_matrix.shape == (N, N, 2*T+1), f"conflict_matrix.shape = {conflict_matrix.shape}"
+
+        success, pos = False, -1 # whether can actually schedule i and the earliest it can be scheduled
+
+        for t in range(0, T+1, 1):
+            # train to schedule transaction i at time t
+            temp_success = True
+            for j, tj in scheduled:
+                if conflict_matrix[new_action][j][tj - t + T] == 1: # conflict
+                    temp_success = False
+                    break
+            if temp_success: # assign at earliest
+                success, pos = True, t
+                break
+        if success:
+            return pos
+        return -1
+    
+    def get_state_tensor(self, conflict_matrix, mask):
+        # essentially flatten and concatenate the conflict matrix and the mask
+        N, T = self.N, self.T # convenience
+        assert conflict_matrix.shape == (N, N, 2*T+1), f"conflict_matrix.shape = {conflict_matrix.shape}"
+        assert mask.shape == (N,), f"mask.shape = {mask.shape}"
+        res = torch.cat([conflict_matrix.flatten(), mask], dim=0).float().to(self.device)
+        assert res.shape == (N*N*(2*T+1)+N,), f"res.shape = {res.shape}"
+        return res
 
 class Trainer:
     def __init__(self, N, T, lr=1e-3, gamma=0.9, epsilon=0.1, q_net=None):
@@ -33,34 +108,11 @@ class Trainer:
         self.gamma = gamma # discount rate
         self.epsilon = epsilon # epsilon-greedy
 
-    def get_state_tensor(self, conflict_matrix, mask):
-        # essentially flatten and concatenate the conflict matrix and the mask
-        N, T = self.N, self.T # convenience
-        assert conflict_matrix.shape == (N, N, 2*T+1), f"conflict_matrix.shape = {conflict_matrix.shape}"
-        assert mask.shape == (N,), f"mask.shape = {mask.shape}"
-        res = torch.cat([conflict_matrix.flatten(), mask], dim=0).float().to(self.device)
-        assert res.shape == (N*N*(2*T+1)+N,), f"res.shape = {res.shape}"
-        return res
-
-    def select_action(self, state_tensor, mask):
-        # action = arg max_a(Q(s, a))
-        # unless epsilon, then explore a bit
-        assert state_tensor.shape == (self.N*self.N*(2*self.T+1)+self.N,), f"state_tensor.shape = {state_tensor.shape}"
-        assert mask.shape == (self.N,), f"mask.shape = {mask.shape}"
-        with torch.no_grad():
-            q_values = self.q_net(state_tensor.unsqueeze(0)).squeeze()
-            q_values[mask == 1] = float('-inf')  # transactions that are already scheduled are masked out
-            if random.random() < self.epsilon: # epsilon-greedy exploration
-                valid_actions = torch.where(mask == 0)[0]
-                return random.choice(valid_actions.tolist())
-            return torch.argmax(q_values).item()
-        assert False # should be unreachable
-
     def train_step(self, state_tensor, action, reward, next_state_tensor, done):
         assert state_tensor.shape == (self.N*self.N*(2*self.T+1)+self.N,), f"state_tensor.shape = {state_tensor.shape}"
         assert next_state_tensor.shape == (self.N*self.N*(2*self.T+1)+self.N,), f"next_state_tensor.shape = {next_state_tensor.shape}"
-        q_values = self.q_net(state_tensor.unsqueeze(0)).squeeze()
-        next_q_values = self.q_net(next_state_tensor.unsqueeze(0)).squeeze()
+        q_values = self.q_net.model(state_tensor)
+        next_q_values = self.q_net.model(next_state_tensor)
 
         target = reward
         if not done: target += self.gamma * next_q_values.max().item()
@@ -81,34 +133,61 @@ class Trainer:
         scheduled = []
 
         for step in range(self.N):
-            state_tensor = self.get_state_tensor(conflict_matrix, mask)
+            state_tensor = self.q_net.get_state_tensor(conflict_matrix, mask)
             assert state_tensor.shape == (N*N*(2*T+1)+N,), f"state_tensor.shape = {state_tensor.shape}"
-            action = self.select_action(state_tensor, mask)
-            assert 0 <= action and action < N, f"action = {action}"
+            action = self.q_net.select_action(state_tensor, mask)
+            #assert 0 <= action and action < N, f"action = {action}"
 
-            reward, pos = self.compute_reward(action, scheduled, conflict_matrix)
+            reward, pos = self.compute_reward(action, scheduled, conflict_matrix, mask)
             total_reward += reward
 
-            scheduled.append((action, pos))
-            mask[action] = 1
+            if action >= N:
+                done = True
+            else:
+                scheduled.append((action, pos))
+                mask[action] = 1
 
-            done = (mask.sum() == self.N)
-            next_state_tensor = self.get_state_tensor(conflict_matrix, mask)
-            assert next_state_tensor.shape == (N*N*(2*T+1)+N,), f"next_state_tensor.shape = {state_tensor.shape}"
+                done = (mask.sum() == self.N)
+                next_state_tensor = self.q_net.get_state_tensor(conflict_matrix, mask)
+                assert next_state_tensor.shape == (N*N*(2*T+1)+N,), f"next_state_tensor.shape = {state_tensor.shape}"
 
-            self.train_step(state_tensor, action, reward, next_state_tensor, done)
+                self.train_step(state_tensor, action, reward, next_state_tensor, done)
 
             if done: break
 
         return total_reward
 
-    def compute_reward(self, new_action, scheduled, conflict_matrix):
+    def compute_reward(self, new_action, scheduled, conflict_matrix, mask):
         N, T = self.N, self.T # convenience
-        assert 0 <= new_action and new_action < N, f"new_action = f{new_action}"
+        #assert 0 <= new_action and new_action < N, f"new_action = f{new_action}"
         assert conflict_matrix.shape == (N, N, 2*T+1), f"conflict_matrix.shape = {conflict_matrix.shape}"
 
-        reward = 0.
         success, pos = False, -1 # whether can actually schedule i and the earliest it can be scheduled
+
+        if new_action >= N:
+            total_reward = 5
+            increment = 1
+            # counter = 0
+            for i in range(N):
+                increment = 1
+                if mask[i] == 0:
+                    for t in range(0, T+1, 1):
+                        # train to schedule transaction i at time t
+                        temp_success = True
+                        for j, tj in scheduled:
+                            if conflict_matrix[i][j][tj - t + T] == 1: # conflict
+                                temp_success = False
+                                break
+                        if temp_success: # assign at earliest
+                            success, pos = True, t
+                            break
+                    if success:
+                        total_reward -= increment
+                        increment += 1
+                    else:
+                        total_reward += 1
+            return total_reward/2, -1
+
         for t in range(0, T+1, 1):
             # train to schedule transaction i at time t
             temp_success = True
@@ -116,12 +195,10 @@ class Trainer:
                 if conflict_matrix[new_action][j][tj - t + T] == 1: # conflict
                     temp_success = False
                     break
-                    #return 0., -1
             if temp_success: # assign at earliest
                 success, pos = True, t
                 break
         if success:
             reward_curve = [1., 0.9, 0.8, 0.7, 0.6, 0.5, 0.4]
             return reward_curve[pos], pos
-            #return 1, pos
-        return -5., -1
+        return 0., -1

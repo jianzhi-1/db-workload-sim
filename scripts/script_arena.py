@@ -1,6 +1,6 @@
 import pickle
 from Simulator import Simulator
-from Scheduler import LumpScheduler, Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, SequentialScheduler, QueueBasedScheduler
+from Scheduler import LumpScheduler, RLSMFTwistedScheduler, Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, SequentialScheduler, QueueBasedScheduler, RLSMFTwistedScheduler
 from Workload import SmallBankWorkload
 from KernelWrapper import KernelWrapper
 from Kernel import IntegerOptimisationKernelMkII
@@ -10,7 +10,7 @@ workload = SmallBankWorkload()
 probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
 
 workload_arr = []
-T = 100
+T = 20
 n_queues = 10
 max_n_kernel = 10
 filename = "arena_final_again_fixed_conflict.txt"
@@ -23,7 +23,7 @@ class Contestant():
     def __init__(self, name:str, scheduler:Scheduler, model=None):
         self.name = name
         self.scheduler = scheduler
-        self.sim = Simulator(scheduler, [])
+        self.sim = Simulator(scheduler, [], False)
         self.sim.model = model
 
 contestants:list[Contestant] = []
@@ -32,8 +32,11 @@ contestants:list[Contestant] = []
 #with open('trained_model_CNN.pkl', 'rb') as f:
 #    model_CNN = pickle.load(f)
 
-with open('model_linear.pkl', 'rb') as f:
-    model_linear = pickle.load(f)
+with open('trained_model_linear.pkl', 'rb') as f:
+   model_linear = pickle.load(f)
+
+with open('model_RL.pkl', 'rb') as f:
+    model_RL = pickle.load(f)
     
 contestants.extend(
     [
@@ -42,9 +45,10 @@ contestants.extend(
         #Contestant("queue-k-smf", scheduler = QueueScheduler(n_queues, KSMFScheduler, k=10)),
         #Contestant("queue-based", scheduler = QueueBasedScheduler(n_queues=n_queues))
         Contestant("Linear Model", scheduler=LumpScheduler(), model=model_linear),
+        #Contestant("RL Model", scheduler=LumpScheduler(), model=model_RL),
+
     ]
 )
-
 done = False
 
 for t in range(T):
@@ -52,7 +56,10 @@ for t in range(T):
     for contestant in contestants:
         contestant.sim.add_transactions(workload_arr[t])
         if contestant.sim.model is not None:
-            contestant.sim.sim(retryOnAbort=True, n=50, T=6)
+            if contestant.name == "Linear Model":
+                contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="ML")
+            elif contestant.name == "RL Model":
+                contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="RL")
         else:
             contestant.sim.sim(retryOnAbort=True)
         #print(contestant.sim.online_stats())
@@ -68,10 +75,10 @@ while not done:
     curdone = True
     for contestant in contestants:
         if contestant.sim.done(): continue
-        if contestant.sim.model is not None:
-            contestant.sim.sim(retryOnAbort=True, n=50, T=6)
-        else:
-            contestant.sim.sim(retryOnAbort=True)
+        if contestant.name == "Linear Model":
+            contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="ML")
+        elif contestant.name == "RL Model":
+            contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="RL")
         #print(contestant.sim.online_stats())
         d = contestant.sim.print_statistics()
         d["name"] = contestant.name

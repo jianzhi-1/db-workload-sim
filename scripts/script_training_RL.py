@@ -35,7 +35,7 @@ def generator(num_txns, T):
 
 N = 50
 T = 6
-EPISODES = 100
+EPISODES = 50
 GAMMA = 0.9 # discount factor
 EPSILON = 0.1
 LR = 1e-3

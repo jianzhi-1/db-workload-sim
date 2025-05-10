@@ -2,7 +2,7 @@ import heapq
 
 import numpy as np
 import torch
-from Scheduler import Scheduler, KSMFTwistedScheduler, KSMFTwistedOracle2PhaseDontCareScheduler
+from Scheduler import Scheduler, KSMFTwistedScheduler, KSMFTwistedOracle2PhaseDontCareScheduler, RLSMFTwistedScheduler
 from utils import Transaction, Operation, ReadOperation, WriteOperation, conflict
 from Locker import Locker
 from utils import clone_transaction, clone_operation_list
@@ -32,7 +32,7 @@ class Simulator():
     # 2. If T2 requests for a resource that T1 has not released, then T2 aborts itself and n_aborts += 1. 
     #    T2 does not restart itself (for simplicity of simulation, otherwise just implementing MVCC)
 
-    def __init__(self, scheduler:Scheduler=None, txnPool:list[Transaction]=None):
+    def __init__(self, scheduler:Scheduler=None, txnPool:list[Transaction]=None, filterT:bool=False):
         self.scheduler = scheduler
         self.txnPool = txnPool
         self.resource_locks = Locker()
@@ -44,7 +44,8 @@ class Simulator():
         self.memo = dict()
         self.clear()
         self.flushPool = [] # flush for Oracle
-        self.txns_ML = []
+        # self.txns_ML = []
+        self.filterT:bool = filterT
 
     def clear(self):
         self.resource_locks = Locker()
@@ -74,47 +75,152 @@ class Simulator():
             new_txn = clone_transaction(p.txn)
             new_txn.txn += DELTA
             self.flushPool.append(new_txn)
+
+    def no_filter_T(self, n):
+        res = self.txnPool[:n]
+        self.txnPool = self.txnPool[n:]
+        return res
     
-    def update_memory(self, n, T):
-        txns_to_schedule = self.txnPool[:n]
+    def filter_T(self, n): #filtered set of transactions to schedule
+        # res = []
+        # num_candidates = 0
+        # idx = 0
+        # maxlim = len(self.txnPool)
+        # while num_candidates < n and idx < len(self.txnPool): #Filter based on whether there is a current conflict
+        #     if idx > maxlim:
+        #         assert False, "No valid resources left to schedule easily"
+        #     candidate = self.txnPool[idx]
+        #     can_schedule = True
+        #     for op in candidate.operations:
+        #         # typ = "R" if op.is_read else "W"
+        #         # if self.locker.probe(op.resource, typ, self.step, T) < self.step:
+        #         # print(self.resource_locks.probe_table, flush=True)
+        #         if op.resource in self.resource_locks.probe_table:
+        #             if (self.resource_locks.probe_table[op.resource] and 
+        #                 (self.resource_locks.probe_table[op.resource][0] is not None) and 
+        #                 (self.resource_locks.probe_table[op.resource][1] is not None)):
+        #                 can_schedule = False
+        #                 break
+        #     if can_schedule:
+        #         res.append(clone_transaction(candidate))
+        #         num_candidates += 1
+        #     else:
+        #         self.txnPool.append(clone_transaction(candidate))
+        #     idx += 1
+        # self.txnPool = self.txnPool[idx:]
+        return None
+
+
+    
+    def update_memory_ML(self, n, T):
+        self.scheduler.memory = {}
+        txns_to_schedule = []
+        if self.filterT == False:
+            txns_to_schedule = self.no_filter_T(n)
+        else:
+            txns_to_schedule = self.filter_T(n)
         x = conflict_matrix(1, n, T, txns_to_schedule)
         x = torch.from_numpy(x.astype(np.float32))
         lamb, p = self.model(x)
-        memory = dict()
+        # memory = dict()
         for j, txn in enumerate(txns_to_schedule):
             prob_arr = lamb[0][j].cpu().detach().numpy()
             action = np.random.choice(range(self.step, self.step+T+2), p=prob_arr, size=1)[0]
             if action != self.step+T+1:
-                memory[txn.txn] = action
-        self.scheduler.memory = memory
+                self.scheduler.memory[txn.txn] = action
+        # self.scheduler.memory = memory
+        return txns_to_schedule
     
-    def sim(self, freeze:bool=False, retryOnAbort:bool=False, n:int=None, T:int=None) -> dict:
+    def update_memory_RL(self, n, T):
+        txns_to_schedule = []
+        if self.filterT == False:
+            txns_to_schedule = self.no_filter_T(n)
+        else:
+            txns_to_schedule = self.filter_T(n)
+
+        self.scheduler.memory = {}
+
+        # self.txns_ML = []
+
+        # num_candidates = 0
+        # idx = 0
+        # maxlim = len(self.txnPool)
+        # while num_candidates < n and idx < len(self.txnPool): #Filter based on whether there is a current conflict
+        #     if idx > maxlim:
+        #         assert False, "No valid resources left to schedule easily"
+        #     candidate = self.txnPool[idx]
+        #     can_schedule = True
+        #     for op in candidate.operations:
+        #         # typ = "R" if op.is_read else "W"
+        #         # if self.locker.probe(op.resource, typ, self.step, T) < self.step:
+        #         # print(self.resource_locks.probe_table, flush=True)
+        #         if op.resource in self.resource_locks.probe_table:
+        #             if (self.resource_locks.probe_table[op.resource] and 
+        #                 (self.resource_locks.probe_table[op.resource][0] is not None) and 
+        #                 (self.resource_locks.probe_table[op.resource][1] is not None)):
+        #                 can_schedule = False
+        #                 break
+        #     if can_schedule:
+        #         self.txns_ML.append(clone_transaction(candidate))
+        #         num_candidates += 1
+        #     else:
+        #         self.txnPool.append(clone_transaction(candidate))
+        #     idx += 1
+        
+        # self.txnPool = self.txnPool[idx:]
+
+        x = conflict_matrix(1, n, T, txns_to_schedule)
+        x = torch.from_numpy(x.astype(np.float32))
+        txns, mask = self.model.obtain_schedule(x)
+        for txn_idx, ts in txns:
+            if txn_idx < len(txns):
+                txn = txns_to_schedule[txn_idx]
+                if ts >= 0:
+                    #print(txn_idx, txn.txn, flush=True)
+                    self.scheduler.memory[txn.txn] = self.step + ts
+        # self.scheduler.memory = memory
+        # print('done updating memory RL', flush=True)
+        return txns_to_schedule
+
+    
+    def sim(self, freeze:bool=False, retryOnAbort:bool=False, n:int=None, T:int=None, ML_RL:str = None) -> dict:
+        # print(len(self.scheduled_txn), flush=True)
         while len(self.scheduled_txn) > 0 and self.scheduled_txn[0].priority <= self.step:
             if self.scheduled_txn[0].priority < self.step: assert False, "transaction should be scheduled earlier"
             p = heapq.heappop(self.scheduled_txn)
             self.inflight[p.txn.txn] = p.txn.operations
             self.memo[p.txn.txn] = clone_transaction(p.txn) # clone just in case need to reschedule
 
+        txns_to_schedule = self.txnPool
         if len(self.txnPool) == 0: # no more transactions to be scheduled
             self.tick(retryOnAbort=retryOnAbort)
             return self.statistics
         if n != None and T != None: #ML model scheduling, only schedule every T steps
-            self.update_memory(self.scheduler.memory, self.txnPool, self.step)
+            if self.step % T == 0:
+                if ML_RL == "ML":
+                    txns_to_schedule = self.update_memory_ML(n, T)
+                    decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
+                    # decisions.extend([0]*(len(self.txnPool)))
+                elif ML_RL == "RL": 
+                    txns_to_schedule = self.update_memory_RL(n, T)
+                    decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
+                    # decisions.extend([(0,0)]*(len(self.txnPool)))
+            else:
+                self.tick(retryOnAbort=retryOnAbort)
+                return self.statistics
 
+        else:
             decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
 
-            if (len(self.txnPool) > len(txns_to_schedule)):
-                decisions.extend([0]*(len(self.txnPool) - len(txns_to_schedule)))
-        else:
-            decisions = self.scheduler.schedule(self.inflight, self, self.txnPool, self.step) # pass self for flush()
-
-        assert len(decisions) == len(self.txnPool), f"Decision length is not equal transaction pool length, {type(self.scheduler)}, {len(decisions)}, {len(self.txnPool)}"
+        # assert len(decisions) == len(self.txnPool), f"Decision length is not equal transaction pool length, {type(self.scheduler)}, {len(decisions)}, {len(self.txnPool)}"
 
         new_pool = []
+        # print(decisions, flush=True)
 
-        if isinstance(self.scheduler, KSMFTwistedScheduler) or isinstance(self.scheduler, KSMFTwistedOracle2PhaseDontCareScheduler):
+        if isinstance(self.scheduler, KSMFTwistedScheduler) or isinstance(self.scheduler, KSMFTwistedOracle2PhaseDontCareScheduler) or isinstance(self.scheduler, RLSMFTwistedScheduler):
             for (i, v) in decisions:
-                t = self.txnPool[i]
+                # t = self.txnPool[i]
+                t = txns_to_schedule[i]
                 if v >= 1: 
                     self.scheduled_time[t.txn] = self.step + v - 1
                     if v == 1:
@@ -127,7 +233,8 @@ class Simulator():
                 elif v == 0: new_pool.append(t)
                 else: assert False, f"unknown decision {v}"
         else:
-            for i, t in enumerate(self.txnPool):
+            # for i, t in enumerate(self.txnPool):
+            for i, t in enumerate(txns_to_schedule):
                 if decisions[i] >= 1: 
                     self.scheduled_time[t.txn] = self.step + decisions[i] - 1
                     if decisions[i] == 1:
@@ -140,7 +247,7 @@ class Simulator():
                 elif decisions[i] == 0: new_pool.append(t)
                 else: assert False, f"unknown decision {decisions[i]}"
         
-        self.txnPool = new_pool + self.flushPool
+        self.txnPool = self.txnPool + new_pool + self.flushPool
         self.flushPool = []
 
         statistics = dict()
