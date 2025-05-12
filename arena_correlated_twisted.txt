@@ -1,7 +1,7 @@
-{'n_aborts': 0, 'n_successes': 0, 'steps': 1}
-{'n_aborts': 0, 'n_successes': 0, 'steps': 1}
-{'n_aborts': 0, 'n_successes': 0, 'steps': 1}
-{'n_aborts': 0, 'n_successes': 0, 'steps': 1}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'RL-ordered k-smf n=20 T=6'}
 {'n_aborts': 0, 'n_successes': 4, 'steps': 2, 'name': 'k-smf-k=5'}
 {'n_aborts': 0, 'n_successes': 5, 'steps': 2, 'name': 'k-smf-twisted-k=5'}
 {'n_aborts': 0, 'n_successes': 2, 'steps': 2, 'name': 'RL-ordered k-smf n=50 T=6'}
@@ -902,7 +902,3 @@
 {'n_aborts': 0, 'n_successes': 499, 'steps': 253, 'name': 'k-smf-k=5'}
 {'n_aborts': 0, 'n_successes': 499, 'steps': 254, 'name': 'k-smf-k=5'}
 {'n_aborts': 0, 'n_successes': 500, 'steps': 255, 'name': 'k-smf-k=5'}
-{'n_aborts': 0, 'n_successes': 500, 'steps': 255, 'name': 'k-smf-k=5'}
-{'n_aborts': 0, 'n_successes': 500, 'steps': 221, 'name': 'k-smf-twisted-k=5'}
-{'n_aborts': 0, 'n_successes': 496, 'steps': 209, 'name': 'RL-ordered k-smf n=50 T=6'}
-{'n_aborts': 0, 'n_successes': 500, 'steps': 219, 'name': 'RL-ordered k-smf n=20 T=6'}

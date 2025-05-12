@@ -7,3 +7,4 @@ model_RL.pkl
 venv/
 trained_model_CNN.pt
 trained_model_linear.pkl
+model_RL_20.pkl

@@ -1,5 +1,7 @@
+import pickle
+import time
 from Simulator import Simulator
-from Scheduler import Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, KSMFOracleScheduler, KSMFOracle2PhaseScheduler, KSMFZeroScheduler, KSMFOracle2PhaseDontCareScheduler, KSMFTwistedOracle2PhaseDontCareScheduler, KSMFTwistedScheduler
+from Scheduler import LumpScheduler, RLSMFTwistedScheduler, Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, KSMFOracleScheduler, KSMFOracle2PhaseScheduler, KSMFZeroScheduler, KSMFOracle2PhaseDontCareScheduler, KSMFTwistedOracle2PhaseDontCareScheduler, KSMFTwistedScheduler
 from Workload import SmallBankWorkload
 from KernelWrapper import KernelWrapper
 from Kernel import IntegerOptimisationKernelMkII
@@ -15,33 +17,49 @@ probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db
 
 workload_arr = []
 oracle_arr = []
-T = 100
+T = 10
 filename = "arena_correlated_twisted.txt"
+timing_filename = "arena_correlated_twisted_timing.txt"
 for t in range(T):
-    num_txns = 1000
+    num_txns = 50
     random_transactions = workload.generate_transactions(num_txns, probabilities, start=t*num_txns)
     oracle_arr.append(workload.get_sticky_list())
     workload_arr.append([clone_transaction(txn) for txn in random_transactions])
 
 class Contestant():
-    def __init__(self, name:str, scheduler:Scheduler):
+    def __init__(self, name:str, scheduler:Scheduler, model=None):
         self.name = name
         self.scheduler = scheduler
-        self.sim = Simulator(scheduler, [])
+        self.sim = Simulator(scheduler, [], False)
+        self.sim.model = model
+        self.done = False
+        self.makespan = None
 
 contestants:list[Contestant] = []
+
+# with open('model_linear.pkl', 'rb') as f:
+#    model_linear = pickle.load(f)
+
+with open('model_RL.pkl', 'rb') as f:
+    model_RL = pickle.load(f)
+
+with open('model_RL_20.pkl', 'rb') as f:
+    model_RL_20 = pickle.load(f)
 
 contestants.extend(
     [
         Contestant("k-smf-k=5", scheduler = KSMFScheduler(k=5)),
         Contestant("k-smf-twisted-k=5", scheduler = KSMFTwistedScheduler(k=5)),
-        Contestant("k-smf-twisted-k=10", scheduler = KSMFTwistedScheduler(k=10)),
-        Contestant("k-smf-k=10", scheduler = KSMFScheduler(k=10)),
-        Contestant("k-smf-oracle-k=5", scheduler = KSMFOracleScheduler(k=5)),
+        # Contestant("k-smf-twisted-k=10", scheduler = KSMFTwistedScheduler(k=10)),
+        # Contestant("k-smf-k=10", scheduler = KSMFScheduler(k=10)),
+        # Contestant("k-smf-oracle-k=5", scheduler = KSMFOracleScheduler(k=5)),
         #Contestant("k-smf-oracle-2-phase", scheduler = KSMFOracle2PhaseScheduler(k=5)),
-        Contestant("k-smf-oracle-2-phase-k=5", scheduler = KSMFOracle2PhaseDontCareScheduler(k=5)),
-        Contestant("k-smf-twisted-k=5", scheduler = KSMFTwistedOracle2PhaseDontCareScheduler(k=5))
+        # Contestant("k-smf-oracle-2-phase-k=5", scheduler = KSMFOracle2PhaseDontCareScheduler(k=5)),
+        # Contestant("k-smf-twisted-oracle-2-phase-k=5", scheduler = KSMFTwistedOracle2PhaseDontCareScheduler(k=5)),
         #Contestant("k-smf-zero", scheduler = KSMFZeroScheduler(k=5))
+        # Contestant("Linear Model", scheduler=LumpScheduler(), model=model_linear),
+        Contestant("RL-ordered k-smf n=50 T=6", scheduler=RLSMFTwistedScheduler(), model=model_RL),
+        Contestant("RL-ordered k-smf n=20 T=6", scheduler=RLSMFTwistedScheduler(), model=model_RL_20),
     ]
 )
 
@@ -53,18 +71,66 @@ for t in range(T):
         contestant.sim.add_transactions(workload_arr[t])
         if isinstance(contestant.sim.scheduler, KSMFOracleScheduler) or isinstance(contestant.sim.scheduler, KSMFOracle2PhaseScheduler) or isinstance(contestant.sim.scheduler, KSMFOracle2PhaseDontCareScheduler):
             contestant.sim.scheduler.inject_oracle_list(oracle_arr[t])
-        contestant.sim.sim(retryOnAbort=True)
-        curdone = curdone and contestant.sim.done()
+        
+        start_time = time.time()
+        if contestant.sim.model is not None:
+            if contestant.name == "Linear Model":
+                contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="ML")
+            elif contestant.name == "RL-ordered k-smf n=50 T=6":
+                contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="RL")
+            elif contestant.name == "RL-ordered k-smf n=20 T=6":
+                contestant.sim.sim(retryOnAbort=True, n=20, T=6, ML_RL="RL")
+        else:
+            contestant.sim.sim(retryOnAbort=True)
+        end_time = time.time()
+        
+        d = contestant.sim.print_statistics()
+        ts = int((end_time - start_time) * 10000)
+        times = {
+            "name": contestant.name,
+            "time": ts,
+        }
+        d["name"] = contestant.name
+        with open(filename, "a") as f:
+            f.write(str(d) + "\n")
+        with open(timing_filename, "a") as f:
+            f.write(str(times) + "\n")
     done = done or curdone
 
 # clean up the remaining
-while not done:
-    curdone = True
+done_counter = len(contestants)
+while done_counter > 0:
     for contestant in contestants:
-        if contestant.sim.done(): continue
-        contestant.sim.sim(retryOnAbort=True)
-        curdone = curdone and contestant.sim.done()
-    done = done or curdone
+        if contestant.sim.done(): 
+            if contestant.done is False:
+                contestant.done = True
+                contestant.makespan = contestant.sim.step
+                done_counter -= 1
+                continue
+        else:
+            start_time = time.time()
+            if contestant.sim.model is not None:
+                if contestant.name == "Linear Model":
+                    contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="ML")
+                elif contestant.name == "RL-ordered k-smf n=50 T=6":
+                    contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="RL")
+                elif contestant.name == "RL-ordered k-smf n=20 T=6":
+                    contestant.sim.sim(retryOnAbort=True, n=20, T=6, ML_RL="RL")
+            else:
+                contestant.sim.sim(retryOnAbort=True)
+            end_time = time.time()
+            
+            d = contestant.sim.print_statistics()
+            ts = int((end_time - start_time) * 10000)
+            times = {
+                "name": contestant.name,
+                "time": ts,
+            }
+            d["name"] = contestant.name
+            with open(filename, "a") as f:
+                f.write(str(d) + "\n")
+            with open(timing_filename, "a") as f:
+                f.write(str(times) + "\n")
 
 for contestant in contestants:
     d = contestant.sim.statistics

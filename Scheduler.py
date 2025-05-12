@@ -281,7 +281,6 @@ class KSMFTwistedOracle2PhaseDontCareScheduler(Scheduler):
     
     def schedule(self, inflight:dict(), _, TxnPool:list[Transaction], curstep:int) -> list[int]:
         total_txns = len(TxnPool)
-        print(f"total_txns = {total_txns}")
         update_table = dict() # maps resource to how many times it was seen in this iteration
         
         assert total_txns > 0, "scheduler fail: total number of transactions is 0"

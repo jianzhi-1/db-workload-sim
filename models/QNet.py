@@ -15,6 +15,7 @@ class QNetwork(nn.Module):
             nn.ReLU(),
             nn.Linear(hidden_dim, N+1)
         )
+        self.epsilon = 0.1
 
     def obtain_schedule(self, conflict_matrix):
         N, T = self.N, self.T # convenience
@@ -25,6 +26,12 @@ class QNetwork(nn.Module):
         assert mask.shape == (self.N,), f"mask.shape = {mask.shape}"
 
         scheduled = []
+
+        skipped = []
+        for i in range(N):
+            if conflict_matrix[i].sum() == 0:
+                skipped.append((i, 0))
+                mask[i] = 1
 
         for _ in range(self.N):
             state_tensor = self.get_state_tensor(conflict_matrix, mask)
@@ -44,7 +51,7 @@ class QNetwork(nn.Module):
                 assert next_state_tensor.shape == (N*N*(2*T+1)+N,), f"next_state_tensor.shape = {state_tensor.shape}"
             if done: break
 
-        return scheduled, mask
+        return skipped + scheduled, mask
     
     def select_action(self, state_tensor, mask):
         # action = arg max_a(Q(s, a))
@@ -57,9 +64,11 @@ class QNetwork(nn.Module):
             # Convert mask to boolean tensor for indexing
             mask_bool = (adjusted_mask == 1)
             q_values[mask_bool] = float('-inf')  # transactions that are already scheduled are masked out
-            #if random.random() < self.epsilon: # epsilon-greedy exploration
-            #    valid_actions = torch.where(mask == 0)[0]
-            #    return random.choice(valid_actions.tolist())
+            if random.random() < self.epsilon: # epsilon-greedy exploration
+               valid_actions = torch.where(mask == 0)[0].tolist()
+               if len(valid_actions) == 0:
+                   return self.N+1
+               return random.choice(valid_actions)
             return torch.argmax(q_values).item()
         assert False # should be unreachable
 
@@ -132,6 +141,14 @@ class Trainer:
         total_reward = 0
         scheduled = []
 
+        self.epsilon = self.epsilon * 0.9
+
+        skipped = []
+        for i in range(N):
+            if conflict_matrix[i].sum() == 0:
+                skipped.append((i, 0))
+                mask[i] = 1
+
         for step in range(self.N):
             state_tensor = self.q_net.get_state_tensor(conflict_matrix, mask)
             assert state_tensor.shape == (N*N*(2*T+1)+N,), f"state_tensor.shape = {state_tensor.shape}"
@@ -154,7 +171,7 @@ class Trainer:
                 self.train_step(state_tensor, action, reward, next_state_tensor, done)
 
             if done: break
-
+        print(scheduled, flush=True)
         return total_reward
 
     def compute_reward(self, new_action, scheduled, conflict_matrix, mask):
@@ -165,16 +182,19 @@ class Trainer:
         success, pos = False, -1 # whether can actually schedule i and the earliest it can be scheduled
 
         if new_action >= N:
-            total_reward = 5
-            increment = 1
+            # total_reward = 0
+            conflict_points = 0
+            pos_reward = 0
+            neg_reward = 0.5
             # counter = 0
             for i in range(N):
-                increment = 1
+                increment = 0.5
                 if mask[i] == 0:
                     for t in range(0, T+1, 1):
                         # train to schedule transaction i at time t
                         temp_success = True
                         for j, tj in scheduled:
+                            conflict_points += sum(conflict_matrix[i][j])
                             if conflict_matrix[i][j][tj - t + T] == 1: # conflict
                                 temp_success = False
                                 break
@@ -182,12 +202,20 @@ class Trainer:
                             success, pos = True, t
                             break
                     if success:
-                        total_reward -= increment
-                        increment += 1
+                        neg_reward -= increment
+                        increment = increment * 1.5
                     else:
-                        total_reward += 1
-            return total_reward/2, -1
+                        pos_reward += 1
+                        # increment = 0
+            conflict_points = max(0, conflict_points - 30)
+            if neg_reward >= 0:
+                pos_reward += 10
+            # print(conflict_points // 10, pos_reward, neg_reward, flush=True)
+            conflict_points = min(conflict_points // 10, 6)
+            
+            return pos_reward + neg_reward + conflict_points, -1
 
+        difficulty = 1
         for t in range(0, T+1, 1):
             # train to schedule transaction i at time t
             temp_success = True
@@ -198,7 +226,11 @@ class Trainer:
             if temp_success: # assign at earliest
                 success, pos = True, t
                 break
+            else:
+                difficulty += 0.5
         if success:
             reward_curve = [1., 0.9, 0.8, 0.7, 0.6, 0.5, 0.4]
-            return reward_curve[pos], pos
-        return 0., -1
+            # print('success', reward_curve[pos], difficulty, flush=True)
+            return reward_curve[pos] * difficulty, pos
+        # print('fail', difficulty, flush=True)
+        return -3., -1

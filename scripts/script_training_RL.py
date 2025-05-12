@@ -16,7 +16,7 @@ def generator(num_txns, T):
     corr_params = {
         "normal_scale": 10.0,
         "event_scale": 20.0,
-        "correlation_factor": 0.1
+        "correlation_factor": 0.05
     }
     workload = SmallBankWorkload(correlated=True, corr_params=corr_params)
     probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
@@ -33,9 +33,9 @@ def generator(num_txns, T):
         return arr, random_transactions_list
     return gen
 
-N = 50
+N = 20
 T = 6
-EPISODES = 50
+EPISODES = 100
 GAMMA = 0.9 # discount factor
 EPSILON = 0.1
 LR = 1e-3
@@ -84,8 +84,9 @@ for episode in tqdm(range(EPISODES), desc="training", unit="epoch"):
     conflict_matrix, random_transactions_list = data_gen(batch_size)
     conflict_matrix = torch.tensor(conflict_matrix)
     #print_conflict_matrix(conflict_matrix, random_transactions_list[0])
-    total_reward = trainer.run_episode(conflict_matrix)
-    reward_history.append(total_reward)
+    for i in range(2):
+        total_reward = trainer.run_episode(conflict_matrix)
+        reward_history.append(total_reward)
 
     if (episode + 1) % 50 == 0:
         avg_reward = sum(reward_history[-50:]) / 50
@@ -101,5 +102,5 @@ plt.title("Reward History Curve")
 plt.grid()
 plt.show()
 
-with open("model_RL.pkl", "wb") as f:
+with open("model_RL_20.pkl", "wb") as f:
     pickle.dump(trainer.q_net, f)

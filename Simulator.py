@@ -32,7 +32,7 @@ class Simulator():
     # 2. If T2 requests for a resource that T1 has not released, then T2 aborts itself and n_aborts += 1. 
     #    T2 does not restart itself (for simplicity of simulation, otherwise just implementing MVCC)
 
-    def __init__(self, scheduler:Scheduler=None, txnPool:list[Transaction]=None, filterT:bool=False):
+    def __init__(self, scheduler:Scheduler=None, txnPool:list[Transaction]=[], filterT:bool=False):
         self.scheduler = scheduler
         self.txnPool = txnPool
         self.resource_locks = Locker()
@@ -77,6 +77,7 @@ class Simulator():
             self.flushPool.append(new_txn)
 
     def no_filter_T(self, n):
+        # res = [clone_transaction(txn) for txn in self.txnPool[:n]]
         res = self.txnPool[:n]
         self.txnPool = self.txnPool[n:]
         return res
@@ -132,11 +133,11 @@ class Simulator():
         return txns_to_schedule
     
     def update_memory_RL(self, n, T):
-        txns_to_schedule = []
+        txns_N = []
         if self.filterT == False:
-            txns_to_schedule = self.no_filter_T(n)
+            txns_N = self.no_filter_T(n)
         else:
-            txns_to_schedule = self.filter_T(n)
+            txns_N = self.filter_T(n)
 
         self.scheduler.memory = {}
 
@@ -169,14 +170,17 @@ class Simulator():
         
         # self.txnPool = self.txnPool[idx:]
 
-        x = conflict_matrix(1, n, T, txns_to_schedule)
+        txns_to_schedule = []
+
+        x = conflict_matrix(1, n, T, txns_N)
         x = torch.from_numpy(x.astype(np.float32))
         txns, mask = self.model.obtain_schedule(x)
         for txn_idx, ts in txns:
-            if txn_idx < len(txns):
-                txn = txns_to_schedule[txn_idx]
+            if txn_idx < len(txns_N):
+                txn = txns_N[txn_idx]
                 if ts >= 0:
                     #print(txn_idx, txn.txn, flush=True)
+                    txns_to_schedule.append(clone_transaction(txn))
                     self.scheduler.memory[txn.txn] = self.step + ts
         # self.scheduler.memory = memory
         # print('done updating memory RL', flush=True)
@@ -185,6 +189,10 @@ class Simulator():
     
     def sim(self, freeze:bool=False, retryOnAbort:bool=False, n:int=None, T:int=None, ML_RL:str = None) -> dict:
         # print(len(self.scheduled_txn), flush=True)
+        if self.done():
+            self.done = True
+            return self.statistics
+        
         while len(self.scheduled_txn) > 0 and self.scheduled_txn[0].priority <= self.step:
             if self.scheduled_txn[0].priority < self.step: assert False, "transaction should be scheduled earlier"
             p = heapq.heappop(self.scheduled_txn)
@@ -195,34 +203,33 @@ class Simulator():
         if len(self.txnPool) == 0: # no more transactions to be scheduled
             self.tick(retryOnAbort=retryOnAbort)
             return self.statistics
+        
         if n != None and T != None: #ML model scheduling, only schedule every T steps
             if self.step % T == 0:
+                # print(len(self.txnPool), len(self.scheduled_txn), len(self.inflight), flush=True)
                 if ML_RL == "ML":
                     txns_to_schedule = self.update_memory_ML(n, T)
-                    decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
-                    # decisions.extend([0]*(len(self.txnPool)))
                 elif ML_RL == "RL": 
                     txns_to_schedule = self.update_memory_RL(n, T)
-                    decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
-                    # decisions.extend([(0,0)]*(len(self.txnPool)))
             else:
                 self.tick(retryOnAbort=retryOnAbort)
                 return self.statistics
-
-        else:
-            decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
+        
+        decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
 
         # assert len(decisions) == len(self.txnPool), f"Decision length is not equal transaction pool length, {type(self.scheduler)}, {len(decisions)}, {len(self.txnPool)}"
 
         new_pool = []
         # print(decisions, flush=True)
 
-        if isinstance(self.scheduler, KSMFTwistedScheduler) or isinstance(self.scheduler, KSMFTwistedOracle2PhaseDontCareScheduler) or isinstance(self.scheduler, RLSMFTwistedScheduler):
+        if isinstance(self.scheduler, KSMFTwistedScheduler) or isinstance(self.scheduler, KSMFTwistedOracle2PhaseDontCareScheduler):
+            counter = 0
             for (i, v) in decisions:
                 # t = self.txnPool[i]
                 t = txns_to_schedule[i]
                 if v >= 1: 
                     self.scheduled_time[t.txn] = self.step + v - 1
+                    counter += 1
                     if v == 1:
                         self.inflight[t.txn] = t.operations
                         self.memo[t.txn] = clone_transaction(t)
@@ -232,6 +239,31 @@ class Simulator():
                     pass # scheduler says toss this transaction away
                 elif v == 0: new_pool.append(t)
                 else: assert False, f"unknown decision {v}"
+            # print(counter, flush=True)
+        elif isinstance(self.scheduler, RLSMFTwistedScheduler):
+            step_stop = self.step + T
+            while self.step < step_stop:
+                for (i, v) in decisions:
+                    # t = self.txnPool[i]
+                    t = txns_to_schedule[i]
+                    if v >= 1: 
+                        self.scheduled_time[t.txn] = self.step + v - 1
+                        if v == 1:
+                            self.inflight[t.txn] = t.operations
+                            self.memo[t.txn] = clone_transaction(t)
+                        else:
+                            heapq.heappush(self.scheduled_txn, Pair(self.scheduled_time[t.txn], t))
+                    elif v == -1:
+                        pass # scheduler says toss this transaction away
+                    elif v == 0: new_pool.append(t)
+                    else: assert False, f"unknown decision {v}"
+                self.txnPool = self.txnPool + new_pool + self.flushPool
+                self.flushPool = []
+                statistics = dict()
+
+                if freeze: statistics |= self.sim_frozen()
+                self.tick(retryOnAbort=retryOnAbort) # tick one step
+                return (self.statistics | statistics) if freeze else self.statistics
         else:
             # for i, t in enumerate(self.txnPool):
             for i, t in enumerate(txns_to_schedule):
@@ -247,7 +279,8 @@ class Simulator():
                 elif decisions[i] == 0: new_pool.append(t)
                 else: assert False, f"unknown decision {decisions[i]}"
         
-        self.txnPool = self.txnPool + new_pool + self.flushPool
+        self.txnPool = new_pool + self.flushPool
+        # print(len(self.txnPool), flush=True)
         self.flushPool = []
 
         statistics = dict()
