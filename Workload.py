@@ -240,6 +240,11 @@ class TPCCWorkload(Workload):
         self.state = 0 # 0: random, 1: correlated
         self.sticky_value = None # the value that is correlated to during that time interval
     
+    def get_sticky_list(self) -> list:
+        if self.state == 0: return None
+        if self.sticky_value is None: return None
+        return [(i, self.sticky_value) for i in range(3)]
+    
     def generate_transactions(self, num_txns:int, probabilities:list[float]=None, start=0) -> list[Transaction]:
         if not self.correlated: return self.generate_random_transactions(num_txns, probabilities=probabilities, start=start)
         else:

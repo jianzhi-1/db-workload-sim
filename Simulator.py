@@ -205,7 +205,7 @@ class Simulator():
             return self.statistics
         
         if n != None and T != None: #ML model scheduling, only schedule every T steps
-            if self.step % T == 0:
+            if self.step % (T) == 0:
                 # print(len(self.txnPool), len(self.scheduled_txn), len(self.inflight), flush=True)
                 if ML_RL == "ML":
                     txns_to_schedule = self.update_memory_ML(n, T)

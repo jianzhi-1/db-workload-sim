@@ -8,7 +8,7 @@ import torch.optim as optim
 import torch.nn as nn
 from tqdm import tqdm
 
-from Workload import SmallBankWorkload
+from Workload import SmallBankWorkload, TPCCWorkload
 from models.QNet import Trainer
 from utils import conflict
 
@@ -16,10 +16,11 @@ def generator(num_txns, T):
     corr_params = {
         "normal_scale": 10.0,
         "event_scale": 20.0,
-        "correlation_factor": 0.05
+        "correlation_factor": 0.1
     }
-    workload = SmallBankWorkload(correlated=True, corr_params=corr_params)
-    probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
+    workload = TPCCWorkload(correlated=True, corr_params=corr_params)
+    # probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
+    probabilities = [43,41,3,1,3,1,3,1,4]
     def gen(batch_size, eps=0.1):
         arr = np.zeros((batch_size, num_txns, num_txns, 2*T + 1))
         random_transactions_list = []
@@ -34,7 +35,7 @@ def generator(num_txns, T):
     return gen
 
 N = 20
-T = 6
+T = 7
 EPISODES = 100
 GAMMA = 0.9 # discount factor
 EPSILON = 0.1
@@ -77,6 +78,8 @@ def print_conflict_matrix(conflict_tensor, transactions):
 data_gen = generator(N, T)
 # Instantiate scheduler
 trainer = Trainer(N=N, T=T, lr=LR, gamma=GAMMA, epsilon=EPSILON)
+# with open("model_RL_50.pkl", "rb") as f:
+#     trainer.q_net = pickle.load(f)
 # Training loop
 reward_history = []
 
@@ -102,5 +105,5 @@ plt.title("Reward History Curve")
 plt.grid()
 plt.show()
 
-with open("model_RL_20.pkl", "wb") as f:
+with open("model_RL_20_TPCC_corr.pkl", "wb") as f:
     pickle.dump(trainer.q_net, f)

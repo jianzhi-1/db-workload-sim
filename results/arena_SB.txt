@@ -1,0 +1,1776 @@
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 6, 'steps': 2, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 8, 'steps': 2, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 7, 'steps': 2, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 7, 'steps': 2, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 8, 'steps': 2, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 3, 'steps': 2, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 2, 'steps': 2, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 7, 'steps': 3, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 91, 'steps': 3, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 14, 'steps': 3, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 13, 'steps': 3, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 91, 'steps': 3, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 13, 'steps': 3, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 6, 'steps': 3, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 11, 'steps': 4, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 106, 'steps': 4, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 22, 'steps': 4, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 18, 'steps': 4, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 104, 'steps': 4, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 20, 'steps': 4, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 9, 'steps': 4, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 17, 'steps': 5, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 119, 'steps': 5, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 31, 'steps': 5, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 24, 'steps': 5, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 119, 'steps': 5, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 22, 'steps': 5, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 12, 'steps': 5, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 21, 'steps': 6, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 133, 'steps': 6, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 39, 'steps': 6, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 29, 'steps': 6, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 128, 'steps': 6, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 28, 'steps': 6, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 12, 'steps': 6, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 27, 'steps': 7, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 142, 'steps': 7, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 43, 'steps': 7, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 32, 'steps': 7, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 139, 'steps': 7, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 30, 'steps': 7, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 15, 'steps': 7, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 29, 'steps': 8, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 155, 'steps': 8, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 48, 'steps': 8, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 42, 'steps': 8, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 149, 'steps': 8, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 34, 'steps': 8, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 16, 'steps': 8, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 39, 'steps': 9, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 163, 'steps': 9, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 52, 'steps': 9, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 46, 'steps': 9, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 162, 'steps': 9, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 39, 'steps': 9, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 21, 'steps': 9, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 52, 'steps': 10, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 175, 'steps': 10, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 57, 'steps': 10, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 53, 'steps': 10, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 171, 'steps': 10, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 46, 'steps': 10, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 25, 'steps': 10, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 55, 'steps': 11, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 184, 'steps': 11, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 60, 'steps': 11, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 58, 'steps': 11, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 179, 'steps': 11, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 52, 'steps': 11, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 28, 'steps': 11, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 61, 'steps': 12, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 189, 'steps': 12, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 61, 'steps': 12, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 65, 'steps': 12, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 187, 'steps': 12, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 57, 'steps': 12, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 29, 'steps': 12, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 64, 'steps': 13, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 195, 'steps': 13, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 67, 'steps': 13, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 70, 'steps': 13, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 197, 'steps': 13, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 63, 'steps': 13, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 32, 'steps': 13, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 68, 'steps': 14, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 202, 'steps': 14, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 70, 'steps': 14, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 75, 'steps': 14, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 202, 'steps': 14, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 68, 'steps': 14, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 37, 'steps': 14, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 72, 'steps': 15, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 205, 'steps': 15, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 74, 'steps': 15, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 83, 'steps': 15, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 210, 'steps': 15, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 80, 'steps': 15, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 42, 'steps': 15, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 77, 'steps': 16, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 212, 'steps': 16, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 78, 'steps': 16, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 91, 'steps': 16, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 213, 'steps': 16, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 88, 'steps': 16, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 45, 'steps': 16, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 80, 'steps': 17, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 215, 'steps': 17, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 83, 'steps': 17, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 93, 'steps': 17, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 217, 'steps': 17, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 91, 'steps': 17, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 47, 'steps': 17, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 86, 'steps': 18, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 223, 'steps': 18, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 87, 'steps': 18, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 97, 'steps': 18, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 223, 'steps': 18, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 95, 'steps': 18, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 50, 'steps': 18, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 92, 'steps': 19, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 225, 'steps': 19, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 89, 'steps': 19, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 101, 'steps': 19, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 229, 'steps': 19, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 99, 'steps': 19, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 51, 'steps': 19, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 101, 'steps': 20, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 234, 'steps': 20, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 98, 'steps': 20, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 102, 'steps': 20, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 235, 'steps': 20, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 106, 'steps': 20, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 53, 'steps': 20, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 106, 'steps': 21, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 239, 'steps': 21, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 105, 'steps': 21, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 109, 'steps': 21, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 238, 'steps': 21, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 113, 'steps': 21, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 58, 'steps': 21, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 111, 'steps': 22, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 246, 'steps': 22, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 110, 'steps': 22, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 114, 'steps': 22, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 245, 'steps': 22, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 122, 'steps': 22, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 61, 'steps': 22, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 116, 'steps': 23, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 250, 'steps': 23, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 117, 'steps': 23, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 117, 'steps': 23, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 248, 'steps': 23, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 125, 'steps': 23, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 63, 'steps': 23, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 118, 'steps': 24, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 256, 'steps': 24, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 120, 'steps': 24, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 120, 'steps': 24, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 254, 'steps': 24, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 133, 'steps': 24, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 66, 'steps': 24, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 123, 'steps': 25, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 261, 'steps': 25, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 124, 'steps': 25, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 123, 'steps': 25, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 259, 'steps': 25, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 135, 'steps': 25, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 67, 'steps': 25, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 127, 'steps': 26, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 262, 'steps': 26, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 132, 'steps': 26, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 123, 'steps': 26, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 264, 'steps': 26, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 142, 'steps': 26, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 68, 'steps': 26, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 130, 'steps': 27, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 269, 'steps': 27, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 140, 'steps': 27, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 133, 'steps': 27, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 268, 'steps': 27, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 152, 'steps': 27, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 71, 'steps': 27, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 134, 'steps': 28, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 272, 'steps': 28, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 143, 'steps': 28, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 136, 'steps': 28, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 274, 'steps': 28, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 160, 'steps': 28, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 74, 'steps': 28, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 138, 'steps': 29, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 276, 'steps': 29, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 147, 'steps': 29, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 145, 'steps': 29, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 277, 'steps': 29, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 165, 'steps': 29, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 78, 'steps': 29, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 140, 'steps': 30, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 282, 'steps': 30, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 151, 'steps': 30, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 149, 'steps': 30, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 281, 'steps': 30, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 170, 'steps': 30, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 78, 'steps': 30, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 143, 'steps': 31, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 283, 'steps': 31, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 154, 'steps': 31, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 156, 'steps': 31, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 286, 'steps': 31, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 174, 'steps': 31, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 82, 'steps': 31, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 146, 'steps': 32, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 289, 'steps': 32, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 159, 'steps': 32, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 163, 'steps': 32, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 289, 'steps': 32, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 176, 'steps': 32, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 86, 'steps': 32, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 148, 'steps': 33, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 293, 'steps': 33, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 165, 'steps': 33, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 166, 'steps': 33, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 294, 'steps': 33, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 184, 'steps': 33, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 93, 'steps': 33, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 155, 'steps': 34, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 296, 'steps': 34, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 169, 'steps': 34, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 170, 'steps': 34, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 297, 'steps': 34, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 189, 'steps': 34, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 95, 'steps': 34, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 158, 'steps': 35, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 299, 'steps': 35, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 171, 'steps': 35, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 173, 'steps': 35, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 301, 'steps': 35, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 195, 'steps': 35, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 98, 'steps': 35, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 166, 'steps': 36, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 305, 'steps': 36, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 174, 'steps': 36, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 177, 'steps': 36, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 305, 'steps': 36, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 197, 'steps': 36, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 100, 'steps': 36, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 168, 'steps': 37, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 309, 'steps': 37, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 178, 'steps': 37, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 182, 'steps': 37, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 309, 'steps': 37, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 201, 'steps': 37, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 100, 'steps': 37, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 170, 'steps': 38, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 311, 'steps': 38, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 179, 'steps': 38, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 185, 'steps': 38, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 311, 'steps': 38, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 208, 'steps': 38, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 104, 'steps': 38, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 172, 'steps': 39, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 316, 'steps': 39, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 182, 'steps': 39, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 189, 'steps': 39, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 314, 'steps': 39, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 214, 'steps': 39, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 108, 'steps': 39, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 176, 'steps': 40, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 318, 'steps': 40, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 186, 'steps': 40, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 194, 'steps': 40, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 317, 'steps': 40, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 223, 'steps': 40, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 110, 'steps': 40, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 183, 'steps': 41, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 321, 'steps': 41, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 189, 'steps': 41, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 197, 'steps': 41, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 320, 'steps': 41, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 227, 'steps': 41, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 114, 'steps': 41, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 190, 'steps': 42, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 324, 'steps': 42, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 192, 'steps': 42, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 200, 'steps': 42, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 322, 'steps': 42, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 231, 'steps': 42, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 117, 'steps': 42, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 195, 'steps': 43, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 328, 'steps': 43, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 195, 'steps': 43, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 204, 'steps': 43, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 326, 'steps': 43, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 235, 'steps': 43, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 120, 'steps': 43, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 198, 'steps': 44, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 331, 'steps': 44, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 199, 'steps': 44, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 206, 'steps': 44, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 328, 'steps': 44, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 240, 'steps': 44, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 122, 'steps': 44, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 199, 'steps': 45, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 331, 'steps': 45, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 203, 'steps': 45, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 211, 'steps': 45, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 332, 'steps': 45, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 253, 'steps': 45, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 125, 'steps': 45, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 202, 'steps': 46, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 333, 'steps': 46, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 206, 'steps': 46, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 213, 'steps': 46, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 334, 'steps': 46, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 257, 'steps': 46, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 129, 'steps': 46, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 209, 'steps': 47, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 335, 'steps': 47, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 206, 'steps': 47, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 216, 'steps': 47, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 339, 'steps': 47, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 262, 'steps': 47, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 129, 'steps': 47, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 213, 'steps': 48, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 339, 'steps': 48, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 212, 'steps': 48, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 216, 'steps': 48, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 340, 'steps': 48, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 263, 'steps': 48, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 133, 'steps': 48, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 218, 'steps': 49, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 342, 'steps': 49, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 215, 'steps': 49, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 218, 'steps': 49, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 343, 'steps': 49, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 268, 'steps': 49, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 135, 'steps': 49, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 221, 'steps': 50, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 345, 'steps': 50, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 218, 'steps': 50, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 220, 'steps': 50, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 346, 'steps': 50, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 275, 'steps': 50, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 139, 'steps': 50, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 230, 'steps': 51, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 347, 'steps': 51, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 222, 'steps': 51, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 224, 'steps': 51, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 349, 'steps': 51, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 288, 'steps': 51, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 144, 'steps': 51, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 233, 'steps': 52, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 352, 'steps': 52, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 225, 'steps': 52, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 229, 'steps': 52, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 353, 'steps': 52, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 293, 'steps': 52, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 150, 'steps': 52, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 236, 'steps': 53, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 352, 'steps': 53, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 228, 'steps': 53, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 234, 'steps': 53, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 354, 'steps': 53, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 300, 'steps': 53, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 154, 'steps': 53, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 238, 'steps': 54, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 356, 'steps': 54, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 232, 'steps': 54, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 236, 'steps': 54, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 358, 'steps': 54, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 303, 'steps': 54, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 156, 'steps': 54, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 238, 'steps': 55, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 358, 'steps': 55, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 235, 'steps': 55, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 240, 'steps': 55, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 359, 'steps': 55, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 304, 'steps': 55, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 157, 'steps': 55, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 239, 'steps': 56, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 359, 'steps': 56, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 237, 'steps': 56, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 241, 'steps': 56, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 362, 'steps': 56, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 309, 'steps': 56, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 161, 'steps': 56, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 242, 'steps': 57, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 360, 'steps': 57, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 238, 'steps': 57, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 245, 'steps': 57, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 364, 'steps': 57, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 321, 'steps': 57, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 165, 'steps': 57, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 245, 'steps': 58, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 362, 'steps': 58, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 242, 'steps': 58, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 248, 'steps': 58, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 365, 'steps': 58, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 325, 'steps': 58, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 168, 'steps': 58, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 251, 'steps': 59, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 363, 'steps': 59, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 243, 'steps': 59, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 253, 'steps': 59, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 367, 'steps': 59, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 333, 'steps': 59, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 169, 'steps': 59, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 251, 'steps': 60, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 367, 'steps': 60, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 245, 'steps': 60, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 256, 'steps': 60, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 369, 'steps': 60, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 341, 'steps': 60, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 169, 'steps': 60, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 256, 'steps': 61, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 368, 'steps': 61, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 250, 'steps': 61, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 259, 'steps': 61, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 372, 'steps': 61, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 343, 'steps': 61, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 171, 'steps': 61, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 261, 'steps': 62, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 370, 'steps': 62, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 252, 'steps': 62, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 263, 'steps': 62, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 374, 'steps': 62, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 350, 'steps': 62, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 173, 'steps': 62, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 263, 'steps': 63, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 373, 'steps': 63, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 257, 'steps': 63, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 267, 'steps': 63, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 375, 'steps': 63, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 352, 'steps': 63, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 179, 'steps': 63, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 268, 'steps': 64, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 376, 'steps': 64, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 259, 'steps': 64, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 272, 'steps': 64, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 379, 'steps': 64, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 356, 'steps': 64, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 183, 'steps': 64, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 273, 'steps': 65, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 379, 'steps': 65, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 262, 'steps': 65, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 274, 'steps': 65, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 379, 'steps': 65, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 358, 'steps': 65, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 186, 'steps': 65, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 278, 'steps': 66, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 380, 'steps': 66, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 263, 'steps': 66, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 278, 'steps': 66, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 381, 'steps': 66, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 362, 'steps': 66, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 187, 'steps': 66, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 279, 'steps': 67, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 382, 'steps': 67, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 267, 'steps': 67, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 280, 'steps': 67, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 382, 'steps': 67, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 362, 'steps': 67, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 189, 'steps': 67, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 284, 'steps': 68, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 383, 'steps': 68, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 267, 'steps': 68, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 282, 'steps': 68, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 385, 'steps': 68, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 365, 'steps': 68, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 191, 'steps': 68, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 286, 'steps': 69, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 388, 'steps': 69, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 271, 'steps': 69, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 284, 'steps': 69, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 385, 'steps': 69, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 366, 'steps': 69, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 198, 'steps': 69, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 289, 'steps': 70, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 388, 'steps': 70, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 275, 'steps': 70, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 286, 'steps': 70, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 388, 'steps': 70, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 369, 'steps': 70, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 203, 'steps': 70, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 291, 'steps': 71, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 389, 'steps': 71, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 276, 'steps': 71, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 287, 'steps': 71, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 391, 'steps': 71, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 371, 'steps': 71, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 204, 'steps': 71, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 294, 'steps': 72, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 391, 'steps': 72, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 277, 'steps': 72, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 290, 'steps': 72, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 391, 'steps': 72, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 372, 'steps': 72, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 208, 'steps': 72, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 296, 'steps': 73, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 391, 'steps': 73, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 281, 'steps': 73, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 297, 'steps': 73, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 394, 'steps': 73, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 374, 'steps': 73, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 210, 'steps': 73, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 297, 'steps': 74, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 393, 'steps': 74, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 284, 'steps': 74, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 300, 'steps': 74, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 396, 'steps': 74, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 376, 'steps': 74, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 213, 'steps': 74, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 303, 'steps': 75, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 396, 'steps': 75, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 288, 'steps': 75, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 305, 'steps': 75, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 397, 'steps': 75, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 378, 'steps': 75, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 218, 'steps': 75, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 304, 'steps': 76, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 396, 'steps': 76, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 290, 'steps': 76, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 308, 'steps': 76, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 399, 'steps': 76, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 380, 'steps': 76, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 222, 'steps': 76, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 308, 'steps': 77, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 398, 'steps': 77, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 293, 'steps': 77, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 311, 'steps': 77, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 400, 'steps': 77, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 383, 'steps': 77, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 226, 'steps': 77, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 311, 'steps': 78, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 399, 'steps': 78, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 298, 'steps': 78, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 313, 'steps': 78, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 402, 'steps': 78, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 385, 'steps': 78, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 228, 'steps': 78, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 313, 'steps': 79, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 400, 'steps': 79, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 302, 'steps': 79, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 315, 'steps': 79, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 403, 'steps': 79, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 386, 'steps': 79, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 229, 'steps': 79, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 317, 'steps': 80, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 402, 'steps': 80, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 304, 'steps': 80, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 322, 'steps': 80, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 403, 'steps': 80, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 389, 'steps': 80, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 232, 'steps': 80, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 319, 'steps': 81, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 403, 'steps': 81, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 308, 'steps': 81, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 324, 'steps': 81, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 404, 'steps': 81, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 391, 'steps': 81, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 237, 'steps': 81, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 321, 'steps': 82, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 404, 'steps': 82, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 309, 'steps': 82, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 328, 'steps': 82, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 406, 'steps': 82, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 393, 'steps': 82, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 239, 'steps': 82, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 324, 'steps': 83, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 405, 'steps': 83, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 311, 'steps': 83, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 330, 'steps': 83, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 408, 'steps': 83, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 395, 'steps': 83, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 242, 'steps': 83, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 327, 'steps': 84, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 407, 'steps': 84, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 314, 'steps': 84, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 333, 'steps': 84, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 409, 'steps': 84, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 396, 'steps': 84, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 244, 'steps': 84, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 330, 'steps': 85, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 408, 'steps': 85, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 317, 'steps': 85, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 335, 'steps': 85, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 410, 'steps': 85, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 397, 'steps': 85, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 248, 'steps': 85, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 331, 'steps': 86, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 410, 'steps': 86, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 320, 'steps': 86, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 337, 'steps': 86, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 411, 'steps': 86, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 400, 'steps': 86, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 250, 'steps': 86, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 332, 'steps': 87, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 411, 'steps': 87, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 324, 'steps': 87, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 340, 'steps': 87, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 411, 'steps': 87, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 402, 'steps': 87, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 254, 'steps': 87, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 334, 'steps': 88, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 412, 'steps': 88, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 325, 'steps': 88, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 340, 'steps': 88, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 412, 'steps': 88, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 403, 'steps': 88, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 257, 'steps': 88, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 336, 'steps': 89, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 414, 'steps': 89, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 326, 'steps': 89, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 341, 'steps': 89, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 414, 'steps': 89, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 404, 'steps': 89, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 262, 'steps': 89, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 337, 'steps': 90, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 415, 'steps': 90, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 330, 'steps': 90, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 344, 'steps': 90, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 415, 'steps': 90, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 405, 'steps': 90, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 263, 'steps': 90, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 338, 'steps': 91, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 416, 'steps': 91, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 330, 'steps': 91, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 347, 'steps': 91, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 416, 'steps': 91, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 406, 'steps': 91, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 266, 'steps': 91, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 338, 'steps': 92, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 417, 'steps': 92, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 331, 'steps': 92, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 350, 'steps': 92, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 417, 'steps': 92, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 407, 'steps': 92, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 270, 'steps': 92, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 341, 'steps': 93, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 418, 'steps': 93, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 334, 'steps': 93, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 352, 'steps': 93, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 93, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 407, 'steps': 93, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 276, 'steps': 93, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 343, 'steps': 94, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 94, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 335, 'steps': 94, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 353, 'steps': 94, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 420, 'steps': 94, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 408, 'steps': 94, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 278, 'steps': 94, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 347, 'steps': 95, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 95, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 341, 'steps': 95, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 357, 'steps': 95, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 421, 'steps': 95, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 410, 'steps': 95, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 281, 'steps': 95, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 349, 'steps': 96, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 421, 'steps': 96, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 342, 'steps': 96, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 359, 'steps': 96, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 422, 'steps': 96, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 412, 'steps': 96, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 283, 'steps': 96, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 352, 'steps': 97, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 422, 'steps': 97, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 348, 'steps': 97, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 362, 'steps': 97, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 423, 'steps': 97, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 412, 'steps': 97, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 285, 'steps': 97, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 352, 'steps': 98, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 423, 'steps': 98, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 349, 'steps': 98, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 363, 'steps': 98, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 98, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 413, 'steps': 98, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 287, 'steps': 98, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 355, 'steps': 99, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 99, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 352, 'steps': 99, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 366, 'steps': 99, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 99, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 414, 'steps': 99, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 293, 'steps': 99, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 357, 'steps': 100, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 425, 'steps': 100, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 353, 'steps': 100, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 367, 'steps': 100, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 427, 'steps': 100, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 415, 'steps': 100, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 294, 'steps': 100, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 358, 'steps': 101, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 426, 'steps': 101, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 355, 'steps': 101, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 368, 'steps': 101, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 427, 'steps': 101, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 416, 'steps': 101, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 298, 'steps': 101, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 361, 'steps': 102, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 428, 'steps': 102, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 357, 'steps': 102, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 369, 'steps': 102, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 428, 'steps': 102, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 417, 'steps': 102, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 300, 'steps': 102, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 363, 'steps': 103, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 429, 'steps': 103, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 359, 'steps': 103, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 369, 'steps': 103, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 429, 'steps': 103, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 418, 'steps': 103, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 304, 'steps': 103, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 365, 'steps': 104, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 104, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 359, 'steps': 104, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 372, 'steps': 104, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 104, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 104, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 309, 'steps': 104, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 367, 'steps': 105, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 105, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 363, 'steps': 105, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 374, 'steps': 105, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 105, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 420, 'steps': 105, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 313, 'steps': 105, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 368, 'steps': 106, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 431, 'steps': 106, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 363, 'steps': 106, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 376, 'steps': 106, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 432, 'steps': 106, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 420, 'steps': 106, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 317, 'steps': 106, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 371, 'steps': 107, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 432, 'steps': 107, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 365, 'steps': 107, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 378, 'steps': 107, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 432, 'steps': 107, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 421, 'steps': 107, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 320, 'steps': 107, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 372, 'steps': 108, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 432, 'steps': 108, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 366, 'steps': 108, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 379, 'steps': 108, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 433, 'steps': 108, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 422, 'steps': 108, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 320, 'steps': 108, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 374, 'steps': 109, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 434, 'steps': 109, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 368, 'steps': 109, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 381, 'steps': 109, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 434, 'steps': 109, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 422, 'steps': 109, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 322, 'steps': 109, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 375, 'steps': 110, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 434, 'steps': 110, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 369, 'steps': 110, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 384, 'steps': 110, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 434, 'steps': 110, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 422, 'steps': 110, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 326, 'steps': 110, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 376, 'steps': 111, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 436, 'steps': 111, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 374, 'steps': 111, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 385, 'steps': 111, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 436, 'steps': 111, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 423, 'steps': 111, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 332, 'steps': 111, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 379, 'steps': 112, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 436, 'steps': 112, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 376, 'steps': 112, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 387, 'steps': 112, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 112, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 423, 'steps': 112, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 335, 'steps': 112, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 380, 'steps': 113, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 113, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 377, 'steps': 113, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 389, 'steps': 113, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 113, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 113, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 337, 'steps': 113, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 381, 'steps': 114, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 438, 'steps': 114, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 378, 'steps': 114, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 390, 'steps': 114, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 438, 'steps': 114, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 114, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 339, 'steps': 114, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 382, 'steps': 115, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 439, 'steps': 115, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 380, 'steps': 115, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 392, 'steps': 115, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 115, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 115, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 341, 'steps': 115, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 383, 'steps': 116, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 116, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 381, 'steps': 116, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 392, 'steps': 116, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 116, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 426, 'steps': 116, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 342, 'steps': 116, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 386, 'steps': 117, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 117, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 384, 'steps': 117, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 395, 'steps': 117, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 117, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 427, 'steps': 117, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 346, 'steps': 117, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 387, 'steps': 118, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 442, 'steps': 118, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 386, 'steps': 118, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 396, 'steps': 118, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 441, 'steps': 118, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 428, 'steps': 118, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 351, 'steps': 118, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 389, 'steps': 119, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 442, 'steps': 119, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 389, 'steps': 119, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 398, 'steps': 119, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 442, 'steps': 119, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 429, 'steps': 119, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 352, 'steps': 119, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 390, 'steps': 120, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 120, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 391, 'steps': 120, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 398, 'steps': 120, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 442, 'steps': 120, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 120, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 355, 'steps': 120, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 391, 'steps': 121, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 121, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 395, 'steps': 121, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 400, 'steps': 121, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 121, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 121, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 356, 'steps': 121, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 395, 'steps': 122, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 122, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 396, 'steps': 122, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 402, 'steps': 122, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 122, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 122, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 360, 'steps': 122, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 396, 'steps': 123, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 123, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 397, 'steps': 123, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 402, 'steps': 123, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 123, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 432, 'steps': 123, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 363, 'steps': 123, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 397, 'steps': 124, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 124, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 398, 'steps': 124, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 404, 'steps': 124, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 124, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 433, 'steps': 124, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 366, 'steps': 124, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 399, 'steps': 125, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 125, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 399, 'steps': 125, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 405, 'steps': 125, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 125, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 433, 'steps': 125, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 368, 'steps': 125, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 399, 'steps': 126, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 126, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 399, 'steps': 126, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 407, 'steps': 126, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 126, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 434, 'steps': 126, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 371, 'steps': 126, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 401, 'steps': 127, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 127, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 401, 'steps': 127, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 409, 'steps': 127, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 127, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 435, 'steps': 127, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 371, 'steps': 127, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 402, 'steps': 128, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 128, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 401, 'steps': 128, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 410, 'steps': 128, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 446, 'steps': 128, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 435, 'steps': 128, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 373, 'steps': 128, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 403, 'steps': 129, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 129, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 402, 'steps': 129, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 412, 'steps': 129, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 129, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 435, 'steps': 129, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 381, 'steps': 129, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 405, 'steps': 130, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 130, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 403, 'steps': 130, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 413, 'steps': 130, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 130, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 436, 'steps': 130, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 382, 'steps': 130, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 406, 'steps': 131, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 131, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 404, 'steps': 131, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 415, 'steps': 131, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 131, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 436, 'steps': 131, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 385, 'steps': 131, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 407, 'steps': 132, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 132, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 406, 'steps': 132, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 416, 'steps': 132, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 132, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 132, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 388, 'steps': 132, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 409, 'steps': 133, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 133, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 406, 'steps': 133, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 417, 'steps': 133, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 133, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 133, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 391, 'steps': 133, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 412, 'steps': 134, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 134, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 408, 'steps': 134, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 134, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 134, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 438, 'steps': 134, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 393, 'steps': 134, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 414, 'steps': 135, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 135, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 410, 'steps': 135, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 420, 'steps': 135, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 135, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 438, 'steps': 135, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 400, 'steps': 135, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 415, 'steps': 136, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 136, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 412, 'steps': 136, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 421, 'steps': 136, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 136, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 438, 'steps': 136, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 406, 'steps': 136, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 416, 'steps': 137, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 137, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 415, 'steps': 137, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 422, 'steps': 137, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 137, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 439, 'steps': 137, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 409, 'steps': 137, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 417, 'steps': 138, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 138, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 415, 'steps': 138, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 423, 'steps': 138, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 138, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 439, 'steps': 138, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 412, 'steps': 138, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 139, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 139, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 416, 'steps': 139, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 139, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 139, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 139, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 414, 'steps': 139, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 140, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 140, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 417, 'steps': 140, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 140, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 140, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 441, 'steps': 140, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 140, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 141, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 141, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 417, 'steps': 141, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 425, 'steps': 141, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 141, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 441, 'steps': 141, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 426, 'steps': 141, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 421, 'steps': 142, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 142, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 142, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 425, 'steps': 142, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 142, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 441, 'steps': 142, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 428, 'steps': 142, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 421, 'steps': 143, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 143, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 419, 'steps': 143, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 425, 'steps': 143, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 143, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 143, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 431, 'steps': 143, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 422, 'steps': 144, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 144, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 420, 'steps': 144, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 427, 'steps': 144, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 144, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 144, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 431, 'steps': 144, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 422, 'steps': 145, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 145, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 420, 'steps': 145, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 428, 'steps': 145, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 145, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 145, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 433, 'steps': 145, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 423, 'steps': 146, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 146, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 421, 'steps': 146, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 146, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 146, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 146, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 433, 'steps': 146, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 147, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 147, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 422, 'steps': 147, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 147, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 147, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 147, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 147, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 426, 'steps': 148, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 148, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 148, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 432, 'steps': 148, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 148, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 148, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 148, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 428, 'steps': 149, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 149, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 424, 'steps': 149, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 434, 'steps': 149, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 149, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 149, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 149, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 150, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 150, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 426, 'steps': 150, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 435, 'steps': 150, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 150, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 150, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 150, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 431, 'steps': 151, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 151, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 426, 'steps': 151, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 435, 'steps': 151, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 151, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 151, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 151, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 433, 'steps': 152, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 152, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 427, 'steps': 152, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 436, 'steps': 152, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 152, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 152, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 152, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 435, 'steps': 153, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 153, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 427, 'steps': 153, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 153, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 153, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 153, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 153, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 436, 'steps': 154, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 154, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 430, 'steps': 154, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 154, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 154, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 154, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 154, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 155, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 155, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 432, 'steps': 155, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 439, 'steps': 155, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 155, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 155, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 155, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 438, 'steps': 156, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 156, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 433, 'steps': 156, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 156, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 156, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 156, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 156, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 438, 'steps': 157, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 157, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 433, 'steps': 157, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 441, 'steps': 157, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 157, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 157, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 157, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 439, 'steps': 158, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 158, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 434, 'steps': 158, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 158, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 158, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 158, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 158, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 439, 'steps': 159, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 159, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 435, 'steps': 159, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 159, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 159, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 159, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 159, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 160, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 160, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 436, 'steps': 160, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 160, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 160, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 160, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 160, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 441, 'steps': 161, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 161, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 436, 'steps': 161, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 161, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 161, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 161, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 161, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 441, 'steps': 162, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 162, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 162, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 162, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 162, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 162, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 162, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 441, 'steps': 163, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 163, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 437, 'steps': 163, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 163, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 163, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 163, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 163, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 442, 'steps': 164, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 164, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 438, 'steps': 164, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 164, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 164, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 164, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 164, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 165, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 165, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 439, 'steps': 165, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 165, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 165, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 165, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 165, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 166, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 166, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 166, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 166, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 166, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 166, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 166, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 167, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 167, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 440, 'steps': 167, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 167, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 167, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 167, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 167, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 444, 'steps': 168, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 168, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 441, 'steps': 168, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 168, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 168, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 168, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 168, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 446, 'steps': 169, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 169, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 442, 'steps': 169, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 169, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 169, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 169, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 169, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 446, 'steps': 170, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 170, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 170, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 170, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 170, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 170, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 170, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 171, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 171, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 443, 'steps': 171, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 171, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 171, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 171, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 171, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 172, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 172, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 172, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 172, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 172, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 172, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 172, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 173, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 173, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 173, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 173, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 173, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 173, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 173, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 174, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 174, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 445, 'steps': 174, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 174, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 174, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 174, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 174, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 175, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 175, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 447, 'steps': 175, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 175, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 175, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 175, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 175, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 176, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 176, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 176, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 176, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 176, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 176, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 176, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 177, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 177, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 448, 'steps': 177, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 177, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 177, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 177, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 177, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 178, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 178, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 449, 'steps': 178, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 178, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 178, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 178, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 178, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 179, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 179, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 179, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 179, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 179, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 179, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 179, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 180, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 180, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 450, 'steps': 180, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 180, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 180, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 180, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 180, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 453, 'steps': 181, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 181, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 451, 'steps': 181, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 181, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 181, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 181, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 181, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 182, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 182, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 182, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 182, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 182, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 182, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 182, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 183, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 183, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 452, 'steps': 183, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 183, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 183, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 183, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 183, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 455, 'steps': 184, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 184, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 454, 'steps': 184, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 184, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 184, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 184, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 184, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 185, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 185, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 456, 'steps': 185, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 185, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 185, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 185, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 185, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 186, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 186, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 186, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 186, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 186, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 186, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 186, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 187, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 187, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 187, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 187, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 187, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 187, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 187, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 188, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 188, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 457, 'steps': 188, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 188, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 188, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 188, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 188, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 189, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 189, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 458, 'steps': 189, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 189, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 189, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 189, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 189, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 190, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 190, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 190, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 190, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 190, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 190, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 190, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 191, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 191, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 191, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 191, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 191, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 191, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 191, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 192, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 192, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 459, 'steps': 192, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 192, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 192, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 192, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 192, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 193, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 193, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 460, 'steps': 193, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 193, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 193, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 193, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 193, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 194, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 194, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 194, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 194, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 194, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 194, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 194, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 195, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 195, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 461, 'steps': 195, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 195, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 195, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 195, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 195, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 196, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 196, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 462, 'steps': 196, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 196, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 196, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 196, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 196, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 197, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 197, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 197, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 197, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 197, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 197, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 197, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 198, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 198, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 198, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 198, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 198, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 198, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 198, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 199, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 199, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 463, 'steps': 199, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 199, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 199, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 199, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 199, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 200, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 200, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 200, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 200, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 200, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 200, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 200, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 201, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 201, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 464, 'steps': 201, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 201, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 201, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 201, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 201, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 202, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 202, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 202, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 202, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 202, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 202, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 202, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 203, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 203, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 465, 'steps': 203, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 203, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 203, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 203, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 203, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 204, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 204, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 204, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 204, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 204, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 204, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 204, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 205, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 205, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 466, 'steps': 205, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 205, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 205, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 205, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 205, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 206, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 206, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 206, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 206, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 206, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 206, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 206, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 207, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 207, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 207, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 207, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 207, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 207, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 207, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 208, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 208, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 467, 'steps': 208, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 208, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 208, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 208, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 208, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 209, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 209, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 209, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 209, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 209, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 209, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 209, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 210, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 210, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 468, 'steps': 210, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 210, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 210, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 210, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 210, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 471, 'steps': 211, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 211, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 211, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 211, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 211, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 211, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 211, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 212, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 212, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 212, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 212, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 212, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 212, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 212, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 213, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 213, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 469, 'steps': 213, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 213, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 213, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 213, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 213, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 214, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 214, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 214, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 214, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 214, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 214, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 214, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 215, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 215, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 470, 'steps': 215, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 215, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 215, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 215, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 215, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 216, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 216, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 216, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 216, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 216, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 216, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 216, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 217, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 217, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 217, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 217, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 217, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 217, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 217, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 218, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 218, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 472, 'steps': 218, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 218, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 218, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 218, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 218, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 219, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 219, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 219, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 219, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 219, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 219, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 219, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 220, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 220, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 473, 'steps': 220, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 220, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 220, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 220, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 220, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 221, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 221, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 221, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 221, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 221, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 221, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 221, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 222, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 222, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 474, 'steps': 222, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 222, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 222, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 222, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 222, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 476, 'steps': 223, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 223, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 223, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 223, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 223, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 223, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 223, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 224, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 224, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 224, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 224, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 224, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 224, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 224, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 225, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 225, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 475, 'steps': 225, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 225, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 225, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 225, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 225, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 226, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 226, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 226, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 226, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 226, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 226, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 226, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 227, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 227, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 227, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 227, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 227, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 227, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 227, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 228, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 228, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 477, 'steps': 228, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 228, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 228, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 228, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 228, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 229, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 229, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 478, 'steps': 229, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 229, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 229, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 229, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 229, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 230, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 230, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 230, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 230, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 230, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 230, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 230, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 231, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 231, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 231, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 231, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 231, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 231, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 231, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 232, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 232, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 479, 'steps': 232, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 232, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 232, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 232, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 232, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 233, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 233, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 233, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 233, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 233, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 233, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 233, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 234, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 234, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 480, 'steps': 234, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 234, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 234, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 234, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 234, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 235, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 235, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 235, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 235, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 235, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 235, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 235, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 236, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 236, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 481, 'steps': 236, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 236, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 236, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 236, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 236, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 237, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 237, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 237, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 237, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 237, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 237, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 237, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 238, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 238, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 482, 'steps': 238, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 238, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 238, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 238, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 238, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 239, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 239, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 239, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 239, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 239, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 239, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 239, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 240, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 240, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 483, 'steps': 240, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 240, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 240, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 240, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 240, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 241, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 241, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 241, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 241, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 241, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 241, 'name': 'RL-ordered k-smf n=50 T=6'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 241, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 242, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 242, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 484, 'steps': 242, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 242, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 242, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 500, 'steps': 242, 'name': 'RL-ordered k-smf n=20 T=6'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 243, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 500, 'steps': 243, 'name': 'k-smf-twisted-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 243, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 490, 'steps': 243, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 243, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 244, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 244, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 244, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 500, 'steps': 244, 'name': 'k-smf-twisted-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 486, 'steps': 245, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 485, 'steps': 245, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 245, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 246, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 246, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 246, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 247, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 247, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 247, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 248, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 487, 'steps': 248, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 248, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 249, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 249, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 249, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 250, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 488, 'steps': 250, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 250, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 251, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 251, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 251, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 252, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 252, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 252, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 253, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 489, 'steps': 253, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 253, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 254, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 254, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 254, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 255, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 491, 'steps': 255, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 255, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 256, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 256, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 256, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 257, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 492, 'steps': 257, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 257, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 258, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 258, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 258, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 259, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 493, 'steps': 259, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 259, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 260, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 260, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 260, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 261, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 494, 'steps': 261, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 261, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 262, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 262, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 262, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 497, 'steps': 263, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 263, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 263, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 264, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 495, 'steps': 264, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 264, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 265, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 265, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 265, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 266, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 266, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 500, 'steps': 266, 'name': 'k-smf-oracle-2-phase-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 267, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 496, 'steps': 267, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 500, 'steps': 268, 'name': 'k-smf-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 268, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 498, 'steps': 269, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 270, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 499, 'steps': 271, 'name': 'k-smf-oracle-k=5'}
+{'n_aborts': 0, 'n_successes': 500, 'steps': 272, 'name': 'k-smf-oracle-k=5'}

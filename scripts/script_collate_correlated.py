@@ -2,7 +2,7 @@ import pickle
 import time
 from Simulator import Simulator
 from Scheduler import LumpScheduler, RLSMFTwistedScheduler, Scheduler, QueueKernelScheduler, KSMFScheduler, QueueScheduler, KSMFOracleScheduler, KSMFOracle2PhaseScheduler, KSMFZeroScheduler, KSMFOracle2PhaseDontCareScheduler, KSMFTwistedOracle2PhaseDontCareScheduler, KSMFTwistedScheduler
-from Workload import SmallBankWorkload
+from Workload import SmallBankWorkload, TPCCWorkload
 from KernelWrapper import KernelWrapper
 from Kernel import IntegerOptimisationKernelMkII
 from utils import clone_transaction
@@ -12,17 +12,18 @@ corr_params = {
     "event_scale": 20.0,
     "correlation_factor": 0.1
 }
-workload = SmallBankWorkload(correlated=True, corr_params=corr_params)
-probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
-
+# workload = SmallBankWorkload(correlated=True, corr_params=corr_params)
+workload = TPCCWorkload()
+# probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
+probabilities = [43,41,3,1,3,1,3,1,4]
 workload_arr = []
 oracle_arr = []
-T = 10
-filename = "arena_correlated_twisted.txt"
-timing_filename = "arena_correlated_twisted_timing.txt"
+T = 1
+filename = "arena_corr_TPCC.txt"
+timing_filename = "arena_corr_TPCC_times.txt"
 for t in range(T):
-    num_txns = 50
-    random_transactions = workload.generate_transactions(num_txns, probabilities, start=t*num_txns)
+    num_txns = 500
+    random_transactions = workload.generate_transactions(num_txns, probabilities=probabilities, start=t*num_txns)
     oracle_arr.append(workload.get_sticky_list())
     workload_arr.append([clone_transaction(txn) for txn in random_transactions])
 
@@ -40,11 +41,12 @@ contestants:list[Contestant] = []
 # with open('model_linear.pkl', 'rb') as f:
 #    model_linear = pickle.load(f)
 
-with open('model_RL.pkl', 'rb') as f:
+with open('model_RL_50_TPCC_corr.pkl', 'rb') as f:
     model_RL = pickle.load(f)
 
-with open('model_RL_20.pkl', 'rb') as f:
+with open('model_RL_20_TPCC_corr.pkl', 'rb') as f:
     model_RL_20 = pickle.load(f)
+
 
 contestants.extend(
     [
@@ -52,14 +54,15 @@ contestants.extend(
         Contestant("k-smf-twisted-k=5", scheduler = KSMFTwistedScheduler(k=5)),
         # Contestant("k-smf-twisted-k=10", scheduler = KSMFTwistedScheduler(k=10)),
         # Contestant("k-smf-k=10", scheduler = KSMFScheduler(k=10)),
-        # Contestant("k-smf-oracle-k=5", scheduler = KSMFOracleScheduler(k=5)),
+        Contestant("k-smf-oracle-k=5", scheduler = KSMFOracleScheduler(k=5)),
         #Contestant("k-smf-oracle-2-phase", scheduler = KSMFOracle2PhaseScheduler(k=5)),
-        # Contestant("k-smf-oracle-2-phase-k=5", scheduler = KSMFOracle2PhaseDontCareScheduler(k=5)),
-        # Contestant("k-smf-twisted-oracle-2-phase-k=5", scheduler = KSMFTwistedOracle2PhaseDontCareScheduler(k=5)),
+        Contestant("k-smf-oracle-2-phase-k=5", scheduler = KSMFOracle2PhaseDontCareScheduler(k=5)),
+        Contestant("k-smf-twisted-oracle-2-phase-k=5", scheduler = KSMFTwistedOracle2PhaseDontCareScheduler(k=5)),
+        # Contestant("int-opt-k=10 n=20", QueueKernelScheduler(n_queues=10, kernel=KernelWrapper(IntegerOptimisationKernelMkII(20)))),
         #Contestant("k-smf-zero", scheduler = KSMFZeroScheduler(k=5))
         # Contestant("Linear Model", scheduler=LumpScheduler(), model=model_linear),
-        Contestant("RL-ordered k-smf n=50 T=6", scheduler=RLSMFTwistedScheduler(), model=model_RL),
-        Contestant("RL-ordered k-smf n=20 T=6", scheduler=RLSMFTwistedScheduler(), model=model_RL_20),
+        Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL),
+        Contestant("RL-ordered k-smf n=20 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL_20),
     ]
 )
 
@@ -75,11 +78,11 @@ for t in range(T):
         start_time = time.time()
         if contestant.sim.model is not None:
             if contestant.name == "Linear Model":
-                contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="ML")
-            elif contestant.name == "RL-ordered k-smf n=50 T=6":
-                contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="RL")
-            elif contestant.name == "RL-ordered k-smf n=20 T=6":
-                contestant.sim.sim(retryOnAbort=True, n=20, T=6, ML_RL="RL")
+                contestant.sim.sim(retryOnAbort=True, n=50, T=7, ML_RL="ML")
+            elif contestant.name == "RL-ordered k-smf n=50 T=7":
+                contestant.sim.sim(retryOnAbort=True, n=50, T=7, ML_RL="RL")
+            elif contestant.name == "RL-ordered k-smf n=20 T=7":
+                contestant.sim.sim(retryOnAbort=True, n=20, T=7, ML_RL="RL")
         else:
             contestant.sim.sim(retryOnAbort=True)
         end_time = time.time()
@@ -111,11 +114,11 @@ while done_counter > 0:
             start_time = time.time()
             if contestant.sim.model is not None:
                 if contestant.name == "Linear Model":
-                    contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="ML")
-                elif contestant.name == "RL-ordered k-smf n=50 T=6":
-                    contestant.sim.sim(retryOnAbort=True, n=50, T=6, ML_RL="RL")
-                elif contestant.name == "RL-ordered k-smf n=20 T=6":
-                    contestant.sim.sim(retryOnAbort=True, n=20, T=6, ML_RL="RL")
+                    contestant.sim.sim(retryOnAbort=True, n=50, T=7, ML_RL="ML")
+                elif contestant.name == "RL-ordered k-smf n=50 T=7":
+                    contestant.sim.sim(retryOnAbort=True, n=50, T=7, ML_RL="RL")
+                elif contestant.name == "RL-ordered k-smf n=20 T=7":
+                    contestant.sim.sim(retryOnAbort=True, n=20, T=7, ML_RL="RL")
             else:
                 contestant.sim.sim(retryOnAbort=True)
             end_time = time.time()

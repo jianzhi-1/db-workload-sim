@@ -1,0 +1,394 @@
+{'name': 'k-smf-k=5', 'time': 149}
+{'name': 'k-smf-twisted-k=5', 'time': 897}
+{'name': 'k-smf-oracle-k=5', 'time': 200}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 210}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 616}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 4809}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 645}
+{'name': 'k-smf-k=5', 'time': 10}
+{'name': 'k-smf-twisted-k=5', 'time': 9}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 10}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 9}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 19}
+{'name': 'k-smf-twisted-k=5', 'time': 10}
+{'name': 'k-smf-oracle-k=5', 'time': 9}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 19}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 20}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 10}
+{'name': 'k-smf-twisted-k=5', 'time': 10}
+{'name': 'k-smf-oracle-k=5', 'time': 14}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 10}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 10}
+{'name': 'k-smf-twisted-k=5', 'time': 10}
+{'name': 'k-smf-oracle-k=5', 'time': 10}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 9}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 10}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 19}
+{'name': 'k-smf-twisted-k=5', 'time': 21}
+{'name': 'k-smf-oracle-k=5', 'time': 22}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 20}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 29}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 10}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 14}
+{'name': 'k-smf-twisted-k=5', 'time': 10}
+{'name': 'k-smf-oracle-k=5', 'time': 9}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 10}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 10}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 9}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 4282}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 889}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 9}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 10}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 10}
+{'name': 'k-smf-oracle-k=5', 'time': 10}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 9}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 10}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 9}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 10}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 9}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 9}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 3925}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 606}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 9}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 9}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 4126}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 645}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 9}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 9}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-k=5', 'time': 0}
+{'name': 'k-smf-twisted-k=5', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 3949}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 585}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 3649}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 666}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 3941}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 655}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 10}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 4106}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 655}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 10}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 4324}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 635}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 9}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 4269}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 692}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 641}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=50 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 11}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 635}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 714}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 613}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 9}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 620}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 685}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 604}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 774}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 664}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 699}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 14}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 644}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 14}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 667}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 9}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 661}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 582}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 756}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 11}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}
+{'name': 'RL-ordered k-smf n=20 T=7', 'time': 0}

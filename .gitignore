@@ -8,3 +8,6 @@ venv/
 trained_model_CNN.pt
 trained_model_linear.pkl
 model_RL_20.pkl
+model_RL_20_TPCC_corr.pkl
+model_RL_50.pkl
+model_RL_50_TPCC_corr.pkl
