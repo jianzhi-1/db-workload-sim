@@ -26,12 +26,12 @@ class QNetwork(nn.Module):
         mask = torch.zeros(self.N)
         assert mask.shape == (self.N,), f"mask.shape = {mask.shape}"
 
+        skipped = []
         scheduled = []
 
-        skipped = []
         for i in range(N):
             if conflict_matrix[i].sum() == 0:
-                skipped.append((i, 0))
+                scheduled.append((i,0))
                 mask[i] = 1
 
         for _ in range(self.N):
@@ -177,8 +177,9 @@ class Trainer:
                 self.train_step(state_tensor, action, reward, next_state_tensor, done)
 
             if done: break
-        if episode_number >= 95 and len(skipped) != self.N:
+        if episode_number >= 99:
             print(f'scheduled: {sorted(scheduled)}', flush=True)
+            print(mask)
         return total_reward
 
     def compute_reward(self, new_action, scheduled, conflict_matrix, mask):
@@ -201,46 +202,46 @@ class Trainer:
                         # train to schedule transaction i at time t
                         temp_success = True
                         for j, tj in scheduled:
-                            conflict_points += sum(conflict_matrix[i][j])
+                            # conflict_points += sum(conflict_matrix[i][j])
                             if conflict_matrix[i][j][tj - t + T] == 1: # conflict
                                 temp_success = False
                                 break
                         if temp_success: # assign at earliest
-                            success, pos = True, t
+                            success = True
                             break
-                    if success:
+                    if success: #ended when could've scheduled
                         neg_reward -= increment
                         increment = increment * 1.5
-                    else:
-                        pos_reward += 1
+                    else: #would've been a conflict, reward for stopping
+                        pos_reward += 2
                         # increment = 0
-            conflict_points = max(0, conflict_points - 30)
-            if neg_reward >= 0:
-                pos_reward += 10
+            # conflict_points = max(0, conflict_points - 30)
+            # if neg_reward >= 0:
+                # pos_reward += 10
             # print(conflict_points // 10, pos_reward, neg_reward, flush=True)
-            conflict_points = min(conflict_points // 10, 6)
+            # conflict_points = min(conflict_points // 10, 6)
             
-            return pos_reward + neg_reward + conflict_points, -1
+            return pos_reward + neg_reward, -1
 
-        difficulty = 1
+        # difficulty = 1
+        neg_reward = -3.
         for t in range(0, T+1, 1):
             # train to schedule transaction i at time t
             temp_success = True
             for j, tj in scheduled:
                 if conflict_matrix[new_action][j][tj - t + T] == 1: # conflict
                     temp_success = False
+                    neg_reward *= 1.5
                     break
             if temp_success: # assign at earliest
                 success, pos = True, t
                 break
-            else:
-                difficulty += 0.5
         if success:
             reward_curve = [1., 0.9, 0.8, 0.7, 0.6, 0.5, 0.4]
             # print('success', reward_curve[pos], difficulty, flush=True)
-            return reward_curve[pos] * difficulty, pos
+            return reward_curve[pos], pos
         # print('fail', difficulty, flush=True)
-        return -3., -1
+        return neg_reward, -1
     
     def print_conflict_matrix(conflict_tensor):
         conflict_matrix = conflict_tensor[0].cpu().numpy()

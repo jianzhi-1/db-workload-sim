@@ -28,10 +28,10 @@ for t in range(T):
     workload_arr.append([clone_transaction(txn) for txn in random_transactions])
 
 class Contestant():
-    def __init__(self, name:str, scheduler:Scheduler, model=None):
+    def __init__(self, name:str, scheduler:Scheduler, model=None, filterT:bool = False, skipT:bool = False):
         self.name = name
         self.scheduler = scheduler
-        self.sim = Simulator(scheduler, [], False)
+        self.sim = Simulator(scheduler, [], filterT, skipT)
         self.sim.model = model
         self.done = False
         self.makespan = None
@@ -44,25 +44,38 @@ contestants:list[Contestant] = []
 with open('model_RL_50_TPCC_corr.pkl', 'rb') as f:
     model_RL = pickle.load(f)
 
-with open('model_RL_20_TPCC_corr.pkl', 'rb') as f:
-    model_RL_20 = pickle.load(f)
+# with open('model_RL_20_TPCC_corr.pkl', 'rb') as f:
+    # model_RL_20 = pickle.load(f)
 
 
 contestants.extend(
     [
-        Contestant("k-smf-k=5", scheduler = KSMFScheduler(k=5)),
-        Contestant("k-smf-twisted-k=5", scheduler = KSMFTwistedScheduler(k=5)),
-        # Contestant("k-smf-twisted-k=10", scheduler = KSMFTwistedScheduler(k=10)),
-        # Contestant("k-smf-k=10", scheduler = KSMFScheduler(k=10)),
-        Contestant("k-smf-oracle-k=5", scheduler = KSMFOracleScheduler(k=5)),
-        #Contestant("k-smf-oracle-2-phase", scheduler = KSMFOracle2PhaseScheduler(k=5)),
-        Contestant("k-smf-oracle-2-phase-k=5", scheduler = KSMFOracle2PhaseDontCareScheduler(k=5)),
-        Contestant("k-smf-twisted-oracle-2-phase-k=5", scheduler = KSMFTwistedOracle2PhaseDontCareScheduler(k=5)),
+        # Contestant("k-smf-k=5", scheduler = KSMFScheduler(k=5)),
+        # Contestant("k-smf-twisted-k=5", scheduler = KSMFTwistedScheduler(k=5)),
+        # # Contestant("k-smf-twisted-k=10", scheduler = KSMFTwistedScheduler(k=10)),
+        # # Contestant("k-smf-k=10", scheduler = KSMFScheduler(k=10)),
+        # Contestant("k-smf-oracle-k=5", scheduler = KSMFOracleScheduler(k=5)),
+        # #Contestant("k-smf-oracle-2-phase", scheduler = KSMFOracle2PhaseScheduler(k=5)),
+        # Contestant("k-smf-oracle-2-phase-k=5", scheduler = KSMFOracle2PhaseDontCareScheduler(k=5)),
+        # Contestant("k-smf-twisted-oracle-2-phase-k=5", scheduler = KSMFTwistedOracle2PhaseDontCareScheduler(k=5)),
         # Contestant("int-opt-k=10 n=20", QueueKernelScheduler(n_queues=10, kernel=KernelWrapper(IntegerOptimisationKernelMkII(20)))),
         #Contestant("k-smf-zero", scheduler = KSMFZeroScheduler(k=5))
         # Contestant("Linear Model", scheduler=LumpScheduler(), model=model_linear),
-        Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL),
-        Contestant("RL-ordered k-smf n=20 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL_20),
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = False),
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = True),
+
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = False, skipT = False),
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = False, skipT = True),
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = True, skipT = False),
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = True, skipT = True),
+
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = False, skipT = False),
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = False, skipT = True),
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = True, skipT = False),
+        Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = True, skipT = True),
+
+        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = True),
+        # Contestant("RL-ordered k-smf n=20 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL_20),
     ]
 )
 
@@ -86,28 +99,35 @@ for t in range(T):
         else:
             contestant.sim.sim(retryOnAbort=True)
         end_time = time.time()
+        print('total pass time', str((end_time - start_time) * 1000)[:5], flush=True)
         
         d = contestant.sim.print_statistics()
-        ts = int((end_time - start_time) * 10000)
+        ts = int((end_time - start_time) * 1000)
+        print(d, flush=True)
         times = {
             "name": contestant.name,
-            "time": ts,
+            "total_time": ts,
+            "decision_time": d.get("decision_time"),
+            "conflict_time": d.get("conflict_time"),
+            "RL_time": d.get("RL_time"),
         }
         d["name"] = contestant.name
         with open(filename, "a") as f:
             f.write(str(d) + "\n")
         with open(timing_filename, "a") as f:
             f.write(str(times) + "\n")
+        contestant.sim.reset_ts_stats()
     done = done or curdone
 
 # clean up the remaining
 done_counter = len(contestants)
 while done_counter > 0:
     for contestant in contestants:
-        if contestant.sim.done(): 
+        if contestant.sim.finished == True: 
             if contestant.done is False:
                 contestant.done = True
                 contestant.makespan = contestant.sim.step
+                print(f'contestant {contestant.name} is done, makespan = {contestant.makespan}', flush=True)
                 done_counter -= 1
                 continue
         else:
@@ -122,18 +142,23 @@ while done_counter > 0:
             else:
                 contestant.sim.sim(retryOnAbort=True)
             end_time = time.time()
+            print('total pass time', str((end_time - start_time) * 1000)[:5], flush=True)
             
             d = contestant.sim.print_statistics()
-            ts = int((end_time - start_time) * 10000)
+            ts = int((end_time - start_time) * 1000)
             times = {
                 "name": contestant.name,
-                "time": ts,
+                "total_time": ts,
+                "decision_time": d.get("decision_time"),
+                "conflict_time": d.get("conflict_time"),
+                "RL_time": d.get("RL_time"),
             }
             d["name"] = contestant.name
             with open(filename, "a") as f:
                 f.write(str(d) + "\n")
             with open(timing_filename, "a") as f:
                 f.write(str(times) + "\n")
+            contestant.sim.reset_ts_stats()
 
 for contestant in contestants:
     d = contestant.sim.statistics

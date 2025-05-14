@@ -102,8 +102,8 @@ reward_history = []
 for episode in tqdm(range(EPISODES), desc="training", unit="epoch"):
     conflict_matrix, random_transactions_list = data_gen(batch_size)
     conflict_matrix = torch.tensor(conflict_matrix)
-    if episode >= 99:
-        print_conflict_matrix(conflict_matrix)
+    # if episode >= 99:
+        # print_conflict_matrix(conflict_matrix)
     #print_conflict_matrix(conflict_matrix, random_transactions_list[0])
     total_reward = trainer.run_episode(conflict_matrix, episode)
     if total_reward is not None: #no conflicts

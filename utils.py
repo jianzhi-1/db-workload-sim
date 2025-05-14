@@ -69,7 +69,7 @@ class Transaction():
 
     def __repr__(self):
         # return f"Transaction({self.txn}, {self.operations}, {self.resource_to_ts})"
-        return f"Transaction({self.txn}, {self.resource_to_ts})"
+        return f"Transaction({self.txn}, {self.operations})"
 
 def clone_operation_list(ls:list[Operation]):
     return [ReadOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource, x.res_rows) if x.is_read else WriteOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource, x.res_rows) for x in ls]

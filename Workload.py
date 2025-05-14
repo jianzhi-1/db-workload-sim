@@ -20,18 +20,27 @@ class SmallBankWorkload(Workload):
 
         self.NUM_ACCOUNTS = 10
         
-        self.SMALLBANK_TXN_OPS = { # (Read/Write, Table ID, column_name, cache-id)
-            # Operations with the same cache-id operate on the same row
-            # False -> Read, True -> Write
-            'Amalgamate': [(False, 0, 'custId0', 0), (False, 0, 'custId1', 1), (False, 1, 'custId0', 2), (False, 2, 'custId1', 3), (True, 2, 'custId0', 4), (True, 2, 'custId1', 5)],
-            'Balance': [(False, 0, 'custName', 0), (False, 1, 'custName', 1), (False, 2, 'custName', 2)],
-            'DepositChecking': [(False, 0, 'custName', 0), (True, 0, 'custName', 0)],
-            'SendPayment': [(False, 0, 'sendAcct', 0), (False, 0, 'destAcct', 1), (False, 2, 'sendAcct', 2), (True, 2, 'sendAcct', 2), (True, 2, 'destAcct', 3)],
-            'TransactSavings': [(False, 0, 'custName', 0), (False, 1, 'custName', 1), (True, 1, 'custName', 1)],
-            'WriteCheck': [(False, 0, 'custName', 0), (False, 1, 'custName', 1), (False, 2, 'custName', 2), (True, 2, 'custName', 2)],
+        # self.SMALLBANK_TXN_OPS = { # (Read/Write, Table ID, column_name, cache-id)
+        #     # Operations with the same cache-id operate on the same row
+        #     # False -> Read, True -> Write
+        #     'Amalgamate': [(False, 0, 'custId0', 0), (False, 0, 'custId1', 1), (False, 1, 'custId0', 2), (False, 2, 'custId1', 3), (True, 2, 'custId0', 4), (True, 2, 'custId1', 5)],
+        #     'Balance': [(False, 0, 'custName', 0), (False, 1, 'custName', 1), (False, 2, 'custName', 2)],
+        #     'DepositChecking': [(False, 0, 'custName', 0), (True, 0, 'custName', 0)],
+        #     'SendPayment': [(False, 0, 'sendAcct', 0), (False, 0, 'destAcct', 1), (False, 2, 'sendAcct', 2), (True, 2, 'sendAcct', 2), (True, 2, 'destAcct', 3)],
+        #     'TransactSavings': [(False, 0, 'custName', 0), (False, 1, 'custName', 1), (True, 1, 'custName', 1)],
+        #     'WriteCheck': [(False, 0, 'custName', 0), (False, 1, 'custName', 1), (False, 2, 'custName', 2), (True, 2, 'custName', 2)],
+        # }
+
+        self.SMALLBANK_TXN_OPS_2 = { # (isWrite, Table ID, is_last_op_for_this_resource, var_name)
+            'Amalgamate': [(False, 0, True, 'custId0'), (False, 0, True, 'custId1'), (False, 1, True, 'custId0'), (False, 2, True, 'custId1'), (True, 2, True, 'custId0'), (True, 2, True, 'custId1')],
+            'Balance': [(False, 0, True, 'custName'), (False, 1, True, 'custName'), (False, 2, True, 'custName')],
+            'DepositChecking': [(False, 0, False, 'custName'), (True, 0, True, 'custName')],
+            'SendPayment': [(False, 0, True, 'sendAcct'), (False, 0, True, 'destAcct'), (False, 2, False, 'sendAcct'), (True, 2, True, 'sendAcct'), (True, 2, True, 'destAcct')],
+            'TransactSavings': [(False, 0, True, 'custName'), (False, 1, True, 'custName'), (True, 1, True, 'custName')],
+            'WriteCheck': [(False, 0, True, 'custName'), (False, 1, True, 'custName'), (False, 2, False, 'custName'), (True, 2, True, 'custName')],
         }
 
-        self.num_txn_types = len(self.SMALLBANK_TXN_OPS)
+        self.num_txn_types = len(self.SMALLBANK_TXN_OPS_2)
 
         self.SMALLBANK_INPUT_TYPINGS = { # (column_name, column_type)
             'Amalgamate': {'custId0': 'long', 'custId1': 'long'},
@@ -80,40 +89,119 @@ class SmallBankWorkload(Workload):
             self.ttl -= 1
             return res
 
-    def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None, start=0) -> list[Transaction]:
-        # start argument is used to deduplicate transaction ids when multiple time steps are scheduled
+    def generate_random_transactions(self, num_txns:int, probabilities:list[float]=None, start:int=0) -> list[Transaction]:
+        txn_ops = self.SMALLBANK_TXN_OPS_2
+        txn_input_typings = self.SMALLBANK_INPUT_TYPINGS
+        if probabilities is None:
+            probabilities = [1/len(txn_ops)] * len(txn_ops)
+        # txn_type = random.choices(population=list(txn_ops.keys()), weights=probabilities, k=1)[0]
+        res = []
+        num_txn_types = len(txn_ops.keys())
+        for txn_pool_id in range(num_txns):
+            txn_type_id = random.choices(population=([i for i in range(0, num_txn_types)]), weights=probabilities, k=1)[0]
+            txn_type = list(txn_ops.keys())[txn_type_id]
+            ops_unformatted = txn_ops[txn_type]
+            ops = [None]*len(ops_unformatted)
+            inputs = txn_input_typings[txn_type]
+            my_inputs = {}
 
-        if probabilities is None: probabilities = [1/len(self.SMALLBANK_TXN_OPS)] * len(self.SMALLBANK_TXN_OPS) # assume by default uniform
+            for key in inputs.keys():
+                value = inputs[key]
+                if value == 'long':
+                    my_inputs[key] = draw_zipf_with_max(1.0001, self.NUM_ACCOUNTS)
+                elif value == 'string':
+                    my_inputs[key] = draw_zipf_with_max(1.0001, self.NUM_ACCOUNTS)
+                elif value == 'double':
+                    my_inputs[key] = random.randint(0, 100)
 
-        txn_type_arr = random.choices(population=list(self.SMALLBANK_TXN_OPS.keys()), weights=probabilities, k=num_txns)
-        
-        txn_arr = []
-        idx = 0
-        for i, v in enumerate(txn_type_arr):
-            txn_id = start + i
-            op_list = []
-            cache = dict()
-            resource_to_ts = dict()
-            for op in self.SMALLBANK_TXN_OPS[v]:
-                val = cache[op[3]] if op[3] in cache else self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]])
-                if op[3] not in cache: cache[op[3]] = val
-                if op[0]: 
-                    op_list.append(WriteOperation(txn_id, (op[1], val))) # write operation
-                    resource_to_ts[(op[1], val)] = ("W", idx) # won't be overwritten by later read, all reads before writes on same resource
-                else: 
-                    op_list.append(ReadOperation(txn_id, (op[1], val))) # read operation
-                    resource_to_ts[(op[1], val)] = ("R", idx)
-                idx+=1
-            txn_arr.append(Transaction(txn_id, op_list, v, resource_to_ts))
+            hotKeys = []
+            for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
+                isRead = (not ops_unformatted[op_idx][0])
+                table = ops_unformatted[op_idx][1]
+                is_last_on_resource = ops_unformatted[op_idx][2]
+                row = my_inputs[ops_unformatted[op_idx][3]]
+                is_last = op_idx == len(ops_unformatted) - 1
+                if isRead: #read
+                    ops[op_idx] = ReadOperation(txn_pool_id, (table, row), is_last, is_last_on_resource)
+                else: #write
+                    ops[op_idx] = WriteOperation(txn_pool_id, (table, row), is_last, is_last_on_resource)
 
-        return txn_arr
+                # if ((table, row) in self.hotkeys):
+                    # hotKeys.append((table, row))
+
+
+            txn = Transaction(txn_pool_id, ops, txn_type) #txn:int, operations:list[Operation], txn_type:str="", resource_to_ts:dict={}):
+            res.append(txn)
+        return res
+    
+    def generate_correlated_transactions(self, num_txns:int, probabilities:list[float]=None, start=0, p=0.1) -> list[Transaction]:
+        txn_ops = self.SMALLBANK_TXN_OPS_2
+        txn_input_typings = self.SMALLBANK_INPUT_TYPINGS
+        if probabilities is None:
+            probabilities = [1/len(txn_ops)] * len(txn_ops)
+        # txn_type = random.choices(population=list(txn_ops.keys()), weights=probabilities, k=1)[0]
+        res = []
+        num_txn_types = len(txn_ops.keys())
+
+        #sticky values
+        sticky_inputs = {}
+        for key in txn_input_typings.keys():
+            cur_input_typing = txn_input_typings[key]
+            sticky_inputs[key] = cur_input_typing.generate_value()
+
+
+        for txn_pool_id in range(num_txns):
+            txn_type_id = random.choices(population=([i for i in range(0, num_txn_types)]), weights=probabilities, k=1)[0]
+            txn_type = list(txn_ops.keys())[txn_type_id]
+            ops_unformatted = txn_ops[txn_type]
+            ops = [None]*len(ops_unformatted)
+            inputs = txn_input_typings[txn_type]
+            my_inputs = {}
+
+            for key in txn_input_typings.keys():
+                cur_input_typing = txn_input_typings[key]
+                if random.random() < p:
+                    my_inputs[key] = sticky_inputs[key]
+                else:
+                    my_inputs[key] = cur_input_typing.generate_value()
+
+            for key in inputs.keys():
+                value = inputs[key]
+                if value == 'long':
+                    my_inputs[key] = draw_zipf_with_max(1.0001, self.NUM_ACCOUNTS)
+                elif value == 'string':
+                    my_inputs[key] = draw_zipf_with_max(1.0001, self.NUM_ACCOUNTS)
+                elif value == 'double':
+                    my_inputs[key] = random.randint(0, 100)
+
+            hotKeys = []
+            for op_idx in range(len(ops_unformatted)):  # Iterate over the sequence of ops:
+                isRead = (not ops_unformatted[op_idx][0])
+                table = ops_unformatted[op_idx][1]
+                is_last_on_resource = ops_unformatted[op_idx][2]
+                row = my_inputs[ops_unformatted[op_idx][3]]
+                is_last = op_idx == len(ops_unformatted) - 1
+                if isRead: #read
+                    ops[op_idx] = ReadOperation(txn_pool_id, (table, row), is_last, is_last_on_resource)
+                else: #write
+                    ops[op_idx] = WriteOperation(txn_pool_id, (table, row), is_last, is_last_on_resource)
+
+                # if ((table, row) in self.hotkeys):
+                    # hotKeys.append((table, row))
+
+
+            txn = Transaction(txn_pool_id, ops, txn_type) #txn:int, operations:list[Operation], txn_type:str="", resource_to_ts:dict={}):
+            res.append(txn)
+        return res
+
+
 
     def generate_correlated_transactions(self, num_txns:int, probabilities:list[float]=None, start=0, p=0.1) -> list[Transaction]:
         # start argument is used to deduplicate transaction ids when multiple time steps are scheduled
 
-        if probabilities is None: probabilities = [1/len(self.SMALLBANK_TXN_OPS)] * len(self.SMALLBANK_TXN_OPS) # assume by default uniform
+        if probabilities is None: probabilities = [1/len(self.SMALLBANK_TXN_OPS_2)] * len(self.SMALLBANK_TXN_OPS_2) # assume by default uniform
 
-        txn_type_arr = random.choices(population=list(self.SMALLBANK_TXN_OPS.keys()), weights=probabilities, k=num_txns)
+        txn_type_arr = random.choices(population=list(self.SMALLBANK_TXN_OPS_2.keys()), weights=probabilities, k=num_txns)
         
         txn_arr = []
         
@@ -362,10 +450,16 @@ class TPCCWorkload(Workload):
         return txn_arr
 
 if __name__ == "__main__":
-    workload = SmallBankWorkload()
+    corr_params = {
+        "normal_scale": 10.0,
+        "event_scale": 20.0,
+        "correlation_factor": 0.1
+    }
+    workload = SmallBankWorkload(correlated=True, corr_params=corr_params)
 
     probabilities = [1,0,0,0,0,0] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
-    num_txns = 3
+    num_txns = 15
     random_transactions = workload.generate_random_transactions(num_txns, probabilities)
-    print(random_transactions)
+    for txn in random_transactions:
+        print(txn)
    

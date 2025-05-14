@@ -1,8 +1,8 @@
 import heapq
-
+import time
 import numpy as np
 import torch
-from Scheduler import Scheduler, KSMFTwistedScheduler, KSMFTwistedOracle2PhaseDontCareScheduler, RLSMFTwistedScheduler
+from Scheduler import LumpScheduler, Scheduler, KSMFTwistedScheduler, KSMFTwistedOracle2PhaseDontCareScheduler, RLSMFTwistedScheduler
 from utils import Transaction, Operation, ReadOperation, WriteOperation, conflict
 from Locker import Locker
 from utils import clone_transaction, clone_operation_list
@@ -32,7 +32,7 @@ class Simulator():
     # 2. If T2 requests for a resource that T1 has not released, then T2 aborts itself and n_aborts += 1. 
     #    T2 does not restart itself (for simplicity of simulation, otherwise just implementing MVCC)
 
-    def __init__(self, scheduler:Scheduler=None, txnPool:list[Transaction]=[], filterT:bool=False):
+    def __init__(self, scheduler:Scheduler=None, txnPool:list[Transaction]=[], filterT:bool=False, skipT:bool = False):
         self.scheduler = scheduler
         self.txnPool = txnPool
         self.resource_locks = Locker()
@@ -45,7 +45,9 @@ class Simulator():
         self.clear()
         self.flushPool = [] # flush for Oracle
         # self.txns_ML = []
-        self.filterT:bool = filterT
+        self.filterT:bool = filterT #filter out transactions that conflict with inflight transactions
+        self.skipT:bool = skipT #make a scheduling decision every T timesteps instead of every 1
+        self.finished = False
 
     def clear(self):
         self.resource_locks = Locker()
@@ -53,6 +55,7 @@ class Simulator():
         self.inflight = dict()
         self.scheduled_time = dict()
         self.step = 0
+        self.finished = False
 
         # statistics
         self.statistics = {
@@ -65,6 +68,7 @@ class Simulator():
 
     def add_transactions(self, more_txns:list[Transaction]):
         # add more transactions to transaction pool, for possibly online use cases
+        self.finished = False # just in case it was true
         self.txnPool.extend([clone_transaction(txn) for txn in more_txns]) # clone just to be safe
 
     def flush(self):
@@ -83,33 +87,38 @@ class Simulator():
         return res
     
     def filter_T(self, n): #filtered set of transactions to schedule
-        # res = []
-        # num_candidates = 0
-        # idx = 0
-        # maxlim = len(self.txnPool)
-        # while num_candidates < n and idx < len(self.txnPool): #Filter based on whether there is a current conflict
-        #     if idx > maxlim:
-        #         assert False, "No valid resources left to schedule easily"
-        #     candidate = self.txnPool[idx]
-        #     can_schedule = True
-        #     for op in candidate.operations:
-        #         # typ = "R" if op.is_read else "W"
-        #         # if self.locker.probe(op.resource, typ, self.step, T) < self.step:
-        #         # print(self.resource_locks.probe_table, flush=True)
-        #         if op.resource in self.resource_locks.probe_table:
-        #             if (self.resource_locks.probe_table[op.resource] and 
-        #                 (self.resource_locks.probe_table[op.resource][0] is not None) and 
-        #                 (self.resource_locks.probe_table[op.resource][1] is not None)):
-        #                 can_schedule = False
-        #                 break
-        #     if can_schedule:
-        #         res.append(clone_transaction(candidate))
-        #         num_candidates += 1
-        #     else:
-        #         self.txnPool.append(clone_transaction(candidate))
-        #     idx += 1
-        # self.txnPool = self.txnPool[idx:]
-        return None
+        res = []
+        num_candidates = 0
+        idx = 0
+        maxlim = len(self.txnPool)
+        while num_candidates < n and idx < len(self.txnPool): #Filter based on whether there is a current conflict
+            if idx > maxlim:
+                assert False, "No valid resources left to schedule easily"
+            candidate = self.txnPool[idx]
+            can_schedule = True
+            for op in candidate.operations:
+                # typ = "R" if op.is_read else "W"
+                # if self.locker.probe(op.resource, typ, self.step, T) < self.step:
+                # print(self.resource_locks.probe_table, flush=True)
+                # if op.resource in self.resource_locks.probe_table:
+                #     if (self.resource_locks.probe_table[op.resource] and 
+                #         (self.resource_locks.probe_table[op.resource][0] is not None) and 
+                #         (self.resource_locks.probe_table[op.resource][1] is not None)):
+                #         can_schedule = False
+                #         break
+
+                # if op.resource 
+                if self.resource_locks.probe(op.resource, op.type) >= self.step:
+                    can_schedule = False
+                    break
+            if can_schedule:
+                res.append(clone_transaction(candidate))
+                num_candidates += 1
+            else:
+                self.txnPool.append(clone_transaction(candidate))
+            idx += 1
+        self.txnPool = self.txnPool[idx:]
+        return res
 
 
     
@@ -134,12 +143,12 @@ class Simulator():
     
     def update_memory_RL(self, n, T):
         txns_N = []
-        if self.filterT == False:
+        if self.filterT == False: #removes txns to schedule from the pool, puts them back after
             txns_N = self.no_filter_T(n)
         else:
             txns_N = self.filter_T(n)
 
-        self.scheduler.memory = {}
+        # self.scheduler.memory = {}
 
         # self.txns_ML = []
 
@@ -172,30 +181,52 @@ class Simulator():
 
         txns_to_schedule = []
 
+        start_time = time.time()
         x = conflict_matrix(1, n, T, txns_N)
+        end_time = time.time()
+        # print('conflict_matrix', str((end_time - start_time) * 1000)[:5], flush=True)
+        self.statistics["conflict_time"] = str((end_time - start_time) * 1000)[:4]
+        start_time = time.time()
         x = torch.from_numpy(x.astype(np.float32))
         txns, mask = self.model.obtain_schedule(x)
         for txn_idx, ts in txns:
             if txn_idx < len(txns_N):
-                txn = txns_N[txn_idx]
                 if ts >= 0:
-                    #print(txn_idx, txn.txn, flush=True)
-                    txns_to_schedule.append(clone_transaction(txn))
-                    self.scheduler.memory[txn.txn] = self.step + ts
+                    txn = txns_N[txn_idx]
+                    txns_to_schedule.append(txn)
+                    if hasattr(self.scheduler, 'memory'):
+                        self.scheduler.memory[txn.txn] = self.step + ts # for if using LumpScheduler
+                else:
+                    self.statistics['n_aborts'] += 1
+                    self.txnPool.extend(txns_N[txn_idx])
+                # self.scheduler.memory[txn.txn] = self.step + ts
+
+        txns_to_reschedule = np.where(mask == 0)[0].tolist()
+        # print(f'scheduling {len(txns_to_schedule)}')
+        # print(self.step, self.scheduler.memory, flush=True)
+        self.txnPool.extend([txns_N[idx] for idx in txns_to_reschedule])
+        self.txnPool = txns_to_schedule + self.txnPool
+        
         # self.scheduler.memory = memory
         # print('done updating memory RL', flush=True)
+        end_time = time.time()
+        self.statistics["RL_time"] = str((end_time - start_time) * 1000)[:4]
         return txns_to_schedule
 
     
     def sim(self, freeze:bool=False, retryOnAbort:bool=False, n:int=None, T:int=None, ML_RL:str = None) -> dict:
         # print(len(self.scheduled_txn), flush=True)
-        if self.done():
-            self.done = True
+        # print(len(self.scheduled_txn), len(self.txnPool), len(self.flushPool), flush=True)
+        start_time = time.time()
+        if self.done() and self.statistics["n_successes"] == 500:
+            self.finished = True
             return self.statistics
         
         while len(self.scheduled_txn) > 0 and self.scheduled_txn[0].priority <= self.step:
             if self.scheduled_txn[0].priority < self.step: assert False, "transaction should be scheduled earlier"
             p = heapq.heappop(self.scheduled_txn)
+            if hasattr(self.scheduler, 'memory') and self.scheduler.memory is not None:
+                del self.scheduler.memory[p.txn.txn]
             self.inflight[p.txn.txn] = p.txn.operations
             self.memo[p.txn.txn] = clone_transaction(p.txn) # clone just in case need to reschedule
 
@@ -203,19 +234,25 @@ class Simulator():
         if len(self.txnPool) == 0: # no more transactions to be scheduled
             self.tick(retryOnAbort=retryOnAbort)
             return self.statistics
-        
-        if n != None and T != None: #ML model scheduling, only schedule every T steps
-            if self.step % (T) == 0:
-                # print(len(self.txnPool), len(self.scheduled_txn), len(self.inflight), flush=True)
-                if ML_RL == "ML":
-                    txns_to_schedule = self.update_memory_ML(n, T)
-                elif ML_RL == "RL": 
-                    txns_to_schedule = self.update_memory_RL(n, T)
-            else:
+
+        if ML_RL is not None: #ML model scheduling
+            if self.skipT and T is not None and (self.step % T) != 0: #only schedule every T steps
                 self.tick(retryOnAbort=retryOnAbort)
                 return self.statistics
+            if ML_RL == "ML":
+                txns_to_schedule = self.update_memory_ML(n, T) # not fully implemented
+            elif ML_RL == "RL": 
+                txns_to_schedule = self.update_memory_RL(n, T)
         
+        # print(txns_to_schedule, flush=True)
         decisions = self.scheduler.schedule(self.inflight, self, txns_to_schedule, self.step) # pass self for flush()
+        # print(decisions, flush=True)
+        if ML_RL is not None:
+            if isinstance(self.scheduler, LumpScheduler):
+                decisions.extend([0]*(len(self.txnPool) - len(decisions)))
+
+        end_time = time.time()
+        self.statistics["decision_time"] = str((end_time - start_time) * 1000)[:4]
 
         # assert len(decisions) == len(self.txnPool), f"Decision length is not equal transaction pool length, {type(self.scheduler)}, {len(decisions)}, {len(self.txnPool)}"
 
@@ -257,7 +294,7 @@ class Simulator():
                         pass # scheduler says toss this transaction away
                     elif v == 0: new_pool.append(t)
                     else: assert False, f"unknown decision {v}"
-                self.txnPool = self.txnPool + new_pool + self.flushPool
+                self.txnPool = self.txnPool[len(decisions):] + new_pool + self.flushPool
                 self.flushPool = []
                 statistics = dict()
 
@@ -265,8 +302,8 @@ class Simulator():
                 self.tick(retryOnAbort=retryOnAbort) # tick one step
                 return (self.statistics | statistics) if freeze else self.statistics
         else:
-            # for i, t in enumerate(self.txnPool):
-            for i, t in enumerate(txns_to_schedule):
+            for i, t in enumerate(self.txnPool):
+            # for i, t in enumerate(txns_to_schedule):
                 if decisions[i] >= 1: 
                     self.scheduled_time[t.txn] = self.step + decisions[i] - 1
                     if decisions[i] == 1:
@@ -280,14 +317,12 @@ class Simulator():
                 else: assert False, f"unknown decision {decisions[i]}"
         
         self.txnPool = new_pool + self.flushPool
-        # print(len(self.txnPool), flush=True)
         self.flushPool = []
 
         statistics = dict()
 
         if freeze: statistics |= self.sim_frozen()
         self.tick(retryOnAbort=retryOnAbort) # tick one step
-
         return (self.statistics | statistics) if freeze else self.statistics
 
     def sim_frozen(self) -> dict:
@@ -346,7 +381,10 @@ class Simulator():
                 if retryOnAbort: 
                     new_txn = self.memo[txn]
                     # print(f"Rescheduled: {new_txn.txn} -> {new_txn.txn+DELTA}: {new_txn}")
-                    new_txn.txn += DELTA
+                    # new_txn.txn += DELTA
+                    del self.memo[txn]
+                    if hasattr(self.scheduler, 'memory') and self.scheduler.memory is not None and txn in self.scheduler.memory:
+                        del self.scheduler.memory[txn]
                     self.txnPool.append(clone_transaction(new_txn))
             else: # success
                 self.inflight[txn] = self.inflight[txn][1:] # pop the first operations
@@ -358,12 +396,15 @@ class Simulator():
                     self.resource_locks.remove_all(op.txn) # not necessary, but for peace of mind
                     self.statistics["n_successes"] += 1
                     del self.memo[txn] # no need to remember the original transaction anymore
+                    if hasattr(self.scheduler, 'memory') and self.scheduler.memory is not None and txn in self.scheduler.memory:
+                        del self.scheduler.memory[txn]
 
             if len(self.inflight[txn]) == 0:
                 del self.inflight[txn]
 
         self.statistics["steps"] += 1
         self.step += 1
+        if isinstance(self.scheduler, LumpScheduler): self.scheduler.step += 1
 
     def done(self) -> bool:
         return len(self.inflight) == 0 and len(self.txnPool) == 0 and len(self.scheduled_txn) == 0
@@ -371,6 +412,11 @@ class Simulator():
     def print_statistics(self) -> dict:
         print(self.statistics)
         return self.statistics
+
+    def reset_ts_stats(self):
+        if self.statistics.get("decision_time"): del self.statistics["decision_time"]
+        if self.statistics.get("conflict_time"): del self.statistics["conflict_time"]
+        if self.statistics.get("RL_time"): del self.statistics["RL_time"]
 
     def online_stats(self):
         return self.step, len(self.inflight) + len(self.txnPool) + len(self.scheduled_txn)

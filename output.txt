@@ -1,167 +1,459 @@
-Episode 50: Avg Reward (last 50): 3.60
-scheduled: []
-0: []
-1: []
-2: []
-3: []
-4: []
-5: []
-6: []
-7: []
-8: []
-9: []
-10: []
-11: []
-12: []
-13: []
-14: []
-15: []
-16: []
-17: []
-18: [7]
-19: []
-20: []
-21: []
-22: []
-23: []
-24: []
-25: []
-26: []
-27: []
-28: []
-29: []
-30: []
-31: []
-32: []
-33: []
-34: []
-35: []
-36: []
-37: []
-38: []
-39: []
-40: []
-41: []
-42: []
-43: []
-44: []
-45: []
-46: []
-47: []
-48: []
-49: []
-skipped: [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 0), (12, 0), (13, 0), (14, 0), (15, 0), (16, 0), (17, 0), (19, 0), (20, 0), (21, 0), (22, 0), (23, 0), (24, 0), (25, 0), (26, 0), (27, 0), (28, 0), (29, 0), (30, 0), (31, 0), (32, 0), (33, 0), (34, 0), (35, 0), (36, 0), (37, 0), (38, 0), (39, 0), (40, 0), (41, 0), (42, 0), (43, 0), (44, 0), (45, 0), (46, 0), (47, 0), (48, 0), (49, 0)]
-scheduled: [(18, 0)]
-Episode 100: Avg Reward (last 50): 4.04
-Episode 50: Avg Reward (last 50): 4.23
-scheduled: [(4, 0), (29, 0)]
-scheduled: [(40, 0)]
-0: []
-1: []
-2: []
-3: []
-4: [0]
-5: []
-6: []
-7: []
-8: []
-9: []
-10: []
-11: []
-12: []
-13: []
-14: []
-15: []
-16: []
-17: []
-18: []
-19: [16]
-20: []
-21: []
-22: []
-23: []
-24: []
-25: []
-26: []
-27: []
-28: []
-29: []
-30: []
-31: [42]
-32: []
-33: []
-34: []
-35: []
-36: []
-37: []
-38: []
-39: []
-40: []
-41: []
-42: [31]
-43: [16]
-44: []
-45: []
-46: []
-47: []
-48: []
-49: []
-skipped: [(0, 0), (1, 0), (2, 0), (3, 0), (5, 0), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 0), (12, 0), (13, 0), (14, 0), (15, 0), (16, 0), (17, 0), (18, 0), (20, 0), (21, 0), (22, 0), (23, 0), (24, 0), (25, 0), (26, 0), (27, 0), (28, 0), (29, 0), (30, 0), (32, 0), (33, 0), (34, 0), (35, 0), (36, 0), (37, 0), (38, 0), (39, 0), (40, 0), (41, 0), (44, 0), (45, 0), (46, 0), (47, 0), (48, 0), (49, 0)]
-scheduled: [(4, 0), (19, 0), (31, 0), (42, 1), (43, 0)]
-Episode 100: Avg Reward (last 50): 3.30
-Episode 50: Avg Reward (last 50): 9.49
-scheduled: [(12, 0), (17, 1), (45, 0), (49, 1)]
-scheduled: [(7, 1), (15, 1), (26, 0), (44, 0)]
-0: []
-1: []
-2: [24, 39]
-3: []
-4: []
-5: []
-6: []
-7: []
-8: []
-9: []
-10: [11]
-11: [10]
-12: []
-13: []
-14: []
-15: []
-16: []
-17: []
-18: []
-19: []
-20: []
-21: []
-22: []
-23: [27]
-24: [2, 39]
-25: []
-26: []
-27: [23]
-28: []
-29: []
-30: []
-31: []
-32: []
-33: []
-34: []
-35: []
-36: []
-37: []
-38: []
-39: [2, 24]
-40: []
-41: []
-42: []
-43: []
-44: []
-45: []
-46: []
-47: []
-48: []
-49: []
-skipped: [(0, 0), (1, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0), (9, 0), (12, 0), (13, 0), (14, 0), (15, 0), (16, 0), (17, 0), (18, 0), (19, 0), (20, 0), (21, 0), (22, 0), (25, 0), (26, 0), (28, 0), (29, 0), (30, 0), (31, 0), (32, 0), (33, 0), (34, 0), (35, 0), (36, 0), (37, 0), (38, 0), (40, 0), (41, 0), (42, 0), (43, 0), (44, 0), (45, 0), (46, 0), (47, 0), (48, 0), (49, 0)]
-scheduled: [(2, 2), (10, 1), (11, 0), (23, 1), (24, 0), (27, 0), (39, 1)]
-Episode 100: Avg Reward (last 50): 8.95
+total pass time 511.6
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'conflict_time': '451.', 'RL_time': '55.3', 'decision_time': '510.'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'conflict_time': '451.', 'RL_time': '55.3', 'decision_time': '510.'}
+total pass time 0.162
+{'n_aborts': 0, 'n_successes': 2, 'steps': 2, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.161
+{'n_aborts': 0, 'n_successes': 4, 'steps': 3, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.157
+{'n_aborts': 0, 'n_successes': 4, 'steps': 4, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.106
+{'n_aborts': 0, 'n_successes': 4, 'steps': 5, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.197
+{'n_aborts': 0, 'n_successes': 21, 'steps': 6, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.117
+{'n_aborts': 0, 'n_successes': 42, 'steps': 7, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 489.3
+{'n_aborts': 0, 'n_successes': 44, 'steps': 8, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '437.', 'RL_time': '47.7', 'decision_time': '488.'}
+total pass time 0.224
+{'n_aborts': 0, 'n_successes': 45, 'steps': 9, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.143
+{'n_aborts': 0, 'n_successes': 48, 'steps': 10, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.168
+{'n_aborts': 0, 'n_successes': 48, 'steps': 11, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.113
+{'n_aborts': 0, 'n_successes': 48, 'steps': 12, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.180
+{'n_aborts': 0, 'n_successes': 67, 'steps': 13, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.104
+{'n_aborts': 0, 'n_successes': 84, 'steps': 14, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 542.9
+{'n_aborts': 0, 'n_successes': 84, 'steps': 15, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '463.', 'RL_time': '74.0', 'decision_time': '541.'}
+total pass time 0.174
+{'n_aborts': 0, 'n_successes': 86, 'steps': 16, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.182
+{'n_aborts': 0, 'n_successes': 88, 'steps': 17, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.162
+{'n_aborts': 0, 'n_successes': 88, 'steps': 18, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.134
+{'n_aborts': 0, 'n_successes': 88, 'steps': 19, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.230
+{'n_aborts': 0, 'n_successes': 104, 'steps': 20, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.151
+{'n_aborts': 0, 'n_successes': 126, 'steps': 21, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 496.8
+{'n_aborts': 0, 'n_successes': 127, 'steps': 22, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '441.', 'RL_time': '51.0', 'decision_time': '496.'}
+total pass time 0.331
+{'n_aborts': 0, 'n_successes': 133, 'steps': 23, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.159
+{'n_aborts': 0, 'n_successes': 134, 'steps': 24, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.204
+{'n_aborts': 0, 'n_successes': 136, 'steps': 25, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.128
+{'n_aborts': 0, 'n_successes': 137, 'steps': 26, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.188
+{'n_aborts': 0, 'n_successes': 149, 'steps': 27, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.160
+{'n_aborts': 0, 'n_successes': 174, 'steps': 28, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 494.8
+{'n_aborts': 0, 'n_successes': 174, 'steps': 29, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '441.', 'RL_time': '48.8', 'decision_time': '494.'}
+total pass time 0.174
+{'n_aborts': 0, 'n_successes': 178, 'steps': 30, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.185
+{'n_aborts': 0, 'n_successes': 183, 'steps': 31, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.143
+{'n_aborts': 0, 'n_successes': 183, 'steps': 32, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.140
+{'n_aborts': 0, 'n_successes': 183, 'steps': 33, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.170
+{'n_aborts': 0, 'n_successes': 197, 'steps': 34, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.115
+{'n_aborts': 0, 'n_successes': 215, 'steps': 35, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 491.9
+{'n_aborts': 0, 'n_successes': 218, 'steps': 36, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '435.', 'RL_time': '52.3', 'decision_time': '491.'}
+total pass time 0.232
+{'n_aborts': 0, 'n_successes': 221, 'steps': 37, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.191
+{'n_aborts': 0, 'n_successes': 224, 'steps': 38, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.186
+{'n_aborts': 0, 'n_successes': 224, 'steps': 39, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.113
+{'n_aborts': 0, 'n_successes': 224, 'steps': 40, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.181
+{'n_aborts': 0, 'n_successes': 239, 'steps': 41, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.124
+{'n_aborts': 0, 'n_successes': 259, 'steps': 42, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 502.6
+{'n_aborts': 0, 'n_successes': 261, 'steps': 43, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '447.', 'RL_time': '50.5', 'decision_time': '501.'}
+total pass time 0.159
+{'n_aborts': 0, 'n_successes': 265, 'steps': 44, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.123
+{'n_aborts': 0, 'n_successes': 267, 'steps': 45, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.135
+{'n_aborts': 0, 'n_successes': 267, 'steps': 46, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.093
+{'n_aborts': 0, 'n_successes': 267, 'steps': 47, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.170
+{'n_aborts': 0, 'n_successes': 282, 'steps': 48, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.104
+{'n_aborts': 0, 'n_successes': 303, 'steps': 49, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 499.3
+{'n_aborts': 0, 'n_successes': 304, 'steps': 50, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '445.', 'RL_time': '49.2', 'decision_time': '498.'}
+total pass time 0.136
+{'n_aborts': 0, 'n_successes': 305, 'steps': 51, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.170
+{'n_aborts': 0, 'n_successes': 307, 'steps': 52, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.173
+{'n_aborts': 0, 'n_successes': 307, 'steps': 53, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.099
+{'n_aborts': 0, 'n_successes': 307, 'steps': 54, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.185
+{'n_aborts': 0, 'n_successes': 328, 'steps': 55, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.097
+{'n_aborts': 0, 'n_successes': 343, 'steps': 56, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 525.4
+{'n_aborts': 0, 'n_successes': 344, 'steps': 57, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '466.', 'RL_time': '54.2', 'decision_time': '524.'}
+total pass time 0.215
+{'n_aborts': 0, 'n_successes': 347, 'steps': 58, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.101
+{'n_aborts': 0, 'n_successes': 348, 'steps': 59, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.159
+{'n_aborts': 0, 'n_successes': 348, 'steps': 60, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.104
+{'n_aborts': 0, 'n_successes': 348, 'steps': 61, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.193
+{'n_aborts': 0, 'n_successes': 362, 'steps': 62, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.154
+{'n_aborts': 0, 'n_successes': 392, 'steps': 63, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 525.4
+{'n_aborts': 0, 'n_successes': 392, 'steps': 64, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '467.', 'RL_time': '53.1', 'decision_time': '524.'}
+total pass time 0.184
+{'n_aborts': 0, 'n_successes': 392, 'steps': 65, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.137
+{'n_aborts': 0, 'n_successes': 392, 'steps': 66, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.179
+{'n_aborts': 0, 'n_successes': 392, 'steps': 67, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.107
+{'n_aborts': 0, 'n_successes': 392, 'steps': 68, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.187
+{'n_aborts': 0, 'n_successes': 408, 'steps': 69, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.134
+{'n_aborts': 0, 'n_successes': 431, 'steps': 70, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 591.8
+{'n_aborts': 0, 'n_successes': 432, 'steps': 71, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '456.', 'RL_time': '100.', 'decision_time': '590.'}
+total pass time 0.791
+{'n_aborts': 0, 'n_successes': 434, 'steps': 72, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.606
+{'n_aborts': 0, 'n_successes': 434, 'steps': 73, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.393
+{'n_aborts': 0, 'n_successes': 434, 'steps': 74, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.453
+{'n_aborts': 0, 'n_successes': 434, 'steps': 75, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.609
+{'n_aborts': 0, 'n_successes': 454, 'steps': 76, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.409
+{'n_aborts': 0, 'n_successes': 472, 'steps': 77, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 264.5
+{'n_aborts': 0, 'n_successes': 474, 'steps': 78, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '190.', 'RL_time': '68.9', 'decision_time': '263.'}
+total pass time 0.241
+{'n_aborts': 0, 'n_successes': 476, 'steps': 79, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.381
+{'n_aborts': 0, 'n_successes': 476, 'steps': 80, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.432
+{'n_aborts': 0, 'n_successes': 476, 'steps': 81, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.159
+{'n_aborts': 0, 'n_successes': 476, 'steps': 82, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.198
+{'n_aborts': 0, 'n_successes': 484, 'steps': 83, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.133
+{'n_aborts': 0, 'n_successes': 494, 'steps': 84, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 22.25
+{'n_aborts': 0, 'n_successes': 496, 'steps': 85, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '5.92', 'RL_time': '15.7', 'decision_time': '22.1'}
+total pass time 0.089
+{'n_aborts': 0, 'n_successes': 496, 'steps': 86, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.029
+{'n_aborts': 0, 'n_successes': 496, 'steps': 87, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.034
+{'n_aborts': 0, 'n_successes': 496, 'steps': 88, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.024
+{'n_aborts': 0, 'n_successes': 496, 'steps': 89, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.041
+{'n_aborts': 0, 'n_successes': 497, 'steps': 90, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.092
+{'n_aborts': 0, 'n_successes': 499, 'steps': 91, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 9.147
+{'n_aborts': 0, 'n_successes': 499, 'steps': 92, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '0.33', 'RL_time': '8.51', 'decision_time': '9.07'}
+total pass time 0.025
+{'n_aborts': 0, 'n_successes': 499, 'steps': 93, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.023
+{'n_aborts': 0, 'n_successes': 499, 'steps': 94, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.025
+{'n_aborts': 0, 'n_successes': 499, 'steps': 95, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.020
+{'n_aborts': 0, 'n_successes': 499, 'steps': 96, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.027
+{'n_aborts': 0, 'n_successes': 500, 'steps': 97, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.005
+{'n_aborts': 0, 'n_successes': 500, 'steps': 97, 'name': 'RL-ordered k-smf n=50 T=7'}
+contestant RL-ordered k-smf n=50 T=7 is done, makespan = 97
+{'n_aborts': 0, 'n_successes': 500, 'steps': 97, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 553.2
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'conflict_time': '494.', 'RL_time': '53.1', 'decision_time': '552.'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'conflict_time': '494.', 'RL_time': '53.1', 'decision_time': '552.'}
+total pass time 504.4
+{'n_aborts': 0, 'n_successes': 0, 'steps': 2, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '444.', 'RL_time': '53.6', 'decision_time': '503.'}
+total pass time 498.3
+{'n_aborts': 0, 'n_successes': 5, 'steps': 3, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '441.', 'RL_time': '49.8', 'decision_time': '497.'}
+total pass time 535.0
+{'n_aborts': 0, 'n_successes': 8, 'steps': 4, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '477.', 'RL_time': '50.9', 'decision_time': '533.'}
+total pass time 495.2
+{'n_aborts': 0, 'n_successes': 12, 'steps': 5, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '447.', 'RL_time': '42.0', 'decision_time': '494.'}
+total pass time 525.1
+{'n_aborts': 0, 'n_successes': 23, 'steps': 6, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '465.', 'RL_time': '52.8', 'decision_time': '523.'}
+total pass time 488.4
+{'n_aborts': 0, 'n_successes': 69, 'steps': 7, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '435.', 'RL_time': '46.4', 'decision_time': '486.'}
+total pass time 513.2
+{'n_aborts': 0, 'n_successes': 108, 'steps': 8, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '457.', 'RL_time': '48.9', 'decision_time': '511.'}
+total pass time 493.5
+{'n_aborts': 0, 'n_successes': 149, 'steps': 9, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '439.', 'RL_time': '47.5', 'decision_time': '491.'}
+total pass time 513.7
+{'n_aborts': 0, 'n_successes': 192, 'steps': 10, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '435.', 'RL_time': '49.4', 'decision_time': '512.'}
+total pass time 538.8
+{'n_aborts': 0, 'n_successes': 223, 'steps': 11, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '479.', 'RL_time': '52.2', 'decision_time': '537.'}
+total pass time 173.3
+{'n_aborts': 0, 'n_successes': 266, 'steps': 12, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '136.', 'RL_time': '31.8', 'decision_time': '172.'}
+total pass time 10.87
+{'n_aborts': 0, 'n_successes': 297, 'steps': 13, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '3.33', 'RL_time': '6.00', 'decision_time': '10.0'}
+total pass time 3.543
+{'n_aborts': 0, 'n_successes': 331, 'steps': 14, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '0.23', 'RL_time': '2.27', 'decision_time': '2.77'}
+total pass time 0.838
+{'n_aborts': 0, 'n_successes': 358, 'steps': 15, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.642
+{'n_aborts': 0, 'n_successes': 389, 'steps': 16, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.571
+{'n_aborts': 0, 'n_successes': 436, 'steps': 17, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.284
+{'n_aborts': 0, 'n_successes': 458, 'steps': 18, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.176
+{'n_aborts': 0, 'n_successes': 459, 'steps': 19, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.190
+{'n_aborts': 0, 'n_successes': 475, 'steps': 20, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.147
+{'n_aborts': 0, 'n_successes': 482, 'steps': 21, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.129
+{'n_aborts': 0, 'n_successes': 491, 'steps': 22, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.041
+{'n_aborts': 0, 'n_successes': 492, 'steps': 23, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.046
+{'n_aborts': 0, 'n_successes': 496, 'steps': 24, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.027
+{'n_aborts': 0, 'n_successes': 497, 'steps': 25, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.025
+{'n_aborts': 0, 'n_successes': 498, 'steps': 26, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.020
+{'n_aborts': 0, 'n_successes': 499, 'steps': 27, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.016
+{'n_aborts': 0, 'n_successes': 500, 'steps': 28, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.002
+{'n_aborts': 0, 'n_successes': 500, 'steps': 28, 'name': 'RL-ordered k-smf n=50 T=7'}
+contestant RL-ordered k-smf n=50 T=7 is done, makespan = 28
+{'n_aborts': 0, 'n_successes': 500, 'steps': 28, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 533.2
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'conflict_time': '471.', 'RL_time': '55.6', 'decision_time': '531.'}
+{'n_aborts': 0, 'n_successes': 0, 'steps': 1, 'conflict_time': '471.', 'RL_time': '55.6', 'decision_time': '531.'}
+total pass time 0.143
+{'n_aborts': 0, 'n_successes': 0, 'steps': 2, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.175
+{'n_aborts': 0, 'n_successes': 2, 'steps': 3, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.191
+{'n_aborts': 0, 'n_successes': 2, 'steps': 4, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.107
+{'n_aborts': 0, 'n_successes': 2, 'steps': 5, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.200
+{'n_aborts': 0, 'n_successes': 22, 'steps': 6, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.107
+{'n_aborts': 0, 'n_successes': 40, 'steps': 7, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 535.6
+{'n_aborts': 0, 'n_successes': 41, 'steps': 8, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '474.', 'RL_time': '55.7', 'decision_time': '534.'}
+total pass time 0.186
+{'n_aborts': 0, 'n_successes': 43, 'steps': 9, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.253
+{'n_aborts': 0, 'n_successes': 44, 'steps': 10, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.189
+{'n_aborts': 0, 'n_successes': 44, 'steps': 11, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.137
+{'n_aborts': 0, 'n_successes': 44, 'steps': 12, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.225
+{'n_aborts': 0, 'n_successes': 62, 'steps': 13, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.119
+{'n_aborts': 0, 'n_successes': 77, 'steps': 14, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 514.0
+{'n_aborts': 0, 'n_successes': 82, 'steps': 15, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '453.', 'RL_time': '54.3', 'decision_time': '513.'}
+total pass time 0.183
+{'n_aborts': 0, 'n_successes': 87, 'steps': 16, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.215
+{'n_aborts': 0, 'n_successes': 89, 'steps': 17, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.174
+{'n_aborts': 0, 'n_successes': 90, 'steps': 18, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.108
+{'n_aborts': 0, 'n_successes': 90, 'steps': 19, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.212
+{'n_aborts': 0, 'n_successes': 112, 'steps': 20, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.092
+{'n_aborts': 0, 'n_successes': 127, 'steps': 21, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 506.1
+{'n_aborts': 0, 'n_successes': 131, 'steps': 22, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '447.', 'RL_time': '53.3', 'decision_time': '505.'}
+total pass time 0.223
+{'n_aborts': 0, 'n_successes': 134, 'steps': 23, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.200
+{'n_aborts': 0, 'n_successes': 135, 'steps': 24, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.175
+{'n_aborts': 0, 'n_successes': 135, 'steps': 25, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.168
+{'n_aborts': 0, 'n_successes': 135, 'steps': 26, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.209
+{'n_aborts': 0, 'n_successes': 152, 'steps': 27, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.126
+{'n_aborts': 0, 'n_successes': 171, 'steps': 28, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 521.1
+{'n_aborts': 0, 'n_successes': 172, 'steps': 29, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '462.', 'RL_time': '53.0', 'decision_time': '520.'}
+total pass time 0.149
+{'n_aborts': 0, 'n_successes': 175, 'steps': 30, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.243
+{'n_aborts': 0, 'n_successes': 177, 'steps': 31, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.154
+{'n_aborts': 0, 'n_successes': 177, 'steps': 32, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.151
+{'n_aborts': 0, 'n_successes': 177, 'steps': 33, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.193
+{'n_aborts': 0, 'n_successes': 192, 'steps': 34, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.113
+{'n_aborts': 0, 'n_successes': 211, 'steps': 35, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 628.4
+{'n_aborts': 0, 'n_successes': 216, 'steps': 36, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '571.', 'RL_time': '52.1', 'decision_time': '627.'}
+total pass time 0.251
+{'n_aborts': 0, 'n_successes': 221, 'steps': 37, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.164
+{'n_aborts': 0, 'n_successes': 225, 'steps': 38, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.163
+{'n_aborts': 0, 'n_successes': 226, 'steps': 39, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.100
+{'n_aborts': 0, 'n_successes': 226, 'steps': 40, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.175
+{'n_aborts': 0, 'n_successes': 240, 'steps': 41, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.154
+{'n_aborts': 0, 'n_successes': 262, 'steps': 42, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 466.5
+{'n_aborts': 0, 'n_successes': 262, 'steps': 43, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '416.', 'RL_time': '45.4', 'decision_time': '465.'}
+total pass time 0.150
+{'n_aborts': 0, 'n_successes': 267, 'steps': 44, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.141
+{'n_aborts': 0, 'n_successes': 271, 'steps': 45, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.129
+{'n_aborts': 0, 'n_successes': 271, 'steps': 46, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.095
+{'n_aborts': 0, 'n_successes': 271, 'steps': 47, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.167
+{'n_aborts': 0, 'n_successes': 290, 'steps': 48, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.080
+{'n_aborts': 0, 'n_successes': 304, 'steps': 49, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 474.0
+{'n_aborts': 0, 'n_successes': 306, 'steps': 50, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '420.', 'RL_time': '48.2', 'decision_time': '473.'}
+total pass time 0.162
+{'n_aborts': 0, 'n_successes': 308, 'steps': 51, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.127
+{'n_aborts': 0, 'n_successes': 312, 'steps': 52, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.144
+{'n_aborts': 0, 'n_successes': 312, 'steps': 53, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.131
+{'n_aborts': 0, 'n_successes': 312, 'steps': 54, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.178
+{'n_aborts': 0, 'n_successes': 334, 'steps': 55, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.093
+{'n_aborts': 0, 'n_successes': 349, 'steps': 56, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 469.8
+{'n_aborts': 0, 'n_successes': 350, 'steps': 57, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '420.', 'RL_time': '44.0', 'decision_time': '469.'}
+total pass time 0.138
+{'n_aborts': 0, 'n_successes': 353, 'steps': 58, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.155
+{'n_aborts': 0, 'n_successes': 357, 'steps': 59, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.156
+{'n_aborts': 0, 'n_successes': 357, 'steps': 60, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.097
+{'n_aborts': 0, 'n_successes': 357, 'steps': 61, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.155
+{'n_aborts': 0, 'n_successes': 373, 'steps': 62, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.093
+{'n_aborts': 0, 'n_successes': 389, 'steps': 63, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 504.1
+{'n_aborts': 0, 'n_successes': 390, 'steps': 64, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '434.', 'RL_time': '45.5', 'decision_time': '503.'}
+total pass time 0.242
+{'n_aborts': 0, 'n_successes': 395, 'steps': 65, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.205
+{'n_aborts': 0, 'n_successes': 398, 'steps': 66, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.149
+{'n_aborts': 0, 'n_successes': 398, 'steps': 67, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.103
+{'n_aborts': 0, 'n_successes': 398, 'steps': 68, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.192
+{'n_aborts': 0, 'n_successes': 415, 'steps': 69, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.107
+{'n_aborts': 0, 'n_successes': 431, 'steps': 70, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 540.7
+{'n_aborts': 0, 'n_successes': 434, 'steps': 71, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '478.', 'RL_time': '56.3', 'decision_time': '539.'}
+total pass time 0.159
+{'n_aborts': 0, 'n_successes': 435, 'steps': 72, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.201
+{'n_aborts': 0, 'n_successes': 435, 'steps': 73, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.163
+{'n_aborts': 0, 'n_successes': 435, 'steps': 74, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.127
+{'n_aborts': 0, 'n_successes': 435, 'steps': 75, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.196
+{'n_aborts': 0, 'n_successes': 451, 'steps': 76, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.140
+{'n_aborts': 0, 'n_successes': 475, 'steps': 77, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 96.56
+{'n_aborts': 0, 'n_successes': 479, 'steps': 78, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '72.9', 'RL_time': '21.6', 'decision_time': '96.1'}
+total pass time 0.064
+{'n_aborts': 0, 'n_successes': 480, 'steps': 79, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.066
+{'n_aborts': 0, 'n_successes': 480, 'steps': 80, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.070
+{'n_aborts': 0, 'n_successes': 480, 'steps': 81, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.048
+{'n_aborts': 0, 'n_successes': 480, 'steps': 82, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.080
+{'n_aborts': 0, 'n_successes': 491, 'steps': 83, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.034
+{'n_aborts': 0, 'n_successes': 495, 'steps': 84, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 9.718
+{'n_aborts': 0, 'n_successes': 496, 'steps': 85, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '3.26', 'RL_time': '6.02', 'decision_time': '9.62'}
+total pass time 0.018
+{'n_aborts': 0, 'n_successes': 496, 'steps': 86, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.017
+{'n_aborts': 0, 'n_successes': 496, 'steps': 87, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.022
+{'n_aborts': 0, 'n_successes': 496, 'steps': 88, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.019
+{'n_aborts': 0, 'n_successes': 496, 'steps': 89, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.025
+{'n_aborts': 0, 'n_successes': 498, 'steps': 90, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.017
+{'n_aborts': 0, 'n_successes': 499, 'steps': 91, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 2.614
+{'n_aborts': 0, 'n_successes': 499, 'steps': 92, 'name': 'RL-ordered k-smf n=50 T=7', 'conflict_time': '0.23', 'RL_time': '2.20', 'decision_time': '2.57'}
+total pass time 0.015
+{'n_aborts': 0, 'n_successes': 499, 'steps': 93, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.013
+{'n_aborts': 0, 'n_successes': 499, 'steps': 94, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.014
+{'n_aborts': 0, 'n_successes': 499, 'steps': 95, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.013
+{'n_aborts': 0, 'n_successes': 499, 'steps': 96, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.017
+{'n_aborts': 0, 'n_successes': 500, 'steps': 97, 'name': 'RL-ordered k-smf n=50 T=7'}
+total pass time 0.005
+{'n_aborts': 0, 'n_successes': 500, 'steps': 97, 'name': 'RL-ordered k-smf n=50 T=7'}
+contestant RL-ordered k-smf n=50 T=7 is done, makespan = 97
+{'n_aborts': 0, 'n_successes': 500, 'steps': 97, 'name': 'RL-ordered k-smf n=50 T=7'}

@@ -708,18 +708,19 @@ class LumpScheduler(Scheduler):
         #print(self.memory, flush=True)
         for i, txn in enumerate(TxnPool):
             if txn.txn not in self.memory: 
-                #assert False, "transaction not scheduled"
-                res[i] = 0
+                assert False, "transaction not scheduled"
+                # res[i] = 0
             else:
                 ts = self.memory[txn.txn]
                 if self.step > ts: 
-                    # assert False, "transaction should have been scheduled earlier"
-                    res[i] = 0
+                    assert False, f'transaction should have been scheduled earlier, ts={ts}, self.step={self.step}'
+                    # res[i] = 0
                 if self.dont_care is not None and self.dont_care == ts: 
                     res[i] = -1
                 elif self.step == ts: 
                     res[i] = 1 # schedule it
-        self.step += 1
+                elif self.step < ts:
+                    res[i] = 1 + ts - self.step
         return res
 
 
