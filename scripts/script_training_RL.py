@@ -30,19 +30,34 @@ def generator(num_txns, T):
             for t in range(-T, T + 1, 1):
                 for i, t1 in enumerate(random_transactions):
                     for j, t2 in enumerate(random_transactions):
-                        arr[b][i][j][t + T] = conflict(t1, t2, t)
+                        if i == j:
+                            arr[b][i][j][t + T] = 0
+                        else:
+                            arr[b][i][j][t + T] = conflict(t1, t2, t)
         return arr, random_transactions_list
     return gen
 
-N = 20
+N = 50
 T = 7
 EPISODES = 100
 GAMMA = 0.9 # discount factor
 EPSILON = 0.1
 LR = 1e-3
 batch_size = 1
+
+def print_conflict_matrix(conflict_tensor):
+    conflict_matrix = conflict_tensor[0].cpu().numpy()
+    for i in range(len(conflict_matrix)):
+        conflicts = []
+        for j in range(len(conflict_matrix[i])):
+            if np.any(conflict_matrix[i][j]):
+                conflicts.append(j)
+        print(f'{i}: {conflicts}', flush=True)
     
-def print_conflict_matrix(conflict_tensor, transactions):
+
+
+    
+def print_conflict_matrix_old(conflict_tensor, transactions):
     """
     Print raw conflict matrix for each transaction.
 
@@ -50,10 +65,11 @@ def print_conflict_matrix(conflict_tensor, transactions):
         conflict_tensor: torch tensor of shape (batch, N, N, 2T+1)
         transactions: list of Transaction objects
     """
+    return None
     # Take first batch and convert to numpy
     conflict_matrix = conflict_tensor[0].cpu().numpy()
-    N = conflict_matrix.shape[0]
-    T = (conflict_matrix.shape[2] - 1) // 2
+    # N = conflict_matrix.shape[0]
+    # T = (conflict_matrix.shape[2] - 1) // 2
     print(conflict_matrix.shape)
 
     print("\n" + "="*80)
@@ -86,9 +102,11 @@ reward_history = []
 for episode in tqdm(range(EPISODES), desc="training", unit="epoch"):
     conflict_matrix, random_transactions_list = data_gen(batch_size)
     conflict_matrix = torch.tensor(conflict_matrix)
+    if episode >= 99:
+        print_conflict_matrix(conflict_matrix)
     #print_conflict_matrix(conflict_matrix, random_transactions_list[0])
-    for i in range(2):
-        total_reward = trainer.run_episode(conflict_matrix)
+    total_reward = trainer.run_episode(conflict_matrix, episode)
+    if total_reward is not None: #no conflicts
         reward_history.append(total_reward)
 
     if (episode + 1) % 50 == 0:
@@ -105,5 +123,5 @@ plt.title("Reward History Curve")
 plt.grid()
 plt.show()
 
-with open("model_RL_20_TPCC_corr.pkl", "wb") as f:
+with open("model_RL_50_TPCC_corr.pkl", "wb") as f:
     pickle.dump(trainer.q_net, f)

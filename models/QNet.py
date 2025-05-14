@@ -2,6 +2,7 @@ import random
 import torch
 import torch.optim as optim
 import torch.nn as nn
+import numpy as np
 
 class QNetwork(nn.Module):
     def __init__(self, N, T, hidden_dim=128):
@@ -130,7 +131,7 @@ class Trainer:
         loss.backward()
         self.optimizer.step()
 
-    def run_episode(self, conflict_matrix):
+    def run_episode(self, conflict_matrix, episode_number=0):
         N, T = self.N, self.T # convenience
         assert conflict_matrix.shape == (1, N, N, 2*T+1), f"conflict_matrix.shape = {conflict_matrix.shape}"
         conflict_matrix = conflict_matrix.squeeze()
@@ -148,8 +149,13 @@ class Trainer:
             if conflict_matrix[i].sum() == 0:
                 skipped.append((i, 0))
                 mask[i] = 1
+        if episode_number >= 99:
+            print(f'skipped: {sorted(skipped)}', flush=True)
+        
+        if len(skipped) == self.N:
+            return None
 
-        for step in range(self.N):
+        for step in range(self.N - len(skipped)):
             state_tensor = self.q_net.get_state_tensor(conflict_matrix, mask)
             assert state_tensor.shape == (N*N*(2*T+1)+N,), f"state_tensor.shape = {state_tensor.shape}"
             action = self.q_net.select_action(state_tensor, mask)
@@ -171,7 +177,8 @@ class Trainer:
                 self.train_step(state_tensor, action, reward, next_state_tensor, done)
 
             if done: break
-        print(scheduled, flush=True)
+        if episode_number >= 95 and len(skipped) != self.N:
+            print(f'scheduled: {sorted(scheduled)}', flush=True)
         return total_reward
 
     def compute_reward(self, new_action, scheduled, conflict_matrix, mask):
@@ -234,3 +241,12 @@ class Trainer:
             return reward_curve[pos] * difficulty, pos
         # print('fail', difficulty, flush=True)
         return -3., -1
+    
+    def print_conflict_matrix(conflict_tensor):
+        conflict_matrix = conflict_tensor[0].cpu().numpy()
+        for i in range(len(conflict_matrix)):
+            conflicts = []
+            for j in range(len(conflict_matrix[i])):
+                if np.any(conflict_matrix[i][j]):
+                    conflicts.append(j)
+            print(f'{i}: {conflicts}', flush=True)

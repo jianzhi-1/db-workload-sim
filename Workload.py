@@ -358,8 +358,8 @@ class TPCCWorkload(Workload):
 if __name__ == "__main__":
     workload = SmallBankWorkload()
 
-    probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
-    num_txns = 100
+    probabilities = [1,0,0,0,0,0] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
+    num_txns = 3
     random_transactions = workload.generate_random_transactions(num_txns, probabilities)
     print(random_transactions)
    
