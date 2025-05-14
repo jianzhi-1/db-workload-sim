@@ -51,12 +51,13 @@ class WriteOperation(Operation):
         return f"Write({self.resource})"
 
 class Transaction():
-    def __init__(self, txn:int, operations:list[Operation], txn_type:str=""):
+    def __init__(self, txn:int, operations:list[Operation], txn_type:str="", resource_to_ts:dict={}):
         self.txn = txn
         self.txn_type = txn_type # annotation only, not used
         assert len(operations) > 0
         self.operations = operations  # List of Read/Write objects
         self.operations[-1].is_last = True
+        self.resource_to_ts = resource_to_ts #mapping of resource to timestep, hopefully to reduct computation on conflict matrix for checking conflict resources
         visited = dict()
         for i in range(len(self.operations) - 1, -1, -1):
             if self.operations[i].resource not in visited:
@@ -67,7 +68,8 @@ class Transaction():
                 self.operations[i].delta_last = visited[self.operations[i].resource] - i
 
     def __repr__(self):
-        return f"Transaction({self.txn}, {self.operations})"
+        # return f"Transaction({self.txn}, {self.operations}, {self.resource_to_ts})"
+        return f"Transaction({self.txn}, {self.resource_to_ts})"
 
 def clone_operation_list(ls:list[Operation]):
     return [ReadOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource, x.res_rows) if x.is_read else WriteOperation(x.txn, x.resource, x.is_last, x.is_last_on_resource, x.res_rows) for x in ls]

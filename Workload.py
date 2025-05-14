@@ -88,17 +88,23 @@ class SmallBankWorkload(Workload):
         txn_type_arr = random.choices(population=list(self.SMALLBANK_TXN_OPS.keys()), weights=probabilities, k=num_txns)
         
         txn_arr = []
-        
+        idx = 0
         for i, v in enumerate(txn_type_arr):
             txn_id = start + i
             op_list = []
             cache = dict()
+            resource_to_ts = dict()
             for op in self.SMALLBANK_TXN_OPS[v]:
                 val = cache[op[3]] if op[3] in cache else self.gen(self.SMALLBANK_INPUT_TYPINGS[v][op[2]])
                 if op[3] not in cache: cache[op[3]] = val
-                if op[0]: op_list.append(WriteOperation(txn_id, (op[1], val))) # write operation
-                else: op_list.append(ReadOperation(txn_id, (op[1], val))) # read operation
-            txn_arr.append(Transaction(txn_id, op_list))
+                if op[0]: 
+                    op_list.append(WriteOperation(txn_id, (op[1], val))) # write operation
+                    resource_to_ts[(op[1], val)] = ("W", idx) # won't be overwritten by later read, all reads before writes on same resource
+                else: 
+                    op_list.append(ReadOperation(txn_id, (op[1], val))) # read operation
+                    resource_to_ts[(op[1], val)] = ("R", idx)
+                idx+=1
+            txn_arr.append(Transaction(txn_id, op_list, v, resource_to_ts))
 
         return txn_arr
 
