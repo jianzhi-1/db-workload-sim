@@ -12,37 +12,52 @@ corr_params = {
     "event_scale": 20.0,
     "correlation_factor": 0.1
 }
-# workload = SmallBankWorkload(correlated=True, corr_params=corr_params)
-workload = TPCCWorkload()
-# probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
-probabilities = [43,41,3,1,3,1,3,1,4]
+workload = SmallBankWorkload(correlated=True, corr_params=corr_params)
+# workload = TPCCWorkload(correlated=False, corr_params=corr_params)
+probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
+# probabilities = [43,41,3,1,3,1,3,1,4]
 workload_arr = []
 oracle_arr = []
 T = 1
-filename = "arena_corr_TPCC.txt"
-timing_filename = "arena_corr_TPCC_times.txt"
+filename = "results/arena_corr_SB_2.txt"
+timing_filename = "results/arena_corr_SB_times_2.txt"
 for t in range(T):
-    num_txns = 500
+    num_txns = 1000
     random_transactions = workload.generate_transactions(num_txns, probabilities=probabilities, start=t*num_txns)
     oracle_arr.append(workload.get_sticky_list())
     workload_arr.append([clone_transaction(txn) for txn in random_transactions])
 
 class Contestant():
-    def __init__(self, name:str, scheduler:Scheduler, model=None, filterT:bool = False, skipT:bool = False):
+    def __init__(self, name:str, scheduler:Scheduler, model=None, n:int=None, T:int=None, filterT:bool = False, skipT:bool = False):
         self.name = name
         self.scheduler = scheduler
         self.sim = Simulator(scheduler, [], filterT, skipT)
         self.sim.model = model
         self.done = False
         self.makespan = None
+        self.n = n
+        self.T = T
+
 
 contestants:list[Contestant] = []
 
 # with open('model_linear.pkl', 'rb') as f:
 #    model_linear = pickle.load(f)
 
+with open('model_RL_20_TPCC_corr.pkl', 'rb') as f:
+    model_RL_20_TPCC_corr = pickle.load(f)
 with open('model_RL_50_TPCC_corr.pkl', 'rb') as f:
-    model_RL = pickle.load(f)
+    model_RL_50_TPCC_corr = pickle.load(f)
+with open('model_RL_100_TPCC_corr.pkl', 'rb') as f:
+    model_RL_100_TPCC_corr = pickle.load(f)
+
+with open('model_RL_20_SB_corr.pkl', 'rb') as f:
+    model_RL_20_SB_corr = pickle.load(f)
+with open('model_RL_50_SB_corr.pkl', 'rb') as f:
+    model_RL_50_SB_corr = pickle.load(f)
+with open('model_RL_100_SB_corr.pkl', 'rb') as f:
+    model_RL_100_SB_corr = pickle.load(f)
+
 
 # with open('model_RL_20_TPCC_corr.pkl', 'rb') as f:
     # model_RL_20 = pickle.load(f)
@@ -50,32 +65,57 @@ with open('model_RL_50_TPCC_corr.pkl', 'rb') as f:
 
 contestants.extend(
     [
-        # Contestant("k-smf-k=5", scheduler = KSMFScheduler(k=5)),
-        # Contestant("k-smf-twisted-k=5", scheduler = KSMFTwistedScheduler(k=5)),
+        Contestant("k-smf-k=5", scheduler = KSMFScheduler(k=5)),
+        Contestant("k-smf-twisted-k=5", scheduler = KSMFTwistedScheduler(k=5)),
         # # Contestant("k-smf-twisted-k=10", scheduler = KSMFTwistedScheduler(k=10)),
         # # Contestant("k-smf-k=10", scheduler = KSMFScheduler(k=10)),
         # Contestant("k-smf-oracle-k=5", scheduler = KSMFOracleScheduler(k=5)),
         # #Contestant("k-smf-oracle-2-phase", scheduler = KSMFOracle2PhaseScheduler(k=5)),
         # Contestant("k-smf-oracle-2-phase-k=5", scheduler = KSMFOracle2PhaseDontCareScheduler(k=5)),
-        # Contestant("k-smf-twisted-oracle-2-phase-k=5", scheduler = KSMFTwistedOracle2PhaseDontCareScheduler(k=5)),
+        Contestant("k-smf-twisted-oracle-2-phase-k=5", scheduler = KSMFTwistedOracle2PhaseDontCareScheduler(k=5)),
         # Contestant("int-opt-k=10 n=20", QueueKernelScheduler(n_queues=10, kernel=KernelWrapper(IntegerOptimisationKernelMkII(20)))),
         #Contestant("k-smf-zero", scheduler = KSMFZeroScheduler(k=5))
         # Contestant("Linear Model", scheduler=LumpScheduler(), model=model_linear),
         # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = False),
         # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = True),
 
-        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = False, skipT = False),
-        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = False, skipT = True),
-        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = True, skipT = False),
-        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = True, skipT = True),
+        Contestant("RL n=20 T=6", scheduler=LumpScheduler(), model=model_RL_20_SB_corr, n=20, T=6, filterT = False, skipT = False),
+        Contestant("RL n=20 T=6 filterT", scheduler=LumpScheduler(), model=model_RL_20_SB_corr, n=20, T=6, filterT = True, skipT = False),
+        Contestant("RL n=20 T=6 skipT", scheduler=LumpScheduler(), model=model_RL_20_SB_corr, n=20, T=6, filterT = False, skipT = True),
+        Contestant("RL n=20 T=6 filterT skipT", scheduler=LumpScheduler(), model=model_RL_20_SB_corr, n=20, T=6, filterT = True, skipT = True),
+        Contestant("RL-smf n=20 T=6", scheduler=RLSMFTwistedScheduler(), model=model_RL_20_SB_corr, n=20, T=6, filterT = False, skipT = False),
+        # Contestant("RL-smf n=20 T=6 filterT", scheduler=RLSMFTwistedScheduler(), model=model_RL_20_SB_corr, n=20, T=6, filterT = True, skipT = False),
 
-        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = False, skipT = False),
-        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = False, skipT = True),
-        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = True, skipT = False),
-        Contestant("RL-ordered k-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL, filterT = True, skipT = True),
+        Contestant("RL n=50 T=6", scheduler=LumpScheduler(), model=model_RL_50_SB_corr, n=50, T=6, filterT = False, skipT = False),
+        Contestant("RL n=50 T=6 filterT", scheduler=LumpScheduler(), model=model_RL_50_SB_corr, n=50, T=6, filterT = True, skipT = False),
+        Contestant("RL n=50 T=6 skipT", scheduler=LumpScheduler(), model=model_RL_50_SB_corr, n=50, T=6, filterT = False, skipT = True),
+        Contestant("RL n=50 T=6 filterT skipT", scheduler=LumpScheduler(), model=model_RL_50_SB_corr, n=50, T=6, filterT = True, skipT = True),
+        Contestant("RL-smf n=50 T=6", scheduler=RLSMFTwistedScheduler(), model=model_RL_50_SB_corr, n=50, T=6, filterT = False, skipT = False),
+        # Contestant("RL-smf n=50 T=6 filterT", scheduler=RLSMFTwistedScheduler(), model=model_RL_50_SB_corr, n=50, T=6, filterT = True, skipT = False),
 
-        # Contestant("RL-ordered k-smf n=50 T=7", scheduler=LumpScheduler(), model=model_RL, filterT = True),
-        # Contestant("RL-ordered k-smf n=20 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL_20),
+        Contestant("RL n=100 T=6", scheduler=LumpScheduler(), model=model_RL_100_SB_corr, n=100, T=6, filterT = False, skipT = False),
+        Contestant("RL n=100 T=6 filterT", scheduler=LumpScheduler(), model=model_RL_100_SB_corr, n=100, T=6, filterT = True, skipT = False),
+        Contestant("RL n=100 T=6 skipT", scheduler=LumpScheduler(), model=model_RL_100_SB_corr, n=100, T=6, filterT = False, skipT = True),
+        Contestant("RL n=100 T=6 filterT skipT", scheduler=LumpScheduler(), model=model_RL_100_SB_corr, n=100, T=6, filterT = True, skipT = True),
+        Contestant("RL-smf n=100 T=6", scheduler=RLSMFTwistedScheduler(), model=model_RL_100_SB_corr, n=100, T=6, filterT = False, skipT = False),
+        # Contestant("RL-smf n=100 T=6 filterT", scheduler=RLSMFTwistedScheduler(), model=model_RL_100_SB_corr, n=100, T=6, filterT = True, skipT = False),
+        
+
+        # Contestant("RL n=20 T=7", scheduler=LumpScheduler(), model=model_RL_20_TPCC_corr, n=20, T=7, filterT = False, skipT = False),
+        # Contestant("RL n=20 T=7 filterT", scheduler=LumpScheduler(), model=model_RL_20_TPCC_corr, n=20, T=7, filterT = True, skipT = False),
+        # Contestant("RL-smf n=20 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL_20_TPCC_corr, n=20, T=7, filterT = False, skipT = False),
+        # Contestant("RL-smf n=20 T=7 filterT", scheduler=RLSMFTwistedScheduler(), model=model_RL_20_TPCC_corr, n=20, T=7, filterT = True, skipT = False),
+
+        # Contestant("RL n=50 T=7", scheduler=LumpScheduler(), model=model_RL_50_TPCC_corr, n=50, T=7, filterT = False, skipT = False),
+        # Contestant("RL n=50 T=7 filterT", scheduler=LumpScheduler(), model=model_RL_50_TPCC_corr, n=50, T=7, filterT = True, skipT = False),
+        # Contestant("RL-smf n=50 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL_50_TPCC_corr, n=50, T=7, filterT = False, skipT = False),
+        # Contestant("RL-smf n=50 T=7 filterT", scheduler=RLSMFTwistedScheduler(), model=model_RL_50_TPCC_corr, n=50, T=7, filterT = True, skipT = False),
+
+        # Contestant("RL n=100 T=7", scheduler=LumpScheduler(), model=model_RL_100_TPCC_corr, n=100, T=7, filterT = False, skipT = False),
+        # Contestant("RL n=100 T=7 filterT", scheduler=LumpScheduler(), model=model_RL_100_TPCC_corr, n=100, T=7, filterT = True, skipT = False),
+        # Contestant("RL-smf n=100 T=7", scheduler=RLSMFTwistedScheduler(), model=model_RL_100_TPCC_corr, n=100, T=7, filterT = False, skipT = False),
+        # Contestant("RL-smf n=100 T=7 filterT", scheduler=RLSMFTwistedScheduler(), model=model_RL_100_TPCC_corr, n=100, T=7, filterT = True, skipT = False),
+       
     ]
 )
 
@@ -90,16 +130,11 @@ for t in range(T):
         
         start_time = time.time()
         if contestant.sim.model is not None:
-            if contestant.name == "Linear Model":
-                contestant.sim.sim(retryOnAbort=True, n=50, T=7, ML_RL="ML")
-            elif contestant.name == "RL-ordered k-smf n=50 T=7":
-                contestant.sim.sim(retryOnAbort=True, n=50, T=7, ML_RL="RL")
-            elif contestant.name == "RL-ordered k-smf n=20 T=7":
-                contestant.sim.sim(retryOnAbort=True, n=20, T=7, ML_RL="RL")
+            contestant.sim.sim(retryOnAbort=True, n=contestant.n, T=contestant.T, ML_RL="RL")
         else:
             contestant.sim.sim(retryOnAbort=True)
         end_time = time.time()
-        print('total pass time', str((end_time - start_time) * 1000)[:5], flush=True)
+        # print('total pass time', str((end_time - start_time) * 1000)[:5], flush=True)
         
         d = contestant.sim.print_statistics()
         ts = int((end_time - start_time) * 1000)
@@ -133,16 +168,11 @@ while done_counter > 0:
         else:
             start_time = time.time()
             if contestant.sim.model is not None:
-                if contestant.name == "Linear Model":
-                    contestant.sim.sim(retryOnAbort=True, n=50, T=7, ML_RL="ML")
-                elif contestant.name == "RL-ordered k-smf n=50 T=7":
-                    contestant.sim.sim(retryOnAbort=True, n=50, T=7, ML_RL="RL")
-                elif contestant.name == "RL-ordered k-smf n=20 T=7":
-                    contestant.sim.sim(retryOnAbort=True, n=20, T=7, ML_RL="RL")
+                contestant.sim.sim(retryOnAbort=True, n=contestant.n, T=contestant.T, ML_RL="RL")
             else:
                 contestant.sim.sim(retryOnAbort=True)
             end_time = time.time()
-            print('total pass time', str((end_time - start_time) * 1000)[:5], flush=True)
+            # print('total pass time', str((end_time - start_time) * 1000)[:5], flush=True)
             
             d = contestant.sim.print_statistics()
             ts = int((end_time - start_time) * 1000)

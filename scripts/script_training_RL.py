@@ -12,15 +12,31 @@ from Workload import SmallBankWorkload, TPCCWorkload
 from models.QNet import Trainer
 from utils import conflict
 
-def generator(num_txns, T):
-    corr_params = {
-        "normal_scale": 10.0,
-        "event_scale": 20.0,
-        "correlation_factor": 0.1
-    }
-    workload = TPCCWorkload(correlated=True, corr_params=corr_params)
-    # probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
-    probabilities = [43,41,3,1,3,1,3,1,4]
+#edit these params
+N = 50
+workload_str = "SB" #SmallBank
+# workload_str = "TPCC"
+correlated = True
+
+
+T = 6 if workload_str == "SB" else 7
+print(T, flush=True)
+EPISODES = 100
+GAMMA = 0.9 # discount factor
+EPSILON = 0.1
+LR = 1e-3
+batch_size = 1
+corr_params = {
+    "normal_scale": 10.0,
+    "event_scale": 20.0,
+    "correlation_factor": 0.1
+}
+
+def generator(num_txns, T, workload_str:str="SB"):
+    workload = SmallBankWorkload(correlated=correlated, corr_params=corr_params) if workload_str == "SB" else TPCCWorkload(correlated=correlated, corr_params=corr_params)
+    # workload = TPCCWorkload(correlated=True, corr_params=corr_params)
+    probabilities = [0.15, 0.15, 0.15, 0.25, 0.15, 0.15] if workload_str == "SB" else [43,41,3,1,3,1,3,1,4]
+    # Smallbank # https://github.com/cmu-db/benchbase/blob/main/config/mysql/sample_smallbank_config.xml#L22
     def gen(batch_size, eps=0.1):
         arr = np.zeros((batch_size, num_txns, num_txns, 2*T + 1))
         random_transactions_list = []
@@ -37,14 +53,6 @@ def generator(num_txns, T):
         return arr, random_transactions_list
     return gen
 
-N = 50
-T = 7
-EPISODES = 100
-GAMMA = 0.9 # discount factor
-EPSILON = 0.1
-LR = 1e-3
-batch_size = 1
-
 def print_conflict_matrix(conflict_tensor):
     conflict_matrix = conflict_tensor[0].cpu().numpy()
     for i in range(len(conflict_matrix)):
@@ -52,10 +60,8 @@ def print_conflict_matrix(conflict_tensor):
         for j in range(len(conflict_matrix[i])):
             if np.any(conflict_matrix[i][j]):
                 conflicts.append(j)
-        print(f'{i}: {conflicts}', flush=True)
-    
-
-
+        if len(conflicts) > 0:
+            print(f'{i}: {conflicts}', flush=True)
     
 def print_conflict_matrix_old(conflict_tensor, transactions):
     """
@@ -91,7 +97,7 @@ def print_conflict_matrix_old(conflict_tensor, transactions):
             row = f"{j} | " + " | ".join([f"{round(conflict_matrix[i,j,t])}" for t in range(2*T+1)])
             print(row)
 
-data_gen = generator(N, T)
+data_gen = generator(N, T, workload_str)
 # Instantiate scheduler
 trainer = Trainer(N=N, T=T, lr=LR, gamma=GAMMA, epsilon=EPSILON)
 # with open("model_RL_50.pkl", "rb") as f:
@@ -102,9 +108,8 @@ reward_history = []
 for episode in tqdm(range(EPISODES), desc="training", unit="epoch"):
     conflict_matrix, random_transactions_list = data_gen(batch_size)
     conflict_matrix = torch.tensor(conflict_matrix)
-    # if episode >= 99:
-        # print_conflict_matrix(conflict_matrix)
-    #print_conflict_matrix(conflict_matrix, random_transactions_list[0])
+    if episode >= 95:
+        print_conflict_matrix(conflict_matrix)
     total_reward = trainer.run_episode(conflict_matrix, episode)
     if total_reward is not None: #no conflicts
         reward_history.append(total_reward)
@@ -123,5 +128,5 @@ plt.title("Reward History Curve")
 plt.grid()
 plt.show()
 
-with open("model_RL_50_TPCC_corr.pkl", "wb") as f:
+with open(f'model_RL_{N}_{workload_str}{'_corr' if correlated else ''}.pkl', "wb") as f:
     pickle.dump(trainer.q_net, f)

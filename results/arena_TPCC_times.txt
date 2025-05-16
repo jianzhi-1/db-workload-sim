@@ -1,326 +1,707 @@
-{'name': 'k-smf-k=5', 'time': 160}
-{'name': 'k-smf-twisted-k=5', 'time': 999}
-{'name': 'k-smf-oracle-k=5', 'time': 199}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 206}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 599}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 4758}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 550}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 9}
-{'name': 'k-smf-oracle-k=5', 'time': 10}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 10}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 20}
-{'name': 'k-smf-twisted-k=5', 'time': 10}
-{'name': 'k-smf-oracle-k=5', 'time': 9}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 10}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 20}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 10}
-{'name': 'k-smf-twisted-k=5', 'time': 9}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 9}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 10}
-{'name': 'k-smf-twisted-k=5', 'time': 9}
-{'name': 'k-smf-oracle-k=5', 'time': 9}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 10}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 9}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 20}
-{'name': 'k-smf-twisted-k=5', 'time': 19}
-{'name': 'k-smf-oracle-k=5', 'time': 19}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 22}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 30}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 9}
-{'name': 'k-smf-twisted-k=5', 'time': 10}
-{'name': 'k-smf-oracle-k=5', 'time': 10}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 9}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 9}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 3715}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 665}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 9}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 12}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 10}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 9}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 9}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 9}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 3855}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 650}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 10}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 12}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 12}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 3377}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 605}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'k-smf-k=5', 'time': 0}
-{'name': 'k-smf-twisted-k=5', 'time': 0}
-{'name': 'k-smf-oracle-2-phase-k=5', 'time': 0}
-{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 3565}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 637}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 3429}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 545}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 3533}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 595}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 3215}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 720}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 10}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 3367}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 600}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 4250}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 797}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 10}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 627}
-{'name': 'RL-ordered k-smf n=50 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 731}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 517}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 10}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 519}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 582}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 648}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 701}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 9}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 877}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 11}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 9}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 10}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 9}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 604}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 10}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 9}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 569}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 604}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 561}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 774}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 624}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 1260}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
-{'name': 'RL-ordered k-smf n=20 T=6', 'time': 0}
+{'name': 'k-smf-k=5', 'total_time': 34, 'decision_time': 28, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 181, 'decision_time': 174, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 223, 'decision_time': 169, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 140, 'decision_time': 140, 'conflict_time': 48, 'RL_time': 91}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 61, 'decision_time': 60, 'conflict_time': 48, 'RL_time': 10}
+{'name': 'RL-smf n=20 T=7', 'total_time': 61, 'decision_time': 61, 'conflict_time': 49, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 62, 'decision_time': 62, 'conflict_time': 50, 'RL_time': 11}
+{'name': 'RL n=50 T=7', 'total_time': 367, 'decision_time': 366, 'conflict_time': 327, 'RL_time': 39}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 366, 'decision_time': 366, 'conflict_time': 334, 'RL_time': 31}
+{'name': 'RL-smf n=50 T=7', 'total_time': 353, 'decision_time': 352, 'conflict_time': 318, 'RL_time': 32}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 351, 'decision_time': 351, 'conflict_time': 321, 'RL_time': 29}
+{'name': 'RL n=100 T=7', 'total_time': 1497, 'decision_time': 1496, 'conflict_time': 1315, 'RL_time': 180}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1524, 'decision_time': 1523, 'conflict_time': 1343, 'RL_time': 177}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1743, 'decision_time': 1743, 'conflict_time': 1272, 'RL_time': 465}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1449, 'decision_time': 1448, 'conflict_time': 1267, 'RL_time': 175}
+{'name': 'k-smf-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 2, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 63, 'decision_time': 63, 'conflict_time': 52, 'RL_time': 11}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 63, 'decision_time': 62, 'conflict_time': 50, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 63, 'decision_time': 63, 'conflict_time': 52, 'RL_time': 8}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 66, 'decision_time': 66, 'conflict_time': 54, 'RL_time': 10}
+{'name': 'RL n=50 T=7', 'total_time': 356, 'decision_time': 356, 'conflict_time': 327, 'RL_time': 29}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 372, 'decision_time': 371, 'conflict_time': 332, 'RL_time': 39}
+{'name': 'RL-smf n=50 T=7', 'total_time': 361, 'decision_time': 360, 'conflict_time': 331, 'RL_time': 28}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 389, 'decision_time': 389, 'conflict_time': 342, 'RL_time': 43}
+{'name': 'RL n=100 T=7', 'total_time': 1879, 'decision_time': 1877, 'conflict_time': 1306, 'RL_time': 570}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1739, 'decision_time': 1738, 'conflict_time': 1309, 'RL_time': 427}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1485, 'decision_time': 1484, 'conflict_time': 1305, 'RL_time': 173}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1549, 'decision_time': 1548, 'conflict_time': 1333, 'RL_time': 206}
+{'name': 'k-smf-k=5', 'total_time': 2, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 2, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 2, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 69, 'decision_time': 68, 'conflict_time': 55, 'RL_time': 12}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 65, 'decision_time': 65, 'conflict_time': 52, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 66, 'decision_time': 66, 'conflict_time': 52, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 68, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 11}
+{'name': 'RL n=50 T=7', 'total_time': 356, 'decision_time': 356, 'conflict_time': 323, 'RL_time': 33}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 346, 'decision_time': 346, 'conflict_time': 311, 'RL_time': 34}
+{'name': 'RL-smf n=50 T=7', 'total_time': 341, 'decision_time': 341, 'conflict_time': 307, 'RL_time': 32}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 347, 'decision_time': 346, 'conflict_time': 309, 'RL_time': 36}
+{'name': 'RL n=100 T=7', 'total_time': 1918, 'decision_time': 1917, 'conflict_time': 1337, 'RL_time': 578}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1775, 'decision_time': 1773, 'conflict_time': 1339, 'RL_time': 431}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1538, 'decision_time': 1537, 'conflict_time': 1356, 'RL_time': 175}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1585, 'decision_time': 1584, 'conflict_time': 1356, 'RL_time': 221}
+{'name': 'k-smf-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 2, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 68, 'decision_time': 67, 'conflict_time': 53, 'RL_time': 14}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 80, 'decision_time': 79, 'conflict_time': 65, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 69, 'decision_time': 67, 'conflict_time': 53, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 67, 'decision_time': 66, 'conflict_time': 53, 'RL_time': 10}
+{'name': 'RL n=50 T=7', 'total_time': 383, 'decision_time': 382, 'conflict_time': 349, 'RL_time': 32}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 372, 'decision_time': 372, 'conflict_time': 340, 'RL_time': 31}
+{'name': 'RL-smf n=50 T=7', 'total_time': 378, 'decision_time': 378, 'conflict_time': 341, 'RL_time': 33}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 376, 'decision_time': 376, 'conflict_time': 342, 'RL_time': 31}
+{'name': 'RL n=100 T=7', 'total_time': 1725, 'decision_time': 1724, 'conflict_time': 1340, 'RL_time': 384}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1528, 'decision_time': 1526, 'conflict_time': 1347, 'RL_time': 178}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1619, 'decision_time': 1618, 'conflict_time': 1338, 'RL_time': 204}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1603, 'decision_time': 1602, 'conflict_time': 1369, 'RL_time': 225}
+{'name': 'k-smf-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 2, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 68, 'decision_time': 67, 'conflict_time': 57, 'RL_time': 10}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 64, 'decision_time': 63, 'conflict_time': 53, 'RL_time': 10}
+{'name': 'RL-smf n=20 T=7', 'total_time': 63, 'decision_time': 63, 'conflict_time': 51, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 66, 'decision_time': 65, 'conflict_time': 51, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 387, 'decision_time': 386, 'conflict_time': 352, 'RL_time': 33}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 384, 'decision_time': 383, 'conflict_time': 335, 'RL_time': 47}
+{'name': 'RL-smf n=50 T=7', 'total_time': 352, 'decision_time': 351, 'conflict_time': 321, 'RL_time': 28}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 367, 'decision_time': 367, 'conflict_time': 327, 'RL_time': 35}
+{'name': 'RL n=100 T=7', 'total_time': 1842, 'decision_time': 1840, 'conflict_time': 1357, 'RL_time': 483}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1523, 'decision_time': 1522, 'conflict_time': 1346, 'RL_time': 173}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1608, 'decision_time': 1607, 'conflict_time': 1392, 'RL_time': 209}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1595, 'decision_time': 1594, 'conflict_time': 1353, 'RL_time': 233}
+{'name': 'k-smf-k=5', 'total_time': 3, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 4, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 6, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 63, 'decision_time': 62, 'conflict_time': 50, 'RL_time': 11}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 64, 'decision_time': 63, 'conflict_time': 50, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 64, 'decision_time': 64, 'conflict_time': 50, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 66, 'decision_time': 65, 'conflict_time': 52, 'RL_time': 11}
+{'name': 'RL n=50 T=7', 'total_time': 398, 'decision_time': 397, 'conflict_time': 367, 'RL_time': 29}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 386, 'decision_time': 385, 'conflict_time': 355, 'RL_time': 30}
+{'name': 'RL-smf n=50 T=7', 'total_time': 395, 'decision_time': 394, 'conflict_time': 360, 'RL_time': 31}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 386, 'decision_time': 385, 'conflict_time': 347, 'RL_time': 35}
+{'name': 'RL n=100 T=7', 'total_time': 1859, 'decision_time': 1856, 'conflict_time': 1419, 'RL_time': 436}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1626, 'decision_time': 1623, 'conflict_time': 1422, 'RL_time': 200}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1640, 'decision_time': 1638, 'conflict_time': 1420, 'RL_time': 211}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1659, 'decision_time': 1657, 'conflict_time': 1410, 'RL_time': 237}
+{'name': 'k-smf-k=5', 'total_time': 3, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 3, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 2, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 67, 'decision_time': 67, 'conflict_time': 56, 'RL_time': 10}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 59, 'decision_time': 59, 'conflict_time': 48, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 61, 'decision_time': 61, 'conflict_time': 47, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 60, 'decision_time': 60, 'conflict_time': 49, 'RL_time': 10}
+{'name': 'RL n=50 T=7', 'total_time': 375, 'decision_time': 374, 'conflict_time': 339, 'RL_time': 34}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 376, 'decision_time': 375, 'conflict_time': 346, 'RL_time': 28}
+{'name': 'RL-smf n=50 T=7', 'total_time': 364, 'decision_time': 364, 'conflict_time': 333, 'RL_time': 28}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 361, 'decision_time': 360, 'conflict_time': 328, 'RL_time': 29}
+{'name': 'RL n=100 T=7', 'total_time': 1721, 'decision_time': 1718, 'conflict_time': 1336, 'RL_time': 382}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1528, 'decision_time': 1525, 'conflict_time': 1347, 'RL_time': 177}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1592, 'decision_time': 1589, 'conflict_time': 1352, 'RL_time': 229}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1592, 'decision_time': 1589, 'conflict_time': 1350, 'RL_time': 227}
+{'name': 'k-smf-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 74, 'decision_time': 73, 'conflict_time': 61, 'RL_time': 12}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 64, 'decision_time': 64, 'conflict_time': 52, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 65, 'decision_time': 64, 'conflict_time': 50, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 64, 'decision_time': 63, 'conflict_time': 50, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 366, 'decision_time': 365, 'conflict_time': 336, 'RL_time': 29}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 361, 'decision_time': 360, 'conflict_time': 333, 'RL_time': 26}
+{'name': 'RL-smf n=50 T=7', 'total_time': 395, 'decision_time': 394, 'conflict_time': 359, 'RL_time': 33}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 375, 'decision_time': 373, 'conflict_time': 339, 'RL_time': 32}
+{'name': 'RL n=100 T=7', 'total_time': 1889, 'decision_time': 1885, 'conflict_time': 1389, 'RL_time': 495}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1540, 'decision_time': 1536, 'conflict_time': 1354, 'RL_time': 181}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1685, 'decision_time': 1683, 'conflict_time': 1373, 'RL_time': 229}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1608, 'decision_time': 1606, 'conflict_time': 1359, 'RL_time': 239}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 74, 'decision_time': 73, 'conflict_time': 62, 'RL_time': 11}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 67, 'decision_time': 67, 'conflict_time': 56, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 70, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 72, 'decision_time': 71, 'conflict_time': 57, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 365, 'decision_time': 364, 'conflict_time': 335, 'RL_time': 29}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 368, 'decision_time': 367, 'conflict_time': 333, 'RL_time': 33}
+{'name': 'RL-smf n=50 T=7', 'total_time': 376, 'decision_time': 375, 'conflict_time': 335, 'RL_time': 39}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 386, 'decision_time': 386, 'conflict_time': 349, 'RL_time': 34}
+{'name': 'RL n=100 T=7', 'total_time': 1762, 'decision_time': 1759, 'conflict_time': 1314, 'RL_time': 445}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1496, 'decision_time': 1492, 'conflict_time': 1316, 'RL_time': 175}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1564, 'decision_time': 1562, 'conflict_time': 1350, 'RL_time': 203}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1525, 'decision_time': 1523, 'conflict_time': 1294, 'RL_time': 221}
+{'name': 'k-smf-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 68, 'decision_time': 67, 'conflict_time': 55, 'RL_time': 11}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 77, 'decision_time': 76, 'conflict_time': 60, 'RL_time': 15}
+{'name': 'RL-smf n=20 T=7', 'total_time': 73, 'decision_time': 73, 'conflict_time': 55, 'RL_time': 15}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 78, 'decision_time': 78, 'conflict_time': 60, 'RL_time': 15}
+{'name': 'RL n=50 T=7', 'total_time': 379, 'decision_time': 378, 'conflict_time': 346, 'RL_time': 31}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 380, 'decision_time': 380, 'conflict_time': 345, 'RL_time': 35}
+{'name': 'RL-smf n=50 T=7', 'total_time': 384, 'decision_time': 383, 'conflict_time': 348, 'RL_time': 34}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 386, 'decision_time': 385, 'conflict_time': 344, 'RL_time': 38}
+{'name': 'RL n=100 T=7', 'total_time': 1793, 'decision_time': 1790, 'conflict_time': 1361, 'RL_time': 427}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 1558, 'decision_time': 1554, 'conflict_time': 1366, 'RL_time': 185}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1597, 'decision_time': 1594, 'conflict_time': 1383, 'RL_time': 205}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 2005, 'decision_time': 2003, 'conflict_time': 1439, 'RL_time': 556}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 63, 'decision_time': 63, 'conflict_time': 51, 'RL_time': 11}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 68, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 67, 'decision_time': 66, 'conflict_time': 52, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 65, 'decision_time': 65, 'conflict_time': 53, 'RL_time': 10}
+{'name': 'RL n=50 T=7', 'total_time': 397, 'decision_time': 396, 'conflict_time': 361, 'RL_time': 34}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 392, 'decision_time': 391, 'conflict_time': 361, 'RL_time': 29}
+{'name': 'RL-smf n=50 T=7', 'total_time': 392, 'decision_time': 391, 'conflict_time': 356, 'RL_time': 31}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 405, 'decision_time': 405, 'conflict_time': 368, 'RL_time': 33}
+{'name': 'RL n=100 T=7', 'total_time': 273, 'decision_time': 270, 'conflict_time': 95, 'RL_time': 174}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 268, 'decision_time': 264, 'conflict_time': 90, 'RL_time': 173}
+{'name': 'RL-smf n=100 T=7', 'total_time': 56, 'decision_time': 53, 'conflict_time': 6, 'RL_time': 45}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 69, 'decision_time': 66, 'conflict_time': 9, 'RL_time': 56}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 86, 'decision_time': 86, 'conflict_time': 63, 'RL_time': 23}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 68, 'decision_time': 67, 'conflict_time': 56, 'RL_time': 10}
+{'name': 'RL-smf n=20 T=7', 'total_time': 68, 'decision_time': 68, 'conflict_time': 50, 'RL_time': 16}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 74, 'decision_time': 73, 'conflict_time': 54, 'RL_time': 18}
+{'name': 'RL n=50 T=7', 'total_time': 409, 'decision_time': 408, 'conflict_time': 370, 'RL_time': 37}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 383, 'decision_time': 382, 'conflict_time': 346, 'RL_time': 36}
+{'name': 'RL-smf n=50 T=7', 'total_time': 392, 'decision_time': 392, 'conflict_time': 350, 'RL_time': 38}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 389, 'decision_time': 389, 'conflict_time': 349, 'RL_time': 37}
+{'name': 'RL n=100 T=7', 'total_time': 42, 'decision_time': 40, 'conflict_time': 1, 'RL_time': 39}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 42, 'decision_time': 40, 'conflict_time': 0, 'RL_time': 39}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 2, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 71, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 14}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 71, 'decision_time': 71, 'conflict_time': 55, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 69, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 72, 'decision_time': 72, 'conflict_time': 56, 'RL_time': 15}
+{'name': 'RL n=50 T=7', 'total_time': 362, 'decision_time': 361, 'conflict_time': 326, 'RL_time': 35}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 356, 'decision_time': 355, 'conflict_time': 324, 'RL_time': 31}
+{'name': 'RL-smf n=50 T=7', 'total_time': 357, 'decision_time': 356, 'conflict_time': 321, 'RL_time': 31}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 356, 'decision_time': 356, 'conflict_time': 320, 'RL_time': 32}
+{'name': 'RL n=100 T=7', 'total_time': 97, 'decision_time': 95, 'conflict_time': 5, 'RL_time': 89}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 96, 'decision_time': 94, 'conflict_time': 6, 'RL_time': 88}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 70, 'decision_time': 70, 'conflict_time': 55, 'RL_time': 15}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 70, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 79, 'decision_time': 79, 'conflict_time': 58, 'RL_time': 19}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 71, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 402, 'decision_time': 401, 'conflict_time': 364, 'RL_time': 37}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 379, 'decision_time': 378, 'conflict_time': 345, 'RL_time': 32}
+{'name': 'RL-smf n=50 T=7', 'total_time': 376, 'decision_time': 376, 'conflict_time': 338, 'RL_time': 34}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 387, 'decision_time': 387, 'conflict_time': 344, 'RL_time': 40}
+{'name': 'RL n=100 T=7', 'total_time': 54, 'decision_time': 53, 'conflict_time': 2, 'RL_time': 50}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 41, 'decision_time': 39, 'conflict_time': 0, 'RL_time': 38}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 70, 'decision_time': 69, 'conflict_time': 54, 'RL_time': 14}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 67, 'decision_time': 67, 'conflict_time': 55, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 71, 'decision_time': 71, 'conflict_time': 55, 'RL_time': 15}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 68, 'decision_time': 68, 'conflict_time': 55, 'RL_time': 11}
+{'name': 'RL n=50 T=7', 'total_time': 378, 'decision_time': 377, 'conflict_time': 340, 'RL_time': 37}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 382, 'decision_time': 381, 'conflict_time': 344, 'RL_time': 36}
+{'name': 'RL-smf n=50 T=7', 'total_time': 392, 'decision_time': 390, 'conflict_time': 355, 'RL_time': 34}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 382, 'decision_time': 381, 'conflict_time': 341, 'RL_time': 39}
+{'name': 'RL n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 2, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 69, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 69, 'decision_time': 68, 'conflict_time': 55, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 73, 'decision_time': 72, 'conflict_time': 54, 'RL_time': 17}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 75, 'decision_time': 75, 'conflict_time': 58, 'RL_time': 15}
+{'name': 'RL n=50 T=7', 'total_time': 368, 'decision_time': 367, 'conflict_time': 332, 'RL_time': 35}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 370, 'decision_time': 370, 'conflict_time': 332, 'RL_time': 38}
+{'name': 'RL-smf n=50 T=7', 'total_time': 375, 'decision_time': 375, 'conflict_time': 332, 'RL_time': 41}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 470, 'decision_time': 469, 'conflict_time': 338, 'RL_time': 38}
+{'name': 'RL n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 69, 'decision_time': 69, 'conflict_time': 52, 'RL_time': 16}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 65, 'decision_time': 65, 'conflict_time': 52, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 68, 'decision_time': 67, 'conflict_time': 54, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 76, 'decision_time': 75, 'conflict_time': 57, 'RL_time': 16}
+{'name': 'RL n=50 T=7', 'total_time': 381, 'decision_time': 380, 'conflict_time': 344, 'RL_time': 35}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 378, 'decision_time': 377, 'conflict_time': 342, 'RL_time': 35}
+{'name': 'RL-smf n=50 T=7', 'total_time': 373, 'decision_time': 373, 'conflict_time': 335, 'RL_time': 35}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 372, 'decision_time': 372, 'conflict_time': 335, 'RL_time': 33}
+{'name': 'RL n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 67, 'decision_time': 67, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 71, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 71, 'decision_time': 71, 'conflict_time': 55, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 71, 'decision_time': 70, 'conflict_time': 55, 'RL_time': 14}
+{'name': 'RL n=50 T=7', 'total_time': 343, 'decision_time': 343, 'conflict_time': 310, 'RL_time': 33}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 348, 'decision_time': 348, 'conflict_time': 314, 'RL_time': 32}
+{'name': 'RL-smf n=50 T=7', 'total_time': 349, 'decision_time': 348, 'conflict_time': 311, 'RL_time': 35}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 348, 'decision_time': 346, 'conflict_time': 311, 'RL_time': 33}
+{'name': 'RL n=100 T=7', 'total_time': 14, 'decision_time': 14, 'conflict_time': 0, 'RL_time': 14}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 14, 'decision_time': 14, 'conflict_time': 0, 'RL_time': 14}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 68, 'decision_time': 67, 'conflict_time': 55, 'RL_time': 12}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 67, 'decision_time': 67, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 69, 'decision_time': 69, 'conflict_time': 53, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 70, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 379, 'decision_time': 378, 'conflict_time': 337, 'RL_time': 40}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 379, 'decision_time': 379, 'conflict_time': 339, 'RL_time': 39}
+{'name': 'RL-smf n=50 T=7', 'total_time': 370, 'decision_time': 369, 'conflict_time': 331, 'RL_time': 37}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 370, 'decision_time': 369, 'conflict_time': 331, 'RL_time': 36}
+{'name': 'RL n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 63, 'decision_time': 62, 'conflict_time': 51, 'RL_time': 10}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 64, 'decision_time': 64, 'conflict_time': 52, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 67, 'decision_time': 67, 'conflict_time': 52, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 67, 'decision_time': 67, 'conflict_time': 52, 'RL_time': 14}
+{'name': 'RL n=50 T=7', 'total_time': 378, 'decision_time': 377, 'conflict_time': 346, 'RL_time': 30}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 385, 'decision_time': 384, 'conflict_time': 347, 'RL_time': 37}
+{'name': 'RL-smf n=50 T=7', 'total_time': 385, 'decision_time': 384, 'conflict_time': 341, 'RL_time': 40}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 381, 'decision_time': 380, 'conflict_time': 343, 'RL_time': 35}
+{'name': 'RL n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 65, 'decision_time': 64, 'conflict_time': 51, 'RL_time': 12}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 65, 'decision_time': 64, 'conflict_time': 52, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 67, 'decision_time': 67, 'conflict_time': 51, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 65, 'decision_time': 65, 'conflict_time': 51, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 379, 'decision_time': 379, 'conflict_time': 338, 'RL_time': 40}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 377, 'decision_time': 376, 'conflict_time': 339, 'RL_time': 36}
+{'name': 'RL-smf n=50 T=7', 'total_time': 383, 'decision_time': 382, 'conflict_time': 341, 'RL_time': 39}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 380, 'decision_time': 379, 'conflict_time': 341, 'RL_time': 35}
+{'name': 'RL n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 70, 'decision_time': 69, 'conflict_time': 55, 'RL_time': 14}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 70, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 74, 'decision_time': 73, 'conflict_time': 58, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 76, 'decision_time': 76, 'conflict_time': 56, 'RL_time': 17}
+{'name': 'RL n=50 T=7', 'total_time': 368, 'decision_time': 368, 'conflict_time': 331, 'RL_time': 36}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 390, 'decision_time': 388, 'conflict_time': 350, 'RL_time': 37}
+{'name': 'RL-smf n=50 T=7', 'total_time': 378, 'decision_time': 377, 'conflict_time': 335, 'RL_time': 40}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 378, 'decision_time': 377, 'conflict_time': 338, 'RL_time': 38}
+{'name': 'RL n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 62, 'decision_time': 62, 'conflict_time': 51, 'RL_time': 10}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 63, 'decision_time': 63, 'conflict_time': 51, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 64, 'decision_time': 64, 'conflict_time': 52, 'RL_time': 10}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 67, 'decision_time': 67, 'conflict_time': 54, 'RL_time': 11}
+{'name': 'RL n=50 T=7', 'total_time': 389, 'decision_time': 388, 'conflict_time': 348, 'RL_time': 40}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 386, 'decision_time': 385, 'conflict_time': 349, 'RL_time': 34}
+{'name': 'RL-smf n=50 T=7', 'total_time': 392, 'decision_time': 391, 'conflict_time': 346, 'RL_time': 41}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 390, 'decision_time': 390, 'conflict_time': 348, 'RL_time': 39}
+{'name': 'RL n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 69, 'decision_time': 69, 'conflict_time': 55, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 70, 'decision_time': 70, 'conflict_time': 57, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 71, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 75, 'decision_time': 74, 'conflict_time': 58, 'RL_time': 14}
+{'name': 'RL n=50 T=7', 'total_time': 383, 'decision_time': 382, 'conflict_time': 343, 'RL_time': 38}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 388, 'decision_time': 387, 'conflict_time': 347, 'RL_time': 39}
+{'name': 'RL-smf n=50 T=7', 'total_time': 391, 'decision_time': 390, 'conflict_time': 342, 'RL_time': 43}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 383, 'decision_time': 382, 'conflict_time': 344, 'RL_time': 35}
+{'name': 'RL n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 71, 'decision_time': 70, 'conflict_time': 54, 'RL_time': 15}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 69, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 69, 'decision_time': 69, 'conflict_time': 55, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 69, 'decision_time': 68, 'conflict_time': 55, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 393, 'decision_time': 392, 'conflict_time': 355, 'RL_time': 36}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 403, 'decision_time': 403, 'conflict_time': 364, 'RL_time': 37}
+{'name': 'RL-smf n=50 T=7', 'total_time': 400, 'decision_time': 399, 'conflict_time': 360, 'RL_time': 35}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 397, 'decision_time': 397, 'conflict_time': 358, 'RL_time': 36}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 70, 'decision_time': 68, 'conflict_time': 56, 'RL_time': 12}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 71, 'decision_time': 70, 'conflict_time': 55, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 71, 'decision_time': 71, 'conflict_time': 56, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 71, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 392, 'decision_time': 391, 'conflict_time': 348, 'RL_time': 42}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 379, 'decision_time': 378, 'conflict_time': 338, 'RL_time': 37}
+{'name': 'RL-smf n=50 T=7', 'total_time': 383, 'decision_time': 382, 'conflict_time': 342, 'RL_time': 36}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 387, 'decision_time': 387, 'conflict_time': 343, 'RL_time': 40}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 70, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 14}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 71, 'decision_time': 71, 'conflict_time': 56, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 76, 'decision_time': 76, 'conflict_time': 60, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 81, 'decision_time': 80, 'conflict_time': 66, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 397, 'decision_time': 395, 'conflict_time': 355, 'RL_time': 39}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 397, 'decision_time': 396, 'conflict_time': 354, 'RL_time': 40}
+{'name': 'RL-smf n=50 T=7', 'total_time': 393, 'decision_time': 393, 'conflict_time': 353, 'RL_time': 36}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 386, 'decision_time': 386, 'conflict_time': 345, 'RL_time': 39}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 72, 'decision_time': 72, 'conflict_time': 57, 'RL_time': 14}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 73, 'decision_time': 72, 'conflict_time': 57, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 73, 'decision_time': 72, 'conflict_time': 58, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 74, 'decision_time': 73, 'conflict_time': 60, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 389, 'decision_time': 388, 'conflict_time': 339, 'RL_time': 49}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 390, 'decision_time': 389, 'conflict_time': 349, 'RL_time': 39}
+{'name': 'RL-smf n=50 T=7', 'total_time': 383, 'decision_time': 383, 'conflict_time': 343, 'RL_time': 35}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 378, 'decision_time': 377, 'conflict_time': 338, 'RL_time': 37}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 73, 'decision_time': 72, 'conflict_time': 53, 'RL_time': 19}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 70, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 69, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 69, 'decision_time': 69, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 380, 'decision_time': 379, 'conflict_time': 341, 'RL_time': 37}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 386, 'decision_time': 385, 'conflict_time': 343, 'RL_time': 41}
+{'name': 'RL-smf n=50 T=7', 'total_time': 395, 'decision_time': 394, 'conflict_time': 341, 'RL_time': 49}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 389, 'decision_time': 388, 'conflict_time': 347, 'RL_time': 38}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 71, 'decision_time': 71, 'conflict_time': 58, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 76, 'decision_time': 75, 'conflict_time': 55, 'RL_time': 20}
+{'name': 'RL-smf n=20 T=7', 'total_time': 70, 'decision_time': 69, 'conflict_time': 55, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 71, 'decision_time': 71, 'conflict_time': 54, 'RL_time': 15}
+{'name': 'RL n=50 T=7', 'total_time': 381, 'decision_time': 380, 'conflict_time': 345, 'RL_time': 34}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 383, 'decision_time': 382, 'conflict_time': 342, 'RL_time': 39}
+{'name': 'RL-smf n=50 T=7', 'total_time': 389, 'decision_time': 388, 'conflict_time': 347, 'RL_time': 38}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 378, 'decision_time': 378, 'conflict_time': 337, 'RL_time': 36}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 58, 'decision_time': 58, 'conflict_time': 48, 'RL_time': 10}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 60, 'decision_time': 60, 'conflict_time': 49, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 60, 'decision_time': 60, 'conflict_time': 49, 'RL_time': 10}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 59, 'decision_time': 59, 'conflict_time': 48, 'RL_time': 10}
+{'name': 'RL n=50 T=7', 'total_time': 368, 'decision_time': 367, 'conflict_time': 329, 'RL_time': 38}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 383, 'decision_time': 382, 'conflict_time': 339, 'RL_time': 41}
+{'name': 'RL-smf n=50 T=7', 'total_time': 398, 'decision_time': 398, 'conflict_time': 355, 'RL_time': 41}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 479, 'decision_time': 478, 'conflict_time': 344, 'RL_time': 41}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 67, 'decision_time': 66, 'conflict_time': 53, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 73, 'decision_time': 72, 'conflict_time': 59, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 72, 'decision_time': 72, 'conflict_time': 52, 'RL_time': 18}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 68, 'decision_time': 68, 'conflict_time': 52, 'RL_time': 14}
+{'name': 'RL n=50 T=7', 'total_time': 391, 'decision_time': 391, 'conflict_time': 349, 'RL_time': 42}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 383, 'decision_time': 382, 'conflict_time': 343, 'RL_time': 37}
+{'name': 'RL-smf n=50 T=7', 'total_time': 392, 'decision_time': 390, 'conflict_time': 349, 'RL_time': 39}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 397, 'decision_time': 397, 'conflict_time': 357, 'RL_time': 36}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 71, 'decision_time': 70, 'conflict_time': 57, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 71, 'decision_time': 70, 'conflict_time': 57, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 76, 'decision_time': 75, 'conflict_time': 56, 'RL_time': 17}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 71, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 382, 'decision_time': 381, 'conflict_time': 345, 'RL_time': 35}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 400, 'decision_time': 399, 'conflict_time': 349, 'RL_time': 48}
+{'name': 'RL-smf n=50 T=7', 'total_time': 384, 'decision_time': 383, 'conflict_time': 344, 'RL_time': 38}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 421, 'decision_time': 420, 'conflict_time': 381, 'RL_time': 37}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 73, 'decision_time': 72, 'conflict_time': 60, 'RL_time': 11}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 80, 'decision_time': 79, 'conflict_time': 64, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 71, 'decision_time': 71, 'conflict_time': 54, 'RL_time': 16}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 75, 'decision_time': 74, 'conflict_time': 60, 'RL_time': 11}
+{'name': 'RL n=50 T=7', 'total_time': 383, 'decision_time': 382, 'conflict_time': 345, 'RL_time': 37}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 382, 'decision_time': 381, 'conflict_time': 346, 'RL_time': 35}
+{'name': 'RL-smf n=50 T=7', 'total_time': 389, 'decision_time': 389, 'conflict_time': 349, 'RL_time': 38}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 387, 'decision_time': 386, 'conflict_time': 343, 'RL_time': 40}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 68, 'decision_time': 67, 'conflict_time': 55, 'RL_time': 11}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 75, 'decision_time': 74, 'conflict_time': 58, 'RL_time': 15}
+{'name': 'RL-smf n=20 T=7', 'total_time': 71, 'decision_time': 71, 'conflict_time': 57, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 79, 'decision_time': 77, 'conflict_time': 63, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 378, 'decision_time': 377, 'conflict_time': 342, 'RL_time': 35}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 378, 'decision_time': 377, 'conflict_time': 340, 'RL_time': 36}
+{'name': 'RL-smf n=50 T=7', 'total_time': 392, 'decision_time': 391, 'conflict_time': 350, 'RL_time': 38}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 395, 'decision_time': 395, 'conflict_time': 354, 'RL_time': 38}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 70, 'decision_time': 69, 'conflict_time': 56, 'RL_time': 12}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 70, 'decision_time': 70, 'conflict_time': 55, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 77, 'decision_time': 76, 'conflict_time': 56, 'RL_time': 18}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 72, 'decision_time': 72, 'conflict_time': 56, 'RL_time': 14}
+{'name': 'RL n=50 T=7', 'total_time': 381, 'decision_time': 380, 'conflict_time': 342, 'RL_time': 38}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 381, 'decision_time': 380, 'conflict_time': 338, 'RL_time': 42}
+{'name': 'RL-smf n=50 T=7', 'total_time': 397, 'decision_time': 396, 'conflict_time': 352, 'RL_time': 40}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 383, 'decision_time': 382, 'conflict_time': 346, 'RL_time': 35}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 69, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 14}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 69, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 74, 'decision_time': 74, 'conflict_time': 55, 'RL_time': 17}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 69, 'decision_time': 69, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 376, 'decision_time': 376, 'conflict_time': 335, 'RL_time': 40}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 195, 'decision_time': 195, 'conflict_time': 164, 'RL_time': 31}
+{'name': 'RL-smf n=50 T=7', 'total_time': 100, 'decision_time': 100, 'conflict_time': 80, 'RL_time': 18}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 189, 'decision_time': 188, 'conflict_time': 151, 'RL_time': 33}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 69, 'decision_time': 69, 'conflict_time': 53, 'RL_time': 15}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 69, 'decision_time': 68, 'conflict_time': 55, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 68, 'decision_time': 67, 'conflict_time': 54, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 70, 'decision_time': 70, 'conflict_time': 55, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 85, 'decision_time': 85, 'conflict_time': 66, 'RL_time': 19}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 56, 'decision_time': 56, 'conflict_time': 37, 'RL_time': 18}
+{'name': 'RL-smf n=50 T=7', 'total_time': 43, 'decision_time': 42, 'conflict_time': 28, 'RL_time': 14}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 54, 'decision_time': 53, 'conflict_time': 37, 'RL_time': 14}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 70, 'decision_time': 70, 'conflict_time': 50, 'RL_time': 20}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 67, 'decision_time': 67, 'conflict_time': 51, 'RL_time': 16}
+{'name': 'RL-smf n=20 T=7', 'total_time': 69, 'decision_time': 69, 'conflict_time': 50, 'RL_time': 17}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 67, 'decision_time': 66, 'conflict_time': 53, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 39, 'decision_time': 38, 'conflict_time': 24, 'RL_time': 13}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 18, 'decision_time': 18, 'conflict_time': 9, 'RL_time': 9}
+{'name': 'RL-smf n=50 T=7', 'total_time': 18, 'decision_time': 18, 'conflict_time': 6, 'RL_time': 10}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 21, 'decision_time': 21, 'conflict_time': 12, 'RL_time': 9}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 69, 'decision_time': 69, 'conflict_time': 54, 'RL_time': 15}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 67, 'decision_time': 67, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 71, 'decision_time': 71, 'conflict_time': 55, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 73, 'decision_time': 72, 'conflict_time': 57, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 15, 'decision_time': 14, 'conflict_time': 4, 'RL_time': 9}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 8, 'decision_time': 8, 'conflict_time': 2, 'RL_time': 5}
+{'name': 'RL-smf n=50 T=7', 'total_time': 5, 'decision_time': 5, 'conflict_time': 1, 'RL_time': 3}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 13, 'decision_time': 13, 'conflict_time': 2, 'RL_time': 10}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 74, 'decision_time': 73, 'conflict_time': 55, 'RL_time': 17}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 70, 'decision_time': 69, 'conflict_time': 55, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 71, 'decision_time': 70, 'conflict_time': 55, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 78, 'decision_time': 78, 'conflict_time': 59, 'RL_time': 17}
+{'name': 'RL n=50 T=7', 'total_time': 4, 'decision_time': 4, 'conflict_time': 1, 'RL_time': 3}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 6, 'decision_time': 6, 'conflict_time': 0, 'RL_time': 5}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 4, 'decision_time': 4, 'conflict_time': 1, 'RL_time': 2}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 64, 'decision_time': 64, 'conflict_time': 51, 'RL_time': 12}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 68, 'decision_time': 68, 'conflict_time': 56, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 62, 'decision_time': 61, 'conflict_time': 50, 'RL_time': 10}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 66, 'decision_time': 65, 'conflict_time': 52, 'RL_time': 10}
+{'name': 'RL n=50 T=7', 'total_time': 5, 'decision_time': 4, 'conflict_time': 1, 'RL_time': 2}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'k-smf-twisted-oracle-2-phase-k=5', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 66, 'decision_time': 65, 'conflict_time': 52, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 66, 'decision_time': 65, 'conflict_time': 52, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 67, 'decision_time': 67, 'conflict_time': 52, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 66, 'decision_time': 65, 'conflict_time': 53, 'RL_time': 10}
+{'name': 'RL n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 69, 'decision_time': 68, 'conflict_time': 50, 'RL_time': 17}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 68, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 65, 'decision_time': 65, 'conflict_time': 51, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 69, 'decision_time': 69, 'conflict_time': 51, 'RL_time': 17}
+{'name': 'RL n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 64, 'decision_time': 63, 'conflict_time': 53, 'RL_time': 10}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 62, 'decision_time': 62, 'conflict_time': 49, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 65, 'decision_time': 64, 'conflict_time': 49, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 61, 'decision_time': 61, 'conflict_time': 48, 'RL_time': 11}
+{'name': 'RL n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 65, 'decision_time': 65, 'conflict_time': 52, 'RL_time': 12}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 70, 'decision_time': 70, 'conflict_time': 56, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7', 'total_time': 66, 'decision_time': 65, 'conflict_time': 52, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 66, 'decision_time': 66, 'conflict_time': 52, 'RL_time': 13}
+{'name': 'RL n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=100 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 67, 'decision_time': 67, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 70, 'decision_time': 70, 'conflict_time': 57, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7', 'total_time': 72, 'decision_time': 72, 'conflict_time': 58, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 68, 'decision_time': 67, 'conflict_time': 54, 'RL_time': 11}
+{'name': 'RL n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 69, 'decision_time': 69, 'conflict_time': 55, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 69, 'decision_time': 68, 'conflict_time': 55, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7', 'total_time': 70, 'decision_time': 70, 'conflict_time': 54, 'RL_time': 13}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 70, 'decision_time': 69, 'conflict_time': 56, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': 0, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 70, 'decision_time': 69, 'conflict_time': 57, 'RL_time': 12}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 82, 'decision_time': 81, 'conflict_time': 58, 'RL_time': 21}
+{'name': 'RL-smf n=20 T=7', 'total_time': 75, 'decision_time': 74, 'conflict_time': 59, 'RL_time': 14}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 70, 'decision_time': 69, 'conflict_time': 55, 'RL_time': 12}
+{'name': 'RL n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 67, 'decision_time': 67, 'conflict_time': 53, 'RL_time': 13}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 67, 'decision_time': 66, 'conflict_time': 54, 'RL_time': 11}
+{'name': 'RL-smf n=20 T=7', 'total_time': 68, 'decision_time': 67, 'conflict_time': 53, 'RL_time': 12}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 69, 'decision_time': 68, 'conflict_time': 54, 'RL_time': 12}
+{'name': 'RL-smf n=50 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 6, 'decision_time': 4, 'conflict_time': 1, 'RL_time': 3}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 5, 'decision_time': 5, 'conflict_time': 2, 'RL_time': 2}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=50 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 1, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}
+{'name': 'RL-smf n=20 T=7 filterT', 'total_time': 0, 'decision_time': None, 'conflict_time': None, 'RL_time': None}

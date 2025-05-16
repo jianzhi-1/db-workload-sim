@@ -20,6 +20,7 @@ class QNetwork(nn.Module):
 
     def obtain_schedule(self, conflict_matrix):
         N, T = self.N, self.T # convenience
+        # print(conflict_matrix.shape, self.N, self.T, flush=True)
         assert conflict_matrix.shape == (1, N, N, 2*T+1), f"conflict_matrix.shape = {conflict_matrix.shape}"
         conflict_matrix = conflict_matrix.squeeze()
         assert conflict_matrix.shape == (N, N, 2*T+1), f"conflict_matrix.shape = {conflict_matrix.shape}"
@@ -149,8 +150,9 @@ class Trainer:
             if conflict_matrix[i].sum() == 0:
                 skipped.append((i, 0))
                 mask[i] = 1
-        if episode_number >= 99:
-            print(f'skipped: {sorted(skipped)}', flush=True)
+
+        if episode_number >= 95:
+            print(f'skipped: {sorted([elem[0] for elem in skipped])}', flush=True)
         
         if len(skipped) == self.N:
             return None
@@ -177,9 +179,11 @@ class Trainer:
                 self.train_step(state_tensor, action, reward, next_state_tensor, done)
 
             if done: break
-        if episode_number >= 99:
+        if episode_number >= 95:
             print(f'scheduled: {sorted(scheduled)}', flush=True)
-            print(mask)
+            # print(mask)
+            deferred = np.where(mask == 0)[0].tolist()
+            print(f'deferred: {deferred}', flush=True)
         return total_reward
 
     def compute_reward(self, new_action, scheduled, conflict_matrix, mask):
@@ -191,7 +195,7 @@ class Trainer:
 
         if new_action >= N:
             # total_reward = 0
-            conflict_points = 0
+            # conflict_points = 0
             pos_reward = 0
             neg_reward = 0.5
             # counter = 0
@@ -211,7 +215,7 @@ class Trainer:
                             break
                     if success: #ended when could've scheduled
                         neg_reward -= increment
-                        increment = increment * 1.5
+                        increment = max(increment * 1.5, 2)
                     else: #would've been a conflict, reward for stopping
                         pos_reward += 2
                         # increment = 0
@@ -237,7 +241,7 @@ class Trainer:
                 success, pos = True, t
                 break
         if success:
-            reward_curve = [1., 0.9, 0.8, 0.7, 0.6, 0.5, 0.4]
+            reward_curve = [1., 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3]
             # print('success', reward_curve[pos], difficulty, flush=True)
             return reward_curve[pos], pos
         # print('fail', difficulty, flush=True)

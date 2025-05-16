@@ -12,3 +12,6 @@ model_RL_20_TPCC_corr.pkl
 model_RL_50.pkl
 model_RL_50_TPCC_corr.pkl
 model_RL_100_TPCC_corr.pkl
+model_RL_100_SB_corr.pkl
+model_RL_20_SB_corr.pkl
+model_RL_50_SB_corr.pkl

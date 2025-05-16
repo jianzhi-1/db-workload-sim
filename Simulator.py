@@ -185,7 +185,7 @@ class Simulator():
         x = conflict_matrix(1, n, T, txns_N)
         end_time = time.time()
         # print('conflict_matrix', str((end_time - start_time) * 1000)[:5], flush=True)
-        self.statistics["conflict_time"] = str((end_time - start_time) * 1000)[:4]
+        self.statistics["conflict_time"] = int((end_time - start_time) * 1000)
         start_time = time.time()
         x = torch.from_numpy(x.astype(np.float32))
         txns, mask = self.model.obtain_schedule(x)
@@ -198,7 +198,7 @@ class Simulator():
                         self.scheduler.memory[txn.txn] = self.step + ts # for if using LumpScheduler
                 else:
                     self.statistics['n_aborts'] += 1
-                    self.txnPool.extend(txns_N[txn_idx])
+                    self.txnPool.extend([txns_N[txn_idx]])
                 # self.scheduler.memory[txn.txn] = self.step + ts
 
         txns_to_reschedule = np.where(mask == 0)[0].tolist()
@@ -210,7 +210,7 @@ class Simulator():
         # self.scheduler.memory = memory
         # print('done updating memory RL', flush=True)
         end_time = time.time()
-        self.statistics["RL_time"] = str((end_time - start_time) * 1000)[:4]
+        self.statistics["RL_time"] = int((end_time - start_time) * 1000)
         return txns_to_schedule
 
     
@@ -218,7 +218,7 @@ class Simulator():
         # print(len(self.scheduled_txn), flush=True)
         # print(len(self.scheduled_txn), len(self.txnPool), len(self.flushPool), flush=True)
         start_time = time.time()
-        if self.done() and self.statistics["n_successes"] == 500:
+        if self.done():
             self.finished = True
             return self.statistics
         
@@ -252,7 +252,7 @@ class Simulator():
                 decisions.extend([0]*(len(self.txnPool) - len(decisions)))
 
         end_time = time.time()
-        self.statistics["decision_time"] = str((end_time - start_time) * 1000)[:4]
+        self.statistics["decision_time"] = int((end_time - start_time) * 1000)
 
         # assert len(decisions) == len(self.txnPool), f"Decision length is not equal transaction pool length, {type(self.scheduler)}, {len(decisions)}, {len(self.txnPool)}"
 

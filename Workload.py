@@ -4,10 +4,10 @@ import random
 from numpy.random import zipf # reduce importing large numpy library
 
 def draw_zipf_with_max(a, max_value):
-    for _ in range(100):
+    for _ in range(10):
         sample = zipf(a)
-        if sample <= max_value: return sample
-    return 1
+        if 20 < sample and sample <= max_value + 20: return sample - 20
+    return random.randint(1, max_value + 1)
 
 class Workload(ABC):
 
@@ -194,9 +194,7 @@ class SmallBankWorkload(Workload):
             res.append(txn)
         return res
 
-
-
-    def generate_correlated_transactions(self, num_txns:int, probabilities:list[float]=None, start=0, p=0.1) -> list[Transaction]:
+    def generate_correlated_transactions_old(self, num_txns:int, probabilities:list[float]=None, start=0, p=0.1) -> list[Transaction]:
         # start argument is used to deduplicate transaction ids when multiple time steps are scheduled
 
         if probabilities is None: probabilities = [1/len(self.SMALLBANK_TXN_OPS_2)] * len(self.SMALLBANK_TXN_OPS_2) # assume by default uniform
